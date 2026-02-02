@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Codezilla - Executive Precision</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6D00", // More vibrant energetic orange
+                        "primary-hover": "#FF9100",
+                        "border-dark": "#1F2937",
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#111827",
+                        "charcoal": "#0F1218",
+                        "paper": "#F9FAFB",
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grain-overlay': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')",
+                        'energy-gradient': "linear-gradient(135deg, rgba(255,109,0,0.15) 0%, rgba(255,255,255,0) 50%)",
+                        'energy-gradient-dark': "linear-gradient(135deg, rgba(255,109,0,0.1) 0%, rgba(15,18,24,1) 80%)",
+                    },
+                    animation: {
+                        'depth-zoom': 'depthZoom 12s infinite',
+                        'marquee': 'marquee 40s linear infinite',
+                        'entrance-fade': 'entranceFade 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        depthZoom: {
+                            '0%': { opacity: '0', transform: 'scale(1.2)' },
+                            '15%': { opacity: '1', transform: 'scale(1.1)' },
+                            '35%': { opacity: '1', transform: 'scale(1)' },
+                            '55%': { opacity: '1', transform: 'scale(0.95)' },
+                            '75%': { opacity: '0.8', transform: 'scale(1)' },
+                            '100%': { opacity: '0', transform: 'scale(1)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        entranceFade: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-outline-white {
+                -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+                color: transparent;
+            }
+            .text-outline-black {
+                -webkit-text-stroke: 1px rgba(0,0,0,0.2);
+                color: transparent;
+            }
+            .text-outline-primary {
+                -webkit-text-stroke: 1px #FF6D00;
+                color: transparent;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .animation-delay-4000 {
+                animation-delay: 4s;
+            }
+            .animation-delay-8000 {
+                animation-delay: 8s;
+            }.snap-mandatory {
+                scroll-snap-type: x mandatory;
+            }
+            .snap-center {
+                scroll-snap-align: center;
+            }.group:hover .mega-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+    <nav class="fixed w-full z-50 bg-white border-b-2 border-black">
+        <div class="w-full grid grid-cols-12 h-20 items-center relative">
+            <div
+                class="col-span-6 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-black text-4xl group-hover:text-primary transition-colors">grid_view</span>
+                <span
+                    class="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors">Codezilla</span>
+            </div>
+            <div
+                class="hidden lg:col-span-6 lg:flex justify-center items-center h-full bg-white border-r-2 border-black px-4 relative">
+                <div class="flex items-center gap-8 xl:gap-12 h-full">
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
+                        href="#">Who we are</a>
+                    <div class="group h-full flex items-center px-2 cursor-pointer">
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">What
+                            we do <span class="material-symbols-outlined text-[16px]">expand_more</span></span>
+                        <div
+                            class="mega-menu absolute top-[80px] left-0 w-[100vw] bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[25%] transition-all duration-300 z-50 p-12">
+                            <div class="max-w-7xl grid grid-cols-12 gap-8">
+                                <div class="col-span-3 border-r border-white/20 pr-8">
+                                    <h3 class="text-xl font-display font-bold text-primary mb-6 uppercase">Digital
+                                        Product<br />Development</h3>
+                                    <ul class="space-y-3">
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Rapid Prototyping</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Product Discovery</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">UI/UX Design Services</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Data Science &amp; AI</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Software Architecture</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-span-3 border-r border-white/20 pr-8">
+                                    <h3 class="text-xl font-display font-bold text-white mb-6 uppercase">
+                                        Staff<br />Augmentation</h3>
+                                    <ul class="space-y-3">
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Software Architects</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Back-end Engineers</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Front-end Engineers</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">DevOps Engineers</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Mobile Engineers</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-span-3 border-r border-white/20 pr-8">
+                                    <h3 class="text-xl font-display font-bold text-white mb-6 uppercase">
+                                        Codezilla<br />Accelerators</h3>
+                                    <ul class="space-y-3">
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Document AI</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Codezilla Flywheel</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Codezilla Guard:IAM</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Chatbot Delivery</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-span-3 pl-4">
+                                    <h3 class="text-xl font-display font-bold text-white mb-6 uppercase">
+                                        System<br />Integration</h3>
+                                    <ul class="space-y-3">
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Salesforce</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Adobe Experience Cloud</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">Microsoft Dynamics 365</a></li>
+                                        <li><a class="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                                                href="#">MuleSoft Integration</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
+                        href="#">Case studies</a>
+                    <div class="group h-full flex items-center px-2 cursor-pointer">
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">What
+                            we think <span class="material-symbols-outlined text-[16px]">expand_more</span></span>
+                        <div
+                            class="mega-menu absolute top-[80px] left-0 w-[100vw] bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[65%] transition-all duration-300 z-50 p-12">
+                            <!-- mx-auto -->
+                            <div class="max-w-7xl  grid grid-cols-12 gap-8">
+                                <div class="col-span-4 border-r border-white/20 pr-8 flex flex-col items-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-5xl mb-4 font-light">radio_button_checked</span>
+                                    <h3 class="text-2xl font-display font-bold text-white mb-4 uppercase">Life at
+                                        Codezilla</h3>
+                                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">What does life at Codezilla
+                                        look like? Dive deep into our company culture by reading more about our
+                                        activities.</p>
+                                    <a class="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors border-b border-primary pb-1"
+                                        href="#">View Culture</a>
+                                </div>
+                                <div class="col-span-4 border-r border-white/20 pr-8 px-8 flex flex-col items-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-5xl mb-4 font-light">insights</span>
+                                    <h3 class="text-2xl font-display font-bold text-white mb-4 uppercase">Business
+                                        Insights</h3>
+                                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Latest news. Hot topics. Learn
+                                        more about the latest industry trends from experts that drive digital-led
+                                        progress.</p>
+                                    <a class="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors border-b border-primary pb-1"
+                                        href="#">Read Blog</a>
+                                </div>
+                                <div class="col-span-4 pl-8 flex flex-col items-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-5xl mb-4 font-light">volunteer_activism</span>
+                                    <h3 class="text-2xl font-display font-bold text-white mb-4 uppercase">CSR
+                                        Initiatives</h3>
+                                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Giving back to the community
+                                        is one of the core values of our company. Dive into the activities we have
+                                        organized.</p>
+                                    <a class="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors border-b border-primary pb-1"
+                                        href="#">Our Impact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
+                        href="#">Career</a>
+                </div>
+            </div>
+            <div class="col-span-6 lg:col-span-3 flex justify-end items-center h-full bg-white px-8">
+                <a class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-[#E65100] shadow-[0_4px_12px_rgba(255,109,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,109,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
+                    href="#">
+                    <span>Schedule Call</span>
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section
+        class="relative min-h-screen pt-20 flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
+        <div
+        class="relative h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group">
+
+        <!-- Dots -->
+        <div class="absolute left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-4">
+            <div class="w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-primary ring-offset-2 ring-offset-black"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white cursor-pointer"></div>
+            <!-- <div class="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white cursor-pointer"></div> -->
+        </div>
+
+        <!-- SLIDE 1 -->
+        <div class="absolute inset-0 animate-depth-zoom opacity-0">
+
+            <!-- IMAGE -->
+            <div class="absolute inset-0">
+                <img src="./images/About-banner.webp" alt="Engineer Portrait"
+                    class="w-full h-full object-cover contrast-125 brightness-100" />
+            </div>
+
+            <!-- GRADIENTS -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+
+            <!-- TEXT -->
+            <div class="absolute bottom-0 left-0 p-8 lg:p-12 pl-16 z-10 text-white">
+                <div
+                    class="inline-block bg-primary text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <span class="font-mono text-xs uppercase tracking-widest font-bold">
+                        Role: Chief Architect
+                    </span>
+                </div>
+
+                <p class="font-display text-2xl lg:text-3xl font-light leading-snug max-w-md">
+                    "We build the systems that define the next decade of enterprise efficiency."
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="absolute inset-0 animate-depth-zoom animation-delay-4000 opacity-0">
+
+            <!-- IMAGE -->
+            <div class="absolute inset-0">
+                <img src="./images/team.webp" alt="Project Lead"
+                    class="w-full h-full object-cover object-top contrast-125 brightness-90" />
+            </div>
+
+            <!-- GRADIENTS -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+
+            <!-- TEXT -->
+            <div class="absolute bottom-0 left-0 p-8 lg:p-12 pl-16 z-10 text-white">
+                <div
+                    class="inline-block bg-white text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
+                    <span class="font-mono text-xs uppercase tracking-widest font-bold">
+                        Role: Strategy Lead
+                    </span>
+                </div>
+
+                <p class="font-display text-2xl lg:text-3xl font-light leading-snug max-w-md">
+                    "True transformation happens when human insight meets algorithmic precision."
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+        <div class="relative bg-charcoal flex flex-col justify-between p-8 lg:p-16 bg-energy-gradient-dark">
+            <div class="flex flex-col h-full justify-center">
+                <div class="mb-12">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-4 h-4 bg-primary"></span>
+                        <span class="text-white text-sm font-bold tracking-widest uppercase">The Intelligence First //
+                            001</span>
+                    </div>
+                    <h1
+                        class="font-display text-7xl xl:text-8xl font-bold text-white leading-[0.85] tracking-tighter uppercase mb-6">
+                        <span class="text-primary">Intelligence</span><br />
+                        at the core.
+                    </h1>
+                    <p class="font-display text-2xl lg:text-3xl text-white font-light leading-tight mb-8 max-w-lg">
+                        The AI-powered partner for enterprise product evolution.
+                    </p>
+                    <p
+                        class="text-xl text-gray-400 max-w-xl font-medium leading-relaxed border-l-4 border-primary pl-6">
+                        We don’t just build software. We architect AI-driven systems that define the next decade of
+                        efficiency.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 pt-12 border-t-2 border-gray-800">
+                    <div>
+                        <span class="block text-6xl font-display font-bold text-primary mb-2">98<span
+                                class="text-3xl align-top text-white">%</span></span>
+                        <span class="text-xs uppercase tracking-widest text-white font-bold">Deployment Success</span>
+                    </div>
+                    <div>
+                        <span class="block text-6xl font-display font-bold text-primary mb-2">350<span
+                                class="text-3xl align-top text-white">+</span></span>
+                        <span class="text-xs uppercase tracking-widest text-white font-bold">Active Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted by industry leaders -->
+
+    <!-- New Marquee  -->
+    <section class="bg-white py-16 overflow-hidden">
+        <p class="text-center text-xs tracking-widest text-gray-400 mb-10">
+            TRUSTED BY INDUSTRY LEADERS
+        </p>
+
+        <div class="relative marquee-wrapper">
+            <!-- fade edges -->
+            <div
+                class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10">
+            </div>
+            <div
+                class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10">
+            </div>
+
+            <div class="overflow-hidden">
+                <div id="marqueeTrack" class="flex w-max items-center gap-20 will-change-transform">
+                    <!-- SET 1 -->
+                    <div class="flex items-center gap-20 marquee-set">
+                        <img src="./images/google.png" class="h-10 opacity-60" />
+                        <img src="./images/iso-27001.png" class="h-10 opacity-60" />
+                        <img src="./images/iso-42001.png" class="h-10 opacity-60" />
+                        <img src="./images/aws.png" class="h-10 opacity-60" />
+                        <img src="./images/clutch.png" class="h-10 opacity-60" />
+                    </div>
+
+                    <!-- SET 2 (duplicate) -->
+                    <div class="flex items-center gap-20 marquee-set">
+                        <img src="./images/google.png" class="h-10 opacity-60" />
+                        <img src="./images/iso-27001.png" class="h-10 opacity-60" />
+                        <img src="./images/iso-42001.png" class="h-10 opacity-60" />
+                        <img src="./images/aws.png" class="h-10 opacity-60" />
+                        <img src="./images/clutch.png" class="h-10 opacity-60" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Trusted by industry leaders -->
+    <section
+        class="relative w-full h-[70vh] border-b-2 border-black overflow-hidden group bg-charcoal animate-entrance-fade"
+        style="animation-delay: 0.4s;">
+        <img alt="Philosophy Video Thumbnail"
+            class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYQP_P2qpaXCiAQExIogl63A1lhIribWc4MRMo07AWwiivQuq0vwC6Y-CKYRfssluqWwmAEa4W2yNbpPfd5yXmSlaN71p0uX8WEjX9XWZMPbrsR-gxslu9JOipXeULpbOicRbJ1FA_GsPfyNS0tB5y-HAlo2Lw44tqmQfjIKWC-Rf66kBemEKFrNWdSIE9TJ7EST6dAQlE1336Rn6p2tmc1zBT6RIg-FaiNjo5-WHg2ofj36NKGrFzPQZGDhuO2eb5amTfCAjVE6ag" />
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-4">
+            <button id="playVideoBtn"
+                class="w-20 h-20 md:w-24 md:h-24 bg-primary text-black rounded-full flex items-center justify-center mb-8 hover:scale-110 hover:bg-white hover:text-primary transition-all duration-300 shadow-[0_0_0_12px_rgba(255,109,0,0.3)] hover:shadow-[0_0_0_20px_rgba(255,255,255,0.2)]">
+                <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+            </button>
+            <span
+                class="text-primary font-bold uppercase tracking-widest text-xs md:text-sm mb-4 inline-block bg-black/50 px-3 py-1 border border-primary/30 backdrop-blur-sm">Act
+                2: The Philosophy</span>
+            <h2 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white uppercase tracking-tighter">
+                Our <span class="text-outline-white">Philosophy</span></h2>
+        </div>
+    </section>
+
+    <!-- What we do -->
+    <section class="bg-charcoal text-white border-b-2 border-black animate-entrance-fade"
+        style="animation-delay: 0.6s;">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 min-h-screen">
+            <div
+                class="col-span-1 md:col-span-2 lg:col-span-1 border-b-2 md:border-b-2 lg:border-b-0 lg:border-r-2 border-white/10 p-8 lg:p-12 flex flex-col justify-between bg-energy-gradient-dark relative z-10">
+                <div>
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Capabilities</span>
+                    <h2 class="font-display text-4xl font-bold uppercase leading-none mb-6">What<br />we do</h2>
+                    <div class="w-12 h-1 bg-primary mb-6"></div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Our service matrix is designed for high-impact, scalable intervention. We deploy rapidly and
+                        iterate continuously.
+                    </p>
+                </div>
+                <div class="mt-12">
+                    <a class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b border-primary pb-1 text-primary hover:text-white hover:border-white transition-colors"
+                        href="#">
+                        Full Service List <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="col-span-1 border-b-2 md:border-b-2 lg:border-b-0 border-r-2 border-white/10 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-cover bg-center"
+                    style="background-image: url('./images/aI-data-strategy.webp');">
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex justify-between items-start z-10">
+                    <span
+                        class="font-display text-6xl font-bold text-outline-white group-hover:text-primary transition-colors">01</span>
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary opacity-80 group-hover:opacity-100">psychology</span>
+                </div>
+                <div class="z-10 relative">
+                    <h3
+                        class="font-display text-3xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
+                        AI &amp; Data<br />Strategy</h3>
+                    <p
+                        class="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
+                        Deploying predictive models directly into your business logic. From black box to clear ROI.
+                    </p>
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary">
+                        <span class="w-2 h-2 bg-primary"></span> Analyze
+                    </span>
+                </div>
+            </div>
+            <div
+                class="col-span-1 border-b-2 md:border-b-0 border-r-2 border-white/10 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-cover bg-center"
+                    style="background-image: url('./images/cloud-architecture.webp');">
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex justify-between items-start z-10">
+                    <span
+                        class="font-display text-6xl font-bold text-outline-white group-hover:text-primary transition-colors">02</span>
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary opacity-80 group-hover:opacity-100">cloud_sync</span>
+                </div>
+                <div class="z-10 relative">
+                    <h3
+                        class="font-display text-3xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
+                        Cloud<br />Architecture</h3>
+                    <p
+                        class="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
+                        Building the invisible backbone of your enterprise. Scalable, secure, and resilient
+                        infrastructure.
+                    </p>
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary">
+                        <span class="w-2 h-2 bg-primary"></span> Scale
+                    </span>
+                </div>
+            </div>
+            <div
+                class="col-span-1 md:border-r-0 lg:border-r-0 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUUWGaVonfDZI2sYkkTFKP76Pld62QDqAKhOSZEoYn2R_WMb3YK90DBM26QbJ_W4DBtjuhrRUi_jNaZiByMGudXVemM9lEONe57sIHMM8zV_aghBwVb8k6s43A23xkMeTuQ9nPALHKy3equUI-BMk9JjXvjpvG6x3NrQA98HENnwMnMJ5s3Jbf4rWX7dN3zBxV_SWePS5G872MScoSxdO6X96yD8O1jD_NUDh8WTw3bYMomi8sJzRLywyJqKvJrf0SWnNmg48dve6U');">
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex justify-between items-start z-10">
+                    <span
+                        class="font-display text-6xl font-bold text-outline-white group-hover:text-primary transition-colors">03</span>
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary opacity-80 group-hover:opacity-100">terminal</span>
+                </div>
+                <div class="z-10 relative">
+                    <h3
+                        class="font-display text-3xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
+                        Product<br />Engineering</h3>
+                    <p
+                        class="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
+                        Full-cycle development. We don't just write code; we engineer outcomes through precise
+                        execution.
+                    </p>
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary">
+                        <span class="w-2 h-2 bg-primary"></span> Build
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our work -->
+    <section class="bg-white border-b-2 border-black overflow-hidden animate-entrance-fade"
+        style="animation-delay: 0.8s;">
+        <div class="grid grid-cols-12 border-b-2 border-black">
+            <div
+                class="col-span-12 lg:col-span-3 border-b-2 lg:border-b-0 lg:border-r-2 border-black p-8 lg:p-12 flex flex-col justify-center bg-gray-50">
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Evidence Log</span>
+                <h2 class="font-display text-5xl font-bold uppercase leading-none mb-8">Our<br />work</h2>
+                <div class="flex gap-4">
+                    <button
+                        class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-colors"
+                        onclick="document.getElementById('scroll-container').scrollBy({left: -400, behavior: 'smooth'})">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+                    <button
+                        class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-colors"
+                        onclick="document.getElementById('scroll-container').scrollBy({left: 400, behavior: 'smooth'})">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-9 overflow-x-auto no-scrollbar flex snap-x snap-mandatory scroll-smooth"
+                id="scroll-container">
+                <div
+                    class="w-[85vw] md:w-[60vw] lg:w-[40vw] flex-shrink-0 border-r-2 border-black h-[70vh] relative group snap-center overflow-hidden">
+                    <span
+                        class="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position">Fintech</span>
+                    <img alt="Case Study 1"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="./images/maji-fintech.jpg" />
+                    <div
+                        class="absolute inset-0 bg-black/40 group-hover:bg-primary/10 transition-colors z-10 mix-blend-multiply">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full bg-white border-t-2 border-black p-8 z-20">
+                        <div class="flex justify-between items-end">
+                            <div>
+
+                                <img src="./images/maji-logo.svg" alt="Maji Logo">
+                                <p class="font-display text-1xl font-medium mt-3">Maji is a UK financial wellbeing
+                                    provider that makes saving, spending, and planning money simpler for employees and
+                                    employers.</p>
+                            </div>
+                            <span class="text-4xl font-display font-bold text-primary">01</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-[80vw] md:w-[55vw] lg:w-[35vw] flex-shrink-0 border-r-2 border-black h-[70vh] relative group snap-center overflow-hidden">
+                    <span class="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position">EV
+                        Charging Software</span>
+                    <img alt="Case Study 2"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="./images/rightcharge-main.jpg" />
+                    <div
+                        class="absolute inset-0 bg-black/40 group-hover:bg-primary/10 transition-colors z-10 mix-blend-multiply">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full bg-white border-t-2 border-black p-8 z-20">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <img src="./images/rightcharge-logo.svg" alt="Rightcharge Logo">
+                                <p class="font-display text-1xl font-medium mt-3">An EV charging management platform
+                                    that automates payments, reimbursements, and reporting for fleets.
+                                </p>
+                            </div>
+                            <span class="text-4xl font-display font-bold text-primary">02</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-[85vw] md:w-[60vw] lg:w-[40vw] flex-shrink-0 border-r-2 border-black h-[70vh] relative group snap-center overflow-hidden">
+                    <span class="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position">ERP
+                        Managment</span>
+                    <img alt="Case Study 3"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="./images/naseni.webp" />
+                    <div
+                        class="absolute inset-0 bg-black/40 group-hover:bg-primary/10 transition-colors z-10 mix-blend-multiply">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full bg-white border-t-2 border-black p-8 z-20">
+                        <div class="flex justify-between items-end">
+                            <div>
+
+                                <img src="./images/naseni-logo.svg" alt="Naseni Logo">
+                                <p class="font-display text-1xl font-medium mt-3">A Nigerian government agency driving
+                                    innovation through engineering, manufacturing, and applied research.</p>
+                            </div>
+                            <span class="text-4xl font-display font-bold text-primary">03</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-[85vw] md:w-[60vw] lg:w-[40vw] flex-shrink-0 h-[70vh] relative group bg-charcoal text-white flex items-center justify-center snap-center bg-energy-gradient-dark">
+                    <div class="text-center">
+                        <h3 class="font-display text-4xl font-bold uppercase mb-4">View All<br />Projects</h3>
+                        <a class="inline-block border-2 border-primary text-primary px-8 py-4 uppercase text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-colors"
+                            href="#">Access Archive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How we work -->
+    <section class="bg-gray-100 border-b-2 border-black py-24 bg-energy-gradient animate-entrance-fade"
+        style="animation-delay: 1.0s;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-black pb-8">
+                <h2 class="font-display text-5xl font-bold text-black uppercase tracking-tighter max-w-lg">How<br />we
+                    work</h2>
+                <p class="text-sm font-bold uppercase tracking-widest text-primary mb-2">Select your protocol</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-2 border-black bg-white">
+                <div
+                    class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-black hover:bg-black hover:text-white hover:border-primary transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-12">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">rocket_launch</span>
+                        <span
+                            class="font-mono text-xs border border-current px-2 py-1 group-hover:text-primary group-hover:border-primary">Type
+                            A</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold uppercase mb-4 font-display group-hover:text-primary transition-colors">
+                        Accelerator</h3>
+                    <p class="text-sm leading-relaxed opacity-60 group-hover:opacity-80 mb-8">
+                        Rapid prototyping and MVP development. Go from concept to clickable high-fidelity model in 72
+                        hours.
+                    </p>
+                    <ul class="space-y-2 text-xs font-bold uppercase tracking-wider">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Fixed Timeline
+                        </li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Defined Scope
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-black hover:bg-black hover:text-white hover:border-primary transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-12">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">group_add</span>
+                        <span
+                            class="font-mono text-xs border border-current px-2 py-1 group-hover:text-primary group-hover:border-primary">Type
+                            B</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold uppercase mb-4 font-display group-hover:text-primary transition-colors">
+                        Dedicated Team</h3>
+                    <p class="text-sm leading-relaxed opacity-60 group-hover:opacity-80 mb-8">
+                        Full-scale engineering pods integrated into your workflow. Long-term scalability and deep domain
+                        knowledge.
+                    </p>
+                    <ul class="space-y-2 text-xs font-bold uppercase tracking-wider">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Full
+                            Integration</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Monthly
+                            Retainer</li>
+                    </ul>
+                </div>
+                <div
+                    class="p-12 hover:bg-black hover:text-white hover:border-primary transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-12">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">saved_search</span>
+                        <span
+                            class="font-mono text-xs border border-current px-2 py-1 group-hover:text-primary group-hover:border-primary">Type
+                            C</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold uppercase mb-4 font-display group-hover:text-primary transition-colors">
+                        Strategic Advisory</h3>
+                    <p class="text-sm leading-relaxed opacity-60 group-hover:opacity-80 mb-8">
+                        High-level consulting for legacy modernization and AI readiness assessments. Charting the path
+                        forward.
+                    </p>
+                    <ul class="space-y-2 text-xs font-bold uppercase tracking-wider">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Audit &amp;
+                            Plan</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> C-Suite Liason
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client success -->
+    <section class="bg-charcoal text-white border-b-2 border-black py-24 overflow-hidden relative animate-entrance-fade"
+        style="animation-delay: 1.2s;">
+
+        <div class="absolute inset-0 bg-energy-gradient-dark"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/20 pb-8">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Social
+                        Proof</span>
+                    <h2 class="font-display text-5xl font-bold text-white uppercase tracking-tighter">
+                        Client<br />success
+                    </h2>
+                </div>
+
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <button id="testimonialPrev"
+                        class="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-colors rounded-full">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+
+                    <button id="testimonialNext"
+                        class="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-colors rounded-full">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="relative overflow-hidden">
+
+                <!-- Track -->
+                <div id="testimonialTrack"
+                    class="flex gap-8 transition-transform duration-700 ease-out will-change-transform">
+
+                    <!-- CARD 1 -->
+                    <div class="group cursor-pointer min-w-[300px] md:min-w-[45%] lg:min-w-[32%]">
+                        <div
+                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2l28R5xOf4wxjoTxH5V-j2tO-CugkYbPAz4xC0I5ujqJRSqwD_cDByVkA1BHhJ3JVteHUsM9JJ3TrFx-qQYRdiZEFpPS9rtUZmQKcuqm2ooHxLj1-hJYXS1vMhAnL0MYZBVv7c9IshOXUbcUa_2CYRG6WrJYNaRIEgHe75-FlYH-C4tZ1w50DANW3mp_CWvvdBYu2YTDmBz5D_leEqiFTZcbtOLX36Mty2dMhJTRkPHcKh8G2Kjo9_yqmoQqMX2fb_mdKt5gzp4KC" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div
+                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
+                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 p-8">
+                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
+                                </h3>
+                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
+                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+                                        <img class="w-full h-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm uppercase">James Harrison</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 1 -->
+                    <div class="group cursor-pointer min-w-[300px] md:min-w-[45%] lg:min-w-[32%]">
+                        <div
+                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2l28R5xOf4wxjoTxH5V-j2tO-CugkYbPAz4xC0I5ujqJRSqwD_cDByVkA1BHhJ3JVteHUsM9JJ3TrFx-qQYRdiZEFpPS9rtUZmQKcuqm2ooHxLj1-hJYXS1vMhAnL0MYZBVv7c9IshOXUbcUa_2CYRG6WrJYNaRIEgHe75-FlYH-C4tZ1w50DANW3mp_CWvvdBYu2YTDmBz5D_leEqiFTZcbtOLX36Mty2dMhJTRkPHcKh8G2Kjo9_yqmoQqMX2fb_mdKt5gzp4KC" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div
+                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
+                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 p-8">
+                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
+                                </h3>
+                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
+                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+                                        <img class="w-full h-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm uppercase">James Harrison</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 1 -->
+                    <div class="group cursor-pointer min-w-[300px] md:min-w-[45%] lg:min-w-[32%]">
+                        <div
+                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2l28R5xOf4wxjoTxH5V-j2tO-CugkYbPAz4xC0I5ujqJRSqwD_cDByVkA1BHhJ3JVteHUsM9JJ3TrFx-qQYRdiZEFpPS9rtUZmQKcuqm2ooHxLj1-hJYXS1vMhAnL0MYZBVv7c9IshOXUbcUa_2CYRG6WrJYNaRIEgHe75-FlYH-C4tZ1w50DANW3mp_CWvvdBYu2YTDmBz5D_leEqiFTZcbtOLX36Mty2dMhJTRkPHcKh8G2Kjo9_yqmoQqMX2fb_mdKt5gzp4KC" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div
+                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
+                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 p-8">
+                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
+                                </h3>
+                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
+                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+                                        <img class="w-full h-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm uppercase">James Harrison</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 1 -->
+                    <div class="group cursor-pointer min-w-[300px] md:min-w-[45%] lg:min-w-[32%]">
+                        <div
+                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2l28R5xOf4wxjoTxH5V-j2tO-CugkYbPAz4xC0I5ujqJRSqwD_cDByVkA1BHhJ3JVteHUsM9JJ3TrFx-qQYRdiZEFpPS9rtUZmQKcuqm2ooHxLj1-hJYXS1vMhAnL0MYZBVv7c9IshOXUbcUa_2CYRG6WrJYNaRIEgHe75-FlYH-C4tZ1w50DANW3mp_CWvvdBYu2YTDmBz5D_leEqiFTZcbtOLX36Mty2dMhJTRkPHcKh8G2Kjo9_yqmoQqMX2fb_mdKt5gzp4KC" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div
+                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
+                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 p-8">
+                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
+                                </h3>
+                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
+                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+                                        <img class="w-full h-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm uppercase">James Harrison</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 1 -->
+                    <div class="group cursor-pointer min-w-[300px] md:min-w-[45%] lg:min-w-[32%]">
+                        <div
+                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2l28R5xOf4wxjoTxH5V-j2tO-CugkYbPAz4xC0I5ujqJRSqwD_cDByVkA1BHhJ3JVteHUsM9JJ3TrFx-qQYRdiZEFpPS9rtUZmQKcuqm2ooHxLj1-hJYXS1vMhAnL0MYZBVv7c9IshOXUbcUa_2CYRG6WrJYNaRIEgHe75-FlYH-C4tZ1w50DANW3mp_CWvvdBYu2YTDmBz5D_leEqiFTZcbtOLX36Mty2dMhJTRkPHcKh8G2Kjo9_yqmoQqMX2fb_mdKt5gzp4KC" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div
+                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
+                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 p-8">
+                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
+                                </h3>
+                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
+                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+                                        <img class="w-full h-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm uppercase">James Harrison</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 1 -->
+                    <div class="group cursor-pointer min-w-[300px] md:min-w-[45%] lg:min-w-[32%]">
+                        <div
+                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
+                            <img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2l28R5xOf4wxjoTxH5V-j2tO-CugkYbPAz4xC0I5ujqJRSqwD_cDByVkA1BHhJ3JVteHUsM9JJ3TrFx-qQYRdiZEFpPS9rtUZmQKcuqm2ooHxLj1-hJYXS1vMhAnL0MYZBVv7c9IshOXUbcUa_2CYRG6WrJYNaRIEgHe75-FlYH-C4tZ1w50DANW3mp_CWvvdBYu2YTDmBz5D_leEqiFTZcbtOLX36Mty2dMhJTRkPHcKh8G2Kjo9_yqmoQqMX2fb_mdKt5gzp4KC" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div
+                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
+                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 p-8">
+                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
+                                </h3>
+                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
+                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+                                        <img class="w-full h-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm uppercase">James Harrison</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section class="bg-[#0F1218] border-b-2 border-black py-24 relative overflow-hidden animate-entrance-fade"
+        style="animation-delay: 1.4s;">
+        <div class="absolute top-0 left-0 w-full h-full bg-energy-gradient-dark opacity-50 z-0"></div>
+        <div
+            class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-white/10 pb-8">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Internal IP</span>
+                    <h2 class="font-display text-5xl font-bold text-white uppercase tracking-tighter">Our<br />products
+                    </h2>
+                </div>
+                <p class="text-right text-sm font-medium text-gray-400 max-w-xs mt-4 md:mt-0">
+                    Pre-built modules to jumpstart your transformation. Why build from scratch?
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="group relative flex flex-col h-full p-8  bg-white/5 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(255,109,0,0.05)] hover:shadow-[inset_0_0_40px_rgba(255,109,0,0.2)] transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 rounded-[24px] bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    </div>
+                    <div class="flex justify-between items-start mb-8">
+                        <span
+                            class="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">V
+                            3.0</span>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-all duration-300 shadow-lg">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:text-black">deployed_code</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
+                            Product Flywheel</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Automated CI/CD pipelines
+                            configured for enterprise scale. Reduce deployment time by 400%.</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-white/10">
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 group-hover:gap-4 transition-all cursor-pointer">
+                            Initialize <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </span>
+                    </div>
+                </div>
+                <div
+                    class="group relative flex flex-col h-full p-8 bg-white/5 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(255,109,0,0.05)] hover:shadow-[inset_0_0_40px_rgba(255,109,0,0.2)] transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 rounded-[24px] bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    </div>
+                    <div class="flex justify-between items-start mb-8">
+                        <span
+                            class="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">SEC-OPS</span>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-all duration-300 shadow-lg">
+                            <span class="material-symbols-outlined text-primary group-hover:text-black">security</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
+                            Security Guard:AM</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Real-time threat modeling and
+                            automated compliance checks woven into your codebase.</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-white/10">
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 group-hover:gap-4 transition-all cursor-pointer">
+                            Initialize <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </span>
+                    </div>
+                </div>
+                <div
+                    class="group relative flex flex-col h-full p-8 bg-white/5 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(255,109,0,0.05)] hover:shadow-[inset_0_0_40px_rgba(255,109,0,0.2)] transition-all duration-500 hover:-translate-y-2">
+                    <div
+                        class="absolute inset-0 rounded-[24px] bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    </div>
+                    <div class="flex justify-between items-start mb-8">
+                        <span
+                            class="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">N-NET</span>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-all duration-300 shadow-lg">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:text-black">psychology</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
+                            AI Integration</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Plug-and-play LLM connectors
+                            for internal data grounding and RAG architecture.</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-white/10">
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 group-hover:gap-4 transition-all cursor-pointer">
+                            Initialize <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section
+        class="relative w-full h-screen border-b-2 border-black overflow-hidden bg-charcoal group animate-entrance-fade"
+        style="animation-delay: 1.6s;">
+        <img alt="Senior Consultant"
+            class="absolute inset-0 w-full h-full object-cover object-top opacity-50 mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-1000"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-20 px-6 text-center">
+            <h2
+                class="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white uppercase tracking-tighter mb-12 leading-[0.85]">
+                Ready to<br />build <span class="text-primary">what’s next?</span>
+            </h2>
+            <a class="inline-flex items-center justify-center bg-primary text-black font-bold uppercase tracking-widest text-sm md:text-base px-10 py-5 rounded-full hover:scale-105 hover:bg-white hover:text-primary transition-all duration-300 shadow-[0_0_0_8px_rgba(255,109,0,0.3)] hover:shadow-[0_0_0_12px_rgba(255,255,255,0.2)] animate-pulse"
+                href="#">
+                Schedule a Discovery Call
+            </a>
+        </div>
+        <div
+            class="absolute bottom-12 right-12 z-30 hidden lg:flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl hover:bg-white/10 transition-colors cursor-default">
+            <div class="flex -space-x-3">
+                <div class="w-10 h-10 rounded-full border-2 border-charcoal bg-gray-300 overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
+                </div>
+                <div class="w-10 h-10 rounded-full border-2 border-charcoal bg-gray-300 overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                </div>
+                <div
+                    class="w-10 h-10 rounded-full border-2 border-charcoal bg-primary flex items-center justify-center text-[10px] font-bold text-black">
+                    +12
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-white text-xs font-bold uppercase tracking-wider">Real people</span>
+                </div>
+                <span class="text-primary text-xs font-bold uppercase tracking-wider block">Real pros</span>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-charcoal text-white pt-20 pb-10 border-b-2 border-black animate-entrance-fade"
+        style="animation-delay: 1.8s;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-white text-4xl">grid_view</span>
+                        <span
+                            class="font-display font-bold text-3xl tracking-tighter text-white uppercase">Codezilla</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We architect the future. A rigorous, engineering-first approach to complex digital
+                        transformation and AI integration.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                        <li><a class="hover:text-white transition-colors" href="#">UI/UX Design</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">QA &amp; Testing</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Web Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Mobile Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                        <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Solutions</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Contact</h4>
+                    <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                        <li><a class="hover:text-white transition-colors" href="tel:+442070184541">+44 207 018 4541</a>
+                        </li>
+                        <li><a class="hover:text-white transition-colors"
+                                href="mailto:hello@codezilla.io">hello@codezilla.io</a></li>
+                        <li class="pt-4 flex gap-4">
+                            <a class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-colors text-xs font-bold"
+                                href="#">LI</a>
+                            <a class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-colors text-xs font-bold"
+                                href="#">X</a>
+                            <a class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-colors text-xs font-bold"
+                                href="#">IG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-bold uppercase tracking-widest text-gray-500">
+                <span>© 2024 Codezilla Inc.</span>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-white transition-colors" href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+
+        <button id="closeVideoBtn" class="absolute top-6 right-6 text-white text-4xl hover:scale-110 transition z-10">
+            &times;
+        </button>
+
+        <!-- GSAP target -->
+        <div id="videoContainer"
+            class="relative w-[90%] max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl">
+            <iframe id="videoFrame" class="w-full h-full" src="" title="Philosophy Video" frameborder="0"
+                allow="autoplay; fullscreen; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+
+
+
+    <!-- Codezilla Video Modal -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+    <script>
+        const playBtn = document.getElementById('playVideoBtn');
+        const modal = document.getElementById('videoModal');
+        const closeBtn = document.getElementById('closeVideoBtn');
+        const iframe = document.getElementById('videoFrame');
+        const container = document.getElementById('videoContainer');
+
+        const VIDEO_URL = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
+
+        // GSAP timeline
+        const tl = gsap.timeline({ paused: true });
+
+        tl.fromTo(
+            modal,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.4, ease: "power2.out" }
+        )
+            .fromTo(
+                container,
+                {
+                    scale: 0.85,
+                    y: 60,
+                    opacity: 0,
+                    rotateX: 10
+                },
+                {
+                    scale: 1,
+                    y: 0,
+                    opacity: 1,
+                    rotateX: 0,
+                    duration: 0.6,
+                    ease: "power3.out"
+                },
+                "-=0.2"
+            );
+
+        function openVideo() {
+            iframe.src = VIDEO_URL;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            tl.play(0);
+        }
+
+        function closeVideo() {
+            gsap.to(container, {
+                scale: 0.9,
+                y: 40,
+                opacity: 0,
+                duration: 0.3,
+                ease: "power2.in"
+            });
+
+            gsap.to(modal, {
+                opacity: 0,
+                duration: 0.35,
+                ease: "power2.in",
+                onComplete: () => {
+                    iframe.src = "";
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                    gsap.set([modal, container], { clearProps: "all" });
+                }
+            });
+        }
+
+        playBtn.addEventListener('click', openVideo);
+        closeBtn.addEventListener('click', closeVideo);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeVideo();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeVideo();
+        });
+    </script>
+
+
+    <!-- Hero Banner Animation For Indicators -->
+    <script>
+        const slides = document.querySelectorAll('[data-slide]');
+        const indicators = document.querySelectorAll('[data-indicator]');
+
+        let current = 0;
+        const interval = 5000;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('slide');
+                slide.classList.toggle('opacity-0', i !== index);
+                slide.classList.toggle('z-0', i !== index);
+                slide.classList.toggle('z-10', i === index);
+
+                if (i === index) {
+                    slide.classList.add('slide');
+                }
+            });
+
+            indicators.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            current = index;
+        }
+
+        let timer = setInterval(() => {
+            showSlide((current + 1) % slides.length);
+        }, interval);
+
+        indicators.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(timer);
+                showSlide(Number(dot.dataset.indicator));
+                timer = setInterval(() => {
+                    showSlide((current + 1) % slides.length);
+                }, interval);
+            });
+        });
+    </script>
+
+
+    <!-- Client Video Testimonial -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const track = document.getElementById("testimonialTrack");
+            const prevBtn = document.getElementById("testimonialPrev");
+            const nextBtn = document.getElementById("testimonialNext");
+
+            if (!track || !prevBtn || !nextBtn) return;
+
+            const container = track.parentElement;
+            let currentTranslate = 0;
+            const GAP = 32; // Tailwind gap-8
+
+            function getStep() {
+                const card = track.children[0];
+                if (!card) return 0;
+                return card.offsetWidth + GAP;
+            }
+
+            function getMaxTranslate() {
+                return Math.max(0, track.scrollWidth - container.clientWidth);
+            }
+
+            function update() {
+                const maxTranslate = getMaxTranslate();
+                currentTranslate = Math.max(0, Math.min(currentTranslate, maxTranslate));
+                track.style.transform = `translateX(-${currentTranslate}px)`;
+
+                // Button states
+                prevBtn.classList.toggle("opacity-30", currentTranslate === 0);
+                nextBtn.classList.toggle("opacity-30", currentTranslate >= maxTranslate);
+            }
+
+            nextBtn.addEventListener("click", () => {
+                currentTranslate += getStep();
+                update();
+            });
+
+            prevBtn.addEventListener("click", () => {
+                currentTranslate -= getStep();
+                update();
+            });
+
+            window.addEventListener("resize", update);
+
+            update();
+        });
+    </script>
+
+
+    <!-- Logo Marquee Script -->
+    <script>
+        const track = document.getElementById("marqueeTrack");
+        const images = track.querySelectorAll("img");
+
+        let loaded = 0;
+
+        // Wait until ALL images load
+        images.forEach(img => {
+            if (img.complete) {
+                loaded++;
+            } else {
+                img.onload = () => {
+                    loaded++;
+                    if (loaded === images.length) initMarquee();
+                };
+            }
+        });
+
+        if (loaded === images.length) initMarquee();
+
+        function initMarquee() {
+            // Clone once (exact copy)
+            track.innerHTML += track.innerHTML;
+
+            const contentWidth = track.scrollWidth / 2;
+            let position = 0;
+            const speed = 2.5; // adjust speed
+
+            function animate() {
+                position -= speed;
+
+                if (position <= -contentWidth) {
+                    position = 0; // PERFECT RESET
+                }
+
+                track.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
