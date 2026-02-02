@@ -115,10 +115,10 @@
         <div class="w-full grid grid-cols-12 h-20 items-center relative">
             <div
                 class="col-span-6 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
+               
                 <span
-                    class="material-symbols-outlined text-black text-4xl group-hover:text-primary transition-colors">grid_view</span>
-                <span
-                    class="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors">Codezilla</span>
+                    class="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors"><img src="./images/codezilla.svg" alt="Codezilla Logo" class="w-52
+                    "></span>
             </div>
             <div
                 class="hidden lg:col-span-6 lg:flex justify-center items-center h-full bg-white border-r-2 border-black px-4 relative">
@@ -411,7 +411,7 @@
             <!-- <div
                 class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10">
             </div>
-            <div
+            <div 
                 class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10">
             </div> -->
 
@@ -451,11 +451,11 @@
 
     <!-- Trusted by industry leaders -->
     <section
-        class="relative w-full h-[70vh] border-b-2 border-black overflow-hidden group bg-charcoal animate-entrance-fade"
+        class="relative w-full h-[85vh] border-b-2 border-black overflow-hidden group bg-charcoal animate-entrance-fade"
         style="animation-delay: 0.4s;">
         <img alt="Philosophy Video Thumbnail"
             class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-700"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYQP_P2qpaXCiAQExIogl63A1lhIribWc4MRMo07AWwiivQuq0vwC6Y-CKYRfssluqWwmAEa4W2yNbpPfd5yXmSlaN71p0uX8WEjX9XWZMPbrsR-gxslu9JOipXeULpbOicRbJ1FA_GsPfyNS0tB5y-HAlo2Lw44tqmQfjIKWC-Rf66kBemEKFrNWdSIE9TJ7EST6dAQlE1336Rn6p2tmc1zBT6RIg-FaiNjo5-WHg2ofj36NKGrFzPQZGDhuO2eb5amTfCAjVE6ag" />
+            src="./images/video-bg.webp" />
         <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-4">
             <button id="playVideoBtn"
@@ -1266,7 +1266,7 @@
         const iframe = document.getElementById('videoFrame');
         const container = document.getElementById('videoContainer');
 
-        const VIDEO_URL = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
+        const VIDEO_URL = "https://drive.google.com/file/d/178ba1XrU8vqPCdBUpmaRv87ibeeUHQgT/view?usp=drive_link";
 
         // GSAP timeline
         const tl = gsap.timeline({ paused: true });
