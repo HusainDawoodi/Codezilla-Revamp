@@ -259,29 +259,30 @@
     <section
         class="relative min-h-screen pt-20 flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
         <div
-        class="relative h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group">
+        class="relative h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group hero-slider">
 
         <!-- Dots -->
         <div class="absolute left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-4">
-            <div class="w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-primary ring-offset-2 ring-offset-black"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white cursor-pointer"></div>
-            <!-- <div class="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white cursor-pointer"></div> -->
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <!-- <div class="indicator"></div> -->
         </div>
 
         <!-- SLIDE 1 -->
-        <div class="absolute inset-0 animate-depth-zoom opacity-0">
+        <div class="absolute inset-0 hero-slide-1">
 
-            <!-- IMAGE -->
-            <div class="absolute inset-0">
-                <img src="./images/About-banner.webp" alt="Engineer Portrait"
-                    class="w-full h-full object-cover contrast-125 brightness-100" />
+            <!-- IMAGE + GRADIENTS (animated) -->
+            <div class="absolute inset-0 hero-zoom-1">
+                <div class="absolute inset-0">
+                    <img src="./images/About-banner.webp" alt="Engineer Portrait"
+                        class="w-full h-full object-cover contrast-125 brightness-100" />
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
             </div>
 
-            <!-- GRADIENTS -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
-
-            <!-- TEXT -->
+            <!-- TEXT (static) -->
             <div class="absolute bottom-0 left-0 p-8 lg:p-12 pl-16 z-10 text-white">
                 <div
                     class="inline-block bg-primary text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -297,19 +298,20 @@
         </div>
 
         <!-- SLIDE 2 -->
-        <div class="absolute inset-0 animate-depth-zoom animation-delay-4000 opacity-0">
+        <div class="absolute inset-0 hero-slide-2">
 
-            <!-- IMAGE -->
-            <div class="absolute inset-0">
-                <img src="./images/team.webp" alt="Project Lead"
-                    class="w-full h-full object-cover object-top contrast-125 brightness-90" />
+            <!-- IMAGE + GRADIENTS (animated) -->
+            <div class="absolute inset-0 hero-zoom-2">
+                <div class="absolute inset-0">
+                    <img src="./images/team.webp" alt="Project Lead"
+                        class="w-full h-full object-cover object-top contrast-125 brightness-90" />
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
             </div>
 
-            <!-- GRADIENTS -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
-
-            <!-- TEXT -->
+            <!-- TEXT (static) -->
             <div class="absolute bottom-0 left-0 p-8 lg:p-12 pl-16 z-10 text-white">
                 <div
                     class="inline-block bg-white text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
@@ -366,6 +368,36 @@
         </div>
     </section>
 
+    <script>
+        // Sync hero dots with hero slides (2 slides, each visible ~5s in a 10s loop)
+        (function () {
+            const slider = document.querySelector('.hero-slider');
+            if (!slider) return;
+
+            const indicators = slider.querySelectorAll('.indicator');
+            if (!indicators.length) return;
+
+            let activeIndex = 0;
+
+            function setActive(index) {
+                indicators.forEach((el, i) => {
+                    if (i === index) {
+                        el.classList.add('active');
+                    } else {
+                        el.classList.remove('active');
+                    }
+                });
+            }
+
+            setActive(activeIndex);
+
+            setInterval(() => {
+                activeIndex = (activeIndex + 1) % indicators.length;
+                setActive(activeIndex);
+            }, 5000); // matches half of hero slide animation (10s)
+        })();
+    </script>
+
     <!-- Trusted by industry leaders -->
 
     <!-- New Marquee  -->
@@ -374,17 +406,17 @@
             TRUSTED BY INDUSTRY LEADERS
         </p>
 
-        <div class="relative marquee-wrapper">
+        <div class="relative">
             <!-- fade edges -->
-            <div
+            <!-- <div
                 class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10">
             </div>
             <div
                 class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10">
-            </div>
+            </div> -->
 
             <div class="overflow-hidden">
-                <div id="marqueeTrack" class="flex w-max items-center gap-20 will-change-transform">
+                <div class="flex w-max items-center gap-20">
                     <!-- SET 1 -->
                     <div class="flex items-center gap-20 marquee-set">
                         <img src="./images/google.png" class="h-10 opacity-60" />
@@ -395,6 +427,13 @@
                     </div>
 
                     <!-- SET 2 (duplicate) -->
+                    <div class="flex items-center gap-20 marquee-set">
+                        <img src="./images/google.png" class="h-10 opacity-60" />
+                        <img src="./images/iso-27001.png" class="h-10 opacity-60" />
+                        <img src="./images/iso-42001.png" class="h-10 opacity-60" />
+                        <img src="./images/aws.png" class="h-10 opacity-60" />
+                        <img src="./images/clutch.png" class="h-10 opacity-60" />
+                    </div>
                     <div class="flex items-center gap-20 marquee-set">
                         <img src="./images/google.png" class="h-10 opacity-60" />
                         <img src="./images/iso-27001.png" class="h-10 opacity-60" />
@@ -1392,52 +1431,6 @@
             update();
         });
     </script>
-
-
-    <!-- Logo Marquee Script -->
-    <script>
-        const track = document.getElementById("marqueeTrack");
-        const images = track.querySelectorAll("img");
-
-        let loaded = 0;
-
-        // Wait until ALL images load
-        images.forEach(img => {
-            if (img.complete) {
-                loaded++;
-            } else {
-                img.onload = () => {
-                    loaded++;
-                    if (loaded === images.length) initMarquee();
-                };
-            }
-        });
-
-        if (loaded === images.length) initMarquee();
-
-        function initMarquee() {
-            // Clone once (exact copy)
-            track.innerHTML += track.innerHTML;
-
-            const contentWidth = track.scrollWidth / 2;
-            let position = 0;
-            const speed = 2.5; // adjust speed
-
-            function animate() {
-                position -= speed;
-
-                if (position <= -contentWidth) {
-                    position = 0; // PERFECT RESET
-                }
-
-                track.style.transform = `translateX(${position}px)`;
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-        }
-    </script>
-
 
 
 </body>

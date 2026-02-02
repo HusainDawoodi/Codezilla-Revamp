@@ -119,9 +119,97 @@ h6 {
 }
 
 
-/* Slide */
-.slide {
-  animation: depthZoom 5s ease-in-out forwards;
+/* Hero slider - custom two-slide depth zoom & crossfade
+   - Slide 1 is visible immediately on load
+   - Only image/gradients zoom; text stays fixed
+   - No black/blink between transitions */
+@keyframes heroFade1 {
+  0% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroFade2 {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-slide-1 {
+  animation: heroFade1 10s ease-in-out infinite;
+}
+
+.hero-slide-2 {
+  animation: heroFade2 10s ease-in-out infinite;
+}
+
+/* Zoom only on media layer */
+@keyframes heroZoom1 {
+  0% {
+    transform: scale(1.25);
+  }
+
+  45% {
+    transform: scale(1.08);
+  }
+
+  55% {
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes heroZoom2 {
+  0% {
+    transform: scale(1.25);
+  }
+
+  45% {
+    transform: scale(1.12);
+  }
+
+  55% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+.hero-zoom-1 {
+  animation: heroZoom1 10s ease-in-out infinite;
+}
+
+.hero-zoom-2 {
+  animation: heroZoom2 10s ease-in-out infinite;
 }
 
 /* Indicator */
@@ -161,3 +249,18 @@ h6 {
 
 
 /* NEW CSS FOR LOGO CAROUSAL */
+.marquee-set {
+  display: flex;
+  color: #ffffff;
+  font-size: 16px;
+  padding-right: 50px;
+  animation: marquee 8s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
