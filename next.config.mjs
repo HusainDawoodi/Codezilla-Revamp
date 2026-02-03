@@ -9,6 +9,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'tamediacdn.techaheadcorp.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };

@@ -97,7 +97,7 @@ export default function PhilosophyVideo() {
                         onClick={openVideo}
                         className="w-20 h-20 md:w-24 md:h-24 bg-primary text-black rounded-full flex items-center justify-center mb-8 hover:scale-110 hover:bg-white hover:text-primary transition-all duration-300 shadow-[0_0_0_12px_rgba(255,109,0,0.3)] hover:shadow-[0_0_0_20px_rgba(255,255,255,0.2)]"
                     >
-                        <span className="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                        <span className="material-symbols-outlined !text-5xl ml-1">play_arrow</span>
                     </button>
                     <span className="text-primary font-bold uppercase tracking-widest text-xs md:text-sm mb-4 inline-block bg-black/50 px-3 py-1 border border-primary/30 backdrop-blur-sm">
                         Act 2: The Philosophy

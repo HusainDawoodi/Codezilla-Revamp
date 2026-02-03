@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import TestimonialVideoCard from './TestimonialVideoCard';
-import KhalilVideo from '../videos/khalil.mp4';
+import KhalilVideo from '../videos/khalil_m6AFz1B6.mp4';
 
 // Sample dat based on the HTML
 const TESTIMONIALS = [
@@ -110,7 +110,7 @@ export default function TestimonialCarousel() {
                 {/* Carousel Wrapper */}
                 <div className="relative overflow-hidden">
                     <div className="overflow-x-auto no-scrollbar scroll-smooth">
-                        <div ref={trackRef} className="flex gap-8 w-max pb-8">
+                        <div ref={trackRef} className="flex gap-8 w-max pb-8 !w-full">
                             {TESTIMONIALS.map((item) => (
                                 <TestimonialVideoCard
                                     key={item.id}

@@ -2,7 +2,8 @@
 
 @theme {
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
   --color-primary: #ff6d00;
   --color-primary-hover: #ff9100;
@@ -159,18 +160,18 @@
   /* iso-custom logo tiles (compact, accessible) */
   .iso-custom-logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.25rem;
     padding: 0 0.5rem;
   }
   .iso-custom-logo img {
     display: block;
-    max-height: 64px;
+    max-height: 48px;
     width: auto;
   }
   .iso-text {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     line-height: 1;
     text-align: center;
     color: rgba(0, 0, 0, 0.55);
