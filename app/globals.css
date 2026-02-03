@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #ff6d00;
+  --color-primary-hover: #ff9100;
+  --color-border-dark: #1f2937;
+  --color-background-light: #f3f4f6;
+  --color-background-dark: #111827;
+  --color-charcoal: #0f1218;
+  --color-paper: #f9fafb;
+
+  --background-image-grain-overlay: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+");
+  --background-image-energy-gradient: linear-gradient(
+    135deg,
+    rgba(255, 109, 0, 0.15) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  --background-image-energy-gradient-dark: linear-gradient(
+    135deg,
+    rgba(255, 109, 0, 0.1) 0%,
+    rgba(15, 18, 24, 1) 80%
+  );
+
+  --animate-depth-zoom: depthZoom 12s infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-entrance-fade: entranceFade 1s ease-out forwards;
+
+  @keyframes depthZoom {
+    0% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    15% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    35% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    55% {
+      opacity: 1;
+      transform: scale(0.95);
+    }
+    75% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes entranceFade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+:root {
+  --marquee-speed: 0.6;
+}
+
+@layer utilities {
+  .text-outline-white {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+  }
+  .text-outline-black {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    color: transparent;
+  }
+  .text-outline-primary {
+    -webkit-text-stroke: 1px #ff6d00;
+    color: transparent;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-8000 {
+    animation-delay: 8s;
+  }
+  /* Video Volume Slider Styling */
+  .video-volume-slider {
+    accent-color: #ff6d00;
+  }
+  .video-volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff6d00;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
+  }
+  .video-volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff6d00;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
+  }
+  .snap-mandatory {
+    scroll-snap-type: x mandatory;
+  }
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  .group:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Logo marquee tweaks */
+  .image-marquee {
+    will-change: transform;
+    animation-play-state: running;
+    min-width: max-content;
+  }
+  .image-marquee:hover {
+    animation-play-state: paused;
+  }
+  .image-marquee .marquee-set {
+    flex-shrink: 0;
+  }
+  .image-marquee img {
+    display: block;
+  }
+
+  /* iso-custom logo tiles (compact, accessible) */
+  .iso-custom-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0 0.5rem;
+  }
+  .iso-custom-logo img {
+    display: block;
+    max-height: 64px;
+    width: auto;
+  }
+  .iso-text {
+    font-size: 0.65rem;
+    line-height: 1;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.55);
+  }
+  @media (prefers-color-scheme: dark) {
+    .iso-text {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  /* hide text on very small screens to avoid clutter */
+  @media (max-width: 420px) {
+    .iso-text {
+      display: none;
+    }
+  }
+}
+
+/* Additional Animations from style.css */
+
+/* Hero slider - custom two-slide depth zoom & crossfade */
+@keyframes heroFade1 {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroFade2 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-slide-1 {
+  animation: heroFade1 10s ease-in-out infinite;
+}
+
+.hero-slide-2 {
+  animation: heroFade2 10s ease-in-out infinite;
+}
+
+/* Zoom only on media layer */
+@keyframes heroZoom1 {
+  0% {
+    transform: scale(1.25);
+  }
+  45% {
+    transform: scale(1.08);
+  }
+  55% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes heroZoom2 {
+  0% {
+    transform: scale(1.25);
+  }
+  45% {
+    transform: scale(1.12);
+  }
+  55% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+.hero-zoom-1 {
+  animation: heroZoom1 10s ease-in-out infinite;
+}
+
+.hero-zoom-2 {
+  animation: heroZoom2 10s ease-in-out infinite;
+}
+
+/* Indicator */
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #ff6d00;
+  box-shadow:
+    0 0 0 2px #ff6d00,
+    0 0 0 4px #000;
+}
+
+.tech-position {
+  background: #fff;
+  border: 1px solid #ff6d00;
+  padding: 10px 20px;
+  /* border-radius: 100px; */
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 9999;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.client-video-testimonial {
+  height: 500px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+  will-change: transform;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
