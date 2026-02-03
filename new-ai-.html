@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -96,30 +96,7 @@
             }
             .animation-delay-8000 {
                 animation-delay: 8s;
-            }
-            /* Video Volume Slider Styling */
-            .video-volume-slider {
-                accent-color: #FF6D00;
-            }
-            .video-volume-slider::-webkit-slider-thumb {
-                appearance: none;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: #FF6D00;
-                cursor: pointer;
-                box-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
-            }
-            .video-volume-slider::-moz-range-thumb {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: #FF6D00;
-                cursor: pointer;
-                border: none;
-                box-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
-            }
-            .snap-mandatory {
+            }.snap-mandatory {
                 scroll-snap-type: x mandatory;
             }
             .snap-center {
@@ -131,20 +108,20 @@
             }
 
             /* Logo marquee tweaks */
-            /* .image-marquee { will-change: transform; animation-play-state: running; min-width: max-content; }
+            .image-marquee { will-change: transform; animation-play-state: running; min-width: max-content; }
             .image-marquee:hover { animation-play-state: paused; }
             .image-marquee .marquee-set { flex-shrink: 0; }
             .image-marquee img { display: block; }
 
-            iso-custom logo tiles (compact, accessible)
+            /* iso-custom logo tiles (compact, accessible) */
             .iso-custom-logo { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 0 0.5rem; }
             .iso-custom-logo img { display: block; max-height: 64px; width: auto; }
             .iso-text { font-size: 0.65rem; line-height: 1; text-align: center; color: rgba(0,0,0,0.55); }
             @media (prefers-color-scheme: dark) {
                 .iso-text { color: rgba(255,255,255,0.8); }
             }
-            hide text on very small screens to avoid clutter
-            @media (max-width: 420px) { .iso-text { display: none; } } */
+            /* hide text on very small screens to avoid clutter */
+            @media (max-width: 420px) { .iso-text { display: none; } }
         }
     </style>
 </head>
@@ -441,7 +418,7 @@
     <!-- Trusted by industry leaders -->
 
     <!-- New Marquee  -->
-    <!-- <section class="bg-white py-16 overflow-hidden">
+    <section class="bg-white py-16 overflow-hidden">
         <p class="text-center text-xs tracking-widest text-gray-400 mb-10">
             TRUSTED BY INDUSTRY LEADERS
         </p>
@@ -450,9 +427,9 @@
             <div class="w-full px-6 lg:px-12 py-12">
                 <div class="overflow-hidden">
                     <div class="image-marquee-wrapper" role="region" aria-label="Scrolling partner and award logos">
-                      
+                        <!-- Single-row logos marquee track (two duplicates for seamless loop) -->
                         <div class="image-marquee animate-marquee flex gap-16 md:gap-24 w-full" aria-hidden="true">
-                         
+                            <!-- Set 1: iso-custom-logo tiles -->
                             <div class="flex items-center gap-16 md:gap-24 marquee-set">
                                 <div class="iso-custom-logo">
                                     <img src="./images/google-app.png" alt="Google Developers" />
@@ -495,7 +472,7 @@
                                 </div>
                             </div>
 
-                   
+                            <!-- Duplicate set for seamless loop (aria-hidden) -->
                             <div class="flex items-center gap-16 md:gap-24 marquee-set" aria-hidden="true">
                                 <div class="iso-custom-logo">
                                     <img src="./images/google-app.png" alt="Google Developers" />
@@ -541,282 +518,8 @@
                     </div>
                 </div>
             </div>
-    </section> -->
-
-    <!-- MARQUEE WRAPPER -->
-
-    <section class="bg-white py-16 overflow-hidden">
-        <p class="text-center text-xs tracking-widest text-gray-400 mb-10">
-            TRUSTED BY INDUSTRY LEADERS
-        </p>
-
-        <div class="relative">
-            <!-- <div class="w-full px-6 lg:px-12 py-12"> -->
-            <div class="overflow-hidden">
-                <div class="w-full overflow-hidden bg-white">
-                    <!-- MARQUEE TRACK -->
-                    <div class="flex items-center w-max animate-marquee pl-[100px]" aria-hidden="true">
-
-                        <!-- ===== ORIGINAL ITEMS ===== -->
-
-                        <!-- Clutch App Dev -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/25142445/Clutch-Top-App-Development-Company2026.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Clutch Top</div>
-                                <div>App Development</div>
-                                <div>Company 2026</div>
-                            </div>
-                        </div>
-
-                        <!-- Clutch Gen AI -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/25142446/Clutch-Top-GenerativeAI-Company2026.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Clutch Top</div>
-                                <div>Generative AI</div>
-                                <div>Company 2026</div>
-                            </div>
-                        </div>
-
-                        <!-- Webby -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060928/Webby-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Webby</div>
-                                <div>Award Honoree</div>
-                                <div>2024</div>
-                            </div>
-                        </div>
-
-                        <!-- Google Award -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060922/google-app-award-1.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Google Best App</div>
-                                <div>Award In Personal</div>
-                                <div>Growth 2024</div>
-                            </div>
-                        </div>
-
-                        <!-- AWS Advanced -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060916/aws-advance-tier.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>AWS Partner</div>
-                                <div>Advanced Tier</div>
-                                <div>Services</div>
-                            </div>
-                        </div>
-
-                        <!-- AWS Cloud Ops -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060919/aws-cloud-op-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>AWS Partner</div>
-                                <div>Cloud Operations</div>
-                                <div>Services</div>
-                            </div>
-                        </div>
-
-                        <!-- AWS Security -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060919/aws-security-1.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>AWS Partner</div>
-                                <div>Security Services</div>
-                                <div>Competency</div>
-                            </div>
-                        </div>
-
-                        <!-- SOC 2 -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060925/socII-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>SOC 2</div>
-                                <div>Type II</div>
-                                <div>Certified</div>
-                            </div>
-                        </div>
-
-                        <!-- ISO 27001 -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06032612/ISO-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>ISO/IEC</div>
-                                <div>27001:2022</div>
-                                <div>Certified</div>
-                            </div>
-                        </div>
-
-                        <!-- ISO 42001 -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06032612/ISO-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>ISO/IEC</div>
-                                <div>42001:2023</div>
-                                <div>Certified</div>
-                            </div>
-                        </div>
-
-                        <!-- Partner Logos -->
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/28104654/google-developer.png"
-                            class="h-9 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170430/microsoft.webp"
-                            class="h-8 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170431/mixpanel.webp"
-                            class="h-9 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170426/forbes.webp"
-                            class="h-6 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170425/cbso.webp"
-                            class="h-6 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170429/ibm-business-partner.webp"
-                            class="h-10 px-5 shrink-0" />
-
-
-
-
-                        <!-- Clutch App Dev -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/25142445/Clutch-Top-App-Development-Company2026.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Clutch Top</div>
-                                <div>App Development</div>
-                                <div>Company 2026</div>
-                            </div>
-                        </div>
-
-                        <!-- Clutch Gen AI -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/25142446/Clutch-Top-GenerativeAI-Company2026.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Clutch Top</div>
-                                <div>Generative AI</div>
-                                <div>Company 2026</div>
-                            </div>
-                        </div>
-
-                        <!-- Webby -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060928/Webby-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Webby</div>
-                                <div>Award Honoree</div>
-                                <div>2024</div>
-                            </div>
-                        </div>
-
-                        <!-- Google Award -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060922/google-app-award-1.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>Google Best App</div>
-                                <div>Award In Personal</div>
-                                <div>Growth 2024</div>
-                            </div>
-                        </div>
-
-                        <!-- AWS Advanced -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060916/aws-advance-tier.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>AWS Partner</div>
-                                <div>Advanced Tier</div>
-                                <div>Services</div>
-                            </div>
-                        </div>
-
-                        <!-- AWS Cloud Ops -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060919/aws-cloud-op-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>AWS Partner</div>
-                                <div>Cloud Operations</div>
-                                <div>Services</div>
-                            </div>
-                        </div>
-
-                        <!-- AWS Security -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060919/aws-security-1.png"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>AWS Partner</div>
-                                <div>Security Services</div>
-                                <div>Competency</div>
-                            </div>
-                        </div>
-
-                        <!-- SOC 2 -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06060925/socII-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>SOC 2</div>
-                                <div>Type II</div>
-                                <div>Certified</div>
-                            </div>
-                        </div>
-
-                        <!-- ISO 27001 -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06032612/ISO-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>ISO/IEC</div>
-                                <div>27001:2022</div>
-                                <div>Certified</div>
-                            </div>
-                        </div>
-
-                        <!-- ISO 42001 -->
-                        <div class="flex items-center gap-2 px-5 shrink-0">
-                            <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2026/01/06032612/ISO-icon.svg"
-                                class="h-8" />
-                            <div class="iso-text">
-                                <div>ISO/IEC</div>
-                                <div>42001:2023</div>
-                                <div>Certified</div>
-                            </div>
-                        </div>
-
-                        <!-- Partner Logos -->
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/28104654/google-developer.png"
-                            class="h-9 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170430/microsoft.webp"
-                            class="h-8 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170431/mixpanel.webp"
-                            class="h-9 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170426/forbes.webp"
-                            class="h-6 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170425/cbso.webp"
-                            class="h-6 px-5 shrink-0" />
-                        <img src="https://tamediacdn.techaheadcorp.com/wp-content/uploads/2025/10/01170429/ibm-business-partner.webp"
-                            class="h-10 px-5 shrink-0" />
-
-
-                    </div>
-                </div>
-                <!-- </div> -->
-            </div>
-        </div>
     </section>
+
 
 
 
@@ -850,12 +553,10 @@
                 <div>
                     <span
                         class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Capabilities</span>
-                    <h2 class="font-display text-4xl font-bold uppercase leading-none mb-6">What<br />we
-                        do</h2>
+                    <h2 class="font-display text-4xl font-bold uppercase leading-none mb-6">What<br />we do</h2>
                     <div class="w-12 h-1 bg-primary mb-6"></div>
                     <p class="text-gray-300 text-sm leading-relaxed">
-                        Our service matrix is designed for high-impact, scalable intervention. We deploy
-                        rapidly and
+                        Our service matrix is designed for high-impact, scalable intervention. We deploy rapidly and
                         iterate continuously.
                     </p>
                 </div>
@@ -886,8 +587,7 @@
                         AI &amp; Data<br />Strategy</h3>
                     <p
                         class="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
-                        Deploying predictive models directly into your business logic. From black box to
-                        clear ROI.
+                        Deploying predictive models directly into your business logic. From black box to clear ROI.
                     </p>
                     <span
                         class="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary">
@@ -915,8 +615,7 @@
                         Cloud<br />Architecture</h3>
                     <p
                         class="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
-                        Building the invisible backbone of your enterprise. Scalable, secure, and
-                        resilient
+                        Building the invisible backbone of your enterprise. Scalable, secure, and resilient
                         infrastructure.
                     </p>
                     <span
@@ -945,8 +644,7 @@
                         Product<br />Engineering</h3>
                     <p
                         class="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
-                        Full-cycle development. We don't just write code; we engineer outcomes through
-                        precise
+                        Full-cycle development. We don't just write code; we engineer outcomes through precise
                         execution.
                     </p>
                     <span
@@ -967,8 +665,7 @@
                 <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Evidence Log</span>
                 <h2 class="font-display text-5xl font-bold uppercase leading-none mb-8">Our<br />work</h2>
                 <p class="text-black-300 text-sm leading-relaxed">
-                    Floating overlay arrows are placed over the project carousel for easier access on
-                    all screen sizes
+                    Floating overlay arrows are placed over the project carousel for easier access on all screen sizes
                 </p>
 
             </div>
@@ -1001,10 +698,8 @@
                                 <div>
 
                                     <img src="./images/maji-logo.svg" alt="Maji Logo">
-                                    <p class="font-display text-1xl font-medium mt-3">Maji is a UK
-                                        financial wellbeing
-                                        provider that makes saving, spending, and planning money simpler
-                                        for employees
+                                    <p class="font-display text-1xl font-medium mt-3">Maji is a UK financial wellbeing
+                                        provider that makes saving, spending, and planning money simpler for employees
                                         and
                                         employers.</p>
                                 </div>
@@ -1027,10 +722,8 @@
                             <div class="flex justify-between items-end">
                                 <div>
                                     <img src="./images/rightcharge-logo.svg" alt="Rightcharge Logo">
-                                    <p class="font-display text-1xl font-medium mt-3">An EV charging
-                                        management platform
-                                        that automates payments, reimbursements, and reporting for
-                                        fleets.
+                                    <p class="font-display text-1xl font-medium mt-3">An EV charging management platform
+                                        that automates payments, reimbursements, and reporting for fleets.
                                     </p>
                                 </div>
                                 <span class="text-4xl font-display font-bold text-primary">02</span>
@@ -1053,11 +746,9 @@
                                 <div>
 
                                     <img src="./images/naseni-logo.svg" alt="Naseni Logo">
-                                    <p class="font-display text-1xl font-medium mt-3">A Nigerian
-                                        government agency
+                                    <p class="font-display text-1xl font-medium mt-3">A Nigerian government agency
                                         driving
-                                        innovation through engineering, manufacturing, and applied
-                                        research.</p>
+                                        innovation through engineering, manufacturing, and applied research.</p>
                                 </div>
                                 <span class="text-4xl font-display font-bold text-primary">03</span>
                             </div>
@@ -1066,8 +757,7 @@
                     <div
                         class="w-[85vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 h-[70vh] relative group bg-charcoal text-white flex items-center justify-center snap-center bg-energy-gradient-dark">
                         <div class="text-center">
-                            <h3 class="font-display text-4xl font-bold uppercase mb-4">View
-                                All<br />Projects</h3>
+                            <h3 class="font-display text-4xl font-bold uppercase mb-4">View All<br />Projects</h3>
                             <a class="inline-block border-2 border-primary text-primary px-8 py-4 uppercase text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-colors"
                                 href="#">Access Archive</a>
                         </div>
@@ -1081,11 +771,9 @@
         style="animation-delay: 1.0s;">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-black pb-8">
-                <h2 class="font-display text-5xl font-bold text-black uppercase tracking-tighter max-w-lg">
-                    How<br />we
+                <h2 class="font-display text-5xl font-bold text-black uppercase tracking-tighter max-w-lg">How<br />we
                     work</h2>
-                <p class="text-sm font-bold uppercase tracking-widest text-primary mb-2">Select your
-                    protocol</p>
+                <p class="text-sm font-bold uppercase tracking-widest text-primary mb-2">Select your protocol</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-2 border-black bg-white">
                 <div
@@ -1101,16 +789,13 @@
                         class="text-2xl font-bold uppercase mb-4 font-display group-hover:text-primary transition-colors">
                         Accelerator</h3>
                     <p class="text-sm leading-relaxed opacity-60 group-hover:opacity-80 mb-8">
-                        Rapid prototyping and MVP development. Go from concept to clickable
-                        high-fidelity model in 72
+                        Rapid prototyping and MVP development. Go from concept to clickable high-fidelity model in 72
                         hours.
                     </p>
                     <ul class="space-y-2 text-xs font-bold uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span>
-                            Fixed Timeline
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Fixed Timeline
                         </li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span>
-                            Defined Scope
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Defined Scope
                         </li>
                     </ul>
                 </div>
@@ -1127,17 +812,14 @@
                         class="text-2xl font-bold uppercase mb-4 font-display group-hover:text-primary transition-colors">
                         Dedicated Team</h3>
                     <p class="text-sm leading-relaxed opacity-60 group-hover:opacity-80 mb-8">
-                        Full-scale engineering pods integrated into your workflow. Long-term scalability
-                        and deep domain
+                        Full-scale engineering pods integrated into your workflow. Long-term scalability and deep domain
                         knowledge.
                     </p>
 
                     <ul class="space-y-2 text-xs font-bold uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span>
-                            Full
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Full
                             Integration</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span>
-                            Monthly
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Monthly
                             Retainer</li>
                     </ul>
                 </div>
@@ -1154,16 +836,13 @@
                         class="text-2xl font-bold uppercase mb-4 font-display group-hover:text-primary transition-colors">
                         Strategic Advisory</h3>
                     <p class="text-sm leading-relaxed opacity-60 group-hover:opacity-80 mb-8">
-                        High-level consulting for legacy modernization and AI readiness assessments.
-                        Charting the path
+                        High-level consulting for legacy modernization and AI readiness assessments. Charting the path
                         forward.
                     </p>
                     <ul class="space-y-2 text-xs font-bold uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span>
-                            Audit &amp;
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Audit &amp;
                             Plan</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span>
-                            C-Suite Liason
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> C-Suite Liason
                         </li>
                     </ul>
                 </div>
@@ -1221,51 +900,7 @@
                                 Your browser does not support the video tag.
                             </video>
 
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
-                            </div>
-
-                            <!-- Video Controls -->
-                            <div
-                                class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div
-                                        class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button
-                                        class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                        title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button
-                                            class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                            title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range"
-                                                class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer"
-                                                min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
                             <div
                                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -1277,8 +912,7 @@
 
                             <div class="absolute bottom-0 p-8">
                                 <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero
-                                    downtime.
+                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
                                 </h3>
                                 <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
                                     <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
@@ -1287,8 +921,7 @@
                                     </div>
                                     <div>
                                         <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex
-                                            Fin</p>
+                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
                                     </div>
                                 </div>
                             </div>
@@ -1302,142 +935,12 @@
                             class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
 
                             <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg">
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
-                            </div>
-
-                            <!-- Video Controls -->
-                            <div
-                                class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div
-                                        class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button
-                                        class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                        title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button
-                                            class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                            title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range"
-                                                class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer"
-                                                min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero
-                                    downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex
-                                            Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD 3 (Video) -->
-                    <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
+                                preload="metadata" playsinline loop poster="./images/testimonial2-poster.jpg">
+                                <source src="./videos/testimonial2.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div
-                                class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div
-                                        class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button
-                                        class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                        title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button
-                                            class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                            title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range"
-                                                class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer"
-                                                min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div
                                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -1464,255 +967,7 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- CARD 3 (Video) -->
-                    <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div
-                                class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div
-                                        class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button
-                                        class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                        title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button
-                                            class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                            title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range"
-                                                class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer"
-                                                min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD 3 (Video) -->
-                    <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div
-                                class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div
-                                        class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button
-                                        class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                        title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button
-                                            class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                            title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range"
-                                                class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer"
-                                                min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD 3 (Video) -->
-                    <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div
-                                class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div
-                                        class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button
-                                        class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                        title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button
-                                            class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors"
-                                            title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range"
-                                                class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer"
-                                                min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
     </section>
 
@@ -1730,10 +985,8 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-white/10 pb-8">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Internal
-                        IP</span>
-                    <h2 class="font-display text-5xl font-bold text-white uppercase tracking-tighter">
-                        Our<br />products
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Internal IP</span>
+                    <h2 class="font-display text-5xl font-bold text-white uppercase tracking-tighter">Our<br />products
                     </h2>
                 </div>
                 <p class="text-right text-sm font-medium text-gray-400 max-w-xs mt-4 md:mt-0">
@@ -1760,8 +1013,7 @@
                         <h3
                             class="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
                             Product Flywheel</h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Automated
-                            CI/CD pipelines
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Automated CI/CD pipelines
                             configured for enterprise scale. Reduce deployment time by 400%.</p>
                     </div>
                     <div class="mt-auto pt-6 border-t border-white/10">
@@ -1788,8 +1040,7 @@
                         <h3
                             class="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
                             Security Guard:AM</h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Real-time
-                            threat modeling and
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Real-time threat modeling and
                             automated compliance checks woven into your codebase.</p>
                     </div>
                     <div class="mt-auto pt-6 border-t border-white/10">
@@ -1817,8 +1068,7 @@
                         <h3
                             class="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
                             AI Integration</h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Plug-and-play
-                            LLM connectors
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">Plug-and-play LLM connectors
                             for internal data grounding and RAG architecture.</p>
                     </div>
                     <div class="mt-auto pt-6 border-t border-white/10">
@@ -1839,8 +1089,7 @@
         <img alt="Senior Consultant"
             class="absolute inset-0 w-full h-full object-cover object-top opacity-50 mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-1000"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
-        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent">
-        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center z-20 px-6 text-center">
             <h2
                 class="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white uppercase tracking-tighter mb-12 leading-[0.85]">
@@ -1870,11 +1119,9 @@
             <div>
                 <div class="flex items-center gap-1">
                     <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    <span class="text-white text-xs font-bold uppercase tracking-wider">Real
-                        people</span>
+                    <span class="text-white text-xs font-bold uppercase tracking-wider">Real people</span>
                 </div>
-                <span class="text-primary text-xs font-bold uppercase tracking-wider block">Real
-                    pros</span>
+                <span class="text-primary text-xs font-bold uppercase tracking-wider block">Real pros</span>
             </div>
         </div>
     </section>
@@ -1891,29 +1138,22 @@
                             class="font-display font-bold text-3xl tracking-tighter text-white uppercase">Codezilla</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        We architect the future. A rigorous, engineering-first approach to complex
-                        digital
+                        We architect the future. A rigorous, engineering-first approach to complex digital
                         transformation and AI integration.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Services
-                    </h4>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Services</h4>
                     <ul class="space-y-3 text-sm text-gray-400 font-medium">
                         <li><a class="hover:text-white transition-colors" href="#">UI/UX Design</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">QA &amp; Testing</a>
-                        </li>
-                        <li><a class="hover:text-white transition-colors" href="#">Web Development</a>
-                        </li>
-                        <li><a class="hover:text-white transition-colors" href="#">Mobile
-                                Development</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Cloud Computing</a>
-                        </li>
+                        <li><a class="hover:text-white transition-colors" href="#">QA &amp; Testing</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Web Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Mobile Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Cloud Computing</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Company
-                    </h4>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Company</h4>
                     <ul class="space-y-3 text-sm text-gray-400 font-medium">
                         <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
                         <li><a class="hover:text-white transition-colors" href="#">Solutions</a></li>
@@ -1922,11 +1162,9 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Contact
-                    </h4>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6">Contact</h4>
                     <ul class="space-y-3 text-sm text-gray-400 font-medium">
-                        <li><a class="hover:text-white transition-colors" href="tel:+442070184541">+44
-                                207 018 4541</a>
+                        <li><a class="hover:text-white transition-colors" href="tel:+442070184541">+44 207 018 4541</a>
                         </li>
                         <li><a class="hover:text-white transition-colors"
                                 href="mailto:hello@codezilla.io">hello@codezilla.io</a></li>
@@ -2208,54 +1446,18 @@
         })();
     </script>
 
-    <!-- Video click play/pause with persistent playback position and custom controls for testimonials -->
+    <!-- Video hover play/pause for testimonials -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Only enable hover-play on devices that actually support hover with a fine pointer
+            if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
             const track = document.getElementById('testimonialTrack');
             const cards = Array.from(document.querySelectorAll('.testimonial-video-card'));
             const videos = cards.map(c => c.querySelector('video')).filter(Boolean);
             if (!cards.length) return;
 
-            // Storage key for video playback positions
-            const STORAGE_KEY = 'testimonial-video-times';
-
-            // Reset saved playback positions on load so videos start at 0 after a page reload
-            try {
-                localStorage.removeItem(STORAGE_KEY);
-            } catch (e) {
-                /* ignore */
-            }
-
-            // Load saved video times from localStorage
-            function loadVideoTimes() {
-                try {
-                    const saved = localStorage.getItem(STORAGE_KEY);
-                    return saved ? JSON.parse(saved) : {};
-                } catch (e) {
-                    return {};
-                }
-            }
-
-            // Save video times to localStorage
-            function saveVideoTimes(videoTimes) {
-                try {
-                    localStorage.setItem(STORAGE_KEY, JSON.stringify(videoTimes));
-                } catch (e) {
-                    console.warn('Could not save video times to localStorage', e);
-                }
-            }
-
-            // Format time in MM:SS format
-            function formatTime(seconds) {
-                if (!seconds || isNaN(seconds)) return '0:00';
-                const mins = Math.floor(seconds / 60);
-                const secs = Math.floor(seconds % 60);
-                return `${mins}:${secs.toString().padStart(2, '0')}`;
-            }
-
-            const savedTimes = loadVideoTimes();
-
-            // Drag detection (so click doesn't trigger while user is dragging/scrolling)
+            // Drag detection (so hover doesn't trigger while user is dragging/scrolling)
             let isPointerDown = false;
             let isDragging = false;
             let startX = 0;
@@ -2275,6 +1477,8 @@
                 if (Math.abs(x - startX) > DRAG_THRESHOLD) {
                     if (!isDragging) {
                         isDragging = true;
+                        // Pause all videos immediately when dragging starts
+                        videos.forEach(v => { try { v.pause(); } catch (er) { } });
                     }
                 }
             }, { passive: true });
@@ -2282,6 +1486,7 @@
             ['pointerup', 'pointercancel', 'pointerleave'].forEach(evt => {
                 scroller && scroller.addEventListener(evt, () => {
                     isPointerDown = false;
+                    // small timeout so click handlers still work correctly
                     setTimeout(() => { isDragging = false; }, 50);
                 }, { passive: true });
             });
@@ -2289,167 +1494,45 @@
             function pauseAllExcept(active) {
                 videos.forEach(v => {
                     if (v && v !== active) {
-                        try {
-                            const videoSrc = v.querySelector('source')?.src || v.src;
-                            if (videoSrc) {
-                                const videoTimes = loadVideoTimes();
-                                videoTimes[videoSrc] = v.currentTime;
-                                saveVideoTimes(videoTimes);
-                            }
-                            v.pause();
-                        } catch (e) { }
+                        try { v.pause(); v.currentTime = 0; } catch (e) { }
                     }
                 });
             }
 
-            function updateControlUI(card, video) {
-                const playBtn = card.querySelector('.video-play-btn');
-                const progressBar = card.querySelector('.video-progress');
-                const timeDisplay = card.querySelector('.video-time');
-                const muteBtn = card.querySelector('.video-mute-btn');
-
-                if (playBtn) {
-                    playBtn.innerHTML = video.paused
-                        ? '<span class="material-symbols-outlined text-xl">play_arrow</span>'
-                        : '<span class="material-symbols-outlined text-xl">pause</span>';
-                }
-
-                if (progressBar && video.duration) {
-                    const progress = (video.currentTime / video.duration) * 100;
-                    progressBar.style.width = `${progress}%`;
-                }
-
-                if (timeDisplay) {
-                    timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
-                }
-
-                if (muteBtn) {
-                    muteBtn.innerHTML = video.muted
-                        ? '<span class="material-symbols-outlined text-xl">volume_off</span>'
-                        : '<span class="material-symbols-outlined text-xl">volume_up</span>';
-                }
-            }
-
-            cards.forEach((card, index) => {
+            cards.forEach(card => {
                 const video = card.querySelector('video');
                 if (!video) return;
 
-                const videoSrc = video.querySelector('source')?.src || video.src;
+                // Find central play overlay (the big play icon that is not inside a button)
                 const overlayIcon = Array.from(card.querySelectorAll('.material-symbols-outlined')).find(i => !i.closest('button'));
                 const overlayWrapper = overlayIcon ? overlayIcon.parentElement : null;
-                const controls = card.querySelector('.video-controls');
-                const playBtn = card.querySelector('.video-play-btn');
-                const muteBtn = card.querySelector('.video-mute-btn');
-                const volumeSlider = card.querySelector('.video-volume-slider');
-                const progressBar = card.querySelector('.video-progress-bar');
-                const videoProgress = card.querySelector('.video-progress');
 
-                // Restore saved playback position when video is loaded
-                video.addEventListener('loadedmetadata', () => {
-                    if (videoSrc && savedTimes[videoSrc] !== undefined) {
-                        try {
-                            video.currentTime = savedTimes[videoSrc];
-                        } catch (e) {
-                            console.warn('Could not restore video time', e);
-                        }
-                    }
-                    updateControlUI(card, video);
-                }, { once: true });
+                // Play (try unmuted) on pointerenter unless user is currently dragging
+                card.addEventListener('pointerenter', () => {
+                    if (isPointerDown || isDragging) return;
+                    pauseAllExcept(video);
+                    try { video.currentTime = 0; } catch (e) { }
 
-                // Update controls during playback
-                video.addEventListener('timeupdate', () => {
-                    if (videoSrc && !video.paused) {
-                        const videoTimes = loadVideoTimes();
-                        videoTimes[videoSrc] = video.currentTime;
-                        saveVideoTimes(videoTimes);
-                    }
-                    updateControlUI(card, video);
+                    // Try to play with sound by default; if browser blocks unmuted autoplay, fall back to muted autoplay
+                    try { video.muted = false; } catch (er) { }
+                    video.play().catch(() => {
+                        try { video.muted = true; } catch (er) { }
+                        video.play().catch(() => { });
+                    });
+
+                    // hide the central play overlay while (attempting) playing
+                    if (overlayWrapper) overlayWrapper.style.display = 'none';
                 });
 
-                video.addEventListener('pause', () => {
-                    if (videoSrc) {
-                        const videoTimes = loadVideoTimes();
-                        videoTimes[videoSrc] = video.currentTime;
-                        saveVideoTimes(videoTimes);
-                    }
-                    updateControlUI(card, video);
+                // Pause and reset on leave
+                card.addEventListener('pointerleave', () => {
+                    try { video.pause(); video.currentTime = 0; } catch (e) { }
+                    if (overlayWrapper) overlayWrapper.style.display = '';
                 });
 
-                video.addEventListener('play', () => {
-                    updateControlUI(card, video);
-                });
-
-                // Play/Pause button
-                if (playBtn) {
-                    playBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        if (video.paused) {
-                            pauseAllExcept(video);
-                            try { video.muted = false; } catch (er) { }
-                            video.play().catch(() => {
-                                try { video.muted = true; } catch (er) { }
-                                video.play().catch(() => { });
-                            });
-                            if (overlayWrapper) overlayWrapper.style.display = 'none';
-                        } else {
-                            try { video.pause(); } catch (e) { }
-                        }
-                    });
-                }
-
-                // Mute button
-                if (muteBtn) {
-                    muteBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        video.muted = !video.muted;
-                        updateControlUI(card, video);
-                    });
-                }
-
-                // Volume slider
-                if (volumeSlider) {
-                    volumeSlider.addEventListener('input', (e) => {
-                        e.stopPropagation();
-                        const volume = e.target.value / 100;
-                        video.volume = volume;
-                        if (volume > 0) video.muted = false;
-                        updateControlUI(card, video);
-                    });
-                }
-
-                // Progress bar click to seek
-                if (progressBar) {
-                    progressBar.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        const rect = progressBar.getBoundingClientRect();
-                        const percent = (e.clientX - rect.left) / rect.width;
-                        video.currentTime = percent * video.duration;
-                    });
-                }
-
-                // Skip backward button (5 seconds)
-                const skipBackBtn = card.querySelector('.video-skip-back-btn');
-                if (skipBackBtn) {
-                    skipBackBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        video.currentTime = Math.max(0, video.currentTime - 5);
-                    });
-                }
-
-                // Skip forward button (5 seconds)
-                const skipForwardBtn = card.querySelector('.video-skip-forward-btn');
-                if (skipForwardBtn) {
-                    skipForwardBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        video.currentTime = Math.min(video.duration, video.currentTime + 5);
-                    });
-                }
-
-                // Card click toggles play/pause
+                // Click toggles play/pause (try unmuted first, fallback muted)
                 card.addEventListener('click', (e) => {
-                    if (isDragging) return;
-                    if (e.target.closest('.video-controls')) return;
-
+                    if (isDragging) return; // don't treat drag-end as click
                     if (video.paused) {
                         pauseAllExcept(video);
                         try { video.muted = false; } catch (er) { }
@@ -2459,11 +1542,12 @@
                         });
                         if (overlayWrapper) overlayWrapper.style.display = 'none';
                     } else {
-                        try { video.pause(); } catch (e) { }
+                        try { video.pause(); video.currentTime = 0; } catch (e) { }
+                        if (overlayWrapper) overlayWrapper.style.display = '';
                     }
                 });
 
-                // Keyboard: space/enter toggles play/pause
+                // Keyboard: space/enter toggles play/pause (try unmuted first, fallback muted)
                 card.addEventListener('keydown', (e) => {
                     if (e.key === ' ' || e.key === 'Enter') {
                         e.preventDefault();
@@ -2476,31 +1560,20 @@
                             });
                             if (overlayWrapper) overlayWrapper.style.display = 'none';
                         } else {
-                            try { video.pause(); } catch (e) { }
+                            try { video.pause(); video.currentTime = 0; } catch (e) { }
+                            if (overlayWrapper) overlayWrapper.style.display = '';
                         }
                     }
                 });
             });
 
-            // Pause videos and save times when tab/window hidden
+            // Pause videos when tab/window hidden for performance
             document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    videos.forEach(v => {
-                        try {
-                            const videoSrc = v.querySelector('source')?.src || v.src;
-                            if (videoSrc) {
-                                const videoTimes = loadVideoTimes();
-                                videoTimes[videoSrc] = v.currentTime;
-                                saveVideoTimes(videoTimes);
-                            }
-                            v.pause();
-                        } catch (e) { }
-                    });
-                }
+                if (document.hidden) videos.forEach(v => { try { v.pause(); } catch (e) { } });
             });
         });
     </script>
 
 </body>
 
-</html>
+</html> -->
