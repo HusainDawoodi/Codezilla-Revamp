@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Video from 'next-video';
 
@@ -13,19 +13,28 @@ export default function TestimonialVideoCard({
     quote,
 }) {
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     return (
         <div className="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%] lg:max-w-[32%]" tabIndex="0">
             <div className="relative aspect-[9/16] overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
 
-                <Video
-                    src={videoSrc}
-                    poster={""}
-                    controls={true}
-                    style={{ width: "100%", height: "100%", aspectRatio: "9:16" }}
-                    onPlay={() => setIsPlaying(true)}
-                    onPause={() => setIsPlaying(false)}
-                />
+                {isMounted ? (
+                    <Video
+                        src={videoSrc}
+                        poster={""}
+                        controls={true}
+                        style={{ width: "100%", height: "100%", aspectRatio: "9:16" }}
+                        onPlay={() => setIsPlaying(true)}
+                        onPause={() => setIsPlaying(false)}
+                    />
+                ) : (
+                    <div className="w-full h-full bg-gray-900" />
+                )}
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none"></div>
                 {!isPlaying && (

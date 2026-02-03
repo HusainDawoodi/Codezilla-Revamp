@@ -21,7 +21,7 @@ export default function HeroSlider() {
 
     return (
         <section className="relative min-h-screen pt-20 flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
-            <div className="relative h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group hero-slider">
+            <div className="relative h-[70vh] lg:h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group hero-slider">
 
                 {/* Dots */}
                 <div className="absolute left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-4">
@@ -72,7 +72,7 @@ export default function HeroSlider() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
                     </div>
 
-                    <div className="absolute bottom-0 left-0 p-8 lg:p-12 pl-16 z-10 text-white">
+                    <div className="absolute bottom-0 left-0 p-4 lg:p-12 pl-8 lg:pl-16 z-10 text-white">
                         <div className="inline-block bg-primary text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                             <span className="font-mono text-xs uppercase tracking-widest font-bold">
                                 Role: Chief Architect
@@ -123,7 +123,7 @@ export default function HeroSlider() {
                             <span className="w-4 h-4 bg-primary"></span>
                             <span className="text-white text-sm font-bold tracking-widest uppercase">The Intelligence First // 001</span>
                         </div>
-                        <h1 className="font-display text-7xl xl:text-8xl font-bold text-white leading-[0.85] tracking-tighter uppercase mb-6">
+                        <h1 className="font-display text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.85] tracking-tighter uppercase mb-6">
                             <span className="text-primary">Intelligence</span><br />
                             at the core.
                         </h1>

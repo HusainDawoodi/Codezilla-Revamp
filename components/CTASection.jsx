@@ -18,7 +18,7 @@ export default function CTASection() {
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6 text-center">
-                <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white uppercase tracking-tighter mb-12 leading-[0.85]">
+                <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white uppercase tracking-tighter mb-12 leading-[0.95]">
                     Ready to<br />build <span className="text-primary">what&apos;s next?</span>
                 </h2>
                 <Link

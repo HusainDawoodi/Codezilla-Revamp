@@ -105,7 +105,7 @@ export default function WorkCarousel() {
                     >
 
                         {/* Project 1 */}
-                        <div className="w-[85vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
+                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
                             <span className="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position absolute top-4 left-4 z-20">Fintech</span>
                             <div className="relative w-full h-full">
                                 <Image src="/images/maji-fintech.jpg" alt="Maji Case Study" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -123,7 +123,7 @@ export default function WorkCarousel() {
                         </div>
 
                         {/* Project 2 */}
-                        <div className="w-[85vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
+                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
                             <span className="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position absolute top-4 left-4 z-20">EV Charging Software</span>
                             <div className="relative w-full h-full">
                                 <Image src="/images/rightcharge-main.jpg" alt="Rightcharge Case Study" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -141,7 +141,7 @@ export default function WorkCarousel() {
                         </div>
 
                         {/* Project 3 */}
-                        <div className="w-[85vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
+                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
                             <span className="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position absolute top-4 left-4 z-20">ERP Management</span>
                             <div className="relative w-full h-full">
                                 <Image src="/images/naseni.webp" alt="Naseni Case Study" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -159,7 +159,7 @@ export default function WorkCarousel() {
                         </div>
 
                         {/* View All Card */}
-                        <div className="w-[85vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 h-full relative group bg-charcoal text-white flex items-center justify-center snap-center bg-energy-gradient-dark">
+                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 h-full relative group bg-charcoal text-white flex items-center justify-center snap-center bg-energy-gradient-dark">
                             <div className="text-center">
                                 <h3 className="font-display text-4xl font-bold uppercase mb-4">View All<br />Projects</h3>
                                 <Link className="inline-block border-2 border-primary text-primary px-8 py-4 uppercase text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-colors" href="#">

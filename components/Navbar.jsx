@@ -1,11 +1,26 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Navbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+        setMobileActiveDropdown(null); // Reset dropdowns on close
+    };
+
+    const toggleMobileDropdown = (index) => {
+        setMobileActiveDropdown(mobileActiveDropdown === index ? null : index);
+    };
+
     return (
         <nav className="fixed w-full z-50 bg-white border-b-2 border-black">
             <div className="w-full grid grid-cols-12 h-20 items-center relative">
-                <div className="col-span-6 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
+                {/* Logo Section */}
+                <div className="col-span-10 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer lg:border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
                     <Link href="/" className="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors">
                         <Image
                             src="/images/codezilla.svg"
@@ -17,6 +32,17 @@ export default function Navbar() {
                         />
                     </Link>
                 </div>
+
+                {/* Mobile Menu Button - Visible on Small Screens */}
+                <div className="col-span-2 lg:hidden flex justify-end pr-8">
+                    <button onClick={toggleMobileMenu} className="p-2 text-black hover:text-primary transition-colors">
+                        <span className="material-symbols-outlined text-4xl">
+                            {isMobileMenuOpen ? 'close' : 'menu'}
+                        </span>
+                    </button>
+                </div>
+
+                {/* Desktop Navigation */}
                 <div className="hidden lg:col-span-6 lg:flex justify-center items-center h-full bg-white border-r-2 border-black px-4 relative">
                     <div className="flex items-center gap-8 xl:gap-12 h-full">
                         <Link href="#" className="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2">
@@ -112,11 +138,120 @@ export default function Navbar() {
                         </Link>
                     </div>
                 </div>
-                <div className="col-span-6 lg:col-span-3 flex justify-end items-center h-full bg-white px-8">
+
+                {/* Desktop Call to Action */}
+                <div className="hidden lg:col-span-3 lg:flex justify-end items-center h-full bg-white px-8">
                     <Link href="#" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-[#E65100] shadow-[0_4px_12px_rgba(255,109,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,109,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5">
                         <span>Schedule Call</span>
                         <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </Link>
+                </div>
+            </div>
+
+            {/* Mobile Sidebar Navigation */}
+            <div className={`fixed inset-0 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'}`}>
+                {/* Backdrop */}
+                <div
+                    className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                    onClick={toggleMobileMenu}
+                ></div>
+
+                {/* Sidebar */}
+                <div className={`absolute z-[99999999] top-0 right-0 w-[85vw] md:w-[60vw] h-full bg-white shadow-2xl overflow-y-auto duration-300 transform transition-transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <div className="flex flex-col h-full">
+                        {/* Header */}
+                        <div className="flex items-center justify-between p-6 border-b border-gray-100">
+                            <Link href="/" className="font-display font-bold text-2xl tracking-tighter text-black uppercase" onClick={toggleMobileMenu}>
+                                <Image
+                                    src="/images/codezilla.svg"
+                                    alt="Codezilla Logo"
+                                    width={150}
+                                    height={30}
+                                    className="w-40"
+                                />
+                            </Link>
+                            <button onClick={toggleMobileMenu} className="p-2 text-black hover:text-primary">
+                                <span className="material-symbols-outlined text-3xl">close</span>
+                            </button>
+                        </div>
+
+                        {/* Menu Items */}
+                        <div className="flex-1 py-8 px-6 space-y-6">
+                            <Link href="#" onClick={toggleMobileMenu} className="block text-xl font-display font-bold uppercase text-black hover:text-primary">
+                                Who we are
+                            </Link>
+
+                            {/* What we do Dropdown */}
+                            <div>
+                                <button
+                                    onClick={() => toggleMobileDropdown(1)}
+                                    className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-black hover:text-primary"
+                                >
+                                    <span>What we do</span>
+                                    <span className={`material-symbols-outlined transition-transform duration-300 ${mobileActiveDropdown === 1 ? 'rotate-180' : ''}`}>expand_more</span>
+                                </button>
+                                <div className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 1 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 hidden'}`}>
+
+                                    {/* Sub-sections */}
+                                    <div className="space-y-3">
+                                        <h4 className="text-sm font-bold text-primary uppercase">Digital Product Development</h4>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">Rapid Prototyping</Link>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">Product Discovery</Link>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">UI/UX Design Services</Link>
+                                    </div>
+
+                                    <div className="space-y-3">
+                                        <h4 className="text-sm font-bold text-primary uppercase">Staff Augmentation</h4>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">Software Architects</Link>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">Back-end Engineers</Link>
+                                    </div>
+                                    <div className="space-y-3">
+                                        <h4 className="text-sm font-bold text-primary uppercase">Codezilla Accelerators</h4>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">codezilla-flywheel</Link>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">codezilla Guard:IAM</Link>
+                                    </div>
+                                    <div className="space-y-3">
+                                        <h4 className="text-sm font-bold text-primary uppercase">System Integration</h4>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">Salesforce</Link>
+                                        <Link href="#" className="block text-sm text-gray-500 hover:text-black">Microsoft Dynamics 365</Link>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <Link href="#" onClick={toggleMobileMenu} className="block text-xl font-display font-bold uppercase text-black hover:text-primary">
+                                Case Studies
+                            </Link>
+
+                            {/* What we think Dropdown */}
+                            <div>
+                                <button
+                                    onClick={() => toggleMobileDropdown(2)}
+                                    className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-black hover:text-primary"
+                                >
+                                    <span>What we think</span>
+                                    <span className={`material-symbols-outlined transition-transform duration-300 ${mobileActiveDropdown === 2 ? 'rotate-180' : ''}`}>expand_more</span>
+                                </button>
+                                <div className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 2 ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <Link href="#" className="block text-sm font-bold text-gray-800 hover:text-primary">Life at Codezilla</Link>
+                                    <Link href="#" className="block text-sm font-bold text-gray-800 hover:text-primary">Business Insights</Link>
+                                    <Link href="#" className="block text-sm font-bold text-gray-800 hover:text-primary">CSR Initiatives</Link>
+                                </div>
+                            </div>
+
+                            <Link href="#" onClick={toggleMobileMenu} className="block text-xl font-display font-bold uppercase text-black hover:text-primary">
+                                Career
+                            </Link>
+                        </div>
+
+                        {/* Footer CTA */}
+                        <div className="p-6 border-t border-gray-100">
+                            <Link href="#" className="flex w-full items-center justify-center gap-2 bg-primary text-white px-6 py-4 rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-[#E65100] transition-colors">
+                                <span>Schedule Call</span>
+                                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

@@ -83,7 +83,7 @@ export default function TestimonialCarousel() {
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/20 pb-8">
+                <div className="flex flex-col md:flex-row justify-between lg:items-end mb-16 border-b border-white/20 pb-8">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Social Proof</span>
                         <h2 className="font-display text-5xl font-bold text-white uppercase tracking-tighter">Client<br />success</h2>

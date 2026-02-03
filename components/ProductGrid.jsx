@@ -9,7 +9,7 @@ export default function ProductGrid() {
             <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-white/10 pb-8">
+                <div className="flex flex-col md:flex-row justify-between lg:items-end mb-16 border-b-2 border-white/10 pb-8">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
                             Internal IP
@@ -20,7 +20,7 @@ export default function ProductGrid() {
                             products
                         </h2>
                     </div>
-                    <p className="text-right text-sm font-medium text-gray-400 max-w-xs mt-4 md:mt-0">
+                    <p className="lg:text-right text-sm font-medium text-gray-400 max-w-xs mt-4 md:mt-0">
                         Pre-built modules to jumpstart your transformation. Why build from
                         scratch?
                     </p>
