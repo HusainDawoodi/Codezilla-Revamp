@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -96,30 +96,7 @@
             }
             .animation-delay-8000 {
                 animation-delay: 8s;
-            }
-            /* Video Volume Slider Styling */
-            .video-volume-slider {
-                accent-color: #FF6D00;
-            }
-            .video-volume-slider::-webkit-slider-thumb {
-                appearance: none;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: #FF6D00;
-                cursor: pointer;
-                box-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
-            }
-            .video-volume-slider::-moz-range-thumb {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: #FF6D00;
-                cursor: pointer;
-                border: none;
-                box-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
-            }
-            .snap-mandatory {
+            }.snap-mandatory {
                 scroll-snap-type: x mandatory;
             }
             .snap-center {
@@ -925,40 +902,6 @@
 
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
-                            <!-- Video Controls -->
-                            <div class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-                                  
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range" class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div
                                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                                 <div
@@ -992,46 +935,12 @@
                             class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
 
                             <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg">
-                                <source src="./images/khalil.mp4" type="video/mp4" />
+                                preload="metadata" playsinline loop poster="./images/testimonial2-poster.jpg">
+                                <source src="./videos/testimonial2.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-                                  
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range" class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div
                                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -1058,303 +967,7 @@
                             </div>
                         </div>
                     </div>
-
-
                     <!-- CARD 3 (Video) -->
-                     <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-                                  
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range" class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                      <!-- CARD 3 (Video) -->
-                     <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-                                  
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range" class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                      <!-- CARD 3 (Video) -->
-                     <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-                                  
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range" class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                      <!-- CARD 3 (Video) -->
-                     <div class="group cursor-pointer testimonial-video-card min-w-[300px] md:min-w-[45%] lg:min-w-[32%]"
-                        tabindex="0">
-                        <div
-                            class="relative aspect-[9/16] w-full overflow-hidden border-2 border-white/10 bg-gray-900 shadow-[8px_8px_0px_0px_rgba(255,109,0,0.2)] group-hover:shadow-[12px_12px_0px_0px_rgba(255,109,0,0.5)] transition-all duration-300 group-hover:-translate-y-2">
-
-                            <video class="absolute inset-0 w-full h-full object-cover testimonial-video"
-                                preload="metadata" playsinline loop poster="./images/testimonial1-poster.jpg" controls>
-                                <source src="./images/khalil.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                            <!-- Video Controls -->
-                            <div class="video-controls absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hover:pointer-events-auto">
-                                <!-- Progress Bar -->
-                                <div class="mb-3 group/progress cursor-pointer">
-                                    <div class="video-progress-bar h-1 bg-white/20 rounded-full overflow-hidden group-hover/progress:h-2 transition-all duration-200">
-                                        <div class="video-progress h-full bg-primary rounded-full" style="width: 0%"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Control Buttons and Time -->
-                                <div class="flex items-center justify-between gap-3 text-white">
-                                    <!-- Play/Pause Button -->
-                                    <button class="video-play-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Play/Pause">
-                                        <span class="material-symbols-outlined text-xl">play_arrow</span>
-                                    </button>
-
-                                  
-                                    <!-- Volume Control -->
-                                    <div class="flex items-center gap-2 group/volume">
-                                        <button class="video-mute-btn flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full hover:bg-primary/20 transition-colors" title="Mute">
-                                            <span class="material-symbols-outlined text-xl">volume_up</span>
-                                        </button>
-                                        <div class="hidden group-hover/volume:flex items-center gap-2">
-                                            <input type="range" class="video-volume-slider w-16 h-1 bg-white/20 rounded-full appearance-none cursor-pointer" min="0" max="100" value="100" title="Volume">
-                                        </div>
-                                    </div>
-
-                                    <!-- Time Display -->
-                                    <div class="flex-1 text-right">
-                                        <span class="video-time text-xs font-medium">0:00 / 0:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                <div
-                                    class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,109,0,0.4)]">
-                                    <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                                </div>
-                            </div>
-
-                            <div class="absolute bottom-0 p-8">
-                                <h3 class="font-display text-2xl font-bold uppercase leading-tight">
-                                    Codezilla completely rebuilt our payment infrastructure with zero downtime.
-                                </h3>
-                                <div class="flex items-center gap-4 pt-5 mt-6 border-t border-white/20">
-                                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
-                                        <img class="w-full h-full object-cover"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp" />
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-sm uppercase">James Harrison</p>
-                                        <p class="text-xs text-primary font-bold uppercase">CTO, Apex Fin</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
     </section>
 
@@ -1833,54 +1446,18 @@
         })();
     </script>
 
-    <!-- Video click play/pause with persistent playback position and custom controls for testimonials -->
+    <!-- Video hover play/pause for testimonials -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Only enable hover-play on devices that actually support hover with a fine pointer
+            if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
             const track = document.getElementById('testimonialTrack');
             const cards = Array.from(document.querySelectorAll('.testimonial-video-card'));
             const videos = cards.map(c => c.querySelector('video')).filter(Boolean);
             if (!cards.length) return;
 
-            // Storage key for video playback positions
-            const STORAGE_KEY = 'testimonial-video-times';
-
-            // Reset saved playback positions on load so videos start at 0 after a page reload
-            try {
-                localStorage.removeItem(STORAGE_KEY);
-            } catch (e) {
-                /* ignore */
-            }
-
-            // Load saved video times from localStorage
-            function loadVideoTimes() {
-                try {
-                    const saved = localStorage.getItem(STORAGE_KEY);
-                    return saved ? JSON.parse(saved) : {};
-                } catch (e) {
-                    return {};
-                }
-            }
-
-            // Save video times to localStorage
-            function saveVideoTimes(videoTimes) {
-                try {
-                    localStorage.setItem(STORAGE_KEY, JSON.stringify(videoTimes));
-                } catch (e) {
-                    console.warn('Could not save video times to localStorage', e);
-                }
-            }
-
-            // Format time in MM:SS format
-            function formatTime(seconds) {
-                if (!seconds || isNaN(seconds)) return '0:00';
-                const mins = Math.floor(seconds / 60);
-                const secs = Math.floor(seconds % 60);
-                return `${mins}:${secs.toString().padStart(2, '0')}`;
-            }
-
-            const savedTimes = loadVideoTimes();
-
-            // Drag detection (so click doesn't trigger while user is dragging/scrolling)
+            // Drag detection (so hover doesn't trigger while user is dragging/scrolling)
             let isPointerDown = false;
             let isDragging = false;
             let startX = 0;
@@ -1900,6 +1477,8 @@
                 if (Math.abs(x - startX) > DRAG_THRESHOLD) {
                     if (!isDragging) {
                         isDragging = true;
+                        // Pause all videos immediately when dragging starts
+                        videos.forEach(v => { try { v.pause(); } catch (er) { } });
                     }
                 }
             }, { passive: true });
@@ -1907,6 +1486,7 @@
             ['pointerup', 'pointercancel', 'pointerleave'].forEach(evt => {
                 scroller && scroller.addEventListener(evt, () => {
                     isPointerDown = false;
+                    // small timeout so click handlers still work correctly
                     setTimeout(() => { isDragging = false; }, 50);
                 }, { passive: true });
             });
@@ -1914,167 +1494,45 @@
             function pauseAllExcept(active) {
                 videos.forEach(v => {
                     if (v && v !== active) {
-                        try { 
-                            const videoSrc = v.querySelector('source')?.src || v.src;
-                            if (videoSrc) {
-                                const videoTimes = loadVideoTimes();
-                                videoTimes[videoSrc] = v.currentTime;
-                                saveVideoTimes(videoTimes);
-                            }
-                            v.pause(); 
-                        } catch (e) { }
+                        try { v.pause(); v.currentTime = 0; } catch (e) { }
                     }
                 });
             }
 
-            function updateControlUI(card, video) {
-                const playBtn = card.querySelector('.video-play-btn');
-                const progressBar = card.querySelector('.video-progress');
-                const timeDisplay = card.querySelector('.video-time');
-                const muteBtn = card.querySelector('.video-mute-btn');
-
-                if (playBtn) {
-                    playBtn.innerHTML = video.paused 
-                        ? '<span class="material-symbols-outlined text-xl">play_arrow</span>' 
-                        : '<span class="material-symbols-outlined text-xl">pause</span>';
-                }
-
-                if (progressBar && video.duration) {
-                    const progress = (video.currentTime / video.duration) * 100;
-                    progressBar.style.width = `${progress}%`;
-                }
-
-                if (timeDisplay) {
-                    timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
-                }
-
-                if (muteBtn) {
-                    muteBtn.innerHTML = video.muted 
-                        ? '<span class="material-symbols-outlined text-xl">volume_off</span>' 
-                        : '<span class="material-symbols-outlined text-xl">volume_up</span>';
-                }
-            }
-
-            cards.forEach((card, index) => {
+            cards.forEach(card => {
                 const video = card.querySelector('video');
                 if (!video) return;
 
-                const videoSrc = video.querySelector('source')?.src || video.src;
+                // Find central play overlay (the big play icon that is not inside a button)
                 const overlayIcon = Array.from(card.querySelectorAll('.material-symbols-outlined')).find(i => !i.closest('button'));
                 const overlayWrapper = overlayIcon ? overlayIcon.parentElement : null;
-                const controls = card.querySelector('.video-controls');
-                const playBtn = card.querySelector('.video-play-btn');
-                const muteBtn = card.querySelector('.video-mute-btn');
-                const volumeSlider = card.querySelector('.video-volume-slider');
-                const progressBar = card.querySelector('.video-progress-bar');
-                const videoProgress = card.querySelector('.video-progress');
 
-                // Restore saved playback position when video is loaded
-                video.addEventListener('loadedmetadata', () => {
-                    if (videoSrc && savedTimes[videoSrc] !== undefined) {
-                        try {
-                            video.currentTime = savedTimes[videoSrc];
-                        } catch (e) {
-                            console.warn('Could not restore video time', e);
-                        }
-                    }
-                    updateControlUI(card, video);
-                }, { once: true });
+                // Play (try unmuted) on pointerenter unless user is currently dragging
+                card.addEventListener('pointerenter', () => {
+                    if (isPointerDown || isDragging) return;
+                    pauseAllExcept(video);
+                    try { video.currentTime = 0; } catch (e) { }
 
-                // Update controls during playback
-                video.addEventListener('timeupdate', () => {
-                    if (videoSrc && !video.paused) {
-                        const videoTimes = loadVideoTimes();
-                        videoTimes[videoSrc] = video.currentTime;
-                        saveVideoTimes(videoTimes);
-                    }
-                    updateControlUI(card, video);
+                    // Try to play with sound by default; if browser blocks unmuted autoplay, fall back to muted autoplay
+                    try { video.muted = false; } catch (er) { }
+                    video.play().catch(() => {
+                        try { video.muted = true; } catch (er) { }
+                        video.play().catch(() => { });
+                    });
+
+                    // hide the central play overlay while (attempting) playing
+                    if (overlayWrapper) overlayWrapper.style.display = 'none';
                 });
 
-                video.addEventListener('pause', () => {
-                    if (videoSrc) {
-                        const videoTimes = loadVideoTimes();
-                        videoTimes[videoSrc] = video.currentTime;
-                        saveVideoTimes(videoTimes);
-                    }
-                    updateControlUI(card, video);
+                // Pause and reset on leave
+                card.addEventListener('pointerleave', () => {
+                    try { video.pause(); video.currentTime = 0; } catch (e) { }
+                    if (overlayWrapper) overlayWrapper.style.display = '';
                 });
 
-                video.addEventListener('play', () => {
-                    updateControlUI(card, video);
-                });
-
-                // Play/Pause button
-                if (playBtn) {
-                    playBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        if (video.paused) {
-                            pauseAllExcept(video);
-                            try { video.muted = false; } catch (er) { }
-                            video.play().catch(() => {
-                                try { video.muted = true; } catch (er) { }
-                                video.play().catch(() => { });
-                            });
-                            if (overlayWrapper) overlayWrapper.style.display = 'none';
-                        } else {
-                            try { video.pause(); } catch (e) { }
-                        }
-                    });
-                }
-
-                // Mute button
-                if (muteBtn) {
-                    muteBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        video.muted = !video.muted;
-                        updateControlUI(card, video);
-                    });
-                }
-
-                // Volume slider
-                if (volumeSlider) {
-                    volumeSlider.addEventListener('input', (e) => {
-                        e.stopPropagation();
-                        const volume = e.target.value / 100;
-                        video.volume = volume;
-                        if (volume > 0) video.muted = false;
-                        updateControlUI(card, video);
-                    });
-                }
-
-                // Progress bar click to seek
-                if (progressBar) {
-                    progressBar.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        const rect = progressBar.getBoundingClientRect();
-                        const percent = (e.clientX - rect.left) / rect.width;
-                        video.currentTime = percent * video.duration;
-                    });
-                }
-
-                // Skip backward button (5 seconds)
-                const skipBackBtn = card.querySelector('.video-skip-back-btn');
-                if (skipBackBtn) {
-                    skipBackBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        video.currentTime = Math.max(0, video.currentTime - 5);
-                    });
-                }
-
-                // Skip forward button (5 seconds)
-                const skipForwardBtn = card.querySelector('.video-skip-forward-btn');
-                if (skipForwardBtn) {
-                    skipForwardBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        video.currentTime = Math.min(video.duration, video.currentTime + 5);
-                    });
-                }
-
-                // Card click toggles play/pause
+                // Click toggles play/pause (try unmuted first, fallback muted)
                 card.addEventListener('click', (e) => {
-                    if (isDragging) return;
-                    if (e.target.closest('.video-controls')) return;
-                    
+                    if (isDragging) return; // don't treat drag-end as click
                     if (video.paused) {
                         pauseAllExcept(video);
                         try { video.muted = false; } catch (er) { }
@@ -2084,11 +1542,12 @@
                         });
                         if (overlayWrapper) overlayWrapper.style.display = 'none';
                     } else {
-                        try { video.pause(); } catch (e) { }
+                        try { video.pause(); video.currentTime = 0; } catch (e) { }
+                        if (overlayWrapper) overlayWrapper.style.display = '';
                     }
                 });
 
-                // Keyboard: space/enter toggles play/pause
+                // Keyboard: space/enter toggles play/pause (try unmuted first, fallback muted)
                 card.addEventListener('keydown', (e) => {
                     if (e.key === ' ' || e.key === 'Enter') {
                         e.preventDefault();
@@ -2101,31 +1560,20 @@
                             });
                             if (overlayWrapper) overlayWrapper.style.display = 'none';
                         } else {
-                            try { video.pause(); } catch (e) { }
+                            try { video.pause(); video.currentTime = 0; } catch (e) { }
+                            if (overlayWrapper) overlayWrapper.style.display = '';
                         }
                     }
                 });
             });
 
-            // Pause videos and save times when tab/window hidden
+            // Pause videos when tab/window hidden for performance
             document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    videos.forEach(v => {
-                        try { 
-                            const videoSrc = v.querySelector('source')?.src || v.src;
-                            if (videoSrc) {
-                                const videoTimes = loadVideoTimes();
-                                videoTimes[videoSrc] = v.currentTime;
-                                saveVideoTimes(videoTimes);
-                            }
-                            v.pause(); 
-                        } catch (e) { } 
-                    });
-                }
+                if (document.hidden) videos.forEach(v => { try { v.pause(); } catch (e) { } });
             });
         });
     </script>
 
 </body>
 
-</html>
+</html> -->
