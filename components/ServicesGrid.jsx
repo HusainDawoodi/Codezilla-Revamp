@@ -10,9 +10,9 @@ export default function ServicesGrid() {
                 <div className="col-span-1 md:col-span-2 lg:col-span-1 border-b-2 md:border-b-2 lg:border-b-0 lg:border-r-2 border-white/10 p-8 lg:p-12 flex flex-col justify-between bg-energy-gradient-dark relative z-10">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Capabilities</span>
-                        <h2 className="font-display !text-4xl font-bold uppercase leading-none mb-6">What<br />we do</h2>
+                        <h2 className="font-display !text-4xl font-bold uppercase leading-none mb-6">What <br className='hidden lg:block' />we do</h2>
                         <div className="w-12 h-1 bg-primary mb-6"></div>
-                        <p className="text-gray-300 text-sm leading-relaxed">
+                        <p className="text-gray-300 text-md leading-relaxed">
                             Our service matrix is designed for high-impact, scalable intervention. We deploy rapidly and iterate continuously.
                         </p>
                     </div>
@@ -35,8 +35,8 @@ export default function ServicesGrid() {
                         <span className="material-symbols-outlined !text-4xl text-primary opacity-80 group-hover:opacity-100">psychology</span>
                     </div>
                     <div className="z-10 relative">
-                        <h3 className="font-display text-3xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
-                            AI &amp; Data<br />Strategy
+                        <h3 className="font-display lg:text-3xl text-2xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
+                            AI &amp; Data <br className='hidden lg:block' />Strategy
                         </h3>
                         <p className="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
                             Deploying predictive models directly into your business logic. From black box to clear ROI.
@@ -48,7 +48,7 @@ export default function ServicesGrid() {
                 </div>
 
                 {/* Card 2: Cloud Architecture */}
-                <div className="col-span-1 border-b-2 md:border-b-0 border-r-2 border-white/10 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
+                <div className="col-span-1 border-b-2 lg:border-b-0 border-r-2 border-white/10 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
                     <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                         <Image src="/images/cloud-architecture.webp" alt="Cloud Architecture Background" fill className="object-cover" />
                     </div>
@@ -59,8 +59,8 @@ export default function ServicesGrid() {
                         <span className="material-symbols-outlined !text-4xl text-primary opacity-80 group-hover:opacity-100">cloud_sync</span>
                     </div>
                     <div className="z-10 relative">
-                        <h3 className="font-display text-3xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
-                            Cloud<br />Architecture
+                        <h3 className="font-display lg:text-3xl text-2xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
+                            Cloud <br className='hidden lg:block' />Architecture
                         </h3>
                         <p className="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
                             Building the invisible backbone of your enterprise. Scalable, secure, and resilient infrastructure.
@@ -72,7 +72,7 @@ export default function ServicesGrid() {
                 </div>
 
                 {/* Card 3: Product Engineering */}
-                <div className="col-span-1 md:border-r-0 lg:border-r-0 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
+                <div className="col-span-1 md:col-span-2 lg:col-span-1 md:border-r-0 lg:border-r-0 p-8 lg:p-12 group hover:text-white transition-all duration-500 relative flex flex-col justify-between h-[50vh] lg:h-auto overflow-hidden">
                     <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                         {/* Using a placeholder or the URL provided in legacy code, but since it's a googleusercontent link, I will use a local placeholder if possible or keep the remote one. 
                  The legacy code used: https://lh3.googleusercontent.com/...
@@ -96,8 +96,8 @@ export default function ServicesGrid() {
                         <span className="material-symbols-outlined !text-4xl text-primary opacity-80 group-hover:opacity-100">terminal</span>
                     </div>
                     <div className="z-10 relative">
-                        <h3 className="font-display text-3xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
-                            Product<br />Engineering
+                        <h3 className="font-display lg:text-3xl text-2xl font-bold uppercase mb-4 leading-tight group-hover:text-primary transition-colors">
+                            Product <br className='hidden lg:block' />Engineering
                         </h3>
                         <p className="text-sm opacity-60 group-hover:opacity-100 font-medium leading-relaxed mb-6 transition-opacity">
                             Full-cycle development. We don&apos;t just write code; we engineer outcomes through precise execution.

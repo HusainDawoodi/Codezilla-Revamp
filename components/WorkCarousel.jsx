@@ -38,7 +38,7 @@ export default function WorkCarousel() {
         const target = children[index];
 
         // Center the target
-        const left = Math.round(target.offsetLeft - (scroller.clientWidth - target.offsetWidth) / 2);
+        const left = Math.round(target.offsetLeft - (scroller.clientWidth - target.offsetWidth) / 3);
         scroller.scrollTo({ left, behavior: 'smooth' });
     };
 
@@ -70,9 +70,9 @@ export default function WorkCarousel() {
             <div className="grid grid-cols-12 border-b-2 border-black">
 
                 {/* Sidebar Info */}
-                <div className="col-span-12 lg:col-span-3 border-b-2 lg:border-b-0 lg:border-r-2 border-black p-8 lg:p-12 flex flex-col justify-center bg-gray-50">
+                <div className="col-span-12 lg:col-span-3 border-b-2 lg:border-b-0 lg:border-r-2 border-black p-8 py-10 lg:p-12 flex flex-col justify-center bg-gray-50">
                     <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Evidence Log</span>
-                    <h2 className="font-display text-5xl font-bold uppercase leading-none mb-8">Our<br />work</h2>
+                    <h2 className="font-display text-5xl font-bold uppercase leading-none mb-8">Our <br className='hidden lg:block' />work</h2>
                     <p className="text-black-300 text-sm leading-relaxed">
                         Floating overlay arrows are placed over the project carousel for easier access on all screen sizes
                     </p>
@@ -105,7 +105,7 @@ export default function WorkCarousel() {
                     >
 
                         {/* Project 1 */}
-                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
+                        <div className="w-[100vw] md:w-[50vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
                             <span className="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position absolute top-4 left-4 z-20">Fintech</span>
                             <div className="relative w-full h-full">
                                 <Image src="/images/maji-fintech.jpg" alt="Maji Case Study" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -115,7 +115,7 @@ export default function WorkCarousel() {
                                 <div className="flex justify-between items-end">
                                     <div>
                                         <Image src="/images/maji-logo.svg" alt="Maji Logo" width={100} height={30} className="h-8 w-auto" />
-                                        <p className="font-display text-1xl font-medium mt-3">Maji is a UK financial wellbeing provider that makes saving, spending, and planning money simpler for employees and employers.</p>
+                                        <p className="font-display text-sm lg:text-1xl font-medium mt-3">Maji is a UK financial wellbeing provider that makes saving, spending, and planning money simpler for employees and employers.</p>
                                     </div>
                                     <span className="text-4xl font-display font-bold text-primary">01</span>
                                 </div>
@@ -123,7 +123,7 @@ export default function WorkCarousel() {
                         </div>
 
                         {/* Project 2 */}
-                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
+                        <div className="w-[100vw] md:w-[50vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
                             <span className="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position absolute top-4 left-4 z-20">EV Charging Software</span>
                             <div className="relative w-full h-full">
                                 <Image src="/images/rightcharge-main.jpg" alt="Rightcharge Case Study" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -133,7 +133,7 @@ export default function WorkCarousel() {
                                 <div className="flex justify-between items-end">
                                     <div>
                                         <Image src="/images/rightcharge-logo.svg" alt="Rightcharge Logo" width={100} height={30} className="h-8 w-auto" />
-                                        <p className="font-display text-1xl font-medium mt-3">An EV charging management platform that automates payments, reimbursements, and reporting for fleets.</p>
+                                        <p className="font-display text-sm lg:text-1xl font-medium mt-3">An EV charging management platform that automates payments, reimbursements, and reporting for fleets.</p>
                                     </div>
                                     <span className="text-4xl font-display font-bold text-primary">02</span>
                                 </div>
@@ -141,7 +141,7 @@ export default function WorkCarousel() {
                         </div>
 
                         {/* Project 3 */}
-                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
+                        <div className="w-[100vw] md:w-[50vw] lg:w-[37.2vw] flex-shrink-0 border-r-2 border-black h-full relative group snap-center overflow-hidden">
                             <span className="block text-xs font-bold uppercase tracking-widest text-primary mb-1 tech-position absolute top-4 left-4 z-20">ERP Management</span>
                             <div className="relative w-full h-full">
                                 <Image src="/images/naseni.webp" alt="Naseni Case Study" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -151,7 +151,7 @@ export default function WorkCarousel() {
                                 <div className="flex justify-between items-end">
                                     <div>
                                         <Image src="/images/naseni-logo.svg" alt="Naseni Logo" width={100} height={30} className="h-8 w-auto" />
-                                        <p className="font-display text-1xl font-medium mt-3">A Nigerian government agency driving innovation through engineering, manufacturing, and applied research.</p>
+                                        <p className="font-display text-sm lg:text-1xl font-medium mt-3">A Nigerian government agency driving innovation through engineering, manufacturing, and applied research.</p>
                                     </div>
                                     <span className="text-4xl font-display font-bold text-primary">03</span>
                                 </div>
@@ -159,7 +159,7 @@ export default function WorkCarousel() {
                         </div>
 
                         {/* View All Card */}
-                        <div className="w-[100vw] md:w-[60vw] lg:w-[37.2vw] flex-shrink-0 h-full relative group bg-charcoal text-white flex items-center justify-center snap-center bg-energy-gradient-dark">
+                        <div className="w-[100vw] md:w-[50vw] lg:w-[37.2vw] flex-shrink-0 h-full relative group bg-charcoal text-white flex items-center justify-center snap-center bg-energy-gradient-dark">
                             <div className="text-center">
                                 <h3 className="font-display text-4xl font-bold uppercase mb-4">View All<br />Projects</h3>
                                 <Link className="inline-block border-2 border-primary text-primary px-8 py-4 uppercase text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-colors" href="#">
