@@ -142,7 +142,7 @@ export default function TestimonialCarousel() {
                 {/* Carousel Wrapper */}
                 <div className="relative overflow-hidden">
                     <div className="overflow-x-auto no-scrollbar scroll-smooth">
-                        <div className="flex justify-between gap-4 mt-4 md:mt-0 absolute top-[50%] left-0 z-10 w-full">
+                        <div className="flex justify-between gap-4 mt-4 md:mt-0 absolute top-[50%] left-0 z-90 w-full">
                             <button
                                 onClick={() => scroll('left')}
                                 className={`top-1/2 -translate-y-1/2 w-12 h-12 border-2 border-black bg-white/90 hover:bg-primary hover:border-primary hover:text-black z-30 flex items-center justify-center rounded-full transition-colors ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
