@@ -186,17 +186,11 @@
     text-align: center;
     color: rgba(0, 0, 0, 0.55);
   }
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     .iso-text {
       color: rgba(255, 255, 255, 0.8);
     }
-  }
-  /* hide text on very small screens to avoid clutter */
-  @media (max-width: 420px) {
-    .iso-text {
-      /* display: none; */
-    }
-  }
+  } */
 }
 
 /* Additional Animations from style.css */

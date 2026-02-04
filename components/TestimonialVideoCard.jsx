@@ -79,7 +79,7 @@ export default function TestimonialVideoCard({
                     </div>
                 )}
                 {/* Info Overlay */}
-                <div className="absolute bottom-0 p-8 pointer-events-none transition-opacity duration-300 opacity-100">
+                <div className="absolute bottom-0 p-8 pointer-events-none transition-opacity duration-300 opacity-100 w-100">
                     <h3 className="font-display text-2xl font-bold uppercase leading-tight text-white mb-6">
                         {quote}
                     </h3>

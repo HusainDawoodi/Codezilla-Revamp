@@ -35,30 +35,11 @@ export default function HeroSlider() {
 
                 {/* SLIDE 1 */}
                 <div
-                    className={`absolute inset-0 transition-opacity duration-1000 ${current === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${current === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
                         }`}
-                // Note: The CSS animation heroFade1 handles opacity effectively, but React state visibility ensures we don't have z-index issues.
-                // However, existing CSS animation 'hero-slide-1' runs infinitely.
-                // The JS Logic in original code toggled classes.
-                // To simplify: We can just let React handle the switching if we remove the infinite CSS animation, OR we sync them.
-                // The original code had: setActive(index) and CSS animation running.
-                // Actually, 'hero-slide-1' has `animation: heroFade1 10s infinite`.
-                // If we want to strictly follow the original behavior which synced with JS interval:
-                // The JS interval aligns with the CSS animation phases.
-                // Check CSS: heroFade1 starts at opacity 1, fades out at 55%.
-                // 45% of 10s = 4.5s visible. Loop is 10s.
-                // JS interval is 5000ms (5s).
-                // So every 5s it switches active dot. The fade happens via CSS.
-                // We just need to render both slides and let CSS do the fade?
-                // NO, the original JS `showSlide` toggles opacity classes!
-                // lines 2066: slide.classList.toggle('opacity-0', i !== index);
-                // So the JS controls visibility, overriding or complementing CSS?
-                // Wait, `hero-slide-1` class applies the animation.
-                // If JS also applies `opacity-0`, it hides it.
-                // Let's replicate the structure exactly.
                 >
-                    <div className="absolute inset-0 hero-zoom-1">
-                        <div className="absolute inset-0">
+                    <div className="absolute inset-0">
+                        <div className="absolute inset-0 hero-zoom-1">
                             <Image
                                 src="/images/About-banner.webp"
                                 alt="Engineer Portrait"
@@ -86,11 +67,11 @@ export default function HeroSlider() {
 
                 {/* SLIDE 2 */}
                 <div
-                    className={`absolute inset-0 transition-opacity duration-1000 ${current === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${current === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
                         }`}
                 >
-                    <div className="absolute inset-0 hero-zoom-2">
-                        <div className="absolute inset-0">
+                    <div className="absolute inset-0">
+                        <div className="absolute inset-0 hero-zoom-2">
                             <Image
                                 src="/images/team.webp"
                                 alt="Project Lead"

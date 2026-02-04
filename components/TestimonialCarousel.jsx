@@ -17,7 +17,7 @@ const TESTIMONIALS = [
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'Charlie Cook',
-        clientRole: 'CTO, Rightcharge'
+        clientRole: 'CEO, Rightcharge'
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const TESTIMONIALS = [
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'Haadi AbdulMutalab',
-        clientRole: 'CTO, Found To You'
+        clientRole: 'CEO, Farm To You'
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const TESTIMONIALS = [
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'Shain',
-        clientRole: 'CTO, Thriving'
+        clientRole: 'CEO, Thriving'
 
     },
     {
@@ -45,7 +45,7 @@ const TESTIMONIALS = [
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'Alberto',
-        clientRole: 'CTO, Wemby'
+        clientRole: 'CEO, Wemby'
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ const TESTIMONIALS = [
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'Farukh',
-        clientRole: 'CTO, Apex Fin'
+        clientRole: 'CEO, Apex Fin'
     },
     {
         id: 6,
@@ -63,7 +63,7 @@ const TESTIMONIALS = [
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'Khalil Halilu  ',
-        clientRole: 'CTO, Apex Fin'
+        clientRole: 'CEO, Apex Fin'
     }
 ];
 
@@ -118,10 +118,10 @@ export default function TestimonialCarousel() {
                 <div className="flex flex-col md:flex-row justify-between lg:items-end mb-16 border-b border-white/20 pb-8">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Social Proof</span>
-                        <h2 className="font-display text-4xl font-bold text-white uppercase ">Client <br className="hidden lg:block" />success</h2>
+                        <h2 className="font-display text-4xl font-bold text-white uppercase ">Client Success</h2>
                     </div>
 
-                    <div className="flex gap-4 mt-4 md:mt-0">
+                    {/* <div className="flex gap-4 mt-4 md:mt-0">
                         <button
                             onClick={() => scroll('left')}
                             className={`w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-colors rounded-full ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
@@ -136,12 +136,28 @@ export default function TestimonialCarousel() {
                         >
                             <span className="material-symbols-outlined">arrow_forward</span>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Carousel Wrapper */}
                 <div className="relative overflow-hidden">
                     <div className="overflow-x-auto no-scrollbar scroll-smooth">
+                        <div className="flex justify-between gap-4 mt-4 md:mt-0 absolute top-[50%] left-0 z-10 w-full">
+                            <button
+                                onClick={() => scroll('left')}
+                                className={`top-1/2 -translate-y-1/2 w-12 h-12 border-2 border-black bg-white/90 hover:bg-primary hover:border-primary hover:text-black z-30 flex items-center justify-center rounded-full transition-colors ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
+                                disabled={!canScrollLeft}
+                            >
+                                <span className="material-symbols-outlined text-black">arrow_back</span>
+                            </button>
+                            <button
+                                onClick={() => scroll('right')}
+                                className={`top-1/2 -translate-y-1/2 w-12 h-12 border-2 border-black bg-white/90 hover:bg-primary hover:border-primary hover:text-black z-30 flex items-center justify-center rounded-full transition-colors ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : ''}`}
+                                disabled={!canScrollRight}
+                            >
+                                <span className="material-symbols-outlined text-black">arrow_forward</span>
+                            </button>
+                        </div>
                         <div ref={trackRef} className="flex gap-8 w-max pb-8 !w-full">
                             {TESTIMONIALS.map((item) => (
                                 <TestimonialVideoCard
