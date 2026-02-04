@@ -82,7 +82,7 @@ export default function PhilosophyVideo() {
     return (
         <>
             <section
-                className="relative w-full h-[85vh] border-b-2 border-black overflow-hidden group bg-charcoal animate-entrance-fade"
+                className="relative w-full h-[60vh] lg:h-[85vh] border-b-2 border-black overflow-hidden group bg-charcoal animate-entrance-fade"
                 style={{ animationDelay: '0.4s' }}
             >
                 <Image
@@ -103,7 +103,7 @@ export default function PhilosophyVideo() {
                         Act 2: The Philosophy
                     </span>
                     <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white uppercase tracking-tighter">
-                        Our <span className="text-outline-white">Philosophy</span>
+                        Our <span className="text-outline-white-video">Philosophy</span>
                     </h2>
                 </div>
             </section>

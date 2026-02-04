@@ -20,8 +20,8 @@ export default function HeroSlider() {
     };
 
     return (
-        <section className="relative min-h-screen pt-20 flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
-            <div className="relative h-[70vh] lg:h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group hero-slider">
+        <section className="relative min-h-screen pt-16 lg:pt-20 flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
+            <div className="relative h-[80vh] lg:h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group hero-slider">
                 {/* Dots */}
                 <div className="absolute left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-4">
                     {slides.map((index) => (
@@ -77,7 +77,7 @@ export default function HeroSlider() {
                                 Role: Chief Architect
                             </span>
                         </div>
-                        <p className="font-display text-2xl lg:text-3xl font-light leading-snug max-w-md">
+                        <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">
                             &quot;We build the systems that define the next decade of
                             enterprise efficiency.&quot;
                         </p>
@@ -108,7 +108,7 @@ export default function HeroSlider() {
                                 Role: Strategy Lead
                             </span>
                         </div>
-                        <p className="font-display text-2xl lg:text-3xl font-light leading-snug max-w-md">
+                        <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">
                             &quot;True transformation happens when human insight meets
                             algorithmic precision.&quot;
                         </p>
@@ -125,22 +125,22 @@ export default function HeroSlider() {
                                 The Intelligence First // 001
                             </span>
                         </div>
-                        <h1 className="font-display text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.85] tracking-tighter uppercase mb-6">
+                        <h1 className="font-display text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tighter uppercase mb-6">
                             <span className="text-primary">Intelligence </span>
                             <br className="hidden lg:block" />
                             at the core.
                         </h1>
-                        <p className="font-display text-2xl lg:text-3xl text-white font-light leading-tight mb-8 lg:max-w-lg">
+                        <p className="font-display text-lg lg:text-2xl text-white font-light leading-tight mb-8 lg:max-w-2xl">
                             The AI-powered partner for enterprise product evolution.
                         </p>
-                        <p className="text-xl text-gray-400 lg:max-w-xl font-medium leading-relaxed border-l-4 border-primary pl-6">
+                        <p className="text-md lg:text-xl text-gray-400 lg:max-w-2xl font-medium leading-relaxed border-l-4 border-primary pl-6">
                             We don’t just build software. We architect AI-driven systems that
                             define the next decade of efficiency.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8 pt-12 border-t-2 border-gray-800">
                         <div>
-                            <span className="block text-6xl font-display font-bold text-primary mb-2">
+                            <span className="block text-5xl lg:text-6xl font-display font-bold text-primary mb-2">
                                 98<span className="text-3xl align-top text-white">%</span>
                             </span>
                             <span className="text-xs uppercase tracking-widest text-white font-bold">
@@ -148,7 +148,7 @@ export default function HeroSlider() {
                             </span>
                         </div>
                         <div>
-                            <span className="block text-6xl font-display font-bold text-primary mb-2">
+                            <span className="block text-5xl lg:text-6xl font-display font-bold text-primary mb-2">
                                 350<span className="text-3xl align-top text-white">+</span>
                             </span>
                             <span className="text-xs uppercase tracking-widest text-white font-bold">

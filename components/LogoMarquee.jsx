@@ -103,7 +103,7 @@ const MARQUEE_ITEMS = [
 export default function LogoMarquee() {
     return (
         <section className="bg-white py-10 overflow-hidden">
-            <p className="text-center text-xs tracking-widest text-gray-400 mb-5 uppercase">
+            <p className="text-center text-xs tracking-widest text-gray-600 mb-5 uppercase font-semibold">
                 Recognized by Leading Industry Platforms
             </p>
 

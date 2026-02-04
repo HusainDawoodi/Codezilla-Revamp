@@ -83,7 +83,11 @@
 
 @layer utilities {
   .text-outline-white {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    color: transparent;
+  }
+  .text-outline-white-video {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
     color: transparent;
   }
   .text-outline-black {
@@ -163,10 +167,11 @@
     align-items: center;
     gap: 0.25rem;
     padding: 0 0.5rem;
+    opacity: 0.5;
   }
   .iso-custom-logo img {
     display: block;
-    max-height: 48px;
+    max-height: 52px;
     width: auto;
   }
   .iso-text {
@@ -184,7 +189,7 @@
   /* hide text on very small screens to avoid clutter */
   @media (max-width: 420px) {
     .iso-text {
-      display: none;
+      /* display: none; */
     }
   }
 }

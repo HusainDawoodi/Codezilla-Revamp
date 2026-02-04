@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full z-50 bg-white border-b-2 border-black">
-      <div className="w-full grid grid-cols-12 h-20 items-center relative">
+      <div className="w-full grid grid-cols-12 h-16 lg:h-20 items-center relative">
         {/* Logo Section */}
         <div className="col-span-10 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer lg:border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
           <Link
@@ -30,7 +30,7 @@ export default function Navbar() {
               alt="Codezilla Logo"
               width={208}
               height={40}
-              className="w-52"
+              className="w-35 lg:w-52"
               priority
             />
           </Link>
