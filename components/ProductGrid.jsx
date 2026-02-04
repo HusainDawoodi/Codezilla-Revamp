@@ -14,9 +14,8 @@ export default function ProductGrid() {
                         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
                             Internal IP
                         </span>
-                        <h2 className="font-display text-5xl font-bold text-white uppercase tracking-tighter">
-                            Our
-                            <br />
+                        <h2 className="font-display text-4xl font-bold text-white uppercase">
+                            Our <br className="hidden lg:block" />
                             products
                         </h2>
                     </div>
@@ -41,10 +40,10 @@ export default function ProductGrid() {
                             </div>
                         </div>
                         <div className="flex-grow">
-                            <h3 className="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
+                            <h3 className="font-display lg:text-3xl text-2xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
                                 Product Flywheel
                             </h3>
-                            <p className="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+                            <p className="lg:text-lg text-md text-gray-300 leading-relaxed mb-6 font-medium">
                                 Automated CI/CD pipelines configured for enterprise scale.
                                 Reduce deployment time by 400%.
                             </p>
@@ -73,10 +72,10 @@ export default function ProductGrid() {
                             </div>
                         </div>
                         <div className="flex-grow">
-                            <h3 className="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
+                            <h3 className="font-display lg:text-3xl text-2xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
                                 Security Guard:AM
                             </h3>
-                            <p className="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+                            <p className="lg:text-lg text-md text-gray-300 leading-relaxed mb-6 font-medium">
                                 Real-time threat modeling and automated compliance checks woven
                                 into your codebase.
                             </p>
@@ -105,10 +104,10 @@ export default function ProductGrid() {
                             </div>
                         </div>
                         <div className="flex-grow">
-                            <h3 className="font-display text-3xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
+                            <h3 className="font-display lg:text-3xl text-2xl font-bold uppercase mb-4 text-white group-hover:text-primary transition-colors">
                                 AI Integration
                             </h3>
-                            <p className="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+                            <p className="lg:text-lg text-md text-gray-300 leading-relaxed mb-6 font-medium">
                                 Plug-and-play LLM connectors for internal data grounding and RAG
                                 architecture.
                             </p>

@@ -1,16 +1,30 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
     return (
         <footer className="bg-charcoal text-white pt-20 pb-10 border-b-2 border-black animate-entrance-fade" style={{ animationDelay: '1.8s' }}>
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 text-white">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                     {/* Brand */}
                     <div className="space-y-6">
                         <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-white text-4xl">grid_view</span>
-                            <span className="font-display font-bold text-3xl tracking-tighter text-white uppercase">Codezilla</span>
+                            <Link
+                                href="/"
+                                className="font-display font-bold text-3xl tracking-tighter text-white uppercase group-hover:text-primary transition-colors"
+                            >
+                                <Image
+                                    src="/images/white-logo.svg"
+                                    alt="Codezilla Logo"
+                                    width={208}
+                                    height={40}
+                                    className="w-35 lg:w-52"
+                                    priority
+                                />
+                            </Link>
+                            {/* <span className="material-symbols-outlined text-white text-4xl">grid_view</span>
+                            <span className="font-display font-bold text-3xl tracking-tighter text-white uppercase">Codezilla</span> */}
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             We architect the future. A rigorous, engineering-first approach to complex digital transformation and AI integration.
@@ -19,7 +33,7 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h4 className="text-sm font-bold uppercase tracking-widest text-primary mb-6">Services</h4>
+                        <h4 className="text-sm font-bold uppercase  tracking-widest text-primary mb-6">Services</h4>
                         <ul className="space-y-3 text-sm text-gray-400 font-medium">
                             <li><Link className="hover:text-white transition-colors" href="#">UI/UX Design</Link></li>
                             <li><Link className="hover:text-white transition-colors" href="#">QA &amp; Testing</Link></li>

@@ -357,7 +357,7 @@ export default function Navbar() {
 
         {/* Sidebar */}
         <div
-          className={`absolute z-[99999999] top-0 right-0 w-[85vw] md:w-[60vw] h-full bg-white shadow-2xl overflow-y-auto duration-300 transform transition-transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+          className={`absolute z-[99999999] top-0 right-0 w-[85vw] md:w-[60vw] h-full bg-black shadow-2xl overflow-y-auto duration-300 transform transition-transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex flex-col h-full">
             {/* Header */}
@@ -368,7 +368,7 @@ export default function Navbar() {
                 onClick={toggleMobileMenu}
               >
                 <Image
-                  src="/images/codezilla.svg"
+                  src="/images/white-logo.svg"
                   alt="Codezilla Logo"
                   width={150}
                   height={30}
@@ -390,7 +390,7 @@ export default function Navbar() {
               <Link
                 href="#"
                 onClick={toggleMobileMenu}
-                className="block text-xl font-display font-bold uppercase text-black hover:text-primary"
+                className="block text-xl font-display font-bold uppercase text-white hover:text-primary"
               >
                 Who we are
               </Link>
@@ -399,7 +399,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown(1)}
-                  className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-black hover:text-primary"
+                  className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-white hover:text-primary"
                 >
                   <span>What we do</span>
                   <span
@@ -409,7 +409,7 @@ export default function Navbar() {
                   </span>
                 </button>
                 <div
-                  className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 1 ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0 hidden"}`}
+                  className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 1 ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0 invisible !mt-0"}`}
                 >
                   {/* Sub-sections */}
                   <div className="space-y-3">
@@ -418,19 +418,19 @@ export default function Navbar() {
                     </h4>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       Rapid Prototyping
                     </Link>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       Product Discovery
                     </Link>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       UI/UX Design Services
                     </Link>
@@ -442,13 +442,13 @@ export default function Navbar() {
                     </h4>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       Software Architects
                     </Link>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       Back-end Engineers
                     </Link>
@@ -459,13 +459,13 @@ export default function Navbar() {
                     </h4>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       codezilla-flywheel
                     </Link>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       codezilla Guard:IAM
                     </Link>
@@ -476,13 +476,13 @@ export default function Navbar() {
                     </h4>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       Salesforce
                     </Link>
                     <Link
                       href="#"
-                      className="block text-sm text-gray-500 hover:text-black"
+                      className="block text-sm text-gray-200 hover:text-black"
                     >
                       Microsoft Dynamics 365
                     </Link>
@@ -493,7 +493,7 @@ export default function Navbar() {
               <Link
                 href="#"
                 onClick={toggleMobileMenu}
-                className="block text-xl font-display font-bold uppercase text-black hover:text-primary"
+                className="block text-xl font-display font-bold uppercase text-white hover:text-primary"
               >
                 Case Studies
               </Link>
@@ -502,7 +502,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown(2)}
-                  className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-black hover:text-primary"
+                  className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-white hover:text-primary"
                 >
                   <span>What we think</span>
                   <span
@@ -512,23 +512,23 @@ export default function Navbar() {
                   </span>
                 </button>
                 <div
-                  className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 2 ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+                  className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 2 ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 invisible !mt-0"}`}
                 >
                   <Link
                     href="#"
-                    className="block text-sm font-bold text-gray-800 hover:text-primary"
+                    className="block text-sm font-bold text-gray-200 hover:text-primary"
                   >
                     Life at Codezilla
                   </Link>
                   <Link
                     href="#"
-                    className="block text-sm font-bold text-gray-800 hover:text-primary"
+                    className="block text-sm font-bold text-gray-200 hover:text-primary"
                   >
                     Business Insights
                   </Link>
                   <Link
                     href="#"
-                    className="block text-sm font-bold text-gray-800 hover:text-primary"
+                    className="block text-sm font-bold text-gray-200 hover:text-primary"
                   >
                     CSR Initiatives
                   </Link>
@@ -538,7 +538,7 @@ export default function Navbar() {
               <Link
                 href="#"
                 onClick={toggleMobileMenu}
-                className="block text-xl font-display font-bold uppercase text-black hover:text-primary"
+                className="block text-xl font-display font-bold uppercase text-white hover:text-primary"
               >
                 Career
               </Link>

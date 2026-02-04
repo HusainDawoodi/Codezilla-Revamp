@@ -3,32 +3,64 @@
 import { useRef, useState, useEffect } from 'react';
 import TestimonialVideoCard from './TestimonialVideoCard';
 import KhalilVideo from '../videos/khalil_m6AFz1B6.mp4';
-
+import HaadiVideo from '../videos/Haadi.mp4';
+import ShainVideo from '../videos/Shain.mp4';
+import WembyVideo from '../videos/Wemby.mp4';
+import FarukhVideo from '../videos/Farukh.mp4';
+import CharlieVideo from '../videos/charlie_NrKB7TX9.mp4';
 // Sample dat based on the HTML
 const TESTIMONIALS = [
     {
         id: 1,
-        videoSrc: KhalilVideo,
+        videoSrc: CharlieVideo,
         posterSrc: '/images/testimonial1-poster.jpg',
-        quote: 'Codezilla completely rebuilt our payment infrastructure with zero downtime.',
+        quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'James Harrison',
         clientRole: 'CTO, Apex Fin'
     },
     {
         id: 2,
-        videoSrc: KhalilVideo, // Reusing as per original code repeats
+        videoSrc: HaadiVideo, // Reusing as per original code repeats
         posterSrc: '/images/testimonial1-poster.jpg',
-        quote: 'Codezilla completely rebuilt our payment infrastructure with zero downtime.',
+        quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'James Harrison',
         clientRole: 'CTO, Apex Fin'
     },
     {
         id: 3,
+        videoSrc: ShainVideo,
+        posterSrc: '/images/testimonial1-poster.jpg',
+        quote: 'Codezilla completely',
+        clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
+        clientName: 'James Harrison',
+        clientRole: 'CTO, Apex Fin'
+
+    },
+    {
+        id: 4,
+        videoSrc: WembyVideo,
+        posterSrc: '/images/testimonial1-poster.jpg',
+        quote: 'Codezilla completely',
+        clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
+        clientName: 'James Harrison',
+        clientRole: 'CTO, Apex Fin'
+    },
+    {
+        id: 5,
+        videoSrc: FarukhVideo,
+        posterSrc: '/images/testimonial1-poster.jpg',
+        quote: 'Codezilla completely',
+        clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
+        clientName: 'James Harrison',
+        clientRole: 'CTO, Apex Fin'
+    },
+    {
+        id: 6,
         videoSrc: KhalilVideo,
         posterSrc: '/images/testimonial1-poster.jpg',
-        quote: 'Codezilla completely rebuilt our payment infrastructure with zero downtime.',
+        quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
         clientName: 'James Harrison',
         clientRole: 'CTO, Apex Fin'
@@ -86,7 +118,7 @@ export default function TestimonialCarousel() {
                 <div className="flex flex-col md:flex-row justify-between lg:items-end mb-16 border-b border-white/20 pb-8">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Social Proof</span>
-                        <h2 className="font-display text-5xl font-bold text-white uppercase tracking-tighter">Client<br />success</h2>
+                        <h2 className="font-display text-4xl font-bold text-white uppercase ">Client <br className="hidden lg:block" />success</h2>
                     </div>
 
                     <div className="flex gap-4 mt-4 md:mt-0">

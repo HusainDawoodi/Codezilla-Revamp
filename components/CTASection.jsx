@@ -3,22 +3,22 @@ import Image from 'next/image';
 
 export default function CTASection() {
     return (
-        <section className="relative w-full h-screen border-b-2 border-black overflow-hidden bg-charcoal group animate-entrance-fade" style={{ animationDelay: '1.6s' }}>
+        <section className="relative w-full lg:h-screen h-[70vh] border-b-2 border-black overflow-hidden bg-charcoal group animate-entrance-fade" style={{ animationDelay: '1.6s' }}>
 
             {/* Background Image */}
-            <div className="absolute inset-0 w-full h-full">
+            {/* <div className="absolute inset-0 w-full h-full">
                 <Image
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk"
                     alt="Senior Consultant"
                     fill
                     className="object-cover object-top opacity-50 mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
-            </div>
+            </div> */}
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent"></div>
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6 text-center">
-                <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white uppercase tracking-tighter mb-12 leading-[0.95]">
+                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl font-bold text-white uppercase tracking-tighter mb-12 lg:leading-[0.95]">
                     Ready to<br />build <span className="text-primary">what&apos;s next?</span>
                 </h2>
                 <Link
