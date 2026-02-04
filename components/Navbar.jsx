@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-white border-b-2 border-black">
       <div className="w-full grid grid-cols-12 h-16 lg:h-20 items-center relative">
         {/* Logo Section */}
-        <div className="col-span-10 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer lg:border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
+        <div className="col-span-10 lg:col-span-3 pl-6 flex items-center gap-4 cursor-pointer lg:border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
           <Link
             href="/"
             className="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors"
@@ -28,9 +28,9 @@ export default function Navbar() {
             <Image
               src="/images/codezilla.svg"
               alt="Codezilla Logo"
-              width={208}
+              width={200}
               height={40}
-              className="w-35 lg:w-52"
+              className="w-35 lg:w-40"
               priority
             />
           </Link>
@@ -49,8 +49,8 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:col-span-6 lg:flex justify-center items-center h-full bg-white border-r-2 border-black px-4 relative">
-          <div className="flex items-center gap-8 xl:gap-12 h-full">
+        <div className="hidden lg:col-span-6 lg:flex justify-center items-center h-full w-full bg-white border-r-2 border-black px-4 relative">
+          <div className="flex items-center justify-center gap-8 xl:gap-6 h-full w-full">
             <Link
               href="#"
               className="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
@@ -332,13 +332,13 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Call to Action */}
-        <div className="hidden lg:col-span-3 lg:flex justify-end items-center h-full bg-white px-8">
+        <div className="hidden lg:col-span-3 lg:flex justify-end items-center h-full bg-white px-5">
           <Link
             href="#"
-            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-[#E65100] shadow-[0_4px_12px_rgba(255,109,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,109,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-0 bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-[#E65100] shadow-[0_4px_12px_rgba(255,109,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,109,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
           >
             <span>Schedule Call</span>
-            <span className="material-symbols-outlined text-sm">
+            <span className="material-symbols-outlined text-xs">
               arrow_forward
             </span>
           </Link>
@@ -377,7 +377,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 text-black hover:text-primary"
+                className="p-2 text-white hover:text-primary"
               >
                 <span className="material-symbols-outlined text-3xl">
                   close

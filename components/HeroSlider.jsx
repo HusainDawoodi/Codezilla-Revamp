@@ -20,7 +20,7 @@ export default function HeroSlider() {
     };
 
     return (
-        <section className="relative min-h-screen pt-16 lg:pt-20 flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
+        <section className="relative flex flex-col lg:grid lg:grid-cols-2 border-b-2 border-black animate-entrance-fade">
             <div className="relative h-[80vh] lg:h-[60vh] lg:h-auto border-b-2 lg:border-b-0 lg:border-r-2 border-black overflow-hidden bg-gray-900 group hero-slider">
                 {/* Dots */}
                 <div className="absolute left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-4">

@@ -13,7 +13,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Navbar />
+
       <HeroSlider />
       <LogoMarquee />
       <PhilosophyVideo />
@@ -23,7 +23,6 @@ export default function Home() {
       <TestimonialCarousel />
       <ProductGrid />
       <CTASection />
-      <Footer />
     </main>
   );
 }

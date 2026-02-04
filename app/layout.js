@@ -1,5 +1,7 @@
 import { Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // const manrope = Manrope({ subsets: ["latin"], variable: '--font-manrope' });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-display' });
@@ -19,7 +21,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${spaceGrotesk.variable} ${spaceGrotesk.className} bg-background-light antialiased selection:bg-primary selection:text-white overflow-x-hidden`}>
-        {children}
+        <Navbar />
+        <div className="min-h-screen pt-16 lg:pt-20">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
