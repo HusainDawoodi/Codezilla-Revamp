@@ -16,8 +16,8 @@ const TESTIMONIALS = [
         posterSrc: '/images/testimonial1-poster.jpg',
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
-        clientName: 'James Harrison',
-        clientRole: 'CTO, Apex Fin'
+        clientName: 'Charlie Cook',
+        clientRole: 'CTO, Rightcharge'
     },
     {
         id: 2,
@@ -25,8 +25,8 @@ const TESTIMONIALS = [
         posterSrc: '/images/testimonial1-poster.jpg',
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
-        clientName: 'James Harrison',
-        clientRole: 'CTO, Apex Fin'
+        clientName: 'Haadi AbdulMutalab',
+        clientRole: 'CTO, Found To You'
     },
     {
         id: 3,
@@ -34,8 +34,8 @@ const TESTIMONIALS = [
         posterSrc: '/images/testimonial1-poster.jpg',
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
-        clientName: 'James Harrison',
-        clientRole: 'CTO, Apex Fin'
+        clientName: 'Shain',
+        clientRole: 'CTO, Thriving'
 
     },
     {
@@ -44,8 +44,8 @@ const TESTIMONIALS = [
         posterSrc: '/images/testimonial1-poster.jpg',
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
-        clientName: 'James Harrison',
-        clientRole: 'CTO, Apex Fin'
+        clientName: 'Alberto',
+        clientRole: 'CTO, Wemby'
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const TESTIMONIALS = [
         posterSrc: '/images/testimonial1-poster.jpg',
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
-        clientName: 'James Harrison',
+        clientName: 'Farukh',
         clientRole: 'CTO, Apex Fin'
     },
     {
@@ -62,7 +62,7 @@ const TESTIMONIALS = [
         posterSrc: '/images/testimonial1-poster.jpg',
         quote: 'Codezilla completely',
         clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBq9UaKVkeshcHJ7kZVSg-4ETKxKxAl1D0pVRepc4wLQhMyv2I58jHzT2AKFwTHfvnDH6SsI8jtAFpWdf16wGeuyZ0sLpSHwbFa38Lv4ndm9t4tnnPLHQrrKotpzPfzcIN0g0JV8jdu4Tz3mHRdQH2BBwz-YOJR24wR3rfqi18njq-ZeO2tDqxs8BCM1oIS8S1TOKuWK7PYYuYoM2Y5vxm3DlagpVQbrrxpQStW96RhcxQUJXXWasX3CT7ULtDg8WMtnVbeUNcCAKGp',
-        clientName: 'James Harrison',
+        clientName: 'Khalil Halilu  ',
         clientRole: 'CTO, Apex Fin'
     }
 ];
