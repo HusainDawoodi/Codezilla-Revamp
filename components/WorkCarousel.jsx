@@ -34,20 +34,19 @@ const projects = [
 export default function WorkCarousel() {
   const scrollContainerRef = useRef(null);
 
-  // Helper to get nearest child index
+  // Helper to get nearest child index relative to left edge (snap-start)
   const getNearestIndex = () => {
     const scroller = scrollContainerRef.current;
     if (!scroller) return 0;
 
-    const center = scroller.scrollLeft + scroller.clientWidth / 2;
+    const scrollLeft = scroller.scrollLeft;
     const children = Array.from(scroller.children);
 
     let nearest = 0;
     let minDiff = Infinity;
 
     children.forEach((child, i) => {
-      const childCenter = child.offsetLeft + child.offsetWidth / 2;
-      const diff = Math.abs(childCenter - center);
+      const diff = Math.abs(child.offsetLeft - scrollLeft);
       if (diff < minDiff) {
         minDiff = diff;
         nearest = i;
@@ -80,26 +79,6 @@ export default function WorkCarousel() {
       typeof window !== "undefined" && window.innerWidth >= 1024;
     scrollToIndex(getNearestIndex() + (isDesktop ? 2 : 1));
   };
-
-  // Snap logic on scroll end
-  useEffect(() => {
-    const scroller = scrollContainerRef.current;
-    if (!scroller) return;
-
-    let scrollTimeout = null;
-    const handleScroll = () => {
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        scrollToIndex(getNearestIndex());
-      }, 120);
-    };
-
-    scroller.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      scroller.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-    };
-  }, []);
 
   return (
     <section

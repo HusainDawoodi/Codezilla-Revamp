@@ -26,7 +26,7 @@ const TESTIMONIALS = [
     quote: "Codezilla completely",
     clientImage: "/images/khalil.svg",
     clientName: "Khalil Halilu  ",
-    clientRole: "CEO, Apex Fin",
+    clientRole: "CEO, ShapShap",
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ const TESTIMONIALS = [
     quote: "Codezilla completely",
     clientImage: "/images/farukh.svg",
     clientName: "Farukh",
-    clientRole: "CEO, Apex Fin",
+    clientRole: "CEO, Alziraatech",
   },
 ];
 
