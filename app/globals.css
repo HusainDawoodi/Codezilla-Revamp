@@ -150,6 +150,8 @@
     will-change: transform;
     animation-play-state: running;
     min-width: max-content;
+    animation: marquee 80s linear infinite;
+    will-change: transform;
   }
   .image-marquee:hover {
     animation-play-state: paused;
@@ -167,13 +169,12 @@
     align-items: center;
     gap: 0.25rem;
     padding: 0 0.5rem;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-  }
-  .iso-custom-logo:hover {
     opacity: 1;
     transition: opacity 0.3s ease;
   }
+  /* .iso-custom-logo:hover {
+    transition: opacity 0.3s ease;
+  } */
   .iso-custom-logo img {
     display: block;
     max-height: 52px;

@@ -104,7 +104,7 @@ export default function LogoMarquee() {
         <div className="w-full px-6 lg:px-2 py-2">
           <div className="overflow-hidden">
             <div
-              className="image-marquee-wrapper"
+              className=""
               role="region"
               aria-label="Scrolling partner and award logos"
             >
