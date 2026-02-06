@@ -35,9 +35,8 @@ export default function HeroSlider() {
 
         {/* SLIDE 1 */}
         <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            current === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${current === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
         >
           <div className="absolute inset-0">
             <div className="absolute inset-0 hero-zoom-1">
@@ -60,17 +59,15 @@ export default function HeroSlider() {
               </span>
             </div>
             <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">
-              &quot;We build the systems that define the next decade of
-              enterprise efficiency.&quot;
+              &quot;Driving the creation of scalable, secure, and intelligent production-grade systems.&quot;
             </p>
           </div>
         </div>
 
         {/* SLIDE 2 */}
         <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            current === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${current === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
         >
           <div className="absolute inset-0">
             <div className="absolute inset-0 hero-zoom-2">
@@ -92,8 +89,7 @@ export default function HeroSlider() {
               </span>
             </div>
             <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">
-              &quot;True transformation happens when human insight meets
-              algorithmic precision.&quot;
+              &quot;Where human expertise fuels AI systems trusted by organizations worldwide.&quot;
             </p>
           </div>
         </div>

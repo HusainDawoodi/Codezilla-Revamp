@@ -18,7 +18,7 @@ export const metadata = {
 export default function NewAIPage() {
     return (
         <main className="min-h-screen bg-white">
-            <Navbar />
+            {/* <Navbar /> */}
             <HeroSlider />
             <LogoMarquee />
             <PhilosophyVideo />
@@ -28,7 +28,7 @@ export default function NewAIPage() {
             <TestimonialCarousel />
             <ProductGrid />
             <CTASection />
-            <Footer />
+            {/* <Footer /> */}
         </main>
     );
 }
