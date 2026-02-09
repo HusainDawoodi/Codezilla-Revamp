@@ -34,7 +34,8 @@ export default function BenefitsSection() {
               <p className="text-gray-600 text-sm md:text-md leading-relaxed">
                 Good UI/UX design makes digital interactions simple, clear, and
                 enjoyable. When users can navigate easily, frustration
-                decreases.
+                decreases, satisfaction increases, and they are more likely to
+                return and engage frequently.
               </p>
             </div>
           </div>
@@ -50,8 +51,10 @@ export default function BenefitsSection() {
               </h3>
               <p className="text-gray-600 text-sm md:text-md leading-relaxed">
                 Well-designed user journeys reduce friction and highlight
-                important tasks. By simplifying navigation, UI/UX design
-                increases engagement.
+                important tasks. By simplifying navigation and guiding
+                decisions, UI/UX design increases engagement, improves
+                conversions, and helps firms achieve better, measurable digital
+                results.
               </p>
             </div>
           </div>
@@ -68,6 +71,8 @@ export default function BenefitsSection() {
               <p className="text-gray-600 text-sm md:text-md leading-relaxed">
                 A smooth interface shows professionalism and reliability.
                 Consistent images and smart interactions increase confidence.
+                This makes users feel more at ease when using your product and
+                helps strengthen your brand's long-term reputation.
               </p>
             </div>
           </div>

@@ -31,6 +31,8 @@ export default function ProcessSection() {
                   Every good design starts with understanding. We research
                   deeply into your objectives, target audience, and product
                   vision to find insights that form the core of the experience.
+                  This phase sets expectations, finds opportunities, and ensures
+                  that we design for purpose from the start.
                 </p>
               </div>
             </div>
@@ -53,7 +55,8 @@ export default function ProcessSection() {
                   With insights in place, we can chart a clear design path. User
                   flows, structure, and functionality are carefully designed to
                   strike a balance between corporate objectives and user
-                  requirements.
+                  requirements. This strategic plan guides all future design
+                  decisions.
                 </p>
               </div>
             </div>
@@ -75,7 +78,8 @@ export default function ProcessSection() {
                 <p className="text-gray-500 text-sm md:text-md leading-relaxed">
                   Ideas are given visual form through rapid, focused design
                   iterations. We build wireframes, prototypes, and finished
-                  interfaces that adapt based on feedback and testing.
+                  interfaces that adapt based on feedback and testing, ensuring
+                  that the experience is intuitive and engaging.
                 </p>
               </div>
             </div>
@@ -97,7 +101,8 @@ export default function ProcessSection() {
                 <p className="text-gray-500 text-sm md:text-md leading-relaxed">
                   Design meets development. Our team works closely together to
                   bring graphics into responsive, high-performance digital
-                  solutions.
+                  solutions. Precision and usability remain top priorities
+                  throughout deployment.
                 </p>
               </div>
             </div>
