@@ -16,6 +16,8 @@ module.exports = {
                 "background-dark": "#111827",
                 charcoal: "#0F1218",
                 paper: "#F9FAFB",
+                obsidian: "#060606",
+                "dark-accent": "#111111",
             },
             fontFamily: {
                 sans: ['var(--font-manrope)', 'sans-serif'],
