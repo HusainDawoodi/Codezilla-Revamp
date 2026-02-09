@@ -64,9 +64,9 @@ export default function Navbar() {
                   expand_more
                 </span>
               </span>
-              <div className="mega-menu absolute top-[80px] left-0 w-[100vw] bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[25%] transition-all duration-300 z-50 p-12">
+              <div className="mega-menu absolute top-[80px] left-0 w-full bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[25%] transition-all duration-300 z-50 p-12">
                 <div className="max-w-7xl grid grid-cols-12 gap-8">
-                  <div className="col-span-3 border-r border-white/20 pr-8">
+                  <div className="col-span-4 border-r border-white/20 pr-8">
                     <h3 className="text-xl font-display font-bold text-primary mb-6 uppercase">
                       Digital Product
                       <br />
@@ -115,7 +115,7 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-span-3 border-r border-white/20 pr-8">
+                  <div className="col-span-4 border-r border-white/20 pr-8">
                     <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
                       Staff
                       <br />
@@ -164,7 +164,7 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-span-3 border-r border-white/20 pr-8">
+                  <div className="col-span-4">
                     <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
                       Codezilla
                       <br />
@@ -205,7 +205,7 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-span-3 pl-4">
+                  {/* <div className="col-span-3 pl-4">
                     <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
                       System
                       <br />
@@ -245,7 +245,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

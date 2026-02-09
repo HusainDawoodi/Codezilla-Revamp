@@ -217,7 +217,7 @@ export default function PhilosophyVideo() {
           <span className="text-primary hidden lg:inline-block font-bold uppercase tracking-widest text-[10px] lg:text-sm mb-4  bg-black/50 px-3 py-1 border border-primary/30 backdrop-blur-sm">
             Act 2: The Philosophy
           </span>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-white uppercase tracking-tighter leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-7xl font-bold text-white uppercase tracking-tighter leading-tight">
             Our <span className="text-outline-white-video">Philosophy</span>
           </h2>
         </div>

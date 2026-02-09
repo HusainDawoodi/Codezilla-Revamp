@@ -35,8 +35,9 @@ export default function HeroSlider() {
 
         {/* SLIDE 1 */}
         <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${current === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            current === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
         >
           <div className="absolute inset-0">
             <div className="absolute inset-0 hero-zoom-1">
@@ -55,19 +56,21 @@ export default function HeroSlider() {
           <div className="absolute bottom-0 left-0 p-4 lg:p-12 pl-8 lg:pl-16 z-10 text-white">
             <div className="inline-block bg-primary text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <span className="font-mono text-xs uppercase tracking-widest font-bold">
-                Role: Chief Architect
+                The Founders:
               </span>
             </div>
             <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">
-              &quot;Driving the creation of scalable, secure, and intelligent production-grade systems.&quot;
+              Driving the creation of scalable, secure, and intelligent
+              production-grade systems
             </p>
           </div>
         </div>
 
         {/* SLIDE 2 */}
         <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${current === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            current === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
         >
           <div className="absolute inset-0">
             <div className="absolute inset-0 hero-zoom-2">
@@ -85,11 +88,12 @@ export default function HeroSlider() {
           <div className="absolute bottom-0 left-0 p-4 lg:p-12 pl-8 lg:pl-16 z-10 text-white">
             <div className="inline-block bg-white text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
               <span className="font-mono text-xs uppercase tracking-widest font-bold">
-                Role: Strategy Lead
+                The Force
               </span>
             </div>
             <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">
-              &quot;Where human expertise fuels AI systems trusted by organizations worldwide.&quot;
+              Where human expertise fuels AI systems trusted by organizations
+              worldwide
             </p>
           </div>
         </div>

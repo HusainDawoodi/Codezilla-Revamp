@@ -6,7 +6,7 @@ export default function ProcessGrid() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between lg:items-end mb-16 border-b-2 border-black pb-8">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-black uppercase  max-w-lg">
+          <h2 className="font-display text-4xl md:text-4xl font-bold text-black uppercase  max-w-lg">
             How we work
           </h2>
           <p className="text-sm font-bold uppercase tracking-widest text-primary mb-2">

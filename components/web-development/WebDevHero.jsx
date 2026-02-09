@@ -28,7 +28,7 @@ export default function WebDevHero() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="font-display text-4xl md:text-8xl lg:text-9xl font-bold text-white leading-none tracking-tighter uppercase mb-8">
+        <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tighter uppercase mb-8">
           WEB DEVELOPMENT
         </h1>
 

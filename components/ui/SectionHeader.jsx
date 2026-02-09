@@ -47,7 +47,7 @@ export default function SectionHeader({
 
       {title && (
         <h2
-          className={`font-display text-3xl md:text-5xl font-bold uppercase tracking-tighter ${themeStyles[theme].title} mb-6`}
+          className={`font-display text-3xl md:text-4xl font-bold uppercase tracking-tighter ${themeStyles[theme].title} mb-6`}
         >
           {title}
         </h2>

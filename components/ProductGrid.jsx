@@ -43,7 +43,7 @@ export default function ProductGrid() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
               Internal IP
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white uppercase">
+            <h2 className="font-display text-4xl md:text-4xl font-bold text-white uppercase">
               Our products
             </h2>
           </div>

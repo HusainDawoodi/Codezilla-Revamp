@@ -1,18 +1,16 @@
 /**
- * Reusable Input component for forms
+ * Reusable Select component for forms
  * @param {Object} props
- * @param {string} props.type - 'text' | 'email' | 'textarea'
- * @param {string} props.label - Input label
- * @param {string} props.placeholder - Placeholder text
+ * @param {string} props.label - Select label
+ * @param {Array<{value: string, label: string}>} props.options - Array of options
  * @param {string} props.error - Error message
  * @param {boolean} props.required - Required field
  * @param {string} props.className - Additional CSS classes
  * @param {'light' | 'dark'} props.variant - Theme variant
  */
-export default function Input({
-  type = "text",
+export default function Select({
   label,
-  placeholder,
+  options = [],
   error,
   required = false,
   className = "",
@@ -22,7 +20,7 @@ export default function Input({
   const isDark = variant === "dark";
 
   const baseStyles =
-    "w-full p-4 text-sm transition-colors focus:outline-none focus:border-primary rounded-none";
+    "w-full p-4 text-sm transition-colors focus:outline-none focus:border-primary rounded-none appearance-none";
 
   const variantStyles = isDark
     ? "bg-dark border border-white/10 text-white placeholder:text-gray-500"
@@ -45,23 +43,30 @@ export default function Input({
         </label>
       )}
 
-      {type === "textarea" ? (
-        <textarea
-          className={combinedClassName}
-          placeholder={placeholder}
-          required={required}
-          rows={4}
-          {...props}
-        />
-      ) : (
-        <input
-          type={type}
-          className={combinedClassName}
-          placeholder={placeholder}
-          required={required}
-          {...props}
-        />
-      )}
+      <div className="relative">
+        <select className={combinedClassName} required={required} {...props}>
+          {options.map((option) => (
+            <option
+              key={option.value}
+              value={option.value}
+              className="bg-black text-white"
+            >
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <div
+          className={`pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 ${isDark ? "text-white" : "text-black"}`}
+        >
+          <svg
+            className="h-4 w-4 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
 
       {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
     </div>

@@ -11,24 +11,24 @@ import ContactSection from "@/components/ui-ux/ContactSection";
 import WorkCarousel from "@/components/WorkCarousel";
 
 export const metadata = {
-    title: "UI/UX Design Services - Codezilla",
-    description: "Codezilla - Executive Precision in UI/UX Design",
+  title: "UI/UX Design Services - Codezilla",
+  description: "Codezilla - Executive Precision in UI/UX Design",
 };
 
 export default function UIUXPage() {
-    return (
-        <main className="bg-white min-h-screen">
-            <HeroSection />
-            <CapabilitiesMatrix />
-            <TechStack />
-            <ProcessSection />
-            <ServicesSection />
-            <ImpactSection />
-            <WorkCarousel />
-            {/* <PortfolioSection /> */}
-            <BenefitsSection />
-            <AccessibilitySection />
-            <ContactSection />
-        </main>
-    );
+  return (
+    <main className="bg-white min-h-screen">
+      <HeroSection />
+      <CapabilitiesMatrix />
+      <TechStack />
+      <ProcessSection />
+      <ServicesSection />
+      <ImpactSection />
+      <WorkCarousel />
+      {/* <PortfolioSection /> */}
+      <BenefitsSection />
+      {/* <AccessibilitySection /> */}
+      <ContactSection />
+    </main>
+  );
 }

@@ -30,7 +30,7 @@ export default function PhilosophySection() {
             <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary mb-6 block">
               Our Philosophy
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-black uppercase   mb-8">
+            <h2 className="font-display text-4xl md:text-4xl font-bold text-black uppercase   mb-8">
               Web Development That Powers Sales & Success
             </h2>
             <p className="text-lg text-gray-600 font-medium leading-relaxed">

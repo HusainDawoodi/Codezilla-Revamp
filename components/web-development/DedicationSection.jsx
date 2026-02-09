@@ -18,7 +18,7 @@ export default function DedicationSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-black uppercase tracking-tighter mb-8 leading-tight">
+            <h2 className="font-display text-4xl md:text-4xl font-bold text-black uppercase tracking-tighter mb-8 leading-tight">
               Dedication to Excellence
             </h2>
 

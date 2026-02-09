@@ -123,7 +123,7 @@ export default function TestimonialCarousel() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
               Social Proof
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white uppercase ">
+            <h2 className="font-display text-4xl md:text-4xl font-bold text-white uppercase ">
               Client Success
             </h2>
           </div>

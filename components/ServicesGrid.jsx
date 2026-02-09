@@ -14,7 +14,7 @@ export default function ServicesGrid() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
               Capabilities
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase leading-none mb-6">
+            <h2 className="font-display text-4xl md:text-4xl font-bold uppercase leading-none mb-6">
               What <br className="hidden lg:block" />
               we do
             </h2>

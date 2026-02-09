@@ -91,7 +91,7 @@ export default function WorkCarousel() {
           <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
             Evidence Log
           </span>
-          <h2 className="font-display  !text-4xl md:!text-5xl font-bold uppercase leading-none mb-8">
+          <h2 className="font-display  !text-4xl md:!text-4xl font-bold uppercase leading-none mb-8">
             Our <br className="hidden lg:block" />
             work
           </h2>
