@@ -64,8 +64,8 @@ export default function Navbar() {
                   expand_more
                 </span>
               </span>
-              <div className="mega-menu absolute top-[80px] left-0 w-full bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[25%] transition-all duration-300 z-50 p-12">
-                <div className="max-w-7xl grid grid-cols-12 gap-8">
+              <div className="mega-menu absolute top-[80px] left-0 w-full min-w-[80vw] bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[25%] transition-all duration-300 z-50 p-12">
+                <div className="max-w-9xl grid grid-cols-12 gap-8">
                   <div className="col-span-4 border-r border-white/20 pr-8">
                     <h3 className="text-xl font-display font-bold text-primary mb-6 uppercase">
                       Digital Product
@@ -92,9 +92,25 @@ export default function Navbar() {
                       <li>
                         <Link
                           className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
+                          href="/ui-ux"
                         >
                           UI/UX Design Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                          href="/mobile-app-development"
+                        >
+                          Mobile App Development
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                          href="/web-development"
+                        >
+                          Web Development
                         </Link>
                       </li>
                       <li>
@@ -117,9 +133,7 @@ export default function Navbar() {
                   </div>
                   <div className="col-span-4 border-r border-white/20 pr-8">
                     <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
-                      Staff
-                      <br />
-                      Augmentation
+                      Dedicated Teams
                     </h3>
                     <ul className="space-y-3">
                       <li>
@@ -429,16 +443,28 @@ export default function Navbar() {
                       Product Discovery
                     </Link>
                     <Link
-                      href="#"
+                      href="/ui-ux"
                       className="block text-sm text-gray-200 hover:text-black"
                     >
                       UI/UX Design Services
+                    </Link>
+                    <Link
+                      href="/mobile-app-development"
+                      className="block text-sm text-gray-200 hover:text-black"
+                    >
+                      Mobile App Development
+                    </Link>
+                    <Link
+                      href="/web-development"
+                      className="block text-sm text-gray-200 hover:text-black"
+                    >
+                      Web Development
                     </Link>
                   </div>
 
                   <div className="space-y-3">
                     <h4 className="text-sm font-bold text-primary uppercase">
-                      Staff Augmentation
+                      Dedicated Teams
                     </h4>
                     <Link
                       href="#"

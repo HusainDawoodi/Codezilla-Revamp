@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import TrustBadges from "../ui/TrustBadges";
 
 export default function HeroSection() {
   return (
@@ -46,62 +47,7 @@ export default function HeroSection() {
                 Design Philosophy
               </Link>
             </div>
-            <div className="flex flex-wrap items-center gap-6 md:gap-8 border-t border-white/10 pt-8">
-              <div className="flex items-center gap-3">
-                <div className="bg-white w-10 h-10 flex items-center justify-center rounded">
-                  <Image
-                    src="/images/google-icon.png"
-                    alt="Google Reviews"
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex text-primary text-sm">
-                    {[1, 2, 3, 4].map((i) => (
-                      <span
-                        key={i}
-                        className="material-symbols-outlined text-[16px] filled"
-                      >
-                        star
-                      </span>
-                    ))}
-                    <span className="material-symbols-outlined text-[16px] filled">
-                      star_half
-                    </span>
-                  </div>
-                  <span className="text-[10px] uppercase tracking-wider text-gray-400">
-                    4.9/5 Rating
-                  </span>
-                </div>
-              </div>
-              <div className="hidden sm:block w-px h-8 bg-white/10"></div>
-              <div className="flex items-center gap-3">
-                <div className="bg-white w-10 h-10 flex items-center justify-center rounded">
-                  <Image
-                    src="/images/clutch-icon.png"
-                    alt="Clutch"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex text-primary text-sm">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <span
-                        key={i}
-                        className="material-symbols-outlined text-[16px] filled"
-                      >
-                        star
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-[10px] uppercase tracking-wider text-gray-400">
-                    5.0/5 Clutch
-                  </span>
-                </div>
-              </div>
-            </div>
+            <TrustBadges variant="dark" />
           </div>
         </div>
         <div className="lg:col-span-5 relative hidden lg:flex justify-end">

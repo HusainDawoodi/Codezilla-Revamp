@@ -1,0 +1,545 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mobile App Development Services - Codezilla</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6D00",
+                        "primary-hover": "#FF9100",
+                        "charcoal": "#0F1218",
+                        "dark-accent": "#1A1D24",
+                        "obsidian": "#080A0E",
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['monospace'],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-card {
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .blueprint-grid {
+                background-size: 40px 40px;
+                background-image: linear-gradient(to right, rgba(255,109,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,109,0,0.05) 1px, transparent 1px);
+            }
+            .circuit-pattern {
+                background-image: radial-gradient(circle at 2px 2px, rgba(255,109,0,0.15) 1px, transparent 0);
+                background-size: 24px 24px;
+            }
+            .text-outline-primary {
+                -webkit-text-stroke: 1.5px #FF6D00;
+                color: transparent;
+            }
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                animation: marquee 30s linear infinite;
+            }
+            @keyframes pulse-orange {
+                0% { box-shadow: 0 0 0 0 rgba(255, 109, 0, 0.4); }
+                70% { box-shadow: 0 0 0 20px rgba(255, 109, 0, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(255, 109, 0, 0); }
+            }
+            .pulse-orange {
+                animation: pulse-orange 2s infinite;
+            }
+            .vertical-text {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<nav class="fixed w-full z-[100] bg-white border-b-2 border-black">
+<div class="w-full grid grid-cols-12 h-20 items-center">
+<div class="col-span-6 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
+<span class="material-symbols-outlined text-black text-4xl group-hover:text-primary">grid_view</span>
+<span class="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary">Codezilla</span>
+</div>
+<div class="hidden lg:col-span-6 lg:flex justify-center items-center h-full bg-white border-r-2 border-black px-4 relative">
+<div class="flex items-center gap-12 h-full">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black" href="#">Who we are</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black flex items-center gap-1" href="#">What we do</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black" href="#">Case studies</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black" href="#">Career</a>
+</div>
+</div>
+<div class="col-span-6 lg:col-span-3 flex justify-end items-center h-full bg-white px-8">
+<a class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-black transition-all rounded-[4px]" href="#">
+<span>Schedule Call</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen pt-20 flex items-center bg-charcoal overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/80 to-transparent z-10"></div>
+<video autoplay="" class="w-full h-full object-cover opacity-20 grayscale contrast-125" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-data-center-server-room-with-many-blinking-lights-and-cables-34440-large.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="container mx-auto px-12 relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<h1 class="font-display text-6xl md:text-[6.5rem] font-extrabold text-white leading-[0.9] tracking-tighter uppercase">
+                MOBILE APP<br/><span class="text-outline-primary">DEVELOPMENT</span>
+</h1>
+<p class="text-gray-400 text-lg max-w-lg leading-relaxed font-light">
+                We are a reputable web development company dedicated to building innovative, effective, and intuitive websites and web apps.
+            </p>
+<div class="flex flex-col gap-8">
+<div class="flex flex-wrap gap-6 items-center">
+<div class="flex items-center gap-3 bg-white/5 border border-white/10 px-5 py-3 backdrop-blur-md rounded-[4px]">
+<img alt="Google" class="h-4 brightness-0 invert opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM-oLMjIhExzdYDDKcoSoKqXSf5SNleYzahkKu87L2dSflWRmwQlVHAgAYTM_nUGhk_pWLkUuOYsQqZpOJ5UaN8K2emeutelpyu2kLBYzlrMwIqBulJzC0fTHTbhOowMDX8wppqbbtSD60hI53gndxucPPsXxDOCuPvXnetAauLMIkqDgHPWj7JyUV12ukeDcN6wB14x-Jh1iXLOUlf7StXXGM4sxbl45c_A43wI3fk_DCwlgDh8RF-F21BBl_q7B66xWDz4ww"/>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star_half</span>
+</div>
+<span class="text-white/80 font-mono text-[11px] font-bold">4.9/5</span>
+</div>
+<div class="flex items-center gap-3 bg-white/5 border border-white/10 px-5 py-3 backdrop-blur-md rounded-[4px]">
+<span class="text-white font-display font-bold text-sm tracking-tighter uppercase opacity-60">CLUTCH</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+</div>
+<span class="text-white/80 font-mono text-[11px] font-bold">5.0</span>
+</div>
+</div>
+<a class="inline-flex w-fit items-center gap-2 bg-primary text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all rounded-[4px]" href="#">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative hidden lg:flex items-center justify-center">
+<div class="relative scale-110">
+<img alt="iPhone Ecosystem" class="w-[450px] drop-shadow-[0_50px_100px_rgba(0,0,0,0.8)] transform -rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_IzLXc3azK6_0OADmZm9kqjMMSQ4hkXWAxjHKF6_P8vro3o96N0lKyprMZ5GginPQFPC09s4XeD0yUHAWiCkqctJ-T9TxEGvcI2c5x2PpYMSlHlMomiWI4UYNkZkl3qqdaYZjmyTDnOk61bXGPpr0nughppnBgdzKYtyv88xS7cGaSgKOSeiT-62Dbv7hugKe6V9Fr2NOP78s9YpTXMo674Ju08gN5-JOkG2rYNaofjb-7Xl5O1W3tBXbJWCPzxO4QKV-hrzv"/>
+<img alt="Apple Watch" class="absolute -bottom-10 -left-20 w-[200px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transform rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu2fyV_RFDPxHqYDIWDIvMj5YMroFJ-ekDWWERpL0kDbs_c-XcNbmyAvUx_pfM1LanqwvVlMEfsJRmwFGwweT_sMRZKMCxH9AfNPoMP-QcrCh-IYoI_e_fgyS4II7eBGYu7XYE8SmbmaRYT0YpetddjE31z_feCfPEeJTalVcsaWn7AcTMb_MzlAAtICDkrsSWvNDY_Cxxxn2ZGbl3LV9p-EdyuW6Q9Oz-EpSj5fY0Fagb7leyHrAj0bOo7iw6oDx7rdGS1xsP"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#F9F7F2] py-24 border-b border-black/5">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-display text-4xl font-bold leading-tight mb-8">Our team is exceptionally experienced in mobile app development and will deliver an app that will wow both you and your customers.</h2>
+</div>
+<div>
+<p class="text-gray-600 text-lg leading-relaxed font-light">As a leading mobile app development company, we are dedicated to providing innovative, scalable, and feature-rich app solutions that cater to the unique needs of your business, ensuring a seamless user experience and maximum engagement.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-12 border-b border-black/5">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-black/10">
+<div class="py-6 md:py-4 md:px-12 flex flex-col items-center justify-center text-center">
+<span class="text-primary font-display text-4xl font-extrabold mb-2 tracking-tight">50+</span>
+<span class="text-black/60 font-mono font-medium text-[11px] uppercase tracking-[0.2em]">Codezilla Developers</span>
+</div>
+<div class="py-6 md:py-4 md:px-12 flex flex-col items-center justify-center text-center">
+<span class="text-primary font-display text-4xl font-extrabold mb-2 tracking-tight">300+</span>
+<span class="text-black/60 font-mono font-medium text-[11px] uppercase tracking-[0.2em]">Projects Completed</span>
+</div>
+<div class="py-6 md:py-4 md:px-12 flex flex-col items-center justify-center text-center">
+<span class="text-primary font-display text-4xl font-extrabold mb-2 tracking-tight">8+</span>
+<span class="text-black/60 font-mono font-medium text-[11px] uppercase tracking-[0.2em]">Years of Experience</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-obsidian py-32 px-6 overflow-hidden relative">
+<div class="absolute inset-0 blueprint-grid opacity-10"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-24 max-w-4xl mx-auto">
+<h2 class="font-display text-5xl font-bold text-white uppercase tracking-tighter leading-tight mb-4">Codezilla Mobile App Development: Mobile App Development Services That Powers Sales &amp; Success</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative bg-charcoal border-t-4 border-primary/60 rounded-[4px] p-10 overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_50px_rgba(255,109,0,0.15)] hover:border-primary">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 circuit-pattern transition-opacity duration-500"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary text-5xl font-light">phone_iphone</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white uppercase mb-4 tracking-tight">Native App Development</h3>
+<p class="text-gray-400 text-base leading-relaxed font-light">
+                        We create high-performance native apps for iOS and Android using Swift, Kotlin, and Java, ensuring seamless user experiences and robust functionality.
+                    </p>
+</div>
+</div>
+<div class="group relative bg-charcoal border-t-4 border-primary/60 rounded-[4px] p-10 overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_50px_rgba(255,109,0,0.15)] hover:border-primary">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 circuit-pattern transition-opacity duration-500"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary text-5xl font-light">layers</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white uppercase mb-4 tracking-tight">Cross-Platform App Development</h3>
+<p class="text-gray-400 text-base leading-relaxed font-light">
+                        Leveraging frameworks like Flutter and React Native, we build apps that work flawlessly across multiple platforms, saving time and cost without compromising quality.
+                    </p>
+</div>
+</div>
+<div class="group relative bg-charcoal border-t-4 border-primary/60 rounded-[4px] p-10 overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_50px_rgba(255,109,0,0.15)] hover:border-primary">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 circuit-pattern transition-opacity duration-500"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary text-5xl font-light">web</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-white uppercase mb-4 tracking-tight">Progressive Web Apps</h3>
+<p class="text-gray-400 text-base leading-relaxed font-light">
+                        Our progressive web apps combine the best of web and mobile apps, offering fast load times, offline capabilities, and an engaging user experience.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#1e1e1e] py-32 px-6">
+<div class="max-w-[1400px] mx-auto flex gap-12">
+<div class="hidden lg:flex items-start pt-4">
+<span class="vertical-text text-white font-display font-bold text-sm tracking-[0.2em] uppercase opacity-80">Key Benefits</span>
+</div>
+<div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-16">
+<div class="lg:col-span-1 space-y-10">
+<div class="space-y-6">
+<h2 class="font-display text-5xl font-bold text-white leading-tight">Why Choose Codezilla For Mobile App Development</h2>
+</div>
+<div class="flex pt-8">
+<a class="group relative flex flex-col items-center justify-center w-56 h-56 rounded-full border border-white/20 hover:border-primary transition-all p-8 text-center bg-black/20" href="#">
+<span class="relative z-10 text-white font-bold text-sm leading-tight mb-2">Let’s Start with a<br/>Discussion.</span>
+<span class="relative z-10 text-gray-400 text-[10px] font-medium uppercase tracking-tight group-hover:text-primary transition-colors">Connect with us in a click!</span>
+<div class="absolute inset-2 border border-white/5 rounded-full group-hover:scale-105 transition-transform duration-500"></div>
+</a>
+</div>
+</div>
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="bg-[#242424] rounded-[4px] p-10 flex flex-col space-y-6 border border-white/5 hover:border-white/10 transition-colors">
+<h3 class="text-white font-display text-2xl font-bold leading-snug">Expertise In End-To-End Development</h3>
+<div class="w-full h-px bg-white/10"></div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Codezilla handles the entire mobile app development process, from idea validation and UI/UX design to coding, testing, and deployment. Our comprehensive strategy guarantees that projects run smoothly, resulting in apps that are secure, scalable, and personalised to your specific business needs.
+                    </p>
+</div>
+<div class="bg-[#242424] rounded-[4px] p-10 flex flex-col space-y-6 border border-white/5 hover:border-white/10 transition-colors">
+<h3 class="text-white font-display text-2xl font-bold leading-snug">Skilled And Experienced Developers</h3>
+<div class="w-full h-px bg-white/10"></div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Our expert developers specialise on Android, iOS, cross-platform, and upcoming technologies. With years of hands-on experience, we develop unique solutions that provide high performance, dependability, and a consistent user experience across all devices.
+                    </p>
+</div>
+<div class="bg-[#242424] rounded-[4px] p-10 flex flex-col space-y-6 border border-white/5 hover:border-white/10 transition-colors">
+<h3 class="text-white font-display text-2xl font-bold leading-snug">Cutting-Edge Technology Adoption</h3>
+<div class="w-full h-px bg-white/10"></div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Codezilla stays ahead by leveraging the latest tools, frameworks, and tech stacks, including Flutter, React Native, and AI-powered solutions. This allows us to build modern, future-ready mobile applications that meet evolving market trends and user expectations.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#F9F7F2] py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-display text-5xl font-bold uppercase tracking-tighter mb-4 text-black">Benefits of using mobile app development solutions</h2>
+<p class="text-gray-600 max-w-3xl text-lg mt-4">
+                Mobile app development solutions offer a wide range of benefits for businesses looking to expand their reach and improve customer engagement.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white border border-black/5 p-8 group overflow-hidden rounded-[4px] hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-primary/10 rounded-[4px] flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">campaign</span>
+</div>
+<h3 class="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">Enhanced customer engagement</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Direct communication channels that build long-term loyalty through personalized interactions and push notifications.</p>
+</div>
+<div class="bg-white border border-black/5 p-8 group overflow-hidden rounded-[4px] hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-primary/10 rounded-[4px] flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">visibility</span>
+</div>
+<h3 class="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">Improved brand visibility</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Constant presence on user devices increases brand recall and keeps your business top-of-mind for customers.</p>
+</div>
+<div class="bg-white border border-black/5 p-8 group overflow-hidden rounded-[4px] hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-primary/10 rounded-[4px] flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">settings_suggest</span>
+</div>
+<h3 class="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">Efficient Business Operations</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Streamline internal processes and improve productivity with custom mobile solutions for your workforce.</p>
+</div>
+<div class="bg-white border border-black/5 p-8 group overflow-hidden rounded-[4px] hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-primary/10 rounded-[4px] flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">person_check</span>
+</div>
+<h3 class="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">Personalized User Experience</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Leverage user data to provide tailored content and recommendations that drive higher conversion rates.</p>
+</div>
+<div class="bg-white border border-black/5 p-8 group overflow-hidden rounded-[4px] hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-primary/10 rounded-[4px] flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">extension</span>
+</div>
+<h3 class="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">Scalability and Flexibility</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Grow your app features and user base seamlessly with a robust architecture designed for future expansion.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-32 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-display text-6xl font-extrabold text-black uppercase tracking-tighter mb-4">Our Process</h2>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary -translate-x-1/2"></div>
+<div class="space-y-24 relative">
+<div class="flex items-center w-full">
+<div class="w-1/2 pr-12 text-right">
+<h3 class="text-2xl font-display font-bold text-black uppercase mb-2">Discovery &amp; Planning</h3>
+<p class="text-gray-600 text-sm max-w-sm ml-auto font-light">We begin by understanding your business goals and user needs to create a solid roadmap for development.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 bg-black text-white flex items-center justify-center font-display font-bold text-lg shadow-xl rounded-[4px]">01</div>
+</div>
+<div class="w-1/2 pl-12">
+<div class="w-24 h-24 bg-[#F9F7F2] flex items-center justify-center border border-black/5 rounded-[4px]">
+<span class="material-symbols-outlined text-gray-400 text-4xl">search</span>
+</div>
+</div>
+</div>
+<div class="flex items-center w-full">
+<div class="w-1/2 pr-12">
+<div class="w-24 h-24 bg-[#F9F7F2] flex items-center justify-center border border-black/5 ml-auto rounded-[4px]">
+<span class="material-symbols-outlined text-gray-400 text-4xl">design_services</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 bg-black text-white flex items-center justify-center font-display font-bold text-lg shadow-xl rounded-[4px]">02</div>
+</div>
+<div class="w-1/2 pl-12 text-left">
+<h3 class="text-2xl font-display font-bold text-black uppercase mb-2">Design &amp; Prototyping</h3>
+<p class="text-gray-600 text-sm max-w-sm font-light">Creating intuitive UI/UX designs and clickable prototypes to visualize the final product.</p>
+</div>
+</div>
+<div class="flex items-center w-full">
+<div class="w-1/2 pr-12 text-right">
+<h3 class="text-2xl font-display font-bold text-black uppercase mb-2">Development &amp; Integration</h3>
+<p class="text-gray-600 text-sm max-w-sm ml-auto font-light">Our engineers build robust code and integrate necessary APIs to bring your app to life.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 bg-black text-white flex items-center justify-center font-display font-bold text-lg shadow-xl rounded-[4px]">03</div>
+</div>
+<div class="w-1/2 pl-12">
+<div class="w-24 h-24 bg-[#F9F7F2] flex items-center justify-center border border-black/5 rounded-[4px]">
+<span class="material-symbols-outlined text-gray-400 text-4xl">code</span>
+</div>
+</div>
+</div>
+<div class="flex items-center w-full">
+<div class="w-1/2 pr-12">
+<div class="w-24 h-24 bg-[#F9F7F2] flex items-center justify-center border border-black/5 ml-auto rounded-[4px]">
+<span class="material-symbols-outlined text-gray-400 text-4xl">rocket_launch</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 bg-black text-white flex items-center justify-center font-display font-bold text-lg shadow-xl rounded-[4px]">04</div>
+</div>
+<div class="w-1/2 pl-12 text-left">
+<h3 class="text-2xl font-display font-bold text-black uppercase mb-2">Testing &amp; Deployment</h3>
+<p class="text-gray-600 text-sm max-w-sm font-light">Rigorous testing ensures a bug-free experience before we launch your app to the stores.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-obsidian py-32 overflow-hidden border-t border-white/5">
+<div class="container mx-auto px-6 mb-16">
+<h2 class="font-display text-5xl font-bold text-white uppercase tracking-tighter">Our Latest Works</h2>
+</div>
+<div class="flex overflow-x-auto gap-8 px-6 pb-8 no-scrollbar">
+<div class="min-w-[400px] bg-charcoal border border-white/10 rounded-[4px] overflow-hidden group">
+<div class="h-64 bg-gray-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-white text-3xl font-display font-bold uppercase">Usedo</h3>
+</div>
+</div>
+<div class="p-8">
+<p class="text-gray-400 text-sm leading-relaxed mb-6">A second-hand marketplace application designed for seamless buying and selling experiences with integrated secure payments.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-white transition-colors" href="#">View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="min-w-[400px] bg-charcoal border border-white/10 rounded-[4px] overflow-hidden group">
+<div class="h-64 bg-gray-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-white text-3xl font-display font-bold uppercase">Thriving.ai</h3>
+</div>
+</div>
+<div class="p-8">
+<p class="text-gray-400 text-sm leading-relaxed mb-6">An AI-powered health monitoring application connecting caregivers, patients, and doctors in a unified ecosystem.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-white transition-colors" href="#">View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="min-w-[400px] bg-charcoal border border-white/10 rounded-[4px] overflow-hidden group">
+<div class="h-64 bg-gray-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-white text-3xl font-display font-bold uppercase">DD Points</h3>
+</div>
+</div>
+<div class="p-8">
+<p class="text-gray-400 text-sm leading-relaxed mb-6">A loyalty and rewards platform tailored for retail businesses to enhance customer retention through gamification.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-white transition-colors" href="#">View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#F9F7F2] py-32 px-6 border-t border-black/5">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display text-5xl font-bold uppercase tracking-tighter mb-4 text-black">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<div class="border border-black/10 bg-white rounded-[4px] overflow-hidden">
+<details class="group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none text-black">
+<span>How long does it take to develop a mobile app?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="text-gray-600 mt-4 leading-relaxed text-sm font-light">
+                        The timeline for mobile app development depends on the complexity of the app, the features required, and the platforms (iOS, Android, or both) being targeted. A simple app may take 3-4 months, while a more complex one with backend integration could take 6-9 months or more. We provide a detailed timeline during the planning phase.
+                    </div>
+</details>
+</div>
+<div class="border border-black/10 bg-white rounded-[4px] overflow-hidden">
+<details class="group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none text-black">
+<span>Do you provide post-launch support and maintenance?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="text-gray-600 mt-4 leading-relaxed text-sm font-light">
+                        Yes, we offer comprehensive post-launch support and maintenance packages. This includes bug fixes, OS updates, performance monitoring, and feature enhancements to ensure your app remains up-to-date and functions smoothly as your user base grows.
+                    </div>
+</details>
+</div>
+<div class="border border-black/10 bg-white rounded-[4px] overflow-hidden">
+<details class="group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none text-black">
+<span>What technologies do you use for mobile app development?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="text-gray-600 mt-4 leading-relaxed text-sm font-light">
+                        We use a wide range of technologies including Swift and Objective-C for iOS, Kotlin and Java for Android, and cross-platform frameworks like Flutter and React Native. We choose the best tech stack based on your specific project requirements and business goals.
+                    </div>
+</details>
+</div>
+<div class="border border-black/10 bg-white rounded-[4px] overflow-hidden">
+<details class="group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none text-black">
+<span>Can you help with app store submission?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="text-gray-600 mt-4 leading-relaxed text-sm font-light">
+                        Absolutely. We handle the entire submission process for both the Apple App Store and Google Play Store. This includes preparing all necessary assets, ensuring compliance with guidelines, and managing the review process to get your app approved and live.
+                    </div>
+</details>
+</div>
+<div class="border border-black/10 bg-white rounded-[4px] overflow-hidden">
+<details class="group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none text-black">
+<span>Will I own the source code of the app?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="text-gray-600 mt-4 leading-relaxed text-sm font-light">
+                        Yes, upon completion and full payment of the project, you will have full ownership of the source code and all intellectual property rights associated with your custom mobile application.
+                    </div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-24 relative border-t border-white/5">
+<div class="absolute inset-0 opacity-10 pointer-events-none blueprint-grid"></div>
+<div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+<h2 class="font-display text-5xl font-bold text-white uppercase mb-12 tracking-tighter">Discuss with our experts about your need</h2>
+<a class="inline-flex items-center gap-8 bg-primary text-white px-16 py-6 rounded-[4px] font-bold uppercase tracking-[0.3em] text-sm hover:bg-white hover:text-black transition-all group shadow-[0_0_50px_rgba(255,109,0,0.3)]" href="#">
+            Contact Us
+            <span class="material-symbols-outlined group-hover:translate-x-3 transition-transform text-2xl">mail</span>
+</a>
+</div>
+</section>
+<footer class="bg-charcoal text-white pt-24 pb-12 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-10">
+<span class="material-symbols-outlined text-white text-4xl">grid_view</span>
+<span class="font-display font-bold text-4xl tracking-tighter text-white uppercase">Codezilla</span>
+</div>
+<p class="text-gray-400 text-lg max-w-md leading-relaxed font-light">Leading the standard for high-performance mobile engineering. We turn complex requirements into elegant, high-impact digital products for global scale.</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-8">Expertise</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">iOS Development</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Android Native</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Flutter &amp; React Native</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Mobile Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-8">Contact</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> hello@codezilla.io</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> +1 (555) 000-0000</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center text-[11px] font-bold uppercase tracking-widest text-gray-500">
+<span>© 2024 Codezilla Mobile Labs. All rights reserved.</span>
+<div class="flex gap-12 mt-6 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">System Status</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
