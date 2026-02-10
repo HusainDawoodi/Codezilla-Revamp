@@ -24,7 +24,7 @@ export default function MobileHero() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 animate-entrance-fade">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[0.9] tracking-tighter uppercase">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold text-white lg:leading-[0.9] tracking-tighter uppercase">
             MOBILE APP
             <br />
             <span className="text-outline-primary">DEVELOPMENT</span>

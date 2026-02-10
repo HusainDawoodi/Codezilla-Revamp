@@ -32,6 +32,15 @@ export default function MobileWhyChooseUs() {
               <h2 className="font-display text-4xl md:text-5xl font-bold text-white leading-tight">
                 Why Choose Codezilla For Mobile App Development
               </h2>
+              <p className="text-gray-400 text-md leading-relaxed font-light">
+                Partner with Codezilla for mobile app development services as we
+                combine creativity, technological skill, and a user-first
+                approach to generate really unique apps. Our team specialises in
+                developing safe, scalable, and high-performance apps for iOS,
+                Android, and cross-platform use. With Codezilla, you have a
+                trustworthy partner who believes in to transforming your ideas
+                into meaningful digital experiences.
+              </p>
             </div>
 
             <div className="flex pt-8 justify-center lg:justify-start">
@@ -63,7 +72,7 @@ export default function MobileWhyChooseUs() {
                   {point.title}
                 </h3>
                 <div className="w-full h-px bg-white/10"></div>
-                <p className="text-gray-400 text-sm leading-relaxed font-light">
+                <p className="text-gray-400 text-md leading-relaxed font-light">
                   {point.content}
                 </p>
               </div>

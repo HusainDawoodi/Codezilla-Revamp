@@ -8,7 +8,7 @@ import MobileProcess from "@/components/mobile-app-development/MobileProcess";
 import MobileFAQ from "@/components/mobile-app-development/MobileFAQ";
 import WorkCarousel from "@/components/WorkCarousel";
 import ContactSection from "@/components/ui-ux/ContactSection";
-import TechStackMarquee from "@/components/web-development/TechStackMarquee";
+import MobileTechLogo from "@/components/mobile-app-development/MobileTechLogo";
 
 // SEO Metadata
 export const metadata = {
@@ -131,8 +131,8 @@ export default function MobileAppDevelopmentPage() {
         <MobileBenefits />
         <MobileProcess />
         <WorkCarousel />
+        <MobileTechLogo />
         <MobileFAQ />
-        <TechStackMarquee />
         <ContactSection />
       </main>
     </>

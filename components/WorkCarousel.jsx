@@ -82,10 +82,10 @@ export default function WorkCarousel() {
 
   return (
     <section
-      className="bg-white border-b-2 border-black overflow-hidden animate-entrance-fade"
+      className="bg-white border-b-1 border-black overflow-hidden animate-entrance-fade"
       style={{ animationDelay: "0.8s" }}
     >
-      <div className="grid grid-cols-12 border-b-2 border-black">
+      <div className="grid grid-cols-12 border-b-1 border-black">
         {/* Sidebar Info */}
         <div className="col-span-12 lg:col-span-3 border-b-2 lg:border-b-0 lg:border-r-2 border-black p-8 py-10 lg:p-12 flex flex-col justify-center bg-gray-50">
           <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2">

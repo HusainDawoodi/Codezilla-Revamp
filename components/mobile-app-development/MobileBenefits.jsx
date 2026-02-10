@@ -4,37 +4,37 @@ export default function MobileBenefits() {
       icon: "campaign",
       title: "Enhanced customer engagement",
       description:
-        "Direct communication channels that build long-term loyalty through personalized interactions and push notifications.",
+        "Mobile apps offer direct communication between companies and their clients. With push alerts, personalised offers, and real-time updates, marketers can successfully engage customers, increasing loyalty and retention while providing an effortless user experience that websites alone cannot always provide.",
     },
     {
       icon: "visibility",
       title: "Improved brand visibility",
       description:
-        "Constant presence on user devices increases brand recall and keeps your business top-of-mind for customers.",
+        "Having a mobile app means that your brand is always available on users’ devices. Frequent exposure boosts brand recall and familiarity, making clients more inclined to connect with your services than competitors without a dedicated mobile presence.",
     },
     {
       icon: "settings_suggest",
       title: "Efficient Business Operations",
       description:
-        "Streamline internal processes and improve productivity with custom mobile solutions for your workforce.",
+        "Custom mobile apps may optimize procedures, interact with existing systems, and enable real-time data access. This increases productivity, minimizes human errors, and enables firms to manage operations more efficiently, resulting in reduced expenses and faster decision-making.",
     },
     {
       icon: "person_check",
       title: "Personalized User Experience",
       description:
-        "Leverage user data to provide tailored content and recommendations that drive higher conversion rates.",
+        "Mobile apps gather significant user data, allowing businesses to provide personalized content, product recommendations, and services. Personalization boosts customer satisfaction, enhances conversion rates, and builds connections by adjusting to unique user preferences.",
     },
     {
       icon: "extension",
       title: "Scalability and Flexibility",
       description:
-        "Grow your app features and user base seamlessly with a robust architecture designed for future expansion.",
+        "Latest mobile app development solutions are designed to be flexible. Whether introducing new features, managing additional users, or extending into new areas, apps may adapt in along with corporate growth without requiring extensive reconstruction.",
     },
   ];
 
   return (
-    <section className="bg-[#F9F7F2] py-32 px-6">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="bg-[#F9F7F2] py-32 lg:px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="mb-16 animate-entrance-fade">
           <h2 className="font-display text-3xl md:text-4xl font-bold uppercase  mb-4 text-black">
             Benefits of using mobile app development solutions
@@ -61,7 +61,7 @@ export default function MobileBenefits() {
               <h3 className="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">
                 {benefit.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed font-light">
+              <p className="text-gray-500 text-md leading-relaxed font-light">
                 {benefit.description}
               </p>
             </div>

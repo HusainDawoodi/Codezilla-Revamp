@@ -4,19 +4,19 @@ export default function MobileServices() {
       icon: "phone_iphone",
       title: "Native App Development",
       description:
-        "We create high-performance native apps for iOS and Android using Swift, Kotlin, and Java, ensuring seamless user experiences and robust functionality.",
+        "When an app is native it has been built for a specific platform – iOS or Android – and is installed via the app store. Each version is developed in its own programming language and won’t work on different devices. Native apps are fast responsive and highly functional – so most mobile apps tend to be native.",
     },
     {
       icon: "layers",
       title: "Cross-Platform App Development",
       description:
-        "Leveraging frameworks like Flutter and React Native, we build apps that work flawlessly across multiple platforms, saving time and cost without compromising quality.",
+        "The clue’s in the title. Cross-platform means the app will work on different platforms, so you don’t need to build an app for each platform individually. Cross-platform apps usually rely on existing tools and frameworks such as Flutter and can be done relatively cheaply and easily.",
     },
     {
       icon: "web",
       title: "Progressive Web Apps",
       description:
-        "Our progressive web apps combine the best of web and mobile apps, offering fast load times, offline capabilities, and an engaging user experience.",
+        "A PWA is a web application which can be installed on a device like a native mobile app. PWAs usually have great UI/UX which works equally well on web or on mobile. It can be an efficient, cost effective and fast solution.",
     },
   ];
 
@@ -31,7 +31,7 @@ export default function MobileServices() {
           </h2>
           <div className="h-1 w-24 bg-primary mx-auto"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -41,7 +41,7 @@ export default function MobileServices() {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 circuit-pattern"></div>
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-8">
-                  <span className="material-symbols-outlined text-primary text-5xl font-light group-hover:scale-110 transition-transform duration-300">
+                  <span className="material-symbols-outlined text-primary !text-5xl font-light group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </span>
                 </div>

@@ -1,29 +1,31 @@
 export default function MobileFAQ() {
   const faqs = [
     {
-      question: "How long does it take to develop a mobile app?",
+      question: "What does Mobile App Development Require?",
       answer:
-        "The timeline for mobile app development depends on the complexity of the app, the features required, and the platforms (iOS, Android, or both) being targeted. A simple app may take 3-4 months, while a more complex one with backend integration could take 6-9 months or more. We provide a detailed timeline during the planning phase.",
+        "Mobile app development requires the creation of software applications that work on various types of mobile devices. To develop a mobile app, you need to contract with a firm that has experience with all types of mobile apps and employs a proven development approach.",
     },
     {
-      question: "Do you provide post-launch support and maintenance?",
+      question: "What Are the Different Types of Mobile Apps You Can Develop?",
       answer:
-        "Yes, we offer comprehensive post-launch support and maintenance packages. This includes bug fixes, OS updates, performance monitoring, and feature enhancements to ensure your app remains up-to-date and functions smoothly as your user base grows.",
+        "Our firm can develop all kinds of apps including lifestyle, social media, utility, entertainment, productivity, news etc for both iOS and Android platforms",
     },
     {
-      question: "What technologies do you use for mobile app development?",
+      question:
+        "What platform do you target for launching an application: Android or iOS?",
       answer:
-        "We use a wide range of technologies including Swift and Objective-C for iOS, Kotlin and Java for Android, and cross-platform frameworks like Flutter and React Native. We choose the best tech stack based on your specific project requirements and business goals.",
+        "In past years, companies may have chosen to develop apps that support only a single platform. Today, both Android and iOS platforms have a significant market share, so most companies choose to develop apps that work on both platforms.We build apps that support both iOS and Android platforms.",
     },
     {
-      question: "Can you help with app store submission?",
+      question: "Can an app connect to my existing systems/data store?",
       answer:
-        "Absolutely. We handle the entire submission process for both the Apple App Store and Google Play Store. This includes preparing all necessary assets, ensuring compliance with guidelines, and managing the review process to get your app approved and live.",
+        "Yes, we do develop apps that can connect to your existing systems or data store with Application Programming Interface (API). APIs built using any platform can be implemented in an App to connect and read/write data from your datastore.",
     },
     {
-      question: "Will I own the source code of the app?",
+      question:
+        "Should I have a visual (wireframe) ready for my app? Or you can work with us if we don’t have a fully formed idea for our app?",
       answer:
-        "Yes, upon completion and full payment of the project, you will have full ownership of the source code and all intellectual property rights associated with your custom mobile application.",
+        "If you have your web designer and have visuals ready, our development team can work with you to build the app. If you just have an idea or concept we are happy to help you visualise and convert your ideas and concepts into digital reality.",
     },
   ];
 
@@ -53,7 +55,7 @@ export default function MobileFAQ() {
                     expand_more
                   </span>
                 </summary>
-                <div className="text-gray-600 mt-4 leading-relaxed text-sm font-light border-t border-black/5 pt-4">
+                <div className="text-gray-600 mt-4 leading-relaxed text-md font-light border-t border-black/5 pt-4">
                   {faq.answer}
                 </div>
               </details>

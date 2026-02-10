@@ -73,7 +73,7 @@ export default function ContactSection() {
             <br />
             <span className="text-outline-primary">your product?</span>
           </h2>
-          <p className="text-gray-400 text-base md:text-lg font-light max-w-lg">
+          <p className="text-gray-400 text-base md:text-lg font-light max-w-xl">
             Schedule a consultation to explore how our systematic design
             approach can scale your business and improve user satisfaction.
           </p>

@@ -26,7 +26,7 @@
   );
 
   --animate-depth-zoom: depthZoom 12s infinite;
-  --animate-marquee: marquee 40s linear infinite;
+  /* --animate-marquee: marquee 40s linear infinite; */
   --animate-entrance-fade: entranceFade 1s ease-out forwards;
 
   @keyframes depthZoom {
@@ -398,7 +398,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 80s linear infinite;
+  animation: marquee 40s linear infinite;
   will-change: transform;
 }
 

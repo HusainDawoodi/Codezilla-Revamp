@@ -110,10 +110,10 @@ export default function LogoMarquee() {
             >
               {/* Single-row logos marquee track (two duplicates for seamless loop) */}
               <div
-                className="image-marquee animate-marquee flex gap-16 md:gap-24 w-full"
+                className="image-marquee flex gap-16 md:gap-24 w-full"
                 aria-hidden="true"
               >
-                {[0, 1, 2].map((setIndex) => (
+                {[0, 1, 2, 3].map((setIndex) => (
                   <div
                     key={setIndex}
                     className="flex items-center gap-16 md:gap-24 marquee-set"
