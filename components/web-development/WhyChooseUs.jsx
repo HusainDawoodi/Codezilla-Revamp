@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
             <h2 className="font-display text-4xl md:text-4xl font-bold uppercase tracking-tighter mb-6">
               Why choose Codezilla for web development services
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 text-base leading-relaxed">
               Codezilla offers affordable and high-quality web development
               services. Our team of experienced developers ensures that you get
               the best value for your money. We focus on creating custom

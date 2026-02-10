@@ -33,7 +33,7 @@ export default function PhilosophySection() {
             <h2 className="font-display text-4xl md:text-4xl font-bold text-black uppercase   mb-8">
               Web Development That Powers Sales & Success
             </h2>
-            <p className="text-lg text-gray-600 font-medium leading-relaxed">
+            <p className="text-base text-gray-600  leading-relaxed">
               For us, web development is more than just design – it’s about
               driving real business results. We help businesses grow their
               customer base, increase sales, and improve customer engagement by

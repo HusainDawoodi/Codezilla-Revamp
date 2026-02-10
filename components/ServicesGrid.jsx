@@ -19,7 +19,7 @@ export default function ServicesGrid() {
               we do
             </h2>
             <div className="w-12 h-1 bg-primary mb-6"></div>
-            <p className="text-gray-300 text-md leading-relaxed">
+            <p className="text-gray-300 text-base leading-relaxed">
               Our service matrix is designed for high-impact, scalable
               intervention. We deploy rapidly and iterate continuously.
             </p>

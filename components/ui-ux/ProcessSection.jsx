@@ -6,7 +6,7 @@ export default function ProcessSection() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-black uppercase tracking-tight mb-4 text-center">
             How Our Design Process Works
           </h2>
-          <p className="text-gray-500 text-sm md:text-md">
+          <p className="text-gray-500 text-sm md:text-base">
             We follow a proven collaborative process to transform ideas into
             meaningful digital experiences. Each phase ensures clarity,
             creativity, and precision.
@@ -27,7 +27,7 @@ export default function ProcessSection() {
                 <h3 className="text-xl md:text-2xl font-display font-bold text-black uppercase tracking-tight">
                   Discovery
                 </h3>
-                <p className="text-gray-500 text-sm md:text-md leading-relaxed">
+                <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                   Every good design starts with understanding. We research
                   deeply into your objectives, target audience, and product
                   vision to find insights that form the core of the experience.
@@ -51,7 +51,7 @@ export default function ProcessSection() {
                 <h3 className="text-xl md:text-2xl font-display font-bold text-black uppercase tracking-tight">
                   Strategy
                 </h3>
-                <p className="text-gray-500 text-sm md:text-md leading-relaxed">
+                <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                   With insights in place, we can chart a clear design path. User
                   flows, structure, and functionality are carefully designed to
                   strike a balance between corporate objectives and user
@@ -75,7 +75,7 @@ export default function ProcessSection() {
                 <h3 className="text-xl md:text-2xl font-display font-bold text-black uppercase tracking-tight">
                   Design Sprints
                 </h3>
-                <p className="text-gray-500 text-sm md:text-md leading-relaxed">
+                <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                   Ideas are given visual form through rapid, focused design
                   iterations. We build wireframes, prototypes, and finished
                   interfaces that adapt based on feedback and testing, ensuring
@@ -98,7 +98,7 @@ export default function ProcessSection() {
                 <h3 className="text-xl md:text-2xl font-display font-bold text-black uppercase tracking-tight">
                   Engineering
                 </h3>
-                <p className="text-gray-500 text-sm md:text-md leading-relaxed">
+                <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                   Design meets development. Our team works closely together to
                   bring graphics into responsive, high-performance digital
                   solutions. Precision and usability remain top priorities
@@ -121,7 +121,7 @@ export default function ProcessSection() {
                 <h3 className="text-xl md:text-2xl font-display font-bold text-black uppercase tracking-tight">
                   Maintenance
                 </h3>
-                <p className="text-gray-500 text-sm md:text-md leading-relaxed">
+                <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                   Great design evolves. We monitor, modify and improve your
                   product to ensure it meets user expectations, performance
                   needs, and future growth.

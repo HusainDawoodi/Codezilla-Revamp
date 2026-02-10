@@ -8,11 +8,11 @@ export default function ServicesSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white uppercase tracking-tight mb-4 text-left">
               Services provided
             </h2>
-            <p className="text-gray-400 text-sm md:text-md">
+            <p className="text-gray-400 text-sm md:text-base">
               Comprehensive design solutions tailored to your business needs.
             </p>
           </div>
-          <span className="font-mono text-primary text-[10px] md:text-xs uppercase tracking-[0.2em] mb-2">
+          <span className="font-mono text-primary text-[10px] md:text-sm uppercase tracking-[0.2em] mb-2">
             [ 01-06 / Capabilities ]
           </span>
         </div>
@@ -29,7 +29,7 @@ export default function ServicesSection() {
             <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase mb-4 group-hover:text-primary transition-colors">
               Prototyping and wireframe
             </h3>
-            <p className="text-gray-400 text-sm md:text-md leading-relaxed font-light group-hover:text-gray-900 transition-colors">
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light group-hover:text-gray-900 transition-colors">
               We transform concepts into organised visual blueprints that
               specify how customers will use your product. Before development
               starts, interactive prototypes mimic real-world experiences, and
@@ -48,8 +48,8 @@ export default function ServicesSection() {
             <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase mb-4 group-hover:text-primary transition-colors">
               UI/UX Audit and Redesign
             </h3>
-            <p className="text-gray-400 text-sm md:text-md leading-relaxed font-light group-hover:text-gray-900 transition-colors">
-              WeWe evaluate your present digital experience to identify problem
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light group-hover:text-gray-900 transition-colors">
+              We evaluate your present digital experience to identify problem
               areas, usability concerns, and missed possibilities. We determine
               what works, what doesn't, and what could be improved through
               extensive audits and expert perspectives. Our redesign methodology
@@ -69,7 +69,7 @@ export default function ServicesSection() {
             <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase mb-4 group-hover:text-primary transition-colors">
               AI Workflow Experience Design
             </h3>
-            <p className="text-gray-400 text-sm md:text-md leading-relaxed font-light group-hover:text-gray-900 transition-colors">
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light group-hover:text-gray-900 transition-colors">
               We create AI-driven workflows that simplify complex processes and
               build user trust. By focusing on clarity and human-centered
               engagement, we make intelligent systems seem accessible and
@@ -90,7 +90,7 @@ export default function ServicesSection() {
             <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase mb-4 group-hover:text-primary transition-colors">
               UX Research and Behavioural Insights
             </h3>
-            <p className="text-gray-400 text-sm md:text-md leading-relaxed font-light group-hover:text-gray-900 transition-colors">
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light group-hover:text-gray-900 transition-colors">
               We use research and behavioral analysis to discover real user
               motivations and guide better design choices. These insights shape
               structure, interaction, and content flow, making sure your
@@ -111,7 +111,7 @@ export default function ServicesSection() {
             <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase mb-4 group-hover:text-primary transition-colors">
               Usability audits and heuristic reviews.
             </h3>
-            <p className="text-gray-400 text-sm md:text-md leading-relaxed font-light group-hover:text-gray-900 transition-colors">
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light group-hover:text-gray-900 transition-colors">
               We conduct thorough usability tests to find hidden friction,
               confusing interactions, and gaps in the user experience. We apply
               recognized heuristic principles to make navigation, clarity, and
@@ -132,7 +132,7 @@ export default function ServicesSection() {
             <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase mb-4 group-hover:text-primary transition-colors">
               Decision Architecture Design
             </h3>
-            <p className="text-gray-400 text-sm md:text-md leading-relaxed font-light group-hover:text-gray-900 transition-colors">
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light group-hover:text-gray-900 transition-colors">
               We offer clear decision paths that help consumers move forward
               with confidence. By simplifying information and guiding key
               actions, we reduce confusion and obstacles. This thoughtful method

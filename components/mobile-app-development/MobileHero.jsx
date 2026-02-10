@@ -24,12 +24,10 @@ export default function MobileHero() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 animate-entrance-fade">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold text-white lg:leading-[0.9] tracking-tighter uppercase">
-            MOBILE APP
-            <br />
-            <span className="text-outline-primary">DEVELOPMENT</span>
+          <h1 className="font-display text-4xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold text-white  tracking-tighter uppercase">
+            MOBILE APP DEVELOPMENT
           </h1>
-          <p className="text-gray-400 text-lg max-w-lg leading-relaxed font-light">
+          <p className="text-gray-400 text-base max-w-lg leading-relaxed font-light">
             Apps are beginning to dominate our lives. Mobile apps form the basis
             of so much of the way we live – from social interactions, to health,
             to dating and more. Customers now have exceptionally high
@@ -44,7 +42,7 @@ export default function MobileHero() {
             />
 
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button variant="primary" size="lg" icon="arrow_forward" href="#">
+              <Button variant="primary" size="md" icon="arrow_forward" href="#">
                 Learn More
               </Button>
             </div>

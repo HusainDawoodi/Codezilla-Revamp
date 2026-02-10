@@ -89,6 +89,9 @@
 }
 
 @layer utilities {
+  .text-base {
+    font-size: 1rem;
+  }
   .text-outline-white {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
     color: transparent;
@@ -205,6 +208,15 @@
     visibility: visible;
     transform: translateY(0);
   }
+  .mega-menu-trigger:hover .mega-menu-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .mega-menu-trigger:hover ~ .mega-menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
 
   /* Logo marquee tweaks */
   .image-marquee {
@@ -254,6 +266,52 @@
     color: rgba(0, 0, 0, 0.55);
   }
 
+  .glass-morphism {
+    background: rgba(15, 18, 24, 0.96);
+    backdrop-filter: blur(40px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .mega-menu-trigger:hover .mega-menu-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .mega-menu-trigger:hover ~ .mega-menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-link-underline {
+    @apply relative pb-1;
+  }
+  .nav-link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300;
+  }
+  .nav-link-underline:hover::after {
+    @apply w-full;
+  }
+  .library-item {
+    @apply flex flex-col gap-0.5 py-2 px-3 border-l-2 border-transparent transition-all duration-200 cursor-pointer hover:border-primary hover:bg-white/5;
+  }
+  .library-item:hover .item-title {
+    @apply text-white;
+  }
+  .library-item:hover .item-icon {
+    @apply text-primary-hover;
+  }
+  .duotone-icon {
+    @apply text-primary opacity-80;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 109, 0, 0.3);
+    border-radius: 2px;
+  }
   /* @media (prefers-color-scheme: dark) {
     .iso-text {
       color: rgba(255, 255, 255, 0.8);

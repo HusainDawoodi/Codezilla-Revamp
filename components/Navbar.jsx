@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Button from "./ui/Button";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +17,115 @@ export default function Navbar() {
     setMobileActiveDropdown(mobileActiveDropdown === index ? null : index);
   };
 
+  const digitalProductDevelopment = [
+    {
+      title: "Rapid Productivity",
+      description: "Scaling lean methodologies across teams.",
+      icon: "monitoring",
+      link: "/rapid-productivity",
+    },
+    {
+      title: "Product Discovery",
+      description: "High-availability system design and scaling.",
+      icon: "lightbulb",
+      link: "/product-discovery",
+    },
+    {
+      title: "UI/UX Design Services",
+      description: "Rapid validation for user journeys.",
+      icon: "design_services",
+      link: "/ui-ux",
+    },
+    {
+      title: "Web Development Services",
+      description: "Cross-platform native applications.",
+      icon: "javascript",
+      link: "/web-development",
+    },
+    {
+      title: "Mobile App Development Services",
+      description: "Pipelines, warehousing, and analytics.",
+      icon: "devices",
+      link: "/mobile-app-development",
+    },
+    {
+      title: "Data Science & AI",
+      description: "Intelligent automation and predictive models.",
+      icon: "hub",
+      link: "/data-science-ai",
+    },
+    {
+      title: "DevOps & Cloud",
+      description: "CI/CD, infrastructure, and automation.",
+      icon: "cloud",
+      link: "/devops-cloud",
+    },
+    {
+      title: "Software Architecture",
+      description: "Testing strategies and automation frameworks.",
+      icon: "verified",
+      link: "/software-architecture",
+    },
+  ];
+
+  const DedicatedTeams = [
+    {
+      title: "Hire Software Architects",
+      description: "Testing strategies and automation frameworks.",
+      icon: "groups",
+      link: "/hire-software-architects",
+    },
+    {
+      title: "Hire Back-end Engineers",
+      description: "Scalable server-side development and APIs.",
+      icon: "terminal",
+      link: "/hire-back-end-engineers",
+    },
+    {
+      title: "Hire Front-end Engineers",
+      description: "Modern, responsive user interfaces.",
+      icon: "javascript",
+      link: "/hire-front-end-engineers",
+    },
+    {
+      title: "Hire DevOps Engineers",
+      description: "CI/CD, cloud infrastructure, and automation.",
+      icon: "settings_suggest",
+      link: "/hire-devops-engineers",
+    },
+    {
+      title: "Hire Mobile Engineers",
+      description: "CI/CD, cloud infrastructure, and automation.",
+      icon: "devices",
+      link: "/mobile-app-development",
+    },
+  ];
+  const codezillaAccelerators = [
+    {
+      title: "Document AI",
+      description: "CI/CD, cloud infrastructure, and automation.",
+      icon: "psychology",
+      link: "/document-ai",
+    },
+    {
+      title: "Codezilla Flywheel",
+      description: "CI/CD, cloud infrastructure, and automation.",
+      icon: "security",
+      link: "/codezilla-flywheel",
+    },
+    {
+      title: "Codezilla Guard:IAM",
+      description: "CI/CD, cloud infrastructure, and automation.",
+      icon: "verified_user",
+      link: "/codezilla-guard-iam",
+    },
+    {
+      title: "Chatbot Delivery",
+      description: "CI/CD, cloud infrastructure, and automation.",
+      icon: "chat",
+      link: "/chatbot-delivery",
+    },
+  ];
   return (
     <nav className="fixed w-full z-50 bg-white border-b-2 border-black">
       <div className="w-full grid grid-cols-12 h-16 lg:h-20 items-center relative">
@@ -57,217 +167,163 @@ export default function Navbar() {
             >
               Who we are
             </Link>
-            <div className="group h-full flex items-center px-2 cursor-pointer">
-              <span className="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">
-                What we do{" "}
-                <span className="material-symbols-outlined text-[16px]">
+            <div class="mega-menu-trigger h-full flex items-center px-2 cursor-pointer group">
+              <span class="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">
+                What we do
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover:rotate-180">
                   expand_more
                 </span>
               </span>
-              <div className="mega-menu absolute top-[80px] left-0 w-full min-w-[80vw] bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform -translate-x-[25%] transition-all duration-300 z-50 p-12">
-                <div className="max-w-9xl grid grid-cols-12 gap-8">
-                  <div className="col-span-4 border-r border-white/20 pr-8">
-                    <h3 className="text-xl font-display font-bold text-primary mb-6 uppercase">
-                      Digital Product
-                      <br />
-                      Development
-                    </h3>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Rapid Prototyping
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Product Discovery
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="/ui-ux"
-                        >
-                          UI/UX Design Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="/web-development"
-                        >
-                          Web Development Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="/mobile-app-development"
-                        >
-                          Mobile App Development Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="/software-testing"
-                        >
-                          Software Testing Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="/data-science-ai"
-                        >
-                          Data Science & AI
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Software Architecture
-                        </Link>
-                      </li>
-                    </ul>
+              <div class="mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism opacity-0 invisible -translate-y-2 transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black">
+                <div class="max-w-[1600px] mx-auto grid grid-cols-12 gap-8">
+                  <div class="col-span-9 grid grid-cols-4 xl:grid-cols-4 gap-6">
+                    <div class="space-y-4 !col-span-2">
+                      <h3 class="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                        Digital Product Development
+                      </h3>
+                      <div className="flex gap-4">
+                        <div class="space-y-1 ">
+                          {digitalProductDevelopment
+                            .slice(0, 4)
+                            .map((item, index) => (
+                              <Link href={item?.link}>
+                                <div class="library-item">
+                                  <div class="flex items-center gap-2 mb-0.5">
+                                    <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                      {item?.icon}
+                                    </span>
+                                    <span class="!text-xs font-bold text-gray-300 uppercase tracking-wide item-title">
+                                      {item?.title}
+                                    </span>
+                                  </div>
+                                  <p class="text-[12px] text-gray-500 leading-tight">
+                                    {item?.description}
+                                  </p>
+                                </div>
+                              </Link>
+                            ))}
+                        </div>
+                        <div class="space-y-1 ">
+                          {digitalProductDevelopment
+                            .slice(4)
+                            .map((item, index) => (
+                              <Link href={item?.link}>
+                                <div class="library-item">
+                                  <div class="flex items-center gap-2 mb-0.5">
+                                    <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                      {item?.icon}
+                                    </span>
+                                    <span class="!text-xs font-bold text-gray-300 uppercase tracking-wide item-title">
+                                      {item?.title}
+                                    </span>
+                                  </div>
+                                  <p class="text-[12px] text-gray-500 leading-tight">
+                                    {item?.description}
+                                  </p>
+                                </div>
+                              </Link>
+                            ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="space-y-4 !col-span-1.5">
+                      <h3 class="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                        Dedicated Teams
+                      </h3>
+                      <div class="space-y-1">
+                        {DedicatedTeams.map((item, index) => (
+                          <Link href={item?.link}>
+                            <div class="library-item">
+                              <div class="flex items-center gap-2 mb-0.5">
+                                <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                  {item?.icon}
+                                </span>
+                                <span class="!text-xs font-bold text-gray-300 uppercase tracking-wide item-title">
+                                  {item?.title}
+                                </span>
+                              </div>
+                              <p class="text-[12px] text-gray-500 leading-tight">
+                                {item?.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="space-y-4 col-span-1.5">
+                      <h3 class="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                        Codezilla Accelerators
+                      </h3>
+                      <div class="space-y-1">
+                        {codezillaAccelerators.map((item, index) => (
+                          <Link href={item?.link}>
+                            <div class="library-item">
+                              <div class="flex items-center gap-2 mb-0.5">
+                                <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                  {item?.icon}
+                                </span>
+                                <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                  {item?.title}
+                                </span>
+                              </div>
+                              <p class="text-[12px] text-gray-500 leading-tight">
+                                {item?.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div className="col-span-4 border-r border-white/20 pr-8">
-                    <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
-                      Dedicated Teams
-                    </h3>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                  <div class="col-span-3 border-l border-white/10 pl-8">
+                    <div class="h-full flex flex-col justify-between">
+                      <div>
+                        <h3 class="text-xs font-bold text-gray-200 uppercase tracking-[0.3em] mb-6">
+                          Featured Success
+                        </h3>
+                        <div class="group/case relative rounded-[4px] overflow-hidden bg-white/5 border border-white/10 mb-6">
+                          <img
+                            alt="Project Success"
+                            class="w-full aspect-[16/10] object-cover opacity-60 group-hover/case:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk"
+                          />
+                          <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                          <div class="absolute bottom-4 left-4">
+                            <span class="text-[9px] font-bold text-primary bg-primary/10 px-2 py-0.5 border border-primary/20 mb-2 inline-block">
+                              FINTECH LEADERS
+                            </span>
+                            <h4 class="text-white font-bold text-sm">
+                              Next-Gen Neobank Architecture
+                            </h4>
+                          </div>
+                        </div>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                          Built a high-performance banking core serving 2M+
+                          active monthly users with 99.99% uptime.
+                        </p>
+                        <a
+                          class="inline-flex items-center gap-2 text-[10px] font-bold text-primary uppercase tracking-widest hover:text-white transition-colors"
                           href="#"
                         >
-                          Software Architects
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Back-end Engineers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Front-end Engineers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          DevOps Engineers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Mobile Engineers
-                        </Link>
-                      </li>
-                    </ul>
+                          View all work
+                          <span class="material-symbols-outlined text-sm">
+                            arrow_right_alt
+                          </span>
+                        </a>
+                      </div>
+                      {/* <div class="mt-8 relative group/search">
+                        <input
+                          class="w-full bg-white/5 border border-white/10 rounded-[4px] py-2.5 pl-4 pr-10 text-[11px] text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600"
+                          placeholder="Find a service..."
+                          type="text"
+                        />
+                        <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg group-focus-within/search:text-primary transition-colors">
+                          search
+                        </span>
+                      </div> */}
+                    </div>
                   </div>
-                  <div className="col-span-4">
-                    <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
-                      Codezilla
-                      <br />
-                      Accelerators
-                    </h3>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Document AI
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Codezilla Flywheel
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Codezilla Guard:IAM
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Chatbot Delivery
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* <div className="col-span-3 pl-4">
-                    <h3 className="text-xl font-display font-bold text-white mb-6 uppercase">
-                      System
-                      <br />
-                      Integration
-                    </h3>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Salesforce
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Adobe Experience Cloud
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          Microsoft Dynamics 365
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
-                        >
-                          MuleSoft Integration
-                        </Link>
-                      </li>
-                    </ul>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -355,7 +411,11 @@ export default function Navbar() {
 
         {/* Desktop Call to Action */}
         <div className="hidden lg:col-span-3 lg:flex justify-end items-center h-full bg-white px-5">
-          <Link
+          <Button variant="primary" size="sm" href="#" icon="arrow_forward">
+            Schedule Call
+          </Button>
+
+          {/* <Link
             href="#"
             className="inline-flex items-center gap-0 bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-[#E65100] shadow-[0_4px_12px_rgba(255,109,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,109,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
           >
@@ -363,7 +423,7 @@ export default function Navbar() {
             <span className="material-symbols-outlined text-xs">
               arrow_forward
             </span>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -430,6 +490,355 @@ export default function Navbar() {
                     expand_more
                   </span>
                 </button>
+                <div class="mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism opacity-0 invisible -translate-y-2 transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10">
+                  <div class="max-w-[1600px] mx-auto grid grid-cols-12 gap-8">
+                    <div class="col-span-9 grid grid-cols-4 xl:grid-cols-5 gap-6">
+                      <div class="space-y-4">
+                        <h3 class="text-[10px] font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                          Core Engineering
+                        </h3>
+                        <div class="space-y-1">
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                terminal
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Backend Architecture
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              High-availability system design and scaling.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                javascript
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Frontend Systems
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Performant React &amp; Next.js applications.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                database
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Database Design
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Optimized SQL &amp; NoSQL data modeling.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                api
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                API Ecosystems
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Secure REST &amp; GraphQL gateway dev.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="space-y-4">
+                        <h3 class="text-[10px] font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                          AI &amp; Emerging Tech
+                        </h3>
+                        <div class="space-y-1">
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                psychology
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Machine Learning
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Predictive models for enterprise data.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                chat
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                NLP &amp; LLMs
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Custom language model integration solutions.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                hub
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Edge Computing
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Low-latency processing at the edge.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                token
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Blockchain Ops
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Secure smart contract development cycles.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="space-y-4">
+                        <h3 class="text-[10px] font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                          Strategic Consulting
+                        </h3>
+                        <div class="space-y-1">
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                lightbulb
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Product Strategy
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Roadmapping for digital transformation goals.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                architecture
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Tech Audit
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Comprehensive stack and security reviews.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                groups
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Team Augmentation
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              High-performance engineering pods on demand.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                monitoring
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Agile Transformation
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Scaling lean methodologies across teams.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="space-y-4">
+                        <h3 class="text-[10px] font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                          Enterprise Platforms
+                        </h3>
+                        <div class="space-y-1">
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                cloud
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Cloud Migration
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Seamless AWS, Azure, GCP transitions.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                settings_suggest
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                DevOps &amp; CI/CD
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Automated pipelines for rapid deployment.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                security
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                SecOps &amp; IAM
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Enterprise identity and access management.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                dashboard
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Internal Tooling
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Custom dashboards for operational efficiency.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hidden xl:block space-y-4">
+                        <h3 class="text-[10px] font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                          Specialist Ops
+                        </h3>
+                        <div class="space-y-1">
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                verified
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                QA Automation
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Zero-defect delivery through test suites.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                devices
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Mobile Apps
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Native iOS and Android development.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                sync
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                Legacy Refactoring
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Modernizing outdated enterprise codebases.
+                            </p>
+                          </div>
+                          <div class="library-item">
+                            <div class="flex items-center gap-2 mb-0.5">
+                              <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                design_services
+                              </span>
+                              <span class="text-[11px] font-bold text-gray-300 uppercase tracking-wide item-title">
+                                UX Prototyping
+                              </span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight">
+                              Rapid validation for user journeys.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-3 border-l border-white/10 pl-8">
+                      <div class="h-full flex flex-col justify-between">
+                        <div>
+                          <h3 class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-6">
+                            Featured Success
+                          </h3>
+                          <div class="group/case relative rounded-[4px] overflow-hidden bg-white/5 border border-white/10 mb-6">
+                            <img
+                              alt="Project Success"
+                              class="w-full aspect-[16/10] object-cover opacity-60 group-hover/case:scale-105 transition-transform duration-700"
+                              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                              <span class="text-[9px] font-bold text-primary bg-primary/10 px-2 py-0.5 border border-primary/20 mb-2 inline-block">
+                                FINTECH LEADERS
+                              </span>
+                              <h4 class="text-white font-bold text-sm">
+                                Next-Gen Neobank Architecture
+                              </h4>
+                            </div>
+                          </div>
+                          <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                            Built a high-performance banking core serving 2M+
+                            active monthly users with 99.99% uptime.
+                          </p>
+                          <a
+                            class="inline-flex items-center gap-2 text-[10px] font-bold text-primary uppercase tracking-widest hover:text-white transition-colors"
+                            href="#"
+                          >
+                            View all work
+                            <span class="material-symbols-outlined text-sm">
+                              arrow_right_alt
+                            </span>
+                          </a>
+                        </div>
+                        <div class="mt-8 relative group/search">
+                          <input
+                            class="w-full bg-white/5 border border-white/10 rounded-[4px] py-2.5 pl-4 pr-10 text-[11px] text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600"
+                            placeholder="Find a service..."
+                            type="text"
+                          />
+                          <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg group-focus-within/search:text-primary transition-colors">
+                            search
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div
                   className={`mt-4 space-y-6 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${mobileActiveDropdown === 1 ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0 invisible !mt-0"}`}
                 >

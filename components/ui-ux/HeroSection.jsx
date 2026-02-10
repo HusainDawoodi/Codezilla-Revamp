@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import TrustBadges from "../ui/TrustBadges";
+import Button from "../ui/Button";
 
 export default function HeroSection() {
   return (
@@ -20,7 +21,7 @@ export default function HeroSection() {
               {/* <span className="text-outline-primary">for 14+ years.</span> */}
             </h1>
           </div>
-          <p className="text-gray-400 text-md max-w-xl leading-relaxed font-light">
+          <p className="text-gray-400 text-base max-w-xl leading-relaxed font-light">
             We specialise in modern UI/UX design services that transform digital
             products into intuitive and engaging experiences. Whether you're
             launching a new app, revamping a website, or extending your
@@ -31,23 +32,17 @@ export default function HeroSection() {
           </p>
           <div className="space-y-8">
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-              <Link
-                href="#"
-                className="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all rounded-[2px]"
-              >
-                View Case Studies
-                <span className="material-symbols-outlined text-sm">
-                  arrow_forward
-                </span>
-              </Link>
-              <Link
-                href="#"
-                className="inline-flex items-center justify-center gap-3 border border-white/10 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all rounded-[2px]"
-              >
-                Design Philosophy
-              </Link>
+              <TrustBadges variant="dark" />
             </div>
-            <TrustBadges variant="dark" />
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+              <Button variant="primary" size="md" href="#" icon="arrow_forward">
+                View Case Studies
+              </Button>
+
+              <Button variant="outline-white" size="md" href="#">
+                Design Philosophy
+              </Button>
+            </div>
           </div>
         </div>
         <div className="lg:col-span-5 relative hidden lg:flex justify-end">

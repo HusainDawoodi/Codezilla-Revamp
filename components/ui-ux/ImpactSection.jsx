@@ -6,7 +6,7 @@ export default function ImpactSection() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-black uppercase tracking-tight mb-4 text-left">
             Impact &amp; ROI
           </h2>
-          <p className="text-gray-600 text-sm md:text-md">
+          <p className="text-gray-600 text-sm md:text-base">
             Strategic design isn&apos;t just an expense—it&apos;s a quantifiable
             driver for business growth and operational efficiency.
           </p>

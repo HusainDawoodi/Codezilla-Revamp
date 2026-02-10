@@ -35,7 +35,7 @@ export default function WorkCard({
               height={30}
               className="h-8 w-auto"
             />
-            <p className="font-display !text-sm lg:text-md font-medium mt-3 text-gray-500">
+            <p className="font-display !text-sm lg:text-base font-medium mt-3 text-gray-500">
               {description}
             </p>
           </div>

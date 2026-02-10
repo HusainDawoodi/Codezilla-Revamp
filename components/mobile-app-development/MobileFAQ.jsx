@@ -55,7 +55,7 @@ export default function MobileFAQ() {
                     expand_more
                   </span>
                 </summary>
-                <div className="text-gray-600 mt-4 leading-relaxed text-md font-light border-t border-black/5 pt-4">
+                <div className="text-gray-600 mt-4 leading-relaxed text-base font-light border-t border-black/5 pt-4">
                   {faq.answer}
                 </div>
               </details>

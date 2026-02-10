@@ -116,7 +116,7 @@ export default function HeroSlider() {
             <p className="font-display text-lg lg:text-2xl text-white font-light leading-tight mb-8 lg:max-w-2xl">
               The AI-powered partner for enterprise product evolution.
             </p>
-            <p className="text-md lg:text-xl text-gray-400 lg:max-w-2xl font-medium leading-relaxed border-l-4 border-primary pl-6">
+            <p className="text-base lg:text-xl text-gray-400 lg:max-w-2xl font-medium leading-relaxed border-l-4 border-primary pl-6">
               We don’t just build software. We architect AI-driven systems that
               define the next decade of efficiency.
             </p>

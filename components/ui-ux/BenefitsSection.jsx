@@ -7,7 +7,7 @@ export default function BenefitsSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-black uppercase tracking-tight mb-4">
               Key Benefits of UI/UX Design
             </h2>
-            <p className="text-gray-600 text-sm md:text-md">
+            <p className="text-gray-600 text-sm md:text-base">
               Enterprise-grade infrastructure for modern business demands.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function BenefitsSection() {
               <h3 className="font-display text-xl md:text-2xl font-bold text-black uppercase mb-4 tracking-tight">
                 Improved User Experience
               </h3>
-              <p className="text-gray-600 text-sm md:text-md leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 Good UI/UX design makes digital interactions simple, clear, and
                 enjoyable. When users can navigate easily, frustration
                 decreases, satisfaction increases, and they are more likely to
@@ -49,7 +49,7 @@ export default function BenefitsSection() {
               <h3 className="font-display text-xl md:text-2xl font-bold text-black uppercase mb-4 tracking-tight">
                 Better business outcomes.
               </h3>
-              <p className="text-gray-600 text-sm md:text-md leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 Well-designed user journeys reduce friction and highlight
                 important tasks. By simplifying navigation and guiding
                 decisions, UI/UX design increases engagement, improves
@@ -68,7 +68,7 @@ export default function BenefitsSection() {
               <h3 className="font-display text-xl md:text-2xl font-bold text-black uppercase mb-4 tracking-tight">
                 Enhanced Trust and Credibility
               </h3>
-              <p className="text-gray-600 text-sm md:text-md leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 A smooth interface shows professionalism and reliability.
                 Consistent images and smart interactions increase confidence.
                 This makes users feel more at ease when using your product and

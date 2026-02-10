@@ -132,8 +132,8 @@ export default function MobileAppDevelopmentPage() {
         <MobileProcess />
         <WorkCarousel />
         <MobileTechLogo />
-        <MobileFAQ />
         <ContactSection />
+        <MobileFAQ />
       </main>
     </>
   );

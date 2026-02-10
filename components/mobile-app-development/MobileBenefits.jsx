@@ -61,7 +61,7 @@ export default function MobileBenefits() {
               <h3 className="text-xl font-display font-bold text-black uppercase mb-3 tracking-tight">
                 {benefit.title}
               </h3>
-              <p className="text-gray-500 text-md leading-relaxed font-light">
+              <p className="text-gray-500 text-base leading-relaxed font-light">
                 {benefit.description}
               </p>
             </div>

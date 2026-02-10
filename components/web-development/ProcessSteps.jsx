@@ -50,10 +50,10 @@ export default function ProcessSteps() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
               // WORKFLOW
             </span>
-            <h2 className="font-display text-5xl font-bold text-black uppercase tracking-tighter">
+            <h2 className="font-display text-5xl font-bold text-black uppercase ">
               Our Process
             </h2>
-            <p className="text-lg text-gray-600 font-medium leading-relaxed mt-5">
+            <p className="text-base text-gray-600 leading-relaxed mt-5">
               We are committed to helping you create a brighter and more
               sustainable future. Whether you're launching a business, designing
               a website, or building a brand, we provide the tools, expertise,

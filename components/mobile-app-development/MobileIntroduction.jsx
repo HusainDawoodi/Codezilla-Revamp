@@ -17,7 +17,7 @@ export default function MobileIntroduction() {
             className="animate-entrance-fade"
             style={{ animationDelay: "0.2s" }}
           >
-            <p className="text-gray-600 text-md md:text-md leading-relaxed font-light">
+            <p className="text-gray-600 text-base md:text-base leading-relaxed font-light">
               As a leading mobile app development company, we are dedicated to
               providing innovative, scalable, and feature-rich app solutions to
               organizations worldwide. Our skilled team delivers end-to-end

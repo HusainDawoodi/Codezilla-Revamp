@@ -55,7 +55,7 @@ export default function SectionHeader({
 
       {description && (
         <p
-          className={`text-lg leading-relaxed max-w-4xl ${align === "center" ? "mx-auto" : ""} ${themeStyles[theme].description}`}
+          className={`text-base leading-relaxed max-w-4xl ${align === "center" ? "mx-auto" : ""} ${themeStyles[theme].description}`}
         >
           {description}
         </p>

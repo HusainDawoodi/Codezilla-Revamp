@@ -31,14 +31,14 @@ export default function MobileProcess() {
   ];
 
   return (
-    <section className="bg-white py-32 lg:px-6 overflow-hidden">
+    <section className="bg-white py-32 lg:px-6 ">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-24 animate-entrance-fade text-left">
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-black uppercase  mb-4">
             Easy Way to Get Our Popular Development Services
           </h2>
           <div className="h-1.5 w-32 bg-primary"></div>
-          <p className="text-gray-500 text-md leading-relaxed font-light mt-4">
+          <p className="text-gray-500 text-base leading-relaxed font-light mt-4">
             We are committed to helping you create a brighter and more
             sustainable future. Whether you're launching a business, designing a
             website, or building a brand, we provide the tools, expertise, and
@@ -51,11 +51,11 @@ export default function MobileProcess() {
           {/* Central Line */}
           <div className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[2px] bg-primary/20 md:-translate-x-1/2"></div>
 
-          <div className="space-y-24 relative hidden md:block">
+          <div className="space-y-32 relative hidden md:block">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`flex flex-col md:flex-row items-center justify-center w-full group animate-entrance-fade`}
+                className={`flex flex-col md:flex-row items-center justify-center w-full group animate-entrance-fade bg-white !sticky top-30`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div
@@ -73,7 +73,7 @@ export default function MobileProcess() {
                   <h3 className="text-2xl font-display font-bold text-black uppercase mb-2 group-hover:text-primary transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-md max-w-sm ml-auto font-light leading-relaxed">
+                  <p className="text-gray-600 text-base max-w-sm ml-auto font-light leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function MobileProcess() {
                   <h3 className="text-2xl font-display font-bold text-black uppercase mb-2 group-hover:text-primary transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-md max-w-sm mr-auto font-light leading-relaxed">
+                  <p className="text-gray-600 text-base max-w-sm mr-auto font-light leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function MobileProcess() {
                     <h3 className="text-2xl font-display font-bold text-black uppercase mb-2 group-hover:text-primary transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 text-md max-w-sm mr-auto font-light leading-relaxed">
+                    <p className="text-gray-600 text-base max-w-sm mr-auto font-light leading-relaxed">
                       {step.description}
                     </p>
                   </div>

@@ -7,7 +7,7 @@ export default function CapabilitiesMatrix() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-black uppercase tracking-tight mb-4">
               Capabilities Matrix
             </h2>
-            <p className="text-gray-600 text-sm md:text-md">
+            <p className="text-gray-600 text-base md:text-base">
               Our strength is purposeful UI/UX craftsmanship.
             </p>
           </div>
@@ -32,13 +32,13 @@ export default function CapabilitiesMatrix() {
               </h3>
             </div>
             <div className="space-y-4">
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed">
                 We create straightforward, inclusive interfaces based on
                 extensive user research to ensure smooth experiences for
                 different audiences.
               </p>
               <div className="bg-white p-4 border border-black/5 border-l-2 border-l-primary group-hover:border-l-black transition-colors shadow-sm">
-                <span className="text-black text-sm font-bold block mb-1">
+                <span className="text-black text-md font-bold block mb-1">
                   Data shows
                 </span>
                 <p className="text-gray-500 text-sm">
@@ -58,12 +58,12 @@ export default function CapabilitiesMatrix() {
               </h3>
             </div>
             <div className="space-y-4">
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed">
                 Behavioral insights, heatmaps, and usability testing guide every
                 decision to optimize user journeys and conversions.
               </p>
               <div className="bg-white p-4 border border-black/5 border-l-2 border-l-primary group-hover:border-l-black transition-colors shadow-sm">
-                <span className="text-black text-sm font-bold block mb-1">
+                <span className="text-black text-base font-bold block mb-1">
                   Data shows
                 </span>
                 <p className="text-gray-500 text-sm">
@@ -83,13 +83,13 @@ export default function CapabilitiesMatrix() {
               </h3>
             </div>
             <div className="space-y-4">
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed">
                 Effective user interface systems provide consistent,
                 brand-aligned experiences across web, mobile, and upcoming
                 platforms.
               </p>
               <div className="bg-white p-4 border border-black/5 border-l-2 border-l-primary group-hover:border-l-black transition-colors shadow-sm">
-                <span className="text-black text-sm font-bold block mb-1">
+                <span className="text-black text-base font-bold block mb-1">
                   Data shows
                 </span>
                 <p className="text-gray-500 text-sm">
@@ -109,12 +109,12 @@ export default function CapabilitiesMatrix() {
               </h3>
             </div>
             <div className="space-y-4">
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed">
                 Scalable design solutions are designed to grow, eliminating
                 friction, rework, and long-term UX debt.
               </p>
               <div className="bg-white p-4 border border-black/5 border-l-2 border-l-primary group-hover:border-l-black transition-colors shadow-sm">
-                <span className="text-black text-sm font-bold block mb-1">
+                <span className="text-black text-base   font-bold block mb-1">
                   Data shows
                 </span>
                 <p className="text-gray-500 text-sm">

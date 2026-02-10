@@ -34,7 +34,7 @@ export default function TrustBadges({ variant = "dark", className = "" }) {
             </span>
           </div>
           <span
-            className={`text-[10px] uppercase tracking-wider ${
+            className={`text-sm uppercase tracking-wider ${
               isDark ? "text-gray-400" : "text-gray-500"
             }`}
           >
@@ -72,7 +72,7 @@ export default function TrustBadges({ variant = "dark", className = "" }) {
             ))}
           </div>
           <span
-            className={`text-[10px] uppercase tracking-wider ${
+            className={`text-sm uppercase tracking-wider ${
               isDark ? "text-gray-400" : "text-gray-500"
             }`}
           >
