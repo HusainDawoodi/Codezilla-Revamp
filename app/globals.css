@@ -11,7 +11,9 @@
   --color-background-light: #f3f4f6;
   --color-background-dark: #111827;
   --color-charcoal: #0f1218;
+  --color-obsidian: #0f1218;
   --color-paper: #f9fafb;
+  --color-cyan-accent: #00e5ff;
 
   --background-image-grain-overlay: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+");
   --background-image-energy-gradient: linear-gradient(
@@ -28,6 +30,9 @@
   --animate-depth-zoom: depthZoom 12s infinite;
   /* --animate-marquee: marquee 40s linear infinite; */
   --animate-entrance-fade: entranceFade 1s ease-out forwards;
+  --animate-spin-slow: spin 12s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-pulse-slow: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes depthZoom {
     0% {
@@ -80,6 +85,16 @@
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
     }
   }
 }

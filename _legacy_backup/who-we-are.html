@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meeta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Codezilla - Software Development &amp; Innovation Agency</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6D00",
+                        "primary-hover": "#FF9100",
+                        "charcoal": "#0F1218",
+                        "card-bg": "#1C2028",
+                        "paper": "#F9FAFB",
+                        "obsidian": "#0F1218",
+                        "cyan-accent": "#00E5FF",
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'mesh': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')",
+                    },
+                    animation: {
+                        'marquee': 'marquee 40s linear infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .blueprint-grid {
+                background-size: 40px 40px;
+                background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+            }
+            .text-outline {
+                -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+                color: transparent;
+            }
+            .mask-fade {
+                mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .solution-card {
+                @apply bg-white p-10 border border-gray-100 transition-all duration-300 flex flex-col relative overflow-hidden;
+            }
+            .solution-card:hover {
+                @apply border-primary/30 shadow-[0_20px_40px_-15px_rgba(255,109,0,0.1)];
+            }
+            .expert-card-container:hover .expert-image {
+                @apply grayscale-0 scale-105;
+            }
+            .expert-card-container:hover .expert-border {
+                @apply opacity-100;
+            }
+            .timeline-photo {
+                @apply w-full h-64 object-cover border border-gray-200 shadow-sm transition-all duration-500 hover:grayscale-0 grayscale;
+            }
+            .core-value-card {
+                @apply bg-card-bg p-12 border border-white/10 flex flex-col h-full transition-all duration-300 hover:border-primary/50 rounded-[4px];
+            }
+            .floating-input-group {
+                @apply relative border-b border-white/20 focus-within:border-primary transition-all py-2;
+            }
+            .floating-input {
+                @apply block w-full bg-transparent border-none px-0 py-2 text-white placeholder-transparent focus:ring-0 focus:outline-none text-lg;
+            }
+            .floating-label {
+                @apply absolute left-0 top-2 text-gray-500 pointer-events-none transition-all duration-300 origin-left;
+            }
+            .floating-input:focus ~ .floating-label,
+            .floating-input:not(:placeholder-shown) ~ .floating-label {
+                @apply -translate-y-6 scale-75 text-primary;
+            }
+            .neural-bg {
+                background-image: radial-gradient(circle at 50% 50%, rgba(255, 109, 0, 0.05) 0%, transparent 70%);
+            }
+            .parallax-container {
+                perspective: 1000px;
+            }
+            .parallax-image {
+                transform: translateZ(0);
+                transition: transform 0.3s ease-out;
+            }
+            .neural-mesh-canvas {
+                background: radial-gradient(circle at 50% 50%, rgba(255, 109, 0, 0.1) 0%, transparent 70%);
+                filter: blur(40px);
+            }
+            .hud-line {
+                background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans antialiased selection:bg-primary selection:text-white">
+    <nav class="fixed w-full z-50 bg-white border-b-2 border-black">
+        <div class="w-full grid grid-cols-12 h-20 items-center relative">
+            <div
+                class="col-span-6 lg:col-span-3 pl-8 flex items-center gap-4 cursor-pointer border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-black text-4xl group-hover:text-primary transition-colors">grid_view</span>
+                <span
+                    class="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors">Codezilla</span>
+            </div>
+            <div
+                class="hidden lg:col-span-6 lg:flex justify-center items-center h-full bg-white border-r-2 border-black px-4 relative">
+                <div class="flex items-center gap-8 xl:gap-12 h-full">
+                    <a class="text-xs font-bold uppercase tracking-widest text-primary" href="#">Who we are</a>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black"
+                        href="#">What we do</a>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black"
+                        href="#">Case studies</a>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black"
+                        href="#">Career</a>
+                </div>
+            </div>
+            <div class="col-span-6 lg:col-span-3 flex justify-end items-center h-full bg-white px-8">
+                <a class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-[4px] text-xs font-bold uppercase tracking-widest hover:bg-[#E65100] transition-all"
+                    href="#">
+                    <span>Schedule Call</span>
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="relative min-h-screen flex items-center bg-obsidian overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-mesh opacity-10"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] neural-mesh-canvas animate-pulse-slow">
+            </div>
+            <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern height="40" id="hero-dots" patternUnits="userSpaceOnUse" width="40" x="0" y="0">
+                        <circle cx="2" cy="2" fill="#FF6D00" r="1"></circle>
+                    </pattern>
+                </defs>
+                <rect fill="url(#hero-dots)" height="100%" width="100%"></rect>
+            </svg>
+        </div>
+        <div class="absolute right-0 top-0 w-full lg:w-3/5 h-full opacity-40 lg:opacity-100 z-10 pointer-events-none">
+            <div class="relative w-full h-full">
+                <img alt="Leadership Portrait"
+                    class="w-full h-full object-cover grayscale brightness-75 mix-blend-lighten"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                <div class="absolute inset-0">
+                    <div class="absolute top-1/4 right-1/4 w-[2px] h-32 bg-cyan-accent blur-sm animate-pulse"></div>
+                    <div class="absolute top-2/3 right-1/3 w-[2px] h-48 bg-primary blur-sm animate-pulse opacity-50">
+                    </div>
+                    <div class="absolute bottom-1/4 right-10 w-48 h-[1px] bg-cyan-accent/30 blur-sm"></div>
+                </div>
+                <div class="absolute top-1/2 right-1/4 -translate-y-1/2 space-y-24">
+                    <div class="flex items-center gap-4 animate-float">
+                        <div class="w-2 h-2 bg-cyan-accent shadow-[0_0_10px_#00E5FF]"></div>
+                        <div class="border-l border-cyan-accent/50 pl-4">
+                            <p class="text-[10px] text-cyan-accent font-bold tracking-widest uppercase">AI Core</p>
+                            <p class="text-[8px] text-white/40 font-mono tracking-tighter">NODE_0942_ACTIVE</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 animate-float [animation-delay:1.5s]">
+                        <div class="w-2 h-2 bg-primary shadow-[0_0_10px_#FF6D00]"></div>
+                        <div class="border-l border-primary/50 pl-4">
+                            <p class="text-[10px] text-primary font-bold tracking-widest uppercase">Neural Net</p>
+                            <p class="text-[8px] text-white/40 font-mono tracking-tighter">DATA_STREAM_STABLE</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute top-1/4 right-[20%] w-64 h-64 rounded-full border border-white/5 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-1/4 right-[20%] w-64 h-64 rounded-full border-t border-cyan-accent/20 animate-spin-slow">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/40 to-transparent"></div>
+            </div>
+        </div>
+        <div class="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="w-12 h-[1px] bg-primary"></span>
+                    <span class="text-primary text-[10px] font-bold tracking-[0.6em] uppercase">SYSTEMS ONLINE • EST.
+                        2018</span>
+                </div>
+                <h1
+                    class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                    WELCOME TO <span class="text-white">CODEZILLA</span> TECHNOLOGY: A DEVELOPMENT &amp; INNOVATION
+                    AGENCY
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-12 font-light max-w-2xl leading-relaxed">
+                    Pioneering the next frontier of digital engineering. We integrate <span
+                        class="text-cyan-accent/80">advanced neural architectures</span> with high-impact product design
+                    to scale your enterprise into the AI era.
+                </p>
+                <div class="flex flex-col sm:flex-row items-start gap-6">
+                    <a class="inline-flex items-center gap-4 bg-primary text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-[#E65100] transition-all rounded-[4px] shadow-[0_0_20px_rgba(255,109,0,0.3)] group"
+                        href="#">
+                        Start Your Journey
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                    <div
+                        class="flex items-center gap-3 py-5 px-6 border border-white/10 rounded-[4px] bg-white/5 backdrop-blur-sm">
+                        <span
+                            class="material-symbols-outlined text-cyan-accent animate-pulse text-sm">settings_input_component</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Next-Gen
+                            Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#F9FAFB] py-24 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="solution-card border-r-0 border-b-0">
+                    <div class="flex justify-between items-center mb-12 relative z-10">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">INTELLIGENCE</span>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <span class="text-[10px] font-bold text-black uppercase tracking-widest">98% SUCCESS</span>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute right-[-10px] top-[-10px] text-[120px] font-black text-gray-100/50 leading-none select-none pointer-events-none">01</span>
+                    <h3 class="font-display font-bold text-2xl text-black uppercase mb-6 tracking-tight relative z-10">
+                        INTELLIGENT SOLUTIONS</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-16 relative z-10">Turning ideas into intelligent
+                        solutions that power smarter digital innovation everywhere.</p>
+                    <div class="mt-auto flex items-center gap-2 pt-6 border-t border-gray-50 relative z-10">
+                        <span class="material-symbols-outlined text-primary text-lg">trending_up</span>
+                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">+20% COLLABORATION
+                            RATE</span>
+                    </div>
+                </div>
+                <div class="solution-card border-r-0 lg:border-r-0 border-b-0">
+                    <div class="flex justify-between items-center mb-12 relative z-10">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">PARTNERSHIP</span>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <span class="text-[10px] font-bold text-black uppercase tracking-widest">99.9%
+                                RELIABLE</span>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute right-[-10px] top-[-10px] text-[120px] font-black text-gray-100/50 leading-none select-none pointer-events-none">02</span>
+                    <h3 class="font-display font-bold text-2xl text-black uppercase mb-6 tracking-tight relative z-10">
+                        PARTNERS, NOT VENDORS</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-16 relative z-10">We not only create objects, but
+                        we also establish long-term strategic partnerships.</p>
+                    <div class="mt-auto flex items-center gap-2 pt-6 border-t border-gray-50 relative z-10">
+                        <span class="material-symbols-outlined text-primary text-lg">handshake</span>
+                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">TRUST-FIRST
+                            APPROACH</span>
+                    </div>
+                </div>
+                <div class="solution-card border-b-0">
+                    <div class="flex justify-between items-center mb-12 relative z-10">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">PRECISION</span>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <span class="text-[10px] font-bold text-black uppercase tracking-widest">100% FOCUSED</span>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute right-[-10px] top-[-10px] text-[120px] font-black text-gray-100/50 leading-none select-none pointer-events-none">03</span>
+                    <h3 class="font-display font-bold text-2xl text-black uppercase mb-6 tracking-tight relative z-10">
+                        DETAIL-DRIVEN</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-16 relative z-10">Excellence in every detail,
+                        from perfect back-end code to stunning front-end design.</p>
+                    <div class="mt-auto flex items-center gap-2 pt-6 border-t border-gray-50 relative z-10">
+                        <span class="material-symbols-outlined text-primary text-lg">verified</span>
+                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">ZERO-DEFECT
+                            POLICY</span>
+                    </div>
+                </div>
+                <div class="solution-card border-r-0">
+                    <div class="flex justify-between items-center mb-12 relative z-10">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">REACH</span>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <span class="text-[10px] font-bold text-black uppercase tracking-widest">GLOBAL HUB</span>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute right-[-10px] top-[-10px] text-[120px] font-black text-gray-100/50 leading-none select-none pointer-events-none">04</span>
+                    <h3 class="font-display font-bold text-2xl text-black uppercase mb-6 tracking-tight relative z-10">
+                        GLOBAL YET LOCAL</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-16 relative z-10">We merge worldwide vision with
+                        local insight to engage diverse audiences.</p>
+                    <div class="mt-auto flex items-center gap-2 pt-6 border-t border-gray-50 relative z-10">
+                        <span class="material-symbols-outlined text-primary text-lg">public</span>
+                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">WORLDWIDE
+                            DELIVERY</span>
+                    </div>
+                </div>
+                <div class="solution-card border-r-0 lg:border-r-0">
+                    <div class="flex justify-between items-center mb-12 relative z-10">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">INTEGRITY</span>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <span class="text-[10px] font-bold text-black uppercase tracking-widest">FULL ACCESS</span>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute right-[-10px] top-[-10px] text-[120px] font-black text-gray-100/50 leading-none select-none pointer-events-none">05</span>
+                    <h3 class="font-display font-bold text-2xl text-black uppercase mb-6 tracking-tight relative z-10">
+                        TRANSPARENT &amp; TRUSTED</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-16 relative z-10">Open communication, affordable
+                        pricing, and complete accountability at every step.</p>
+                    <div class="mt-auto flex items-center gap-2 pt-6 border-t border-gray-50 relative z-10">
+                        <span class="material-symbols-outlined text-primary text-lg">shield</span>
+                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">CERTIFIED
+                            INTEGRITY</span>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="flex justify-between items-center mb-12 relative z-10">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">AGILITY</span>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <span class="text-[10px] font-bold text-black uppercase tracking-widest">FAST-TRACK</span>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute right-[-10px] top-[-10px] text-[120px] font-black text-gray-100/50 leading-none select-none pointer-events-none">06</span>
+                    <h3 class="font-display font-bold text-2xl text-black uppercase mb-6 tracking-tight relative z-10">
+                        BUILT TO ADAPT</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-16 relative z-10">We move fast, adapt quickly,
+                        and deliver intelligent digital solutions for the future.</p>
+                    <div class="mt-auto flex items-center gap-2 pt-6 border-t border-gray-50 relative z-10">
+                        <span class="material-symbols-outlined text-primary text-lg">bolt</span>
+                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">+45% VELOCITY
+                            INCREASE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-charcoal py-32 border-b-2 border-black relative overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none">
+            <span class="text-[30vw] font-black text-white leading-none">EXPERTS</span>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl mb-16">
+                <h2 class="font-display text-5xl md:text-7xl font-bold text-white uppercase tracking-tighter mb-4">MEET
+                    THE EXPERTS</h2>
+                <p class="text-gray-400 text-lg md:text-xl font-light">A collective of 500+ professionals driven by
+                    technical mastery and innovative vision.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 border border-white/10">
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-b border-white/10">
+                        <img alt="Haider"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                        <div class="absolute bottom-0 right-0 bg-primary px-3 py-1.5 z-30">
+                            <h4 class="text-white font-bold uppercase text-[11px] tracking-wider">Haider</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Founder &amp; CEO</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-b border-white/10">
+                        <img alt="Murtuza"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                        <div class="absolute bottom-0 right-0 bg-white px-3 py-1.5 z-30">
+                            <h4 class="text-black font-bold uppercase text-[11px] tracking-wider">Murtuza</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">CTO</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-b border-white/10">
+                        <img alt="Mansoor"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                        <div class="absolute bottom-0 right-0 bg-primary px-3 py-1.5 z-30">
+                            <h4 class="text-white font-bold uppercase text-[11px] tracking-wider">Mansoor</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Operations</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-b border-white/10">
+                        <img alt="Lead"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                        <div class="absolute bottom-0 right-0 bg-white px-3 py-1.5 z-30">
+                            <h4 class="text-black font-bold uppercase text-[11px] tracking-wider">Lead</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Engineering</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-b border-white/10">
+                        <img alt="Elena"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                        <div class="absolute bottom-0 right-0 bg-primary px-3 py-1.5 z-30">
+                            <h4 class="text-white font-bold uppercase text-[11px] tracking-wider">Elena</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Architect</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-white/10">
+                        <img alt="Julian"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuc-N0uFYLzWlb7pKvFajzTQVmPcSyKxNOt3aeSzq16VM8ROcNdB2eQPyazzNMefwLwUZiq0yRAG2hEV4pMm44go8EcLvgdbNKgyMsZnICbmmi2FkCrSGSWuzihbBGKWwV33nC7elbUfOjsVCpUjvKDTDEyFZfmG_7N9xz90NAHGutUJrynH4o3bPi3AEC5Jxjs8h6pJCy1e40OyCe2XQt0Vm5oYexgfQSKnE5e2b9jvMHWDlNiXJPdU7VwuCbZztjMu4AmTJb" />
+                        <div class="absolute bottom-0 right-0 bg-white px-3 py-1.5 z-30">
+                            <h4 class="text-black font-bold uppercase text-[11px] tracking-wider">Julian</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">VP Product</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-white/10">
+                        <img alt="Marcus"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4akZjDuxPuvDOsHjVUke_Rat871isau2sF9Z36UOPIedmOR-EXT9MG4LPSbMdp0WNrvyjSYbM6_kKpnBPJR4yM5ec0nBNRRB88xhT8UhehQ1Q650MAu4yvhdmmlgZka32hZ8ApQyoZysRQea5qA9mM_Us86UyCWJx_oMPpAzil665OgJqQZvNvnJEwkQdlvMiR6tEflF1ZlVjoTIz8gjfCPWfrU1hsci3S0X5JSNN3EQzCyvcP1tCF4S8mh0bsUvvqt_ynGDM" />
+                        <div class="absolute bottom-0 right-0 bg-primary px-3 py-1.5 z-30">
+                            <h4 class="text-white font-bold uppercase text-[11px] tracking-wider">Marcus</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Design Lead</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-white/10">
+                        <img alt="Sarah"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkYQOygFmI-yl5MJkPmybQ-NoNo8ggeDXp845msNmokZsJdmOJu5C1QOH5tNvaTgv_MfLG5xYfgjkXFe_dExou1YhNoA5ngfDyF982QLdOI8DO2OxQ6cHgpmfhzmUjTScV0f4PnTd0Ks29o1H2O4ZnHrY9WwR4tqMAbJHUc-zqtYNkSaV762B8_somUoI9vVFsvCaTeKNr5FPd1DQW-USG29_dkYYqGPZdIYiPGPQZE1Yk9Y2FCd_6Ya2ceu-H5jzEO7_DlmQ_" />
+                        <div class="absolute bottom-0 right-0 bg-white px-3 py-1.5 z-30">
+                            <h4 class="text-black font-bold uppercase text-[11px] tracking-wider">Sarah</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">QA Director</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5] border-r border-white/10">
+                        <img alt="Khalil"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4akZjDuxPuvDOsHjVUke_Rat871isau2sF9Z36UOPIedmOR-EXT9MG4LPSbMdp0WNrvyjSYbM6_kKpnBPJR4yM5ec0nBNRRB88xhT8UhehQ1Q650MAu4yvhdmmlgZka32hZ8ApQyoZysRQea5qA9mM_Us86UyCWJx_oMPpAzil665OgJqQZvNvnJEwkQdlvMiR6tEflF1ZlVjoTIz8gjfCPWfrU1hsci3S0X5JSNN3EQzCyvcP1tCF4S8mh0bsUvvqt_ynGDM" />
+                        <div class="absolute bottom-0 right-0 bg-primary px-3 py-1.5 z-30">
+                            <h4 class="text-white font-bold uppercase text-[11px] tracking-wider">Khalil</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Advisor</p>
+                    </div>
+                </div>
+                <div class="expert-card-container group bg-gray-900 overflow-hidden">
+                    <div class="relative aspect-[4/5]">
+                        <img alt="Niruban"
+                            class="expert-image w-full h-full object-cover grayscale transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkYQOygFmI-yl5MJkPmybQ-NoNo8ggeDXp845msNmokZsJdmOJu5C1QOH5tNvaTgv_MfLG5xYfgjkXFe_dExou1YhNoA5ngfDyF982QLdOI8DO2OxQ6cHgpmfhzmUjTScV0f4PnTd0Ks29o1H2O4ZnHrY9WwR4tqMAbJHUc-zqtYNkSaV762B8_somUoI9vVFsvCaTeKNr5FPd1DQW-USG29_dkYYqGPZdIYiPGPQZE1Yk9Y2FCd_6Ya2ceu-H5jzEO7_DlmQ_" />
+                        <div class="absolute bottom-0 right-0 bg-white px-3 py-1.5 z-30">
+                            <h4 class="text-black font-bold uppercase text-[11px] tracking-wider">Niruban</h4>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-charcoal">
+                        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Product Strategy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-paper py-32 border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-xl">
+                    <span class="text-xs font-bold uppercase tracking-[0.4em] text-primary mb-6 block">// LIFE AT
+                        CODEZILLA</span>
+                    <h2
+                        class="font-display text-5xl md:text-6xl font-bold text-black uppercase tracking-tighter leading-none">
+                        Our Culture &amp; Environment</h2>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="px-6 py-2 border-2 border-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all bg-black text-white">All</button>
+                    <button
+                        class="px-6 py-2 border-2 border-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all">Workshops</button>
+                    <button
+                        class="px-6 py-2 border-2 border-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all">Team
+                        Activities</button>
+                    <button
+                        class="px-6 py-2 border-2 border-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all">Client
+                        Meetings</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="relative group overflow-hidden border-2 border-black">
+                    <img alt="Workshops"
+                        class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span
+                            class="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">Workshops</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden border-2 border-black md:col-span-2">
+                    <img alt="Team Activities"
+                        class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span
+                            class="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">Team
+                            Activities</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden border-2 border-black">
+                    <img alt="Client Meetings"
+                        class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span
+                            class="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">Client
+                            Meetings</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden border-2 border-black md:col-span-2 lg:col-span-1">
+                    <img alt="All"
+                        class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span
+                            class="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">Workshops</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden border-2 border-black lg:col-span-3">
+                    <img alt="All"
+                        class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk" />
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span
+                            class="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">Team
+                            Activities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-charcoal py-32 border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <span class="text-xs font-bold uppercase tracking-[0.4em] text-primary mb-4 block">WHY WORK WITH
+                    US</span>
+                <h2 class="font-display text-5xl md:text-7xl font-bold text-white uppercase tracking-tighter">Engineered
+                    for Success</h2>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div
+                    class="p-16 flex flex-col items-center text-center bg-charcoal group border border-white/10 rounded-none hover:border-primary transition-all duration-300 relative shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
+                    <div
+                        class="w-16 h-16 bg-white/5 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-primary transition-all">
+                        <span class="material-symbols-outlined text-white">verified_user</span>
+                    </div>
+                    <h4 class="text-white font-display font-bold text-2xl uppercase mb-4">Highly Experienced</h4>
+                    <p class="text-gray-400 leading-relaxed">Leveraging years of architectural excellence and deep
+                        domain expertise to navigate complex technical landscapes with precision.</p>
+                </div>
+                <div
+                    class="p-16 flex flex-col items-center text-center bg-charcoal group border border-white/10 rounded-none hover:border-primary transition-all duration-300 relative shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
+                    <div
+                        class="w-16 h-16 bg-white/5 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-primary transition-all">
+                        <span class="material-symbols-outlined text-white">payments</span>
+                    </div>
+                    <h4 class="text-white font-display font-bold text-2xl uppercase mb-4">Affordable</h4>
+                    <p class="text-gray-400 leading-relaxed">Providing enterprise-grade software engineering at highly
+                        competitive rates through optimized agile processes and global delivery models.</p>
+                </div>
+                <div
+                    class="p-16 flex flex-col items-center text-center bg-charcoal group border border-white/10 rounded-none hover:border-primary transition-all duration-300 relative shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
+                    <div
+                        class="w-16 h-16 bg-white/5 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-primary transition-all">
+                        <span class="material-symbols-outlined text-white">workspace_premium</span>
+                    </div>
+                    <h4 class="text-white font-display font-bold text-2xl uppercase mb-4">Trustworthy</h4>
+                    <p class="text-gray-400 leading-relaxed">Maintaining absolute transparency in communication and
+                        unyielding commitment to security, compliance, and your data privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-paper py-32 border-b-2 border-black blueprint-grid overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2
+                class="font-display text-5xl md:text-7xl font-bold text-black uppercase tracking-tighter mb-24 text-center">
+                The Codezilla Journey</h2>
+            <div class="relative">
+                <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary -translate-x-1/2"></div>
+                <div class="space-y-32">
+                    <div class="relative flex items-center w-full">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-primary rotate-45 z-10">
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div class="pr-12 md:pr-16 text-right flex flex-col items-end">
+                                <div
+                                    class="max-w-md w-full p-8 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all group">
+                                    <img alt="Initial workspace"
+                                        class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all mb-6 border border-gray-100"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuARgEWfVdCZzHKe1SFvAGeb1Y3jyoC8ps-3yhWbLIGkhglmmY7-2vyt3L40Mu7o6dp5wRF8aGKr74bH1RiVEul7EO0FhNNPsvO8Ir_vlz1xEET9SL_fKcjQvL4abgwO8oIgJ04AQ8BJ0_IuN3cvdARN4aiMNKvWWRxidEecrpgthB3BtTKNqSjbWasWLXbcmvXVjyL6ynFjgXYlhmkkKH3-_KhwqyJLjBzEDgmHQNpLu8PVYY4UEgojxIaHR7kbd96OA6u5YAg0" />
+                                    <span class="font-display text-4xl font-black text-primary mb-2 block">2018</span>
+                                    <h3
+                                        class="text-2xl font-bold uppercase mb-4 text-black font-display tracking-tight">
+                                        The Beginning</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Codezilla was founded with a
+                                        mission to bridge the gap between creative design and hardcore engineering.</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center w-full">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-primary rotate-45 z-10">
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div></div>
+                            <div class="pl-12 md:pl-16 text-left flex flex-col items-start">
+                                <div
+                                    class="max-w-md w-full p-8 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(255,109,0,1)] hover:shadow-none transition-all group">
+                                    <img alt="Collaborative engineering team"
+                                        class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all mb-6 border border-gray-100"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtAQHbha_cTcUjYw7tj9Jv6Ey-8DG11UykmzB_jeMlIwzwRz6ATKjtSEAGktQ76Nu21z1KO5oM86ExnvN0Nw8QQnUEqkdcguJJSM75s50IABCJ1L7F6fFQkan6L2Zk1W7PPtSGuT_nxiHhZz-it1P1UeR_z-oUIwSVxnSONpNsJhePONrb1jqxHs9WX0ETfquZsKLitc-k5XcbLSlUXTJa51by0hjLwULB4ugPhpj3fhyNZykLQ5hHAKGlXceG6ohutb-dwg5X" />
+                                    <span class="font-display text-4xl font-black text-primary mb-2 block">2019</span>
+                                    <h3
+                                        class="text-2xl font-bold uppercase mb-4 text-black font-display tracking-tight">
+                                        Building Foundations</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">We expanded our core engineering
+                                        team and established our first major enterprise partnerships.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center w-full">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-primary rotate-45 z-10">
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div class="pr-12 md:pr-16 text-right flex flex-col items-end">
+                                <div
+                                    class="max-w-md w-full p-8 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all group">
+                                    <img alt="International team collaboration"
+                                        class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all mb-6 border border-gray-100"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSbCLnJwUzg8wpaaYLYaI623nkMwESlTGkg2VYQLIVF2xYLZBSB3NNj3bKExsVc2s2XuvgkX6eTBrnCpmQM9HCyoi9lQIFFJ8o_AShMTwJJWv-3ePCxKrAj0sRBR_r65qwKbD6TPtFzoD4JszY9RD5eOWVGxPG4hMvYy1oJ8IprHY4zMA5ZnIeJ0Tpfamjzlx7Izdg5MlCrtbkVjJf_4AbnHxeTrgXJK5R2sR07XfqYevy1ICsnaE3_7Jdo6D-rN8ST0ImnQ4B" />
+                                    <span class="font-display text-4xl font-black text-primary mb-2 block">2020</span>
+                                    <h3
+                                        class="text-2xl font-bold uppercase mb-4 text-black font-display tracking-tight">
+                                        Going Global</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Transitioned to a fully distributed
+                                        model, serving clients across Europe, the US, and Asia.</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center w-full">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-primary rotate-45 z-10">
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div></div>
+                            <div class="pl-12 md:pl-16 text-left flex flex-col items-start">
+                                <div
+                                    class="max-w-md w-full p-8 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(255,109,0,1)] hover:shadow-none transition-all group">
+                                    <img alt="Enterprise project delivery"
+                                        class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all mb-6 border border-gray-100"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_6wybtlVaRk278fQgcxbgNUqJdGg5Srv-gCkX7_x5-klQ7fK660588tsG6eDRRbhIgbM5BQ7In9kx_lU_xmocoBG-J4fTlvgjX1Om-MHsUoNpq-_lg7DUzlA63RBLQt0GMZNxaCseMK1wvC4g1USQYR-La0rkr040ClZ5bMXn4a30Rqc5Hk7r19mYOPedXWuYr32SaB4MmCyY9XvUPn3x1nhnK6MHCEkukS7vhC3ae81Q-gnzIRSabahRh-gq7Fmcz0abp4_j" />
+                                    <span class="font-display text-4xl font-black text-primary mb-2 block">2021</span>
+                                    <h3
+                                        class="text-2xl font-bold uppercase mb-4 text-black font-display tracking-tight">
+                                        Trusted by Enterprises</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Ranked as a top-tier software
+                                        agency by major industry reviewers and Fortune 500 consultants.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center w-full">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-primary rotate-45 z-10">
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div class="pr-12 md:pr-16 text-right flex flex-col items-end">
+                                <div
+                                    class="max-w-md w-full p-8 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all group">
+                                    <img alt="AI focused workstation"
+                                        class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all mb-6 border border-gray-100"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3K5mC_VpEo7KSA1I3Lpg8ricWhVq6uMV4Q0MnKvPYDDoa0dAKHMe8u3sBPQMQu52E4e4NA6LsSHw31pO0CCvXsu_C9z3SG2Z9KEvfIhJsK_sAhPOQBW6e8SxM3wb-VopJyfDV4Er1yk5dLCyfXbz6NtR963wFK48GSCDklMNblro7Ipu3u6-pN8BUEmitTgeGZOlrVSy_IQdQv_RFOIVX-wkLjZOpoepVeDUCuT-RPWZohWmlarevpsPMQOjIa2VOpbtoCdf0" />
+                                    <span class="font-display text-4xl font-black text-primary mb-2 block">2025</span>
+                                    <h3
+                                        class="text-2xl font-bold uppercase mb-4 text-black font-display tracking-tight">
+                                        Building the Future</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Leading the charge in AI-driven
+                                        automation and sustainable software architecture.</p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-obsidian py-32 border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mb-24">
+                <h2
+                    class="font-display text-5xl md:text-7xl font-bold text-white uppercase tracking-tighter leading-[0.9] mb-10">
+                    CODEZILLA’S CORE VALUES: INNOVATION, INTEGRITY, AND IMPACT
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl">
+                    Powerful, self-serve analytics designed to help you convert, engage, and retain users effortlessly.
+                    Trusted by thousands of growing businesses worldwide.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-white/10">
+                <div class="core-value-card">
+                    <div class="mb-12">
+                        <span class="material-symbols-outlined text-primary text-5xl font-bold">rocket_launch</span>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl text-white uppercase mb-6 tracking-tight">TECHNOLOGY</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Technology is what motivates us. We believe in agile thinking and the relentless pursuit of
+                        technical excellence to solve the world's most complex digital challenges.
+                    </p>
+                </div>
+                <div class="core-value-card md:border-l-0">
+                    <div class="mb-12">
+                        <span class="material-symbols-outlined text-primary text-5xl font-bold">public</span>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl text-white uppercase mb-6 tracking-tight">SOCIETY</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        We believe technology should serve humans, not the other way around. We are committed to
+                        building long-term digital futures that contribute positively to the global society.
+                    </p>
+                </div>
+                <div class="core-value-card lg:border-l-0">
+                    <div class="mb-12">
+                        <span class="material-symbols-outlined text-primary text-5xl font-bold">groups</span>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl text-white uppercase mb-6 tracking-tight">COLLABORATION
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        Excellence is a team sport. Through open communication and a culture of radical candor, we work
+                        alongside our partners to co-create experiences that resonate.
+                    </p>
+                </div>
+                <div class="core-value-card lg:border-l-0">
+                    <div class="mb-12">
+                        <span class="material-symbols-outlined text-primary text-5xl font-bold">verified_user</span>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl text-white uppercase mb-6 tracking-tight">INTEGRITY</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        We hold ourselves to the highest standards of ethical decision-making. Accountability isn't just
+                        a policy; it's the foundation of every line of code we write and every relationship we build.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-charcoal py-32 border-b-2 border-black overflow-hidden">
+        <div class="mb-24 overflow-hidden border-y border-white/10 py-12">
+            <div class="flex items-center gap-24 animate-marquee whitespace-nowrap mask-fade">
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Maji</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Rightcharge</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Specxweb</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Fintech
+                    Pro</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Maji</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Rightcharge</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Specxweb</span>
+                <span
+                    class="text-3xl lg:text-5xl font-display font-black text-white/10 uppercase tracking-widest">Fintech
+                    Pro</span>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2
+                class="font-display text-4xl lg:text-6xl font-bold text-center text-white uppercase mb-20 tracking-tighter">
+                What our clients say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border-2 border-white/10 bg-white/5 group hover:border-primary transition-all shadow-[10px_10px_0px_0px_rgba(255,109,0,0.1)]">
+                    <div class="flex items-center gap-4 mb-8">
+                        <img alt="KH" class="w-16 h-16 rounded-none grayscale border border-white/20"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4akZjDuxPuvDOsHjVUke_Rat871isau2sF9Z36UOPIedmOR-EXT9MG4LPSbMdp0WNrvyjSYbM6_kKpnBPJR4yM5ec0nBNRRB88xhT8UhehQ1Q650MAu4yvhdmmlgZka32hZ8ApQyoZysRQea5qA9mM_Us86UyCWJx_oMPpAzil665OgJqQZvNvnJEwkQdlvMiR6tEflF1ZlVjoTIz8gjfCPWfrU1hsci3S0X5JSNN3EQzCyvcP1tCF4S8mh0bsUvvqt_ynGDM" />
+                        <div>
+                            <h4 class="font-bold uppercase text-sm text-white">Khalil Halilu</h4>
+                            <span class="text-[10px] text-primary font-bold uppercase tracking-widest">Tech
+                                Founder</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic leading-relaxed text-lg">"Codezilla transformed our vision into
+                        reality. Their technical expertise is unmatched in the industry."</p>
+                </div>
+                <div
+                    class="p-10 border-2 border-white/10 bg-white/5 group hover:border-primary transition-all shadow-[10px_10px_0px_0px_rgba(255,109,0,0.1)]">
+                    <div class="flex items-center gap-4 mb-8">
+                        <img alt="N" class="w-16 h-16 rounded-none grayscale border border-white/20"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkYQOygFmI-yl5MJkPmybQ-NoNo8ggeDXp845msNmokZsJdmOJu5C1QOH5tNvaTgv_MfLG5xYfgjkXFe_dExou1YhNoA5ngfDyF982QLdOI8DO2OxQ6cHgpmfhzmUjTScV0f4PnTd0Ks29o1H2O4ZnHrY9WwR4tqMAbJHUc-zqtYNkSaV762B8_somUoI9vVFsvCaTeKNr5FPd1DQW-USG29_dkYYqGPZdIYiPGPQZE1Yk9Y2FCd_6Ya2ceu-H5jzEO7_DlmQ_" />
+                        <div>
+                            <h4 class="font-bold uppercase text-sm text-white">Niruban</h4>
+                            <span class="text-[10px] text-primary font-bold uppercase tracking-widest">Product
+                                Manager</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic leading-relaxed text-lg">"Professional, timely, and incredibly
+                        skilled. A pleasure to work with from start to finish."</p>
+                </div>
+                <div
+                    class="p-10 border-2 border-white/10 bg-white/5 group hover:border-primary transition-all shadow-[10px_10px_0px_0px_rgba(255,109,0,0.1)]">
+                    <div class="flex items-center gap-4 mb-8">
+                        <img alt="SS" class="w-16 h-16 rounded-none grayscale border border-white/20"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIzg26FMNK5QwMCGfBKtPGQcwUObYDhOa4hMH5_zLa7Qb8YVXrFkxjSn_FwPYydbJ2o9tFqoKzSYgSSmX_fbiZ8Zmmd-tjiNnVkQORMLiK1-BsTQSLNUFVWkjPrdmU1kBYySeTy1uIu0WDwsFsjtrP4q7jDHM1IQn-Xwj8NOPIQgT-WCqX2pdp0lqq3ZsUqequ3AN2_fT9C6AzwC_hr5oflfKp89uLdnHyV8_PxS1E9U-jtZRV2UKruETCO1O7jQEPKHDgnumO" />
+                        <div>
+                            <h4 class="font-bold uppercase text-sm text-white">Sahil Sethi</h4>
+                            <span class="text-[10px] text-primary font-bold uppercase tracking-widest">CEO,
+                                E-comm</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic leading-relaxed text-lg">"The best development partner we've had.
+                        They truly care about the product's long-term success."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid grid-cols-1 lg:grid-cols-10 min-h-[850px] relative overflow-hidden bg-obsidian">
+        <div class="lg:col-span-6 relative overflow-hidden parallax-container group">
+            <img alt="David Miller Senior Partner"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 parallax-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0HyhTurvwKjejOER_lOlVAtM1hbKd_aSR2oHYZEwNY7Pmgnx_QJcpbfqrLjlwqy3XGIlbtUME54Q3HLI7B19AgtgRB2P1HlWKWaFE9QJi2hD2CCsFJc2DiiW_B2XWOCcS0W-htPnEvLKURXYdDSlAPZevSlkLhaTejsRMHAUthOvZ97Yk1k1IHvSjJzAeSifeIM_jEntnNi7thw0MfCWIEHRQOzLVT6Ixak0_615jnBKANxkCmlofm_3oWb4HHfm7b1WEbMw" />
+            <div class="absolute bottom-0 left-0 p-12 lg:p-20 z-20">
+                <div class="inline-block bg-primary/90 backdrop-blur-md px-6 py-2 mb-4 border border-white/10">
+                    <p class="text-white text-[10px] font-bold uppercase tracking-[0.4em]">EXECUTIVE PARTNER</p>
+                </div>
+                <h3
+                    class="text-white font-display text-4xl lg:text-6xl font-bold uppercase tracking-tighter leading-none mb-2">
+                    David Miller</h3>
+                <p class="text-gray-300 font-light text-xl">"Success isn't built on code alone—it's built on
+                    partnership."</p>
+            </div>
+            <div class="absolute top-12 left-12 z-20">
+                <div class="relative w-32 h-32 flex items-center justify-center">
+                    <div class="absolute inset-0 animate-spin-slow">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <defs>
+                                <path d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" id="circlePath">
+                                </path>
+                            </defs>
+                            <text fill="white" font-family="Space Grotesk" font-size="8.5" font-weight="bold"
+                                letter-spacing="1">
+                                <textPath xlink:href="#circlePath">REAL PEOPLE. REAL PROS. • REAL PEOPLE. REAL PROS. •
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <span class="material-symbols-outlined text-primary text-4xl">verified</span>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80 z-10">
+            </div>
+        </div>
+        <div
+            class="lg:col-span-4 relative py-24 lg:py-32 px-8 lg:px-16 flex flex-col justify-center bg-obsidian border-l border-white/5 neural-bg">
+            <div class="absolute inset-0 bg-mesh opacity-[0.05] pointer-events-none"></div>
+            <div
+                class="absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none select-none opacity-[0.02]">
+                <span
+                    class="font-display font-black text-[250px] leading-none text-white tracking-tighter uppercase inline-block -rotate-90 origin-center translate-x-1/2">CONNECT</span>
+            </div>
+            <div class="relative z-10 max-w-md w-full">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[2px] bg-primary"></span>
+                    <span class="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">INITIATE
+                        COLLABORATION</span>
+                </div>
+                <h2
+                    class="font-display text-5xl md:text-6xl font-bold text-white uppercase tracking-tighter mb-8 leading-[0.9]">
+                    READY TO BUILD WHAT’S NEXT?</h2>
+                <p class="text-lg text-gray-400 font-light leading-relaxed mb-16">Transform your digital landscape with
+                    expert IT consulting. Let’s build the future of technology together!</p>
+                <form action="#" class="space-y-12">
+                    <div class="floating-input-group">
+                        <input class="floating-input" id="fullname" name="fullname" placeholder="Full Name" required=""
+                            type="text" />
+                        <label class="floating-label uppercase text-[10px] font-bold tracking-widest"
+                            for="fullname">Full Name</label>
+                    </div>
+                    <div class="floating-input-group">
+                        <input class="floating-input" id="email" name="email" placeholder="Email Address" required=""
+                            type="email" />
+                        <label class="floating-label uppercase text-[10px] font-bold tracking-widest" for="email">Email
+                            Address</label>
+                    </div>
+                    <div class="floating-input-group">
+                        <textarea class="floating-input min-h-[100px] resize-none" id="message" name="message"
+                            placeholder="Message" required=""></textarea>
+                        <label class="floating-label uppercase text-[10px] font-bold tracking-widest" for="message">Your
+                            Message</label>
+                    </div>
+                    <button
+                        class="group w-full relative overflow-hidden bg-primary text-white py-6 px-10 font-bold uppercase tracking-[0.2em] text-sm transition-all rounded-[4px] flex items-center justify-between shadow-[inset_0_1px_10px_rgba(255,255,255,0.2)]"
+                        type="submit">
+                        <span class="relative z-10">HIRE OUR TEAM</span>
+                        <span
+                            class="material-symbols-outlined relative z-10 group-hover:translate-x-2 transition-transform duration-300">arrow_right_alt</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-charcoal text-white pt-24 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-white text-4xl">grid_view</span>
+                        <span
+                            class="font-display font-bold text-3xl tracking-tighter text-white uppercase">Codezilla</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        A reputable software development company specializing in custom digital solutions and
+                        intelligent engineering.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Location</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Plot No. 201, Scheme No. 78, Part II,<br />
+                        Indore, Madhya Pradesh 452010
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                        <li><a class="hover:text-white transition-colors" href="#">Web Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Mobile App Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">AI Solutions</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">LI</a>
+                        <a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">TW</a>
+                        <a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                <span>© 2025 Codezilla Inc. All rights reserved.</span>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

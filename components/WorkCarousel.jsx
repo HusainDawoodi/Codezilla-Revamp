@@ -95,7 +95,7 @@ export default function WorkCarousel() {
             Our <br className="hidden lg:block" />
             work
           </h2>
-          <p className="text-black-300 text-sm leading-relaxed">
+          <p className="text-black-300 text-base leading-relaxed">
             Floating overlay arrows are placed over the project carousel for
             easier access on all screen sizes
           </p>
