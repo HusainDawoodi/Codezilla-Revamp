@@ -100,23 +100,31 @@ export default function Navbar() {
                       <li>
                         <Link
                           className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="/mobile-app-development"
-                        >
-                          Mobile App Development
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
                           href="/web-development"
                         >
-                          Web Development
+                          Web Development Services
                         </Link>
                       </li>
                       <li>
                         <Link
                           className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
-                          href="#"
+                          href="/mobile-app-development"
+                        >
+                          Mobile App Development Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                          href="/software-testing"
+                        >
+                          Software Testing Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-sm text-gray-400 hover:text-primary hover:pl-2 transition-all block"
+                          href="/data-science-ai"
                         >
                           Data Science & AI
                         </Link>
