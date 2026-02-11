@@ -1,0 +1,622 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Front-end Development Services - Codezilla</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6D00",
+                        "primary-hover": "#FF9100",
+                        "charcoal": "#0B0D11",
+                        "dark-accent": "#14171D",
+                        "obsidian": "#050608",
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['monospace'],
+                    },
+                    transitionTimingFunction: {
+                        'premium': 'cubic-bezier(0.23, 1, 0.32, 1)',
+                    }
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .blueprint-grid {
+                background-size: 40px 40px;
+                background-image: linear-gradient(to right, rgba(255,109,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,109,0,0.03) 1px, transparent 1px);
+            }
+            .text-outline-primary {
+                -webkit-text-stroke: 1px #FF6D00;
+                color: transparent;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .container-max {
+                max-width: 1320px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            .vertical-text {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
+            .glass-nav {
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+            .inner-glow-hover:hover {
+                box-shadow: inset 0 0 15px rgba(255, 109, 0, 0.15), 0 10px 30px -10px rgba(0,0,0,0.1);
+            }
+            .connector-line {
+                position: relative;
+            }
+            .connector-line::after {
+                content: '';
+                position: absolute;
+                bottom: -45px;
+                left: 50%;
+                width: 1px;
+                height: 90px;
+                background: linear-gradient(to bottom, transparent, #FF6D00, transparent);
+                z-index: 20;
+            }
+            @keyframes soft-pulse-glow {
+                0% { box-shadow: 0 0 0 0 rgba(255, 109, 0, 0); border-color: rgba(255, 109, 0, 0.2); }
+                50% { box-shadow: 0 0 25px 2px rgba(255, 109, 0, 0.15); border-color: rgba(255, 109, 0, 0.8); }
+                100% { box-shadow: 0 0 0 0 rgba(255, 109, 0, 0); border-color: rgba(255, 109, 0, 0.2); }
+            }
+            .active-pulse {
+                animation: soft-pulse-glow 4s infinite ease-in-out;
+            }
+            .stagger-reveal {
+                opacity: 0;
+                transform: translateY(15px);
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .group:hover .stagger-reveal {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0.2s;
+            }
+            .self-draw-icon {
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                transition: stroke-dashoffset 1s ease-out;
+                stroke: #FF6D00;
+                fill: transparent;
+                stroke-width: 1;
+            }
+            .group:hover .self-draw-icon {
+                stroke-dashoffset: 0;
+            }
+        }
+        h1, h2, h3, h4 {
+            letter-spacing: 0.04em;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<nav class="fixed w-full z-[100] glass-nav border-b border-primary/20 transition-all duration-300">
+<div class="container-max flex h-20 items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer group">
+<span class="material-symbols-outlined text-black text-2xl group-hover:text-primary transition-all duration-500 transform group-hover:rotate-90">grid_view</span>
+<span class="font-display font-extrabold text-xl tracking-[-0.05em] text-black uppercase group-hover:text-primary transition-colors">Codezilla</span>
+</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[11px] font-bold uppercase tracking-[0.25em] hover:text-primary transition-colors text-black/80" href="#">Who we are</a>
+<a class="text-[11px] font-bold uppercase tracking-[0.25em] hover:text-primary transition-colors text-black/80" href="#">What we do</a>
+<a class="text-[11px] font-bold uppercase tracking-[0.25em] hover:text-primary transition-colors text-black/80" href="#">Case studies</a>
+<a class="text-[11px] font-bold uppercase tracking-[0.25em] hover:text-primary transition-colors text-black/80" href="#">Career</a>
+</div>
+<div class="flex items-center">
+<a class="inline-flex items-center bg-black text-white px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-primary transition-all rounded-[4px]" href="#">
+                Schedule Call
+            </a>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen pt-20 flex items-center bg-obsidian blueprint-grid overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="container-max relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center py-20">
+<div class="lg:col-span-7 space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.5em]">Est. 2010 — Engineering Excellence</span>
+</div>
+<h1 class="font-display text-6xl md:text-[6.5rem] font-bold text-white leading-[0.95] tracking-tighter uppercase">
+                    Front-end<br/>
+<span class="text-outline-primary block mt-2">Architecture</span>
+</h1>
+</div>
+<p class="text-gray-400 text-lg max-w-xl leading-relaxed font-light border-l border-white/10 pl-8">
+                We are a reputable web development company dedicated to building innovative, scalable, and high-performance web applications that empower businesses to thrive in the digital era. Our team combines technical mastery with cinematic design precision.
+            </p>
+<div class="flex flex-col gap-8">
+<form class="flex flex-col md:flex-row gap-0 max-w-2xl bg-white/5 border border-white/10 backdrop-blur-md rounded-[4px] p-1 shadow-2xl">
+<input class="flex-1 bg-transparent border-0 text-white text-[11px] font-mono uppercase tracking-widest focus:ring-0 px-6 py-4" placeholder="Corporate Email" required="" type="email"/>
+<div class="w-[1px] bg-white/10 my-2 hidden md:block"></div>
+<select class="flex-1 bg-transparent border-0 text-gray-400 text-[11px] font-mono uppercase tracking-widest focus:ring-0 px-6 py-4 cursor-pointer">
+<option disabled="" selected="" value="">Selection: Project Type</option>
+<option value="saas">SaaS Development</option>
+<option value="dashboard">Enterprise Dashboard</option>
+<option value="ecommerce">E-commerce</option>
+<option value="modernization">Legacy Modernization</option>
+</select>
+<button class="bg-primary text-white px-10 py-4 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-black transition-all rounded-[4px]" type="submit">Initialize</button>
+</form>
+<div class="flex items-center gap-8">
+<a class="inline-flex items-center gap-4 text-white/40 hover:text-primary text-[10px] font-bold uppercase tracking-[0.3em] transition-all group" href="#">
+                        Explore Capabilities
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">east</span>
+</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative hidden lg:flex justify-end">
+<div class="relative w-full aspect-[4/5] max-w-md group">
+<div class="absolute -inset-10 bg-primary/10 blur-[120px] rounded-full group-hover:bg-primary/20 transition-all duration-1000"></div>
+<div class="relative w-full h-full bg-charcoal overflow-hidden rounded-[4px] border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]">
+<img alt="Lead Developer Portrait" class="w-full h-full object-cover opacity-80 mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-10 left-10 right-10 p-8 bg-black/40 border border-white/10 backdrop-blur-xl rounded-[4px]">
+<div class="flex flex-col gap-2">
+<span class="text-[9px] font-mono text-primary uppercase tracking-[0.4em]">Current Session</span>
+<span class="text-2xl font-display font-bold text-white uppercase tracking-tight">Technical Consultation</span>
+<div class="mt-4 flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#FBFBF9] py-[120px]">
+<div class="container-max">
+<nav class="mb-16 font-mono text-[10px] uppercase tracking-[0.5em] text-gray-400 flex items-center gap-4">
+<span>Home</span>
+<span class="text-gray-300">/</span>
+<span>Services</span>
+<span class="text-gray-300">/</span>
+<span class="text-black font-bold">Frontend</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<div class="lg:col-span-5">
+<h2 class="font-display text-5xl font-bold text-black uppercase tracking-tight leading-tight">Front-End Development Services</h2>
+<div class="w-20 h-1 bg-primary mt-8"></div>
+</div>
+<div class="lg:col-span-7 space-y-10">
+<p class="text-gray-600 text-xl leading-relaxed font-light">
+                    As a leading front-end development company, Codezilla specializes in creating immersive and responsive user interfaces that drive engagement and business growth. Our expertise spans modern JavaScript frameworks and semantic HTML/CSS to deliver pixel-perfect digital experiences.
+                </p>
+<a class="inline-flex items-center gap-4 text-black font-black uppercase tracking-[0.3em] text-[10px] group border-b-2 border-primary pb-1" href="#">
+                    Initiate Project Dialogue
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform text-primary">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-[120px]">
+<div class="container-max">
+<div class="text-center max-w-4xl mx-auto mb-24">
+<h2 class="font-display text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6">High-Performance Frontend Solutions</h2>
+<p class="text-gray-500 font-mono text-[10px] uppercase tracking-[0.5em]">Scalable • Secure • Performant</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/10">
+<div class="bg-charcoal p-12 space-y-8 hover:bg-dark-accent transition-all duration-500 inner-glow-hover group">
+<span class="text-primary font-mono text-xs">01</span>
+<h4 class="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Custom frontend development</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Tailored frontend solutions built from the ground up to match your specific business requirements and user needs.</p>
+</div>
+<div class="bg-charcoal p-12 space-y-8 hover:bg-dark-accent transition-all duration-500 inner-glow-hover group">
+<span class="text-primary font-mono text-xs">02</span>
+<h4 class="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">UI/UX Design and Development</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Combining aesthetic excellence with technical precision to create interfaces that users love to interact with.</p>
+</div>
+<div class="bg-charcoal p-12 space-y-8 hover:bg-dark-accent transition-all duration-500 inner-glow-hover group">
+<span class="text-primary font-mono text-xs">03</span>
+<h4 class="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">SPA Development</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Building lightning-fast Single Page Applications using React, Angular, or Vue.js for a desktop-like web experience.</p>
+</div>
+<div class="bg-charcoal p-12 space-y-8 hover:bg-dark-accent transition-all duration-500 inner-glow-hover group">
+<span class="text-primary font-mono text-xs">04</span>
+<h4 class="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Cross-Browser Compatibility</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Ensuring your web application performs consistently across all modern browsers and device platforms.</p>
+</div>
+<div class="bg-charcoal p-12 space-y-8 hover:bg-dark-accent transition-all duration-500 inner-glow-hover group">
+<span class="text-primary font-mono text-xs">05</span>
+<h4 class="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Performance Optimization</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Systematic auditing and optimization to achieve peak Core Web Vitals and lightning-fast load times.</p>
+</div>
+<div class="bg-charcoal p-12 space-y-8 hover:bg-dark-accent transition-all duration-500 inner-glow-hover group">
+<span class="text-primary font-mono text-xs">06</span>
+<h4 class="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Legacy Modernization</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Updating outdated frontend architectures to modern standards while maintaining business continuity.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#FBFBF9] py-[120px] connector-line">
+<div class="container-max">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight mb-24 max-w-3xl">Why Choose codezilla.io as Your Frontend Partner?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-8 group">
+<div class="w-16 h-16 flex items-center justify-center border border-black/5 bg-white shadow-sm rounded-[4px] group-hover:border-primary/50 group-hover:shadow-md transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">developer_mode</span>
+</div>
+<h4 class="text-xl font-display font-bold text-black uppercase leading-snug">Expertise in Modern Frontend Stack</h4>
+<p class="text-gray-600 text-sm leading-relaxed font-light">Deep mastery in the full React ecosystem, Next.js, and advanced CSS frameworks to build future-proof applications.</p>
+</div>
+<div class="space-y-8 group">
+<div class="w-16 h-16 flex items-center justify-center border border-black/5 bg-white shadow-sm rounded-[4px] group-hover:border-primary/50 group-hover:shadow-md transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+</div>
+<h4 class="text-xl font-display font-bold text-black uppercase leading-snug">Enterprise Global Perspective</h4>
+<p class="text-gray-600 text-sm leading-relaxed font-light">Experience delivering solutions for international clients, ensuring cultural relevance and global accessibility standards.</p>
+</div>
+<div class="space-y-8 group">
+<div class="w-16 h-16 flex items-center justify-center border border-black/5 bg-white shadow-sm rounded-[4px] group-hover:border-primary/50 group-hover:shadow-md transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">sync</span>
+</div>
+<h4 class="text-xl font-display font-bold text-black uppercase leading-snug">Agile Transparent Process</h4>
+<p class="text-gray-600 text-sm leading-relaxed font-light">Full visibility into development cycles with regular updates, clear communication, and iterative delivery schedules.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#FBFBF9] py-[120px] border-t border-black/5">
+<div class="container-max">
+<div class="flex items-center gap-6 mb-24">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight">Trust us for</h2>
+<div class="h-[1px] flex-1 bg-black/10"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 border border-black/5">
+<div class="relative bg-white p-16 transition-all duration-500 hover:z-10 inner-glow-hover group">
+<span class="absolute right-12 top-12 text-7xl font-display font-black text-black/[0.03] select-none pointer-events-none">01</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-10 block">responsive_layout</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-6 tracking-tight">Responsive Web Design</h4>
+<p class="text-gray-600 text-sm leading-relaxed max-w-sm font-light">Seamlessly adapting interfaces across mobile, tablet, and desktop for the ultimate user experience.</p>
+</div>
+</div>
+<div class="relative bg-white p-16 transition-all duration-500 hover:z-10 inner-glow-hover group">
+<span class="absolute right-12 top-12 text-7xl font-display font-black text-black/[0.03] select-none pointer-events-none">02</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-10 block">gesture</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-6 tracking-tight">Intuitive User Interface</h4>
+<p class="text-gray-600 text-sm leading-relaxed max-w-sm font-light">Clean, logical layouts that guide users effortlessly toward their goals without cognitive overload.</p>
+</div>
+</div>
+<div class="relative bg-white p-16 transition-all duration-500 hover:z-10 inner-glow-hover group">
+<span class="absolute right-12 top-12 text-7xl font-display font-black text-black/[0.03] select-none pointer-events-none">03</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-10 block">timer</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-6 tracking-tight">High Availability</h4>
+<p class="text-gray-600 text-sm leading-relaxed max-w-sm font-light">Highly optimized code and error-handling strategies to ensure your frontend is always performant.</p>
+</div>
+</div>
+<div class="relative bg-white p-16 transition-all duration-500 hover:z-10 inner-glow-hover group">
+<span class="absolute right-12 top-12 text-7xl font-display font-black text-black/[0.03] select-none pointer-events-none">04</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-10 block">api</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-6 tracking-tight">System Integration</h4>
+<p class="text-gray-600 text-sm leading-relaxed max-w-sm font-light">Robust API consumption and state management for fluid communication between UI and server logic.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-[140px] overflow-hidden connector-line">
+<div class="container-max">
+<div class="mb-32 flex flex-col items-center text-center">
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.5em] mb-6">Execution Strategy</span>
+<h2 class="font-display text-5xl font-bold text-black uppercase tracking-tight">Development Process</h2>
+</div>
+<div class="flex w-full h-[600px] border border-black/5 rounded-[4px] overflow-hidden shadow-sm">
+<div class="group relative flex-1 hover:flex-[3.5] transition-all duration-700 ease-premium border-r border-black/5 bg-white overflow-hidden cursor-pointer active-pulse">
+<div class="absolute inset-0 p-12 flex flex-col justify-between">
+<div class="flex flex-col items-center group-hover:items-start transition-all duration-700 ease-premium">
+<span class="text-primary font-display text-8xl font-black leading-none mb-16 opacity-20 group-hover:opacity-100 transition-opacity">01</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase tracking-tight whitespace-nowrap vertical-text group-hover:rotate-0 group-hover:writing-mode-horizontal-tb group-hover:mb-8 transition-all duration-700 ease-premium">Analysis</h4>
+<div class="stagger-reveal">
+<p class="text-gray-600 text-lg leading-relaxed font-light max-w-sm border-l-2 border-primary pl-6">Defining project scope and technical feasibility with surgical precision.</p>
+</div>
+</div>
+<div class="flex justify-center group-hover:justify-start transition-all duration-700 ease-premium">
+<svg class="w-20 h-20" viewBox="0 0 24 24">
+<path class="self-draw-icon" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="group relative flex-1 hover:flex-[3.5] transition-all duration-700 ease-premium border-r border-black/5 bg-white overflow-hidden cursor-pointer active-pulse">
+<div class="absolute inset-0 p-12 flex flex-col justify-between">
+<div class="flex flex-col items-center group-hover:items-start transition-all duration-700 ease-premium">
+<span class="text-primary font-display text-8xl font-black leading-none mb-16 opacity-20 group-hover:opacity-100 transition-opacity">02</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase tracking-tight whitespace-nowrap vertical-text group-hover:rotate-0 group-hover:writing-mode-horizontal-tb group-hover:mb-8 transition-all duration-700 ease-premium">Wireframing</h4>
+<div class="stagger-reveal">
+<p class="text-gray-600 text-lg leading-relaxed font-light max-w-sm border-l-2 border-primary pl-6">Translating logic into visual structures and high-fidelity architectural mockups.</p>
+</div>
+</div>
+<div class="flex justify-center group-hover:justify-start transition-all duration-700 ease-premium">
+<svg class="w-20 h-20" viewBox="0 0 24 24">
+<path class="self-draw-icon" d="M3 3h18v18H3z M3 9h18 M9 21V9"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="group relative flex-1 hover:flex-[3.5] transition-all duration-700 ease-premium border-r border-black/5 bg-white overflow-hidden cursor-pointer active-pulse">
+<div class="absolute inset-0 p-12 flex flex-col justify-between">
+<div class="flex flex-col items-center group-hover:items-start transition-all duration-700 ease-premium">
+<span class="text-primary font-display text-8xl font-black leading-none mb-16 opacity-20 group-hover:opacity-100 transition-opacity">03</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase tracking-tight whitespace-nowrap vertical-text group-hover:rotate-0 group-hover:writing-mode-horizontal-tb group-hover:mb-8 transition-all duration-700 ease-premium">Development</h4>
+<div class="stagger-reveal">
+<p class="text-gray-600 text-lg leading-relaxed font-light max-w-sm border-l-2 border-primary pl-6">Writing clean, modular, and high-performance code based on finalized designs.</p>
+</div>
+</div>
+<div class="flex justify-center group-hover:justify-start transition-all duration-700 ease-premium">
+<svg class="w-20 h-20" viewBox="0 0 24 24">
+<path class="self-draw-icon" d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="group relative flex-1 hover:flex-[3.5] transition-all duration-700 ease-premium border-r border-black/5 bg-white overflow-hidden cursor-pointer active-pulse">
+<div class="absolute inset-0 p-12 flex flex-col justify-between">
+<div class="flex flex-col items-center group-hover:items-start transition-all duration-700 ease-premium">
+<span class="text-primary font-display text-8xl font-black leading-none mb-16 opacity-20 group-hover:opacity-100 transition-opacity">04</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase tracking-tight whitespace-nowrap vertical-text group-hover:rotate-0 group-hover:writing-mode-horizontal-tb group-hover:mb-8 transition-all duration-700 ease-premium">Testing</h4>
+<div class="stagger-reveal">
+<p class="text-gray-600 text-lg leading-relaxed font-light max-w-sm border-l-2 border-primary pl-6">Rigorous QA, cross-browser checks, and deep performance auditing.</p>
+</div>
+</div>
+<div class="flex justify-center group-hover:justify-start transition-all duration-700 ease-premium">
+<svg class="w-20 h-20" viewBox="0 0 24 24">
+<path class="self-draw-icon" d="M9 11l3 3L22 4 M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="group relative flex-1 hover:flex-[3.5] transition-all duration-700 ease-premium bg-white overflow-hidden cursor-pointer active-pulse">
+<div class="absolute inset-0 p-12 flex flex-col justify-between">
+<div class="flex flex-col items-center group-hover:items-start transition-all duration-700 ease-premium">
+<span class="text-primary font-display text-8xl font-black leading-none mb-16 opacity-20 group-hover:opacity-100 transition-opacity">05</span>
+<h4 class="font-display text-2xl font-bold text-black uppercase tracking-tight whitespace-nowrap vertical-text group-hover:rotate-0 group-hover:writing-mode-horizontal-tb group-hover:mb-8 transition-all duration-700 ease-premium">Deployment</h4>
+<div class="stagger-reveal">
+<p class="text-gray-600 text-lg leading-relaxed font-light max-w-sm border-l-2 border-primary pl-6">Go-live execution and ongoing technical support for the product lifecycle.</p>
+</div>
+</div>
+<div class="flex justify-center group-hover:justify-start transition-all duration-700 ease-premium">
+<svg class="w-20 h-20" viewBox="0 0 24 24">
+<path class="self-draw-icon" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-[120px] overflow-hidden">
+<div class="container-max">
+<div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-10">
+<div>
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.5em] block mb-6">Portfolio Showcase</span>
+<h2 class="font-display text-5xl font-bold text-white uppercase tracking-tight">Our Latest Works</h2>
+</div>
+<p class="text-gray-500 max-w-sm">Transformative frontend results across diverse enterprise-scale industries.</p>
+</div>
+<div class="flex gap-10 overflow-x-auto pb-12 no-scrollbar snap-x snap-mandatory">
+<div class="min-w-[540px] bg-dark-accent p-1 snap-start group transition-all duration-500 rounded-[4px] border border-white/5 hover:border-primary/40">
+<div class="relative aspect-[16/10] overflow-hidden bg-obsidian rounded-[2px]">
+<img alt="Maji" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8X0-OvcyQkGT8K5B7lGDQVEsCB_9ADuKnKgEoyKXSvJU-wWFbIz1PstXDS3424QXiXj3dX-JIcKsGfynXuAU6cn6fWhcArMXXHofHvO9-INeEu42CBnNsen0ksJwoFO1xIgq_ajR5zrvQzoQLFu-j7nat6xCkCrp1tJSTH4JSI4xhXfOV9Ht6SAg9IHUvwxBYOVA-SpeAc6lh7C6DCpgxP8FWuxquKYJ8paQGNanhtpKCyYqTR7qzdeofDXT0B9KR4uq3Pbqn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="p-10 space-y-4">
+<h4 class="text-2xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Maji Platform</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">A high-performance web platform focused on streamlining supply chain logistics with real-time tracking dashboards.</p>
+</div>
+</div>
+<div class="min-w-[540px] bg-dark-accent p-1 snap-start group transition-all duration-500 rounded-[4px] border border-white/5 hover:border-primary/40">
+<div class="relative aspect-[16/10] overflow-hidden bg-obsidian rounded-[2px]">
+<img alt="Rightcharge" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Oh5oJQnysBkNsqBwsPyCb9mCwVwOFCO_xN6Zz_8ONI1UM9adsgExC_sOlgHAJoYg2RfkS2-RBMdqXxE_skr5_TlavYQ5-3PTV0z2PbuRy4yqcrRTvZBygGc1iO-HVEj6pXMO5dMlQ7X5qjqkvGXnK9IOWKg5bu9d8GRw3HOXUE_8-7pi4leHZvdmxvVuqViuE6kElBrmbmhXmHZpxsvVjfp02WavQ-L-G0qvOqCiTF9g49QPvOqHQ3JIlGvqSxvVyNHfmF1u"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="p-10 space-y-4">
+<h4 class="text-2xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Rightcharge</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Interactive EV charging comparison tool designed for maximum conversion and lightning-fast user interaction.</p>
+</div>
+</div>
+<div class="min-w-[540px] bg-dark-accent p-1 snap-start group transition-all duration-500 rounded-[4px] border border-white/5 hover:border-primary/40">
+<div class="relative aspect-[16/10] overflow-hidden bg-obsidian rounded-[2px]">
+<img alt="Specxweb" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgb6gJPkiRYi6okckdOklicZeHcujd4F1xkALqIHbbTpEsOXdnkV1Ae4zoLNQXrk49D-wgaafUph388hVzEARBhdL1bCYxzKb6znm3-3iSce0kXnpsWkGuTOU2RVYZIbu88i8mbuHr876-HsYDxTtbSRLoB5dt7D9nAYRJa9WWH9n94REN_sOySFiWoc4d_mmROFavDOqrUyxnO7MfIUTVXBpPn5gt58QAWgHcS3hodmshNk74kCZThOayVg00LOI_JHCwGfxM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="p-10 space-y-4">
+<h4 class="text-2xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors">Specxweb</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">Comprehensive enterprise dashboard for data analysis with complex visualization layers and seamless performance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-[120px] border-y border-black/5 overflow-hidden">
+<div class="container-max">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight mb-8">Engineering Ecosystem</h2>
+<p class="text-gray-500 max-w-3xl mb-20 leading-relaxed font-light">Integrate an advanced developer-centric front-end development stack including React, Vue, Angular, Next.js, and TypeScript to ensure scalable and maintainable codebases for your enterprise projects.</p>
+<div class="relative py-12 border-y border-black/5 overflow-hidden">
+<div class="flex items-center gap-24 grayscale opacity-30 whitespace-nowrap overflow-hidden">
+<span class="text-3xl font-display font-black uppercase tracking-tighter">React.js</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">Next.js</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">TypeScript</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">TailwindCSS</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">Angular</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">Vue.js</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">SASS</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">Webpack</span>
+<span class="text-3xl font-display font-black uppercase tracking-tighter">Node.js</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#FBFBF9] py-[120px]">
+<div class="container-max">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight mb-20 border-l-4 border-primary pl-8">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<div class="bg-white border border-black/5 p-12 rounded-[4px] shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-display font-bold text-xl uppercase mb-6 flex justify-between items-center">
+                        What front-end frameworks do you use?
+                        <span class="material-symbols-outlined text-primary">add</span>
+</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light">We specialize in React, Next.js, and Vue.js, choosing the best tool for your specific project requirements to ensure performance and scalability.</p>
+</div>
+<div class="bg-white border border-black/5 p-12 rounded-[4px] shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-display font-bold text-xl uppercase mb-6 flex justify-between items-center">
+                        How do you ensure web performance?
+                        <span class="material-symbols-outlined text-primary">add</span>
+</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light">We follow Core Web Vitals guidelines, implementing lazy loading, image optimization, code splitting, and efficient caching strategies.</p>
+</div>
+<div class="bg-white border border-black/5 p-12 rounded-[4px] shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-display font-bold text-xl uppercase mb-6 flex justify-between items-center">
+                        Do you provide ongoing maintenance?
+                        <span class="material-symbols-outlined text-primary">add</span>
+</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light">Yes, we offer comprehensive maintenance packages including security updates, performance monitoring, and feature enhancements.</p>
+</div>
+<div class="bg-white border border-black/5 p-12 rounded-[4px] shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-display font-bold text-xl uppercase mb-6 flex justify-between items-center">
+                        Is your code accessible (WCAG)?
+                        <span class="material-symbols-outlined text-primary">add</span>
+</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light">Every line of code is written with accessibility in mind, ensuring compliance with WCAG 2.1 standards for inclusive digital experiences.</p>
+</div>
+<div class="bg-white border border-black/5 p-12 rounded-[4px] shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-display font-bold text-xl uppercase mb-6 flex justify-between items-center">
+                        How do you handle responsive design?
+                        <span class="material-symbols-outlined text-primary">add</span>
+</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light">We use a mobile-first approach, rigorously testing across multiple screen sizes and devices to ensure a seamless experience everywhere.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-obsidian min-h-screen flex items-center relative overflow-hidden">
+<div class="absolute inset-0 blueprint-grid opacity-10"></div>
+<div class="container-max relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-32 items-center py-24">
+<div class="space-y-16">
+<h2 class="font-display text-6xl md:text-7xl font-bold text-white uppercase tracking-tighter leading-[0.9]">
+                Transform your <span class="text-primary">digital</span> landscape.
+            </h2>
+<div class="flex items-center gap-10 p-8 border border-white/5 bg-white/5 rounded-[4px] backdrop-blur-sm">
+<img alt="David Miller" class="w-24 h-24 rounded-full object-cover grayscale border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+<div>
+<span class="text-white text-xl font-bold block mb-1">David Miller</span>
+<span class="text-primary font-mono text-[11px] uppercase tracking-[0.4em]">Managing Partner</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-10 pt-10">
+<div class="flex items-center gap-6 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl p-3 bg-white/5 rounded-full group-hover:bg-primary group-hover:text-white transition-all">call</span>
+<span class="text-white font-mono text-lg tracking-wider">+91 0731 4945411</span>
+</div>
+<div class="flex items-center gap-6 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl p-3 bg-white/5 rounded-full group-hover:bg-primary group-hover:text-white transition-all">mail</span>
+<span class="text-white font-mono text-lg tracking-wider">hello@codezilla.io</span>
+</div>
+<div class="flex items-start gap-6 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl p-3 bg-white/5 rounded-full group-hover:bg-primary group-hover:text-white transition-all">location_on</span>
+<span class="text-white font-mono text-lg leading-relaxed max-w-xs">Codezilla HQ, Engineering District, Indore, India</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-accent p-16 border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)] rounded-[4px] relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl pointer-events-none"></div>
+<form class="space-y-10">
+<div class="space-y-4">
+<label class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.3em]">Corporate Entity / Name</label>
+<input class="w-full bg-obsidian/50 border-0 border-b-2 border-white/10 text-white py-4 text-base focus:border-primary focus:ring-0 transition-colors" required="" type="text"/>
+</div>
+<div class="space-y-4">
+<label class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.3em]">Communication Protocol / Email</label>
+<input class="w-full bg-obsidian/50 border-0 border-b-2 border-white/10 text-white py-4 text-base focus:border-primary focus:ring-0 transition-colors" required="" type="email"/>
+</div>
+<div class="space-y-4">
+<label class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.3em]">Project Parameters / Message</label>
+<textarea class="w-full bg-obsidian/50 border-0 border-b-2 border-white/10 text-white py-4 text-base focus:border-primary focus:ring-0 transition-colors" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-6 font-bold uppercase tracking-[0.4em] text-[11px] hover:bg-white hover:text-black transition-all rounded-[4px] shadow-xl">Send Strategic Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+<footer class="bg-charcoal text-white pt-32 pb-16 border-t border-white/5">
+<div class="container-max">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-24 mb-32">
+<div class="col-span-1 md:col-span-2 space-y-12">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">grid_view</span>
+<span class="font-display font-black text-4xl tracking-tighter text-white uppercase">Codezilla</span>
+</div>
+<p class="text-gray-500 text-lg max-w-sm leading-relaxed font-light">Defining the standard for high-performance digital engineering and frontend excellence since 2010.</p>
+</div>
+<div class="space-y-10">
+<h4 class="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">Core Expertise</h4>
+<ul class="space-y-5 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Front-end Architecture</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">System UI/UX Design</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Enterprise Design Systems</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Legacy Modernization</a></li>
+</ul>
+</div>
+<div class="space-y-10">
+<h4 class="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">Connectivity</h4>
+<ul class="space-y-5 text-sm text-gray-400">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs text-primary">mail</span>
+                        hello@codezilla.io
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+                        Indore, MP, India
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono uppercase tracking-[0.5em] text-gray-600">
+<span>© 2024 Codezilla Engineering Labs. All Rights Reserved.</span>
+<div class="flex gap-16 mt-8 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Engagement</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
