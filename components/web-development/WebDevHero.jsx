@@ -43,14 +43,14 @@ export default function WebDevHero() {
           to an existing website, we can help you realize your vision and
           establish a vibrant online presence.
         </p>
-        <div className="flex items-center justify-center gap-4 mb-12">
-          <TrustBadges variant="dark" />
-        </div>
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
           <Button variant="primary" size="md" href="#" icon="arrow_forward">
             Learn More
           </Button>
+        </div>
+        <div className="flex items-center justify-center gap-4 mb-12">
+          <TrustBadges variant="dark" />
         </div>
       </div>
     </section>

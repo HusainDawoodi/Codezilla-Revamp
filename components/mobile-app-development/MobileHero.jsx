@@ -36,16 +36,15 @@ export default function MobileHero() {
           </p>
 
           <div className="flex flex-col gap-8">
-            <TrustBadges
-              variant="dark"
-              className="border-t border-white/10 pt-8"
-            />
-
             <div className="flex flex-col sm:flex-row gap-6">
               <Button variant="primary" size="md" icon="arrow_forward" href="#">
                 Learn More
               </Button>
             </div>
+            <TrustBadges
+              variant="dark"
+              className="border-t border-white/10 pt-8"
+            />
           </div>
         </div>
 

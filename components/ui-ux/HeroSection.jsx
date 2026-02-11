@@ -32,9 +32,6 @@ export default function HeroSection() {
           </p>
           <div className="space-y-8">
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-              <TrustBadges variant="dark" />
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
               <Button variant="primary" size="md" href="#" icon="arrow_forward">
                 View Case Studies
               </Button>
@@ -42,6 +39,9 @@ export default function HeroSection() {
               <Button variant="outline-white" size="md" href="#">
                 Design Philosophy
               </Button>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+              <TrustBadges variant="dark" />
             </div>
           </div>
         </div>

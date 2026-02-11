@@ -258,7 +258,7 @@ export default function Navbar() {
                                 }}
                               >
                                 <div
-                                  className={`library-item ${isActive(item?.link) ? "border-primary bg-white/5" : ""}`}
+                                  className={`library-item ${isActive(item?.link) ? "!border-primary !border-l-2 bg-white/5" : ""}`}
                                 >
                                   <div className="flex items-center gap-2 mb-0.5">
                                     <span
@@ -297,7 +297,7 @@ export default function Navbar() {
                             }}
                           >
                             <div
-                              className={`library-item ${isActive(item?.link) ? "border-primary bg-white/5" : ""}`}
+                              className={`library-item ${isActive(item?.link) ? "!border-primary !border-l-2 bg-white/5" : ""}`}
                             >
                               <div className="flex items-center gap-2 mb-0.5">
                                 <span
@@ -334,7 +334,7 @@ export default function Navbar() {
                             }}
                           >
                             <div
-                              className={`library-item ${isActive(item?.link) ? "border-primary bg-white/5" : ""}`}
+                              className={`library-item ${isActive(item?.link) ? "!border-primary !border-l-2 bg-white/5" : ""}`}
                             >
                               <div className="flex items-center gap-2 mb-0.5">
                                 <span
