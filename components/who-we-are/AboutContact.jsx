@@ -71,7 +71,7 @@ export default function AboutContact() {
               INITIATE COLLABORATION
             </span>
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-bold text-white uppercase tracking-tighter mb-8 leading-[0.9]">
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-white uppercase tracking-tighter mb-8 ">
             READY TO BUILD WHAT’S NEXT?
           </h2>
           <p className="text-lg text-gray-400 font-light leading-relaxed mb-16">

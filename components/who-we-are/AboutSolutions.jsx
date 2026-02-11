@@ -8,7 +8,7 @@ export default function AboutSolutions() {
           {SOLUTIONS.map((solution, index) => (
             <div
               key={solution.id}
-              className={`bg-white p-10 border border-gray-100 transition-all duration-300 flex flex-col relative overflow-hidden group  hover:shadow-[0_20px_40px_-15px_rgba(255,109,0,0.1)] ${
+              className={`bg-white p-6 lg:p-10 border border-gray-100 transition-all duration-300 flex flex-col relative overflow-hidden group  hover:shadow-[0_20px_40px_-15px_rgba(255,109,0,0.1)] ${
                 index % 3 !== 2 ? "lg:border-r-0" : ""
               } ${index < 3 ? "border-b-0" : ""} hover:border hover:border-primary/50`}
             >

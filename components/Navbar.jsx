@@ -50,6 +50,12 @@ export default function Navbar() {
       link: "/mobile-app-development",
     },
     {
+      title: "Software Testing Services",
+      description: "Ensure quality with comprehensive testing and QA.",
+      icon: "bug_report",
+      link: "/software-testing",
+    },
+    {
       title: "Data Science & AI",
       description:
         "Turn data into intelligent automation and predictive insights.",
@@ -169,57 +175,57 @@ export default function Navbar() {
             >
               Who we are
             </Link>
-            <div class="mega-menu-trigger h-full flex items-center px-2 cursor-pointer group">
-              <span class="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">
+            <div className="mega-menu-trigger h-full flex items-center px-2 cursor-pointer group">
+              <span className="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">
                 What we do
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover:rotate-180">
+                <span className="material-symbols-outlined text-[16px] transition-transform group-hover:rotate-180">
                   expand_more
                 </span>
               </span>
-              <div class="mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism opacity-0 invisible -translate-y-2 transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black">
-                <div class="max-w-[1600px] mx-auto grid grid-cols-12 gap-8">
-                  <div class="col-span-9 grid grid-cols-4 xl:grid-cols-4 gap-6">
-                    <div class="space-y-4 !col-span-2">
-                      <h3 class="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+              <div className="mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism opacity-0 invisible -translate-y-2 transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black">
+                <div className="max-w-[1600px] mx-auto grid grid-cols-12 gap-8">
+                  <div className="col-span-9 grid grid-cols-4 xl:grid-cols-4 gap-6">
+                    <div className="space-y-4 !col-span-2">
+                      <h3 className="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
                         Digital Product Development
                       </h3>
                       <div className="flex gap-4">
-                        <div class="space-y-1 ">
+                        <div className="space-y-1 ">
                           {digitalProductDevelopment
                             .slice(0, 4)
                             .map((item, index) => (
                               <Link href={item?.link} key={item?.title}>
-                                <div class="library-item">
-                                  <div class="flex items-center gap-2 mb-0.5">
-                                    <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                <div className="library-item">
+                                  <div className="flex items-center gap-2 mb-0.5">
+                                    <span className="material-symbols-outlined text-sm duotone-icon item-icon">
                                       {item?.icon}
                                     </span>
-                                    <span class="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                    <span className="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
                                       {item?.title}
                                     </span>
                                   </div>
-                                  <p class="text-xs text-gray-500 leading-tight">
+                                  <p className="text-xs text-gray-500 leading-tight">
                                     {item?.description}
                                   </p>
                                 </div>
                               </Link>
                             ))}
                         </div>
-                        <div class="space-y-1 ">
+                        <div className="space-y-1 ">
                           {digitalProductDevelopment
                             .slice(4)
                             .map((item, index) => (
                               <Link href={item?.link} key={item?.title}>
-                                <div class="library-item">
-                                  <div class="flex items-center gap-2 mb-0.5">
-                                    <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                                <div className="library-item">
+                                  <div className="flex items-center gap-2 mb-0.5">
+                                    <span className="material-symbols-outlined text-sm duotone-icon item-icon">
                                       {item?.icon}
                                     </span>
-                                    <span class="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                    <span className="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
                                       {item?.title}
                                     </span>
                                   </div>
-                                  <p class="text-xs text-gray-500 leading-tight">
+                                  <p className="text-xs text-gray-500 leading-tight">
                                     {item?.description}
                                   </p>
                                 </div>
@@ -229,23 +235,23 @@ export default function Navbar() {
                       </div>
                     </div>
 
-                    <div class="space-y-4 !col-span-1.5">
-                      <h3 class="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                    <div className="space-y-4 !col-span-1.5">
+                      <h3 className="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
                         Dedicated Teams
                       </h3>
-                      <div class="space-y-1">
+                      <div className="space-y-1">
                         {DedicatedTeams.map((item, index) => (
                           <Link href={item?.link} key={item?.title}>
-                            <div class="library-item">
-                              <div class="flex items-center gap-2 mb-0.5">
-                                <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                            <div className="library-item">
+                              <div className="flex items-center gap-2 mb-0.5">
+                                <span className="material-symbols-outlined text-sm duotone-icon item-icon">
                                   {item?.icon}
                                 </span>
-                                <span class="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                <span className="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
                                   {item?.title}
                                 </span>
                               </div>
-                              <p class="text-xs text-gray-500 leading-tight">
+                              <p className="text-xs text-gray-500 leading-tight">
                                 {item?.description}
                               </p>
                             </div>
@@ -253,23 +259,23 @@ export default function Navbar() {
                         ))}
                       </div>
                     </div>
-                    <div class="space-y-4 col-span-1.5">
-                      <h3 class="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
+                    <div className="space-y-4 col-span-1.5">
+                      <h3 className="text-sm font-display font-extrabold text-primary uppercase tracking-[0.2em] border-b border-primary/20 pb-2 mb-4">
                         Codezilla Accelerators
                       </h3>
-                      <div class="space-y-1">
+                      <div className="space-y-1">
                         {codezillaAccelerators.map((item, index) => (
                           <Link href={item?.link} key={item?.title}>
-                            <div class="library-item">
-                              <div class="flex items-center gap-2 mb-0.5">
-                                <span class="material-symbols-outlined text-sm duotone-icon item-icon">
+                            <div className="library-item">
+                              <div className="flex items-center gap-2 mb-0.5">
+                                <span className="material-symbols-outlined text-sm duotone-icon item-icon">
                                   {item?.icon}
                                 </span>
-                                <span class="text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                <span className="text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
                                   {item?.title}
                                 </span>
                               </div>
-                              <p class="text-xs text-gray-500 leading-tight">
+                              <p className="text-xs text-gray-500 leading-tight">
                                 {item?.description}
                               </p>
                             </div>
@@ -278,49 +284,49 @@ export default function Navbar() {
                       </div>
                     </div>
                   </div>
-                  <div class="col-span-3 border-l border-white/10 pl-8">
-                    <div class="h-full flex flex-col justify-between">
+                  <div className="col-span-3 border-l border-white/10 pl-8">
+                    <div className="h-full flex flex-col justify-between">
                       <div>
-                        <h3 class="text-xs font-bold text-gray-200 uppercase tracking-[0.3em] mb-6">
+                        <h3 className="text-xs font-bold text-gray-200 uppercase tracking-[0.3em] mb-6">
                           Featured Success
                         </h3>
-                        <div class="group/case relative rounded-[4px] overflow-hidden bg-white/5 border border-white/10 mb-6">
+                        <div className="group/case relative rounded-[4px] overflow-hidden bg-white/5 border border-white/10 mb-6">
                           <img
                             alt="Project Success"
-                            class="w-full aspect-[16/10] object-cover opacity-60 group-hover/case:scale-105 transition-transform duration-700"
+                            className="w-full aspect-[16/10] object-cover opacity-60 group-hover/case:scale-105 transition-transform duration-700"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk"
                           />
-                          <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
-                          <div class="absolute bottom-4 left-4">
-                            <span class="text-[9px] font-bold text-primary bg-primary/10 px-2 py-0.5 border border-primary/20 mb-2 inline-block">
+                          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                          <div className="absolute bottom-4 left-4">
+                            <span className="text-[9px] font-bold text-primary bg-primary/10 px-2 py-0.5 border border-primary/20 mb-2 inline-block">
                               FINTECH LEADERS
                             </span>
-                            <h4 class="text-white font-bold text-sm">
+                            <h4 className="text-white font-bold text-sm">
                               Next-Gen Neobank Architecture
                             </h4>
                           </div>
                         </div>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        <p className="text-sm text-gray-400 leading-relaxed mb-6">
                           Built a high-performance banking core serving 2M+
                           active monthly users with 99.99% uptime.
                         </p>
                         <a
-                          class="inline-flex items-center gap-2 text-[10px] font-bold text-primary uppercase tracking-widest hover:text-white transition-colors"
+                          className="inline-flex items-center gap-2 text-[10px] font-bold text-primary uppercase tracking-widest hover:text-white transition-colors"
                           href="#"
                         >
                           View all work
-                          <span class="material-symbols-outlined text-sm">
+                          <span className="material-symbols-outlined text-sm">
                             arrow_right_alt
                           </span>
                         </a>
                       </div>
-                      {/* <div class="mt-8 relative group/search">
+                      {/* <div className="mt-8 relative group/search">
                         <input
-                          class="w-full bg-white/5 border border-white/10 rounded-[4px] py-2.5 pl-4 pr-10 text-[11px] text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600"
+                          className="w-full bg-white/5 border border-white/10 rounded-[4px] py-2.5 pl-4 pr-10 text-[11px] text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600"
                           placeholder="Find a service..."
                           type="text"
                         />
-                        <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg group-focus-within/search:text-primary transition-colors">
+                        <span className="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg group-focus-within/search:text-primary transition-colors">
                           search
                         </span>
                       </div> */}

@@ -21,7 +21,7 @@ export default function AboutSuccess() {
           {SUCCESS_PILLARS.map((pillar, index) => (
             <div
               key={index}
-              className="p-16 flex flex-col items-center text-center bg-charcoal group border border-white/10 rounded-none hover:border-primary transition-all duration-300 relative shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]"
+              className="p-7 md:p-16 flex flex-col items-center text-center bg-charcoal group border border-white/10 rounded-none hover:border-primary transition-all duration-300 relative shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]"
             >
               <div className="w-16 h-16 bg-white/5 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-primary transition-all">
                 <span className="material-symbols-outlined text-white">

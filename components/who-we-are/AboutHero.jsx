@@ -3,10 +3,10 @@ import Button from "@/components/ui/Button";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-obsidian overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center bg-obsidian overflow-hidden pt-10 lg:pt-20">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('/images/who-we-are/banner.png')] opacity-50 bg-no-repeat bg-cover"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[linear-gradient(to_right,rgba(1,1,1,0.1)_50%,transparent_50%)] blur-[40px] "></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[linear-gradient(to_right,rgba(1,1,1,0.4)_30%,transparent_70%)] blur-[40px] "></div>
         {/*  <svg
           className="absolute inset-0 w-full h-full opacity-10"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export default function AboutHero() {
         </div>
       </div>
 
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
+      <div className="relative z-20 w-full max-w-7xl mx-auto py-10 px-6 lg:px-8 lg:py-20">
         <div className="max-w-3xl">
           <div className="flex items-center gap-4 mb-8">
             <span className="w-12 h-[1px] bg-primary"></span>

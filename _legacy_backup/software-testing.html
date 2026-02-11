@@ -1,0 +1,390 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QA &amp; Testing: Strategic Solution Narrative - Codezilla</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6D00",
+                        "primary-hover": "#FF9100",
+                        "charcoal": "#0F1218",
+                        "dark-accent": "#1A1D24",
+                        "obsidian": "#080A0E",
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['monospace'],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .blueprint-grid {
+                background-size: 40px 40px;
+                background-image: linear-gradient(to right, rgba(255,109,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,109,0,0.05) 1px, transparent 1px);
+            }
+            .grainy-texture {
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+                opacity: 0.05;
+            }
+            .text-outline-primary {
+                -webkit-text-stroke: 1.5px #FF6D00;
+                color: transparent;
+            }
+            .card-shadow-orange {
+                box-shadow: 12px 12px 0px 0px #FF6D00;
+            }
+            .link-line {
+                width: 1px;
+                background: linear-gradient(to bottom, rgba(255,109,0,0.2) 0%, rgba(255,109,0,1) 100%);
+            }
+            .glowing-text {
+                text-shadow: 0 0 15px rgba(255, 109, 0, 0.4);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<nav class="fixed w-full z-[100] bg-white border-b border-black/10">
+<div class="w-full grid grid-cols-12 h-20 items-center px-12">
+<div class="col-span-3 flex items-center gap-4 cursor-pointer group">
+<span class="material-symbols-outlined text-black text-3xl group-hover:text-primary transition-colors">grid_view</span>
+<span class="font-display font-bold text-2xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors">Codezilla</span>
+</div>
+<div class="col-span-6 flex justify-center items-center h-full">
+<div class="flex items-center gap-10 h-full">
+<a class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors text-black" href="#">Who we are</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors text-black" href="#">What we do</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors text-black" href="#">Case studies</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors text-black" href="#">Career</a>
+</div>
+</div>
+<div class="col-span-3 flex justify-end items-center">
+<a class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black transition-all rounded-[2px]" href="#audit">
+                    Schedule Call
+                </a>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen pt-20 flex items-center bg-charcoal blueprint-grid overflow-hidden">
+<div class="container mx-auto px-12 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-10">
+<div class="space-y-4">
+<span class="text-primary font-mono text-xs uppercase tracking-[0.4em] inline-flex items-center gap-2">
+<span class="w-2 h-2 bg-primary"></span>
+                        Guided Solution Narrative
+                    </span>
+<h1 class="font-display text-5xl md:text-[5.5rem] font-bold text-white leading-[0.95] tracking-tight uppercase">
+                        Unstable Software?<br/><span class="text-outline-primary">Eroding</span> Trust.
+                    </h1>
+</div>
+<div class="space-y-6 max-w-xl">
+<p class="text-primary font-display text-xl font-bold uppercase tracking-wide">The Solution: Strategic Verification Excellence.</p>
+<p class="text-gray-400 text-lg leading-relaxed font-light">
+                        Elite engineering partners who integrate within your lifecycle to neutralize architectural friction. We ensure 99.9% deploy-ready reliability through clinical, high-stakes QA protocols.
+                    </p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<a class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all rounded-[2px]" href="#audit">
+                        Technical Strategy Audit
+                        <span class="material-symbols-outlined text-sm">analytics</span>
+</a>
+<a class="inline-flex items-center gap-3 border border-white/10 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all rounded-[2px]" href="#">
+                        Verification Mastery
+                    </a>
+</div>
+</div>
+<div class="lg:col-span-5 relative hidden lg:flex justify-end">
+<div class="relative w-full aspect-square max-w-md border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-1">
+<div class="absolute inset-0 blueprint-grid opacity-30"></div>
+<div class="relative w-full h-full bg-charcoal flex items-center justify-center overflow-hidden">
+<img alt="Focused QA Engineer portrait" class="w-full h-full object-cover mix-blend-screen opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+</div>
+<div class="absolute -top-6 -right-6 bg-white border border-black p-6 card-shadow-orange transform rotate-3">
+<span class="text-black font-display font-bold text-lg block leading-tight">14+ YEARS OF<br/>VERIFICATION MASTERY</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#F9F7F2] py-32 border-b border-black/5">
+<div class="max-w-7xl mx-auto px-12">
+<div class="mb-24">
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.4em] block mb-4">The Matrix</span>
+<h2 class="font-display text-5xl font-bold text-black uppercase tracking-tight mb-4">Strategic Capabilities Matrix</h2>
+<p class="text-gray-600 max-w-2xl font-light text-xl">Targeted architectural interventions designed to mitigate critical risk at every layer of your stack.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
+<div class="relative group">
+<div class="absolute -top-12 -left-6 font-display text-[12rem] font-bold text-black opacity-[0.03] leading-none pointer-events-none select-none">01</div>
+<div class="relative z-10 space-y-8">
+<div>
+<span class="text-[10px] font-bold text-red-500 uppercase tracking-widest flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> CRITICAL FAILURE
+                            </span>
+<h3 class="font-display text-3xl font-bold uppercase tracking-tight text-black mb-4">Edge-Case Reconnaissance</h3>
+<p class="text-gray-600 text-base font-light leading-relaxed">Standard automated flows miss non-linear human behaviors, leading to high-impact production failures that frustrate power users.</p>
+</div>
+<div class="pt-8 border-t border-black/5">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest block mb-4">ENGINEERED RESPONSE</span>
+<p class="text-xl font-display font-bold leading-tight text-black italic">"Manual precision for human behaviors. Exhaustive verification of fringe scenarios to ensure total journey reliability."</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-12 -left-6 font-display text-[12rem] font-bold text-black opacity-[0.03] leading-none pointer-events-none select-none">02</div>
+<div class="relative z-10 space-y-8">
+<div>
+<span class="text-[10px] font-bold text-red-500 uppercase tracking-widest flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> CRITICAL FAILURE
+                            </span>
+<h3 class="font-display text-3xl font-bold uppercase tracking-tight text-black mb-4">Continuous Verification</h3>
+<p class="text-gray-600 text-base font-light leading-relaxed">QA as a 'final step' creates massive bottlenecks, delays releases, and results in expensive late-stage bug fixes.</p>
+</div>
+<div class="pt-8 border-t border-black/5">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest block mb-4">ENGINEERED RESPONSE</span>
+<p class="text-xl font-display font-bold leading-tight text-black italic">"Custom automation architectures for CI/CD. Seamless integration into the developer workflow for instant feedback."</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-12 -left-6 font-display text-[12rem] font-bold text-black opacity-[0.03] leading-none pointer-events-none select-none">03</div>
+<div class="relative z-10 space-y-8">
+<div>
+<span class="text-[10px] font-bold text-red-500 uppercase tracking-widest flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> CRITICAL FAILURE
+                            </span>
+<h3 class="font-display text-3xl font-bold uppercase tracking-tight text-black mb-4">Resilience Benchmarking</h3>
+<p class="text-gray-600 text-base font-light leading-relaxed">Infrastructure failure during peak traffic events causes catastrophic revenue loss and permanent brand damage.</p>
+</div>
+<div class="pt-8 border-t border-black/5">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest block mb-4">ENGINEERED RESPONSE</span>
+<p class="text-xl font-display font-bold leading-tight text-black italic">"Load testing to simulate 1M+ concurrent users. Verification of infrastructure elasticity under extreme stress."</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-12 -left-6 font-display text-[12rem] font-bold text-black opacity-[0.03] leading-none pointer-events-none select-none">04</div>
+<div class="relative z-10 space-y-8">
+<div>
+<span class="text-[10px] font-bold text-red-500 uppercase tracking-widest flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> CRITICAL FAILURE
+                            </span>
+<h3 class="font-display text-3xl font-bold uppercase tracking-tight text-black mb-4">Offensive Security Protocols</h3>
+<p class="text-gray-600 text-base font-light leading-relaxed">Silent vulnerabilities in the application layer expose sensitive data to malicious actors and regulatory fines.</p>
+</div>
+<div class="pt-8 border-t border-black/5">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest block mb-4">ENGINEERED RESPONSE</span>
+<p class="text-xl font-display font-bold leading-tight text-black italic">"Rigorous vulnerability audits. Hardening your application against external threats at the architectural source."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#080A0E] py-32 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="mb-24 text-center">
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.4em] block mb-4">The Narrative</span>
+<h2 class="font-display text-6xl font-bold text-white uppercase tracking-tight mb-6">THE COST OF DELAY</h2>
+<p class="text-gray-500 font-mono text-xs uppercase italic">"Finding a bug in production costs 100x more than in design."</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col">
+<div class="relative bg-white/5 border border-white/10 p-10 min-h-[280px] flex flex-col justify-center overflow-hidden">
+<div class="grainy-texture absolute inset-0 opacity-10"></div>
+<div class="relative z-10">
+<span class="text-gray-500 font-mono text-[10px] uppercase tracking-widest block mb-4">Phase I: Stagnation</span>
+<h4 class="font-display text-3xl font-bold uppercase text-white mb-4">STAGNATION</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Engineering teams lose 40% of their bandwidth to hot-patches and regression cycles, stalling innovation and market entry.</p>
+</div>
+</div>
+<div class="flex justify-center h-12">
+<div class="w-px link-line"></div>
+</div>
+<div class="relative bg-obsidian border border-primary/30 p-10 min-h-[280px] flex flex-col justify-center overflow-hidden group hover:border-primary transition-colors">
+<div class="blueprint-grid absolute inset-0 opacity-5"></div>
+<div class="relative z-10">
+<span class="text-primary font-mono text-[10px] uppercase tracking-widest block mb-4">Phase II: Acceleration</span>
+<h4 class="font-display text-3xl font-bold uppercase text-primary glowing-text mb-4">ACCELERATION</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Custom automation architectures shift testing left, reducing technical debt and increasing sustainable throughput.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="relative bg-white/5 border border-white/10 p-10 min-h-[280px] flex flex-col justify-center overflow-hidden">
+<div class="grainy-texture absolute inset-0 opacity-10"></div>
+<div class="relative z-10">
+<span class="text-gray-500 font-mono text-[10px] uppercase tracking-widest block mb-4">Phase I: Erosion</span>
+<h4 class="font-display text-3xl font-bold uppercase text-white mb-4">REPUTATION EROSION</h4>
+<p class="text-gray-400 text-sm leading-relaxed">High-visibility failures erode years of brand equity in seconds, causing irreversible damage to market leadership.</p>
+</div>
+</div>
+<div class="flex justify-center h-12">
+<div class="w-px link-line"></div>
+</div>
+<div class="relative bg-obsidian border border-primary/30 p-10 min-h-[280px] flex flex-col justify-center overflow-hidden group hover:border-primary transition-colors">
+<div class="blueprint-grid absolute inset-0 opacity-5"></div>
+<div class="relative z-10">
+<span class="text-primary font-mono text-[10px] uppercase tracking-widest block mb-4">Phase II: Protection</span>
+<h4 class="font-display text-3xl font-bold uppercase text-primary glowing-text mb-4">PROTECTION</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Systematic clinical detection protocols neutralize threats in staging, ensuring 99.9% deploy-ready reliability.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="relative bg-white/5 border border-white/10 p-10 min-h-[280px] flex flex-col justify-center overflow-hidden">
+<div class="grainy-texture absolute inset-0 opacity-10"></div>
+<div class="relative z-10">
+<span class="text-gray-500 font-mono text-[10px] uppercase tracking-widest block mb-4">Phase I: Leakage</span>
+<h4 class="font-display text-3xl font-bold uppercase text-white mb-4">FINANCIAL LEAKAGE</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Undetected friction in checkout and activation funnels drives churn and kills Customer Lifetime Value (LTV).</p>
+</div>
+</div>
+<div class="flex justify-center h-12">
+<div class="w-px link-line"></div>
+</div>
+<div class="relative bg-obsidian border border-primary/30 p-10 min-h-[280px] flex flex-col justify-center overflow-hidden group hover:border-primary transition-colors">
+<div class="blueprint-grid absolute inset-0 opacity-5"></div>
+<div class="relative z-10">
+<span class="text-primary font-mono text-[10px] uppercase tracking-widest block mb-4">Phase II: Retention</span>
+<h4 class="font-display text-3xl font-bold uppercase text-primary glowing-text mb-4">RETENTION</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Deep-dive functional verification eliminates conversion blockers, stabilizing the foundation of your revenue stream.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#F9F7F2] py-32 px-12 border-y border-black/5">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight mb-4">Impact &amp; ROI</h2>
+<p class="text-gray-600 max-w-xl">Technical rigor translated into measurable business value. <span class="text-primary font-bold">Measured over 1000+ successful deployments.</span></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-4">
+<h3 class="text-black font-display text-5xl font-extrabold uppercase tracking-tight">99.9%</h3>
+<p class="text-black font-bold uppercase text-xs tracking-[0.2em]">Bug-Free Reliability</p>
+<p class="text-gray-500 text-sm font-light">Critical failures neutralized in staging, preserving system uptime.</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-black font-display text-5xl font-extrabold uppercase tracking-tight">35%</h3>
+<p class="text-black font-bold uppercase text-xs tracking-[0.2em]">Cycle Acceleration</p>
+<p class="text-gray-500 text-sm font-light">Automated suites eliminate manual bottlenecks for confident shipping.</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-black font-display text-5xl font-extrabold uppercase tracking-tight">ZERO</h3>
+<p class="text-black font-bold uppercase text-xs tracking-[0.2em]">Security Breaches</p>
+<p class="text-gray-500 text-sm font-light">Vulnerability scanning identifies threats before exploitation.</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-black font-display text-5xl font-extrabold uppercase tracking-tight">MAX</h3>
+<p class="text-black font-bold uppercase text-xs tracking-[0.2em]">User Trust Index</p>
+<p class="text-gray-500 text-sm font-light">Glitch-free performance correlates with user retention and ratings.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-obsidian py-32 relative border-t border-white/5 overflow-hidden" id="audit">
+<div class="absolute inset-0 blueprint-grid opacity-10"></div>
+<div class="max-w-7xl mx-auto px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="bg-dark-accent p-10 border border-white/10 shadow-2xl">
+<div class="mb-8">
+<h3 class="text-white font-display text-2xl font-bold uppercase tracking-tight">TECHNICAL STRATEGY AUDIT</h3>
+<p class="text-gray-500 text-xs font-mono uppercase mt-2">Precision Assessment Protocol</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Company Name</label>
+<input class="w-full bg-obsidian border border-white/10 text-white p-4 text-sm focus:border-primary focus:ring-0 rounded-none transition-colors" placeholder="e.g. Acme Corp" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Contact Email</label>
+<input class="w-full bg-obsidian border border-white/10 text-white p-4 text-sm focus:border-primary focus:ring-0 rounded-none transition-colors" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Audit Scope Required</label>
+<select class="w-full bg-obsidian border border-white/10 text-white p-4 text-sm focus:border-primary focus:ring-0 rounded-none transition-colors appearance-none">
+<option>Full Cycle Verification Audit</option>
+<option>Automation Framework Assessment</option>
+<option>Offensive Security/Pen Testing</option>
+<option>Infrastructure Resilience Audit</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Primary Objectives</label>
+<textarea class="w-full bg-obsidian border border-white/10 text-white p-4 text-sm focus:border-primary focus:ring-0 rounded-none transition-colors" placeholder="Describe the critical friction points in your current lifecycle..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all" type="submit">
+                        Initiate Strategy Audit
+                    </button>
+</form>
+</div>
+<div class="space-y-10">
+<h2 class="font-display text-5xl md:text-6xl font-bold text-white uppercase tracking-tight leading-[1.1]">
+                    Hire the partners<br/><span class="text-outline-primary">who protect</span><br/>your brand.
+                </h2>
+<p class="text-gray-400 text-lg font-light max-w-lg">
+                    Secure your digital future. Schedule a Technical Strategy Audit to discover how 14+ years of senior-level verification can fortify your product’s architecture.
+                </p>
+<div class="flex flex-col gap-4 pt-4">
+<div class="flex flex-col gap-2">
+<span class="text-gray-500 font-mono text-[10px] uppercase tracking-widest">Direct Engagement</span>
+<a class="text-white border-b border-white/20 pb-1 font-mono text-xl w-fit hover:text-primary hover:border-primary transition-all" href="mailto:senior-partners@codezilla.io">
+                            senior-partners@codezilla.io
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-charcoal text-white pt-24 pb-12 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
+<div class="col-span-1 md:col-span-2 space-y-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">grid_view</span>
+<span class="font-display font-bold text-3xl tracking-tighter text-white uppercase">Codezilla</span>
+</div>
+<p class="text-gray-500 text-sm max-w-sm leading-relaxed font-light">The senior partner for high-stakes digital engineering and verification excellence.</p>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Expertise</h4>
+<ul class="space-y-4 text-xs text-gray-500">
+<li><a class="hover:text-white transition-colors" href="#">Technical Audits</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Security Protocols</a></li>
+</ul>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Contact</h4>
+<ul class="space-y-4 text-xs text-gray-500">
+<li>qa-lab@codezilla.io</li>
+<li>San Francisco | London | Tokyo</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono uppercase tracking-widest text-gray-600">
+<span>© 2024 Codezilla Engineering Labs. 14+ Years of Excellence.</span>
+<div class="flex gap-12 mt-6 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Engagement</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -332,6 +332,19 @@
       color: rgba(255, 255, 255, 0.8);
     }
   } */
+
+  .link-line {
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 109, 0, 0.2) 0%,
+      rgba(255, 109, 0, 1) 100%
+    );
+  }
+
+  .glowing-text {
+    text-shadow: 0 0 15px rgba(255, 109, 0, 0.4);
+  }
 }
 
 /* Additional Animations from style.css */

@@ -204,14 +204,14 @@ export const JOURNEY_STEPS = [
         title: "Expanding Horizons",
         description: "We diversified — introducing AI, analytics, and automation to our service suite. Our team grew stronger with specialists across design, development, and product strategy, ready to take on bigger challenges.",
         image: "/images/who-we-are/J_2022.png",
-        side: "right"
+        side: "left"
     },
     {
         year: "2025",
         title: "Building the Future",
         description: "Today, Codezilla stands as a full-stack technology powerhouse. With expertise spanning apps, cloud, AI, and enterprise software, we continue to empower innovators, governments, and businesses worldwide.",
         image: "/images/who-we-are/J_2025.png",
-        side: "left"
+        side: "right"
     }
 ];
 

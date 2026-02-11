@@ -10,13 +10,13 @@ export default function AboutJourney() {
         </h2>
         <div className="relative">
           {/* Central Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary -translate-x-1/2"></div>
+          <div className="absolute md:left-1/2 top-0 bottom-0 w-[2px] bg-primary md:-translate-x-1/2"></div>
 
-          <div className="space-y-32">
+          <div className="hidden md:block space-y-32">
             {JOURNEY_STEPS.map((step, index) => (
               <div
                 key={index}
-                className="relative flex items-center w-full sticky top-25"
+                className="relative flex items-center sticky top-25"
               >
                 <div className="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-4 border-primary rotate-45 z-10"></div>
                 <div className="grid grid-cols-2 w-full">
@@ -73,6 +73,41 @@ export default function AboutJourney() {
                   )}
                 </div>
               </div>
+            ))}
+          </div>
+          <div className="block md:hidden space-y-32">
+            {JOURNEY_STEPS.map((step, index) => (
+              <>
+                <div
+                  key={index}
+                  className="relative flex items-center sticky top-25"
+                >
+                  <div className="absolute -left-[6px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white border-2 border-primary rotate-45 z-10"></div>
+                  <div className="grid grid-cols-1 w-full">
+                    <div className="pl-6 text-left flex flex-col items-start">
+                      <div className="w-full p-4 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all group">
+                        <div className="relative w-full h-55 mb-6 border border-gray-100 overflow-hidden">
+                          <Image
+                            alt={step.title}
+                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all "
+                            src={step.image}
+                            fill
+                          />
+                        </div>
+                        <span className="font-display text-xl md:text-4xl font-black text-primary mb-2 block">
+                          {step.year}
+                        </span>
+                        <h3 className="text-xl md:text-2xl font-bold uppercase mb-4 text-black font-display tracking-tight">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
             ))}
           </div>
         </div>

@@ -18,11 +18,11 @@ export default function AboutCoreValues() {
           {CORE_VALUES.map((value, index) => (
             <div
               key={index}
-              className={`bg-card-bg p-12 border border-white/10 flex flex-col h-full transition-all duration-300  relative ${
+              className={`bg-card-bg lg:p-12 p-6 border border-white/10 flex flex-col h-full transition-all duration-300  relative ${
                 index !== 0 ? "md:border-l-0" : ""
               } hover:border hover:border-primary `}
             >
-              <div className="mb-12">
+              <div className="lg:mb-12 mb-6">
                 <span className="material-symbols-outlined text-primary !text-5xl font-bold">
                   {value.icon}
                 </span>
