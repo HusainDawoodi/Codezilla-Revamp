@@ -75,7 +75,7 @@ export default function AboutHero() {
           <div className="flex items-center gap-4 mb-8">
             <span className="w-12 h-[1px] bg-primary"></span>
             <span className="text-primary text-xs font-bold tracking-[0.6em] uppercase">
-              SYSTEMS ONLINE • EST. 2018
+              SYSTEMS ONLINE • EST. 2017
             </span>
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold text-white   uppercase mb-8">

@@ -181,14 +181,14 @@ export default function WebDevelopmentPage() {
                 <ServicesOffered />
                 <KeyBenefits />
                 <WhyChooseUs />
+                <TechStackMarquee />
                 <ProcessSteps />
                 <WorkCarousel />
 
+                <TestimonialCarousel />
                 {/* <PortfolioCarousel /> */}
                 {/* <ClientTestimonials /> */}
-                <TestimonialCarousel />
                 <FAQSection />
-                <TechStackMarquee />
             </main>
         </>
     );

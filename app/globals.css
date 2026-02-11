@@ -223,7 +223,7 @@
     visibility: visible;
     transform: translateY(0);
   }
-  .mega-menu-trigger:hover .mega-menu-panel {
+  /* .mega-menu-trigger:hover .mega-menu-panel {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -231,7 +231,7 @@
   .mega-menu-trigger:hover ~ .mega-menu-overlay {
     opacity: 1;
     visibility: visible;
-  }
+  } */
 
   /* Logo marquee tweaks */
   .image-marquee {
@@ -286,7 +286,7 @@
     backdrop-filter: blur(40px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .mega-menu-trigger:hover .mega-menu-panel {
+  /* .mega-menu-trigger:hover .mega-menu-panel {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -294,7 +294,7 @@
   .mega-menu-trigger:hover ~ .mega-menu-overlay {
     opacity: 1;
     visibility: visible;
-  }
+  } */
   .nav-link-underline {
     @apply relative pb-1;
   }

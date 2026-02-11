@@ -54,7 +54,7 @@ export default function HeroSlider() {
           </div>
 
           <div className="absolute bottom-0 left-0 p-4 lg:p-12 pl-8 lg:pl-16 z-10 text-white">
-            <div className="inline-block bg-primary text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="inline-block bg-primary text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
               <span className="font-mono text-xs uppercase tracking-widest font-bold">
                 The Founders:
               </span>
@@ -88,7 +88,7 @@ export default function HeroSlider() {
           <div className="absolute bottom-0 left-0 p-4 lg:p-12 pl-8 lg:pl-16 z-10 text-white">
             <div className="inline-block bg-white text-black px-4 py-2 mb-4 border border-black shadow-[4px_4px_0px_0px_rgba(255,109,0,1)]">
               <span className="font-mono text-xs uppercase tracking-widest font-bold">
-                The Force
+                The Force :
               </span>
             </div>
             <p className="font-display text-lg lg:text-2xl font-light leading-snug max-w-md">

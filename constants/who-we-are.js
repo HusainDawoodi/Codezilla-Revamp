@@ -123,31 +123,31 @@ export const CULTURE_GALLERY = [
     {
         id: 1,
         category: "Workshops",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk",
+        image: "/images/who-we-are/culture-1.png",
         span: "col-span-1"
     },
     {
         id: 2,
         category: "Team Activities",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk",
+        image: "/images/who-we-are/culture-2.png",
         span: "md:col-span-2"
     },
     {
         id: 3,
         category: "Client Meetings",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk",
+        image: "/images/who-we-are/culture-3.png",
         span: "col-span-1"
     },
     {
         id: 4,
         category: "Workshops",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk",
+        image: "/images/who-we-are/culture-4.png",
         span: "md:col-span-2 lg:col-span-1"
     },
     {
         id: 5,
         category: "Team Activities",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCz1nJOqy6BYeaM-mIljKZ7L-qyKz64D5b0H-JEkkkyCwu_HgyWJRQKD5COW5RIdZu71nIRQdoRY90RN9VYUWafl2HKQxULPGNr6EFpVHnEUa164PXTj7GNRf_RyxQIEI5Q35c0IOuyFUJ0ZI_q3K5QBOGKe2U8PrI4ea22QFqu-V9GyodWfAF3W0CAIvbhKPJ2_Hif89lDLRisQ0IbSm1Ct2-HwlsOuVqjm8OxTMnPqbcGWNx3hOgc7r3u_xXhady5bO7watjQ_tlk",
+        image: "/images/who-we-are/culture-5.png",
         span: "lg:col-span-3"
     }
 ];
@@ -161,7 +161,7 @@ export const SUCCESS_PILLARS = [
     {
         icon: "payments",
         title: "Affordable",
-        description: "We won’t beat around the bush. We’re around 20% cheaper than UK agencies. And, in our opinion, 20% better. That adds up to 40% more awesome."
+        description: "We won’t beat around the bush. We’re about 20% more affordable than other agencies and, in our opinion, 20% better. That adds up to 40% more awesome.”"
     },
     {
         icon: "workspace_premium",
@@ -172,35 +172,35 @@ export const SUCCESS_PILLARS = [
 
 export const JOURNEY_STEPS = [
     {
-        year: "2018",
+        year: "2017",
         title: "The Beginning",
         description: "Codezilla was born from a vision to simplify digital transformation for businesses. What started as a small web development company soon became a trusted partner for startups and enterprises across industries.",
         image: "/images/who-we-are/J_2018.png",
         side: "left"
     },
     {
-        year: "2019",
+        year: "2018",
         title: "Building Strong Foundations",
         description: "We expanded our core offerings beyond websites — delivering robust mobile apps, cloud solutions, and backend systems. Our focus on clean architecture and quality code became our signature.",
         image: "/images/who-we-are/J_2019.png",
         side: "right"
     },
     {
-        year: "2020",
+        year: "2019",
         title: "Going Global",
         description: "From India to the UK, Africa, and the Middle East — Codezilla’s reach grew fast. We started working with international clients, helping them modernize legacy systems and launch scalable digital products.",
         image: "/images/who-we-are/J_2020.png",
         side: "left"
     },
     {
-        year: "2021",
+        year: "2020",
         title: "Trusted by Enterprises",
         description: "We became a technology partner for government and enterprise clients, handling secure and high-impact projects. Our success came from blending innovation with reliability — and always delivering on time.",
         image: "/images/who-we-are/J_2021.png",
         side: "right"
     },
     {
-        year: "2022",
+        year: "2021",
         title: "Expanding Horizons",
         description: "We diversified — introducing AI, analytics, and automation to our service suite. Our team grew stronger with specialists across design, development, and product strategy, ready to take on bigger challenges.",
         image: "/images/who-we-are/J_2022.png",

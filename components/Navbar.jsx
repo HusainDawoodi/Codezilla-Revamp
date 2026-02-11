@@ -2,15 +2,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Button from "./ui/Button";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null);
+  const [activeMegaMenu, setActiveMegaMenu] = useState(null);
+  const pathname = usePathname();
+
+  const isActive = (path) => pathname === path;
+  const isParentActive = (links) =>
+    links.some((item) => pathname === item.link);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setMobileActiveDropdown(null); // Reset dropdowns on close
+    setActiveMegaMenu(null);
   };
 
   const toggleMobileDropdown = (index) => {
@@ -141,6 +149,7 @@ export default function Navbar() {
         <div className="col-span-10 lg:col-span-3 pl-6 flex items-center gap-4 cursor-pointer lg:border-r-2 border-black h-full bg-white hover:bg-orange-50 transition-colors group">
           <Link
             href="/"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="font-display font-bold text-3xl tracking-tighter text-black uppercase group-hover:text-primary transition-colors"
           >
             <Image
@@ -171,18 +180,30 @@ export default function Navbar() {
           <div className="flex items-center justify-center gap-8 xl:gap-6 h-full w-full">
             <Link
               href="/who-we-are"
-              className="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors h-full flex items-center px-2 ${isActive("/who-we-are") ? "text-primary border-b-2 border-primary" : "text-black"}`}
             >
               Who we are
             </Link>
-            <div className="mega-menu-trigger h-full flex items-center px-2 cursor-pointer group">
-              <span className="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">
+            <div
+              className="mega-menu-trigger h-full flex items-center px-2 cursor-pointer group"
+              onMouseEnter={() => setActiveMegaMenu("what-we-do")}
+              onMouseLeave={() => setActiveMegaMenu(null)}
+            >
+              <span
+                className={`text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors flex items-center gap-1 ${isParentActive([...digitalProductDevelopment, ...DedicatedTeams, ...codezillaAccelerators]) ? "text-primary active-parent" : "text-black"}`}
+              >
                 What we do
                 <span className="material-symbols-outlined text-[16px] transition-transform group-hover:rotate-180">
                   expand_more
                 </span>
               </span>
-              <div className="mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism opacity-0 invisible -translate-y-2 transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black">
+              <div
+                className={` mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black opacity-0 invisible -translate-y-2 transition-transform  ${
+                  activeMegaMenu === "what-we-do" &&
+                  "opacity-100 visible translate-y-0"
+                }`}
+              >
                 <div className="max-w-[1600px] mx-auto grid grid-cols-12 gap-8">
                   <div className="col-span-9 grid grid-cols-4 xl:grid-cols-4 gap-6">
                     <div className="space-y-4 !col-span-2">
@@ -194,13 +215,26 @@ export default function Navbar() {
                           {digitalProductDevelopment
                             .slice(0, 4)
                             .map((item, index) => (
-                              <Link href={item?.link} key={item?.title}>
-                                <div className="library-item">
+                              <Link
+                                href={item?.link}
+                                key={item?.title}
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false);
+                                  setActiveMegaMenu(null);
+                                }}
+                              >
+                                <div
+                                  className={`library-item ${isActive(item?.link) ? "!border-primary !border-l-2 bg-white/5" : ""}`}
+                                >
                                   <div className="flex items-center gap-2 mb-0.5">
-                                    <span className="material-symbols-outlined text-sm duotone-icon item-icon">
+                                    <span
+                                      className={`material-symbols-outlined text-sm duotone-icon item-icon ${isActive(item?.link) ? "text-primary-hover" : ""}`}
+                                    >
                                       {item?.icon}
                                     </span>
-                                    <span className="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                    <span
+                                      className={`!text-sm font-bold uppercase tracking-wide item-title ${isActive(item?.link) ? "text-white" : "text-gray-300"}`}
+                                    >
                                       {item?.title}
                                     </span>
                                   </div>
@@ -215,13 +249,26 @@ export default function Navbar() {
                           {digitalProductDevelopment
                             .slice(4)
                             .map((item, index) => (
-                              <Link href={item?.link} key={item?.title}>
-                                <div className="library-item">
+                              <Link
+                                href={item?.link}
+                                key={item?.title}
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false);
+                                  setActiveMegaMenu(null);
+                                }}
+                              >
+                                <div
+                                  className={`library-item ${isActive(item?.link) ? "border-primary bg-white/5" : ""}`}
+                                >
                                   <div className="flex items-center gap-2 mb-0.5">
-                                    <span className="material-symbols-outlined text-sm duotone-icon item-icon">
+                                    <span
+                                      className={`material-symbols-outlined text-sm duotone-icon item-icon ${isActive(item?.link) ? "text-primary-hover" : ""}`}
+                                    >
                                       {item?.icon}
                                     </span>
-                                    <span className="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                    <span
+                                      className={`!text-sm font-bold uppercase tracking-wide item-title ${isActive(item?.link) ? "text-white" : "text-gray-300"}`}
+                                    >
                                       {item?.title}
                                     </span>
                                   </div>
@@ -241,13 +288,26 @@ export default function Navbar() {
                       </h3>
                       <div className="space-y-1">
                         {DedicatedTeams.map((item, index) => (
-                          <Link href={item?.link} key={item?.title}>
-                            <div className="library-item">
+                          <Link
+                            href={item?.link}
+                            key={item?.title}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setActiveMegaMenu(null);
+                            }}
+                          >
+                            <div
+                              className={`library-item ${isActive(item?.link) ? "border-primary bg-white/5" : ""}`}
+                            >
                               <div className="flex items-center gap-2 mb-0.5">
-                                <span className="material-symbols-outlined text-sm duotone-icon item-icon">
+                                <span
+                                  className={`material-symbols-outlined text-sm duotone-icon item-icon ${isActive(item?.link) ? "text-primary-hover" : ""}`}
+                                >
                                   {item?.icon}
                                 </span>
-                                <span className="!text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                <span
+                                  className={`!text-sm font-bold uppercase tracking-wide item-title ${isActive(item?.link) ? "text-white" : "text-gray-300"}`}
+                                >
                                   {item?.title}
                                 </span>
                               </div>
@@ -265,13 +325,26 @@ export default function Navbar() {
                       </h3>
                       <div className="space-y-1">
                         {codezillaAccelerators.map((item, index) => (
-                          <Link href={item?.link} key={item?.title}>
-                            <div className="library-item">
+                          <Link
+                            href={item?.link}
+                            key={item?.title}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setActiveMegaMenu(null);
+                            }}
+                          >
+                            <div
+                              className={`library-item ${isActive(item?.link) ? "border-primary bg-white/5" : ""}`}
+                            >
                               <div className="flex items-center gap-2 mb-0.5">
-                                <span className="material-symbols-outlined text-sm duotone-icon item-icon">
+                                <span
+                                  className={`material-symbols-outlined text-sm duotone-icon item-icon ${isActive(item?.link) ? "text-primary-hover" : ""}`}
+                                >
                                   {item?.icon}
                                 </span>
-                                <span className="text-sm font-bold text-gray-300 uppercase tracking-wide item-title">
+                                <span
+                                  className={`text-sm font-bold uppercase tracking-wide item-title ${isActive(item?.link) ? "text-white" : "text-gray-300"}`}
+                                >
                                   {item?.title}
                                 </span>
                               </div>
@@ -336,19 +409,26 @@ export default function Navbar() {
               </div>
             </div>
             <Link
-              className="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
+              className={`text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors h-full flex items-center px-2 ${isActive("/case-studies") ? "text-primary border-b-2 border-primary" : "text-black"}`}
               href="#"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Case studies
             </Link>
-            <div className="group h-full flex items-center px-2 cursor-pointer">
+            <div
+              className="group h-full flex items-center px-2 cursor-pointer"
+              onMouseEnter={() => setActiveMegaMenu("what-we-think")}
+              onMouseLeave={() => setActiveMegaMenu(null)}
+            >
               <span className="text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors text-black flex items-center gap-1">
                 What we think{" "}
                 <span className="material-symbols-outlined text-[16px]">
                   expand_more
                 </span>
               </span>
-              <div className="mega-menu absolute top-[80px] left-0 w-[100%] bg-black text-white border-t border-b-2 border-black shadow-2xl opacity-0 invisible transform  transition-all duration-300 z-50 p-12">
+              <div
+                className={`mega-menu absolute top-[80px] left-0 w-[100%] bg-black text-white border-t border-b-2 border-black shadow-2xl transform transition-all duration-300 z-50 p-12 ${activeMegaMenu === "what-we-think" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
+              >
                 <div className="max-w-7xl grid grid-cols-12 gap-8">
                   <div className="col-span-6 border-r border-white/20 pr-8 flex flex-col items-start">
                     <span className="material-symbols-outlined text-primary text-5xl mb-4 font-light">
@@ -364,6 +444,7 @@ export default function Navbar() {
                     <Link
                       className="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors border-b border-primary pb-1"
                       href="#"
+                      onClick={() => setActiveMegaMenu(null)}
                     >
                       View Culture
                     </Link>
@@ -383,6 +464,7 @@ export default function Navbar() {
                     <Link
                       className="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors border-b border-primary pb-1"
                       href="#"
+                      onClick={() => setActiveMegaMenu(null)}
                     >
                       Read Blog
                     </Link>
@@ -409,8 +491,9 @@ export default function Navbar() {
               </div>
             </div>
             <Link
-              className="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-black h-full flex items-center px-2"
+              className={`text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors h-full flex items-center px-2 ${isActive("/career") ? "text-primary border-b-2 border-primary" : "text-black"}`}
               href="#"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Career
             </Link>
@@ -480,7 +563,7 @@ export default function Navbar() {
               <Link
                 href="/who-we-are"
                 onClick={toggleMobileMenu}
-                className="block text-xl font-display font-bold uppercase text-white hover:text-primary"
+                className={`block text-xl font-display font-bold uppercase hover:text-primary ${isActive("/who-we-are") ? "text-primary" : "text-white"}`}
               >
                 Who we are
               </Link>
@@ -489,7 +572,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => toggleMobileDropdown(1)}
-                  className="flex items-center justify-between w-full text-xl font-display font-bold uppercase text-white hover:text-primary"
+                  className={`flex items-center justify-between w-full text-xl font-display font-bold uppercase hover:text-primary ${isParentActive([...digitalProductDevelopment, ...DedicatedTeams, ...codezillaAccelerators]) ? "text-primary" : "text-white"}`}
                 >
                   <span>What we do</span>
                   <span
@@ -511,7 +594,7 @@ export default function Navbar() {
                         key={index}
                         href={item.link}
                         onClick={toggleMobileMenu}
-                        className="block text-sm text-gray-200 hover:text-primary transition-colors"
+                        className={`block text-sm transition-colors ${isActive(item.link) ? "text-primary font-bold" : "text-gray-200 hover:text-primary"}`}
                       >
                         {item.title}
                       </Link>
@@ -528,7 +611,7 @@ export default function Navbar() {
                         key={index}
                         href={item.link}
                         onClick={toggleMobileMenu}
-                        className="block text-sm text-gray-200 hover:text-primary transition-colors"
+                        className={`block text-sm transition-colors ${isActive(item.link) ? "text-primary font-bold" : "text-gray-200 hover:text-primary"}`}
                       >
                         {item.title}
                       </Link>
@@ -545,7 +628,7 @@ export default function Navbar() {
                         key={index}
                         href={item.link}
                         onClick={toggleMobileMenu}
-                        className="block text-sm text-gray-200 hover:text-primary transition-colors"
+                        className={`block text-sm transition-colors ${isActive(item.link) ? "text-primary font-bold" : "text-gray-200 hover:text-primary"}`}
                       >
                         {item.title}
                       </Link>
@@ -575,9 +658,9 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="#"
+                href="/case-studies"
                 onClick={toggleMobileMenu}
-                className="block text-xl font-display font-bold uppercase text-white hover:text-primary"
+                className={`block text-xl font-display font-bold uppercase hover:text-primary ${isActive("/case-studies") ? "text-primary font-bold" : "text-white"}`}
               >
                 Case Studies
               </Link>
@@ -600,18 +683,21 @@ export default function Navbar() {
                 >
                   <Link
                     href="#"
+                    onClick={toggleMobileMenu}
                     className="block text-sm font-bold text-gray-200 hover:text-primary"
                   >
                     Life at Codezilla
                   </Link>
                   <Link
                     href="#"
+                    onClick={toggleMobileMenu}
                     className="block text-sm font-bold text-gray-200 hover:text-primary"
                   >
                     Business Insights
                   </Link>
                   <Link
                     href="#"
+                    onClick={toggleMobileMenu}
                     className="block text-sm font-bold text-gray-200 hover:text-primary"
                   >
                     CSR Initiatives
@@ -620,9 +706,9 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="#"
+                href="/career"
                 onClick={toggleMobileMenu}
-                className="block text-xl font-display font-bold uppercase text-white hover:text-primary"
+                className={`block text-xl font-display font-bold uppercase hover:text-primary ${isActive("/career") ? "text-primary font-bold" : "text-white"}`}
               >
                 Career
               </Link>
@@ -632,6 +718,7 @@ export default function Navbar() {
             <div className="p-6 border-t border-gray-100">
               <Link
                 href="#"
+                onClick={toggleMobileMenu}
                 className="flex w-full items-center justify-center gap-2 bg-primary text-white px-6 py-4 rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-[#E65100] transition-colors"
               >
                 <span>Schedule Call</span>

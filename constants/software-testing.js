@@ -12,33 +12,33 @@ export const HERO_CONTENT = {
 export const CAPABILITIES_MATRIX = [
     {
         id: "01",
-        failureBadge: "CRITICAL FAILURE",
-        title: "Edge-Case Reconnaissance",
-        description: "Standard automated flows miss non-linear human behaviors, leading to high-impact production failures that frustrate power users.",
+        failureBadge: "Why Us",
+        title: "We Find Problems Before Your Users Do",
+        description: "Codezilla tests your software as real users will. We catch bugs, glitches, and weak spots early. This way, your product launches smoothly and builds trust right away.",
         responseBadge: "ENGINEERED RESPONSE",
         response: '"Manual precision for human behaviors. Exhaustive verification of fringe scenarios to ensure total journey reliability."'
     },
     {
         id: "02",
-        failureBadge: "CRITICAL FAILURE",
-        title: "Continuous Verification",
-        description: "QA as a 'final step' creates massive bottlenecks, delays releases, and results in expensive late-stage bug fixes.",
+        failureBadge: "Why Us",
+        title: "Testing Built Around Real Usage",
+        description: "We simulate real-world behavior and everyday user journeys. This ensures your application runs smoothly, responds reliably, and provides a seamless experience that people can trust from the first click.",
         responseBadge: "ENGINEERED RESPONSE",
         response: '"Custom automation architectures for CI/CD. Seamless integration into the developer workflow for instant feedback."'
     },
     {
         id: "03",
-        failureBadge: "CRITICAL FAILURE",
-        title: "Resilience Benchmarking",
-        description: "Infrastructure failure during peak traffic events causes catastrophic revenue loss and permanent brand damage.",
+        failureBadge: "Why Us",
+        title: "Fast Testing, Strong Results",
+        description: "Our effective QA process keeps releases on schedule without sacrificing quality. This helps you deliver stable, high-quality software that performs well during regular and peak usage.",
         responseBadge: "ENGINEERED RESPONSE",
         response: '"Load testing to simulate 1M+ concurrent users. Verification of infrastructure elasticity under extreme stress."'
     },
     {
         id: "04",
-        failureBadge: "CRITICAL FAILURE",
-        title: "Offensive Security Protocols",
-        description: "Silent vulnerabilities in the application layer expose sensitive data to malicious actors and regulatory fines.",
+        failureBadge: "Why Us",
+        title: "Advanced Tools and Technologies",
+        description: "Codezila uses modern testing tools and frameworks to improve efficiency and accuracy. By leveraging automation and the latest QA technologies, they reduce human errors and accelerate product release timelines.",
         responseBadge: "ENGINEERED RESPONSE",
         response: '"Rigorous vulnerability audits. Hardening your application against external threats at the architectural source."'
     }
@@ -48,61 +48,61 @@ export const COST_OF_DELAY = [
     {
         phase1: {
             badge: "Phase I: Stagnation",
-            title: "STAGNATION",
-            description: "Engineering teams lose 40% of their bandwidth to hot-patches and regression cycles, stalling innovation and market entry."
+            title: "Functional testing services",
+            description: "Our functional testing skills make sure every feature of your application works as intended. We carefully check workflows, user journeys, integrations, and edge cases to find problems early, boost reliability, and provide a smooth, high-quality user experience on all platforms and devices."
         },
         phase2: {
             badge: "Phase II: Acceleration",
-            title: "ACCELERATION",
-            description: "Custom automation architectures shift testing left, reducing technical debt and increasing sustainable throughput."
+            title: "Load testing ",
+            description: "We are a trusted testing partner with strong capabilities in load testing. Our experienced QA specialists conduct customized performance and load tests using systematic, cost-efficient approaches to ensure scalability, production readiness, and reduced risk before deployment."
         }
     },
     {
         phase1: {
             badge: "Phase I: Erosion",
-            title: "REPUTATION EROSION",
-            description: "High-visibility failures erode years of brand equity in seconds, causing irreversible damage to market leadership."
+            title: "Manual & automated",
+            description: "We offer both manual and automated testing, run by our experienced engineers. Manual tests can identify key flaws, and from those learnings, our team can use testing automation programmes to widen the net. We generally find that a combination of both manual and automated testing works best."
         },
         phase2: {
             badge: "Phase II: Protection",
-            title: "PROTECTION",
-            description: "Systematic clinical detection protocols neutralize threats in staging, ensuring 99.9% deploy-ready reliability."
+            title: "Code review & audit",
+            description: "We can audit existing or new code to ensure it is of high quality and up to date, as well as to detect faults and/or security issues. Our team can both identify and eliminate potential problems and ensure adherence to good practice to ensure high performance and reliability."
         }
     },
     {
         phase1: {
             badge: "Phase I: Leakage",
-            title: "FINANCIAL LEAKAGE",
-            description: "Undetected friction in checkout and activation funnels drives churn and kills Customer Lifetime Value (LTV)."
+            title: "Performance and Security",
+            description: "Speed and security are essential components of digital success. Even the most advanced websites and programs can fail if they load slowly or have safety risks. We assess your platform's real-world performance, uncover shortcomings, and make intelligent adjustments to improve speed, stability, and safety."
         },
         phase2: {
             badge: "Phase II: Retention",
-            title: "RETENTION",
-            description: "Deep-dive functional verification eliminates conversion blockers, stabilizing the foundation of your revenue stream."
+            title: "ETL Testing",
+            description: "Ensure seamless data extraction, transformation, and loading processes with comprehensive ETL testing services. We validate data accuracy, integrity, and consistency across systems while supporting smooth integration with EDI applications."
         }
     }
 ];
 
 export const IMPACT_ROI = [
     {
-        value: "99.9%",
-        label: "Bug-Free Reliability",
-        description: "Critical failures neutralized in staging, preserving system uptime."
+        value: "AI-Augmented Functional Testing",
+        // label: "AI-Augmented Functional Testing",
+        description: "Our QA specialists use AI-powered insights to enhance functional testing. AI highlights high-risk areas, detects patterns, and helps testers focus on critical workflows, improving accuracy while reducing testing time and effort."
     },
     {
-        value: "35%",
+        value: "AI-Driven Test Automation",
         label: "Cycle Acceleration",
-        description: "Automated suites eliminate manual bottlenecks for confident shipping."
+        description: "We leverage artificial intelligence to automate repetitive test cases and continuously update scripts when application changes occur. This reduces maintenance work, increases coverage, and speeds up release cycles significantly."
     },
     {
-        value: "ZERO",
+        value: "Predictive Defect Analytics",
         label: "Security Breaches",
-        description: "Vulnerability scanning identifies threats before exploitation."
+        description: "Leverage machine learning algorithms to predict defect-prone modules before issues escalate. By analyzing historical testing data, we proactively reduce risks, enhance stability, and improve overall software reliability."
     },
     {
-        value: "MAX",
+        value: "AI-Powered Performance & Optimization",
         label: "User Trust Index",
-        description: "Glitch-free performance correlates with user retention and ratings."
+        description: "Monitor, analyze, and predict application performance using AI-based intelligence. We identify bottlenecks early, optimize system behavior under heavy loads, and ensure scalable, high-performing applications that deliver seamless user experiences."
     }
 ];
 

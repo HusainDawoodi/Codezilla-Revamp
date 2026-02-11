@@ -9,7 +9,7 @@ export default function AboutContact() {
         <Image
           alt="David Miller Senior Partner"
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0HyhTurvwKjejOER_lOlVAtM1hbKd_aSR2oHYZEwNY7Pmgnx_QJcpbfqrLjlwqy3XGIlbtUME54Q3HLI7B19AgtgRB2P1HlWKWaFE9QJi2hD2CCsFJc2DiiW_B2XWOCcS0W-htPnEvLKURXYdDSlAPZevSlkLhaTejsRMHAUthOvZ97Yk1k1IHvSjJzAeSifeIM_jEntnNi7thw0MfCWIEHRQOzLVT6Ixak0_615jnBKANxkCmlofm_3oWb4HHfm7b1WEbMw"
+          src="/images/who-we-are/footer1.webp"
           fill
         />
         <div className="absolute bottom-0 left-0 p-12 lg:p-20 z-20">
@@ -18,15 +18,15 @@ export default function AboutContact() {
               EXECUTIVE PARTNER
             </p>
           </div>
-          <h3 className="text-white font-display text-4xl lg:text-6xl font-bold uppercase tracking-tighter leading-none mb-2">
+          {/* <h3 className="text-white font-display text-4xl lg:text-6xl font-bold uppercase tracking-tighter leading-none mb-2">
             David Miller
-          </h3>
-          <p className="text-gray-300 font-light text-xl">
+          </h3> */}
+          <p className="text-gray-300 max-w-md  font-light text-xl">
             &quot;Success isn&apos;t built on code alone—it&apos;s built on
             partnership.&quot;
           </p>
         </div>
-        <div className="absolute top-12 left-12 z-20">
+        <div className="absolute bottom-12 right-10 z-20">
           <div className="relative w-32 h-32 flex items-center justify-center">
             <div className="absolute inset-0 animate-spin-slow">
               <svg className="w-full h-full" viewBox="0 0 100 100">
