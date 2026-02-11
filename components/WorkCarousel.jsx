@@ -1,37 +1,10 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import WorkCard from "./ui/WorkCard";
 
-const projects = [
-  {
-    category: "Fintech",
-    imageSrc: "/images/maji-fintech.jpg",
-    logoSrc: "/images/maji-logo.svg",
-    description:
-      "Maji is a UK financial wellbeing provider that makes saving, spending, and planning money simpler for employees and employers.",
-    number: "01",
-  },
-  {
-    category: "EV Charging Software",
-    imageSrc: "/images/rightcharge-main.jpg",
-    logoSrc: "/images/rightcharge-logo.svg",
-    description:
-      "An EV charging management platform that automates payments, reimbursements, and reporting for fleets.",
-    number: "02",
-  },
-  {
-    category: "ERP Management",
-    imageSrc: "/images/naseni.webp",
-    logoSrc: "/images/naseni-logo.svg",
-    description:
-      "A Nigerian government agency driving innovation through engineering, manufacturing, and applied research.",
-    number: "03",
-  },
-];
-
-export default function WorkCarousel() {
+export default function WorkCarousel({ projects = [] }) {
   const scrollContainerRef = useRef(null);
 
   // Helper to get nearest child index relative to left edge (snap-start)

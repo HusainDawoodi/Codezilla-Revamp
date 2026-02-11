@@ -1,0 +1,664 @@
+<html lang="en"><head></head><body class="bg-white font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">```html
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Back-end Development Services - Codezilla</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6D00",
+                        "primary-hover": "#FF9100",
+                        "charcoal": "#0B0D11",
+                        "dark-accent": "#14171D",
+                        "obsidian": "#050608",
+                        "cream": "#F9F8F3",
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['monospace'],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .data-fabric {
+                background-image: 
+                    radial-gradient(circle at 2px 2px, rgba(255, 109, 0, 0.15) 1px, transparent 0);
+                background-size: 32px 32px;
+            }
+            .data-fabric-glow {
+                background: radial-gradient(circle at 50% 50%, rgba(255, 109, 0, 0.05) 0%, transparent 70%);
+            }
+            .text-outline-white {
+                -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+                color: transparent;
+            }
+            .container-max {
+                max-width: 1440px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+            .glass-nav {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(24px);
+            }
+            .status-pulse {
+                box-shadow: 0 0 0 0 rgba(255, 109, 0, 0.4);
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 109, 0, 0.7); }
+                70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 109, 0, 0); }
+                100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 109, 0, 0); }
+            }
+            .circle-blink {
+                animation: blink 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+                box-shadow: 0 0 15px rgba(255, 109, 0, 0.8);
+            }
+            @keyframes blink {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.4; transform: scale(0.9); }
+            }
+            .dashed-connector {
+                background-image: linear-gradient(to bottom, #FF6D00 50%, transparent 50%);
+                background-size: 1px 12px;
+                background-repeat: repeat-y;
+            }
+            .perspective-1000 {
+                perspective: 1000px;
+            }
+            .tilt-card {
+                transform-style: preserve-3d;
+                transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .tilt-card:hover {
+                transform: rotateX(2deg) rotateY(2deg) translateY(-5px);
+            }
+            .interior-parallax-label {
+                transform: translateZ(40px);
+                transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .interior-parallax-status {
+                transform: translateZ(60px);
+                transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .tilt-card:hover .interior-parallax-label {
+                transform: translateZ(60px) translateX(5px);
+            }
+            .tilt-card:hover .interior-parallax-status {
+                transform: translateZ(90px) translateX(-5px);
+            }
+            .parallax-depth-1 { transform: translateY(0px); }
+            .parallax-depth-2 { transform: translateY(20px); }
+            .parallax-depth-3 { transform: translateY(-15px); }.process-timeline-container {
+                view-timeline-name: --process-timeline;
+                view-timeline-axis: block;
+            }
+            .animated-line-draw {
+                height: 0%;
+                animation: drawLine linear both;
+                animation-timeline: --process-timeline;
+                animation-range: entry 20% exit 80%;
+                transition: height 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+            }
+            @keyframes drawLine {
+                from { height: 0%; }
+                to { height: 100%; }
+            }
+            .step-activation {
+                animation: stepActivate linear both;
+                animation-timeline: --process-timeline;
+                transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            }
+            @keyframes stepActivate {
+                0% { transform: scale(0.9); filter: grayscale(1) brightness(0.5); opacity: 0.5; }
+                15%, 85% { transform: scale(1.15); filter: grayscale(0) brightness(1.2) drop-shadow(0 0 15px rgba(255, 109, 0, 0.6)); opacity: 1; }
+                100% { transform: scale(1); filter: grayscale(0) brightness(1); opacity: 1; }
+            }.step-01 { animation-range: entry 20% entry 40%; }
+            .step-02 { animation-range: entry 35% entry 55%; }
+            .step-03 { animation-range: entry 50% entry 70%; }
+            .step-04 { animation-range: entry 65% entry 85%; }
+            .step-05 { animation-range: entry 80% entry 100%; }
+        }
+    </style>
+
+
+<nav class="fixed w-full z-[100] glass-nav border-b border-black/5 transition-all duration-300">
+<div class="container-max flex h-20 items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer group">
+<span class="material-symbols-outlined text-black text-2xl group-hover:text-primary transition-all duration-500">grid_view</span>
+<span class="font-display font-extrabold text-xl tracking-[-0.05em] text-black uppercase">Codezilla</span>
+</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors text-black/80" href="#">Who we are</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors text-black/80" href="#">What we do</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors text-black/80" href="#">Case studies</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors text-black/80" href="#">Career</a>
+</div>
+<div class="flex items-center">
+<a class="inline-flex items-center bg-black text-white px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-primary transition-all rounded-[4px]" href="#">
+                Schedule Call
+            </a>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen pt-20 flex items-center bg-charcoal overflow-hidden">
+<div class="absolute inset-0 data-fabric opacity-40"></div>
+<div class="absolute inset-0 data-fabric-glow"></div>
+<div class="container-max relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+<div class="lg:col-span-8 py-20 pr-12">
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<span class="text-primary font-mono text-[10px] tracking-[0.6em] uppercase">System Architecture / V.04</span>
+<div class="flex-1 h-px bg-white/10"></div>
+</div>
+<h1 class="font-display text-[5rem] md:text-[9rem] font-bold text-white leading-[0.85] tracking-tighter uppercase">
+                    BACK-END<br/>
+<span class="text-outline-white">ARCHITECTURE</span>
+</h1>
+<p class="text-gray-400 text-xl max-w-2xl leading-relaxed font-light border-l border-primary pl-10">
+                    Our backend development services make sure your digital platforms work smoothly by providing reliable, adaptable, and high-performance server-side solutions. Our main focus is creating a solid foundation that manages data and supports complex business tasks efficiently, ensuring stability, adaptability, and long-term growth.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 pt-10">
+<a class="bg-primary text-white px-12 py-6 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-[4px]" href="#">HIRE OUR BACKEND COMPANY</a>
+<a class="border border-white/20 text-white px-12 py-6 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all rounded-[4px]" href="#">SPEAK TO US</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 h-full relative flex items-end">
+<div class="relative w-full aspect-[3/4] overflow-hidden grayscale contrast-125 mix-blend-luminosity">
+<img alt="Lead Architect" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-32 border-t border-white/5">
+<div class="container-max">
+<div class="flex items-end justify-between mb-24">
+<div class="max-w-3xl">
+<h2 class="font-display text-5xl font-bold text-white uppercase tracking-tight mb-8">Our Backend Development Services For Every Business</h2>
+<div class="h-1 w-32 bg-primary"></div>
+</div>
+<div class="hidden lg:block text-right">
+<span class="text-white/30 font-mono text-xs uppercase tracking-widest">Archive Index: BE-001 - BE-006</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative bg-dark-accent/40 border border-white/10 p-12 rounded-[4px] hover:border-primary/50 transition-all duration-500">
+<div class="absolute top-6 right-6 flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/40 uppercase">ARCH-01</span>
+<div class="w-2 h-2 rounded-full bg-primary status-pulse"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-white uppercase mb-8 group-hover:text-primary transition-colors">Custom Backend Development</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-12 border-t border-white/10 pt-8">
+<span class="text-white/20 block mb-4 font-mono text-[10px] tracking-widest uppercase">Executive Brief:</span>
+                    Custom backend development is at the heart of our services, where we build powerful server-side solutions from scratch. We focus on meeting your business's specific needs, ensuring everything is scalable and secure. Our team works with modern technologies to deliver high-performance backends that support complex features and user growth.
+                </p>
+</div>
+<div class="group relative bg-dark-accent/40 border border-white/10 p-12 rounded-[4px] hover:border-primary/50 transition-all duration-500">
+<div class="absolute top-6 right-6 flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/40 uppercase">ARCH-02</span>
+<div class="w-2 h-2 rounded-full bg-primary status-pulse"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-white uppercase mb-8 group-hover:text-primary transition-colors">AI &amp; ML-Powered Backends</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-12 border-t border-white/10 pt-8">
+<span class="text-white/20 block mb-4 font-mono text-[10px] tracking-widest uppercase">Executive Brief:</span>
+                    Our AI &amp; ML-powered backends provide your platform with smart capabilities like predictive analytics and automation. We integrate artificial intelligence directly into your server architecture to make your system smarter and more efficient. This helps in delivering personalized experiences and making data-driven decisions seamlessly.
+                </p>
+</div>
+<div class="group relative bg-dark-accent/40 border border-white/10 p-12 rounded-[4px] hover:border-primary/50 transition-all duration-500">
+<div class="absolute top-6 right-6 flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/40 uppercase">ARCH-03</span>
+<div class="w-2 h-2 rounded-full bg-primary status-pulse"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-white uppercase mb-8 group-hover:text-primary transition-colors">Backend API Management</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-12 border-t border-white/10 pt-8">
+<span class="text-white/20 block mb-4 font-mono text-[10px] tracking-widest uppercase">Executive Brief:</span>
+                    Effective backend API management ensures that different software parts communicate clearly and quickly. We design and manage APIs that are robust, secure, and easy to use, enabling smooth integration with other services and third-party tools. Our focus is on making sure your APIs can handle high traffic while staying fast and reliable.
+                </p>
+</div>
+<div class="group relative bg-dark-accent/40 border border-white/10 p-12 rounded-[4px] hover:border-primary/50 transition-all duration-500">
+<div class="absolute top-6 right-6 flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/40 uppercase">ARCH-04</span>
+<div class="w-2 h-2 rounded-full bg-primary status-pulse"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-white uppercase mb-8 group-hover:text-primary transition-colors">Real-Time Backend Solutions</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-12 border-t border-white/10 pt-8">
+<span class="text-white/20 block mb-4 font-mono text-[10px] tracking-widest uppercase">Executive Brief:</span>
+                    Our real-time backend solutions are perfect for applications that need instant data updates, like messaging apps or live tracking. We use technologies like WebSockets to ensure data flows instantly between the server and the user. This creates a highly responsive experience that keeps users engaged with live information.
+                </p>
+</div>
+<div class="group relative bg-dark-accent/40 border border-white/10 p-12 rounded-[4px] hover:border-primary/50 transition-all duration-500">
+<div class="absolute top-6 right-6 flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/40 uppercase">ARCH-05</span>
+<div class="w-2 h-2 rounded-full bg-primary status-pulse"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-white uppercase mb-8 group-hover:text-primary transition-colors">Headless CMS Development</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-12 border-t border-white/10 pt-8">
+<span class="text-white/20 block mb-4 font-mono text-[10px] tracking-widest uppercase">Executive Brief:</span>
+                    Headless CMS development allows you to manage content in one place and display it across multiple platforms easily. We build backend systems that separate content management from the front-end, giving you more flexibility and control. This approach ensures your content is always ready for any device, from websites to mobile apps.
+                </p>
+</div>
+<div class="group relative bg-dark-accent/40 border border-white/10 p-12 rounded-[4px] hover:border-primary/50 transition-all duration-500">
+<div class="absolute top-6 right-6 flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/40 uppercase">ARCH-06</span>
+<div class="w-2 h-2 rounded-full bg-primary status-pulse"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-white uppercase mb-8 group-hover:text-primary transition-colors">Backend migration to cloud services</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-12 border-t border-white/10 pt-8">
+<span class="text-white/20 block mb-4 font-mono text-[10px] tracking-widest uppercase">Executive Brief:</span>
+                    We handle backend migration to cloud services, helping your business move to modern, scalable cloud environments like AWS or Azure. Our migration process is designed to be smooth and secure, minimizing downtime while improving performance. Moving to the cloud ensures your platform can grow effortlessly and stay cost-efficient.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-cream py-32 overflow-hidden relative border-t border-black/5">
+<div class="absolute inset-0 data-fabric opacity-10"></div>
+<div class="container-max relative z-10">
+<div class="max-w-4xl mx-auto text-center mb-32">
+<h2 class="font-display text-4xl font-bold text-charcoal uppercase tracking-tight">Why Choose codezilla.io as Your Backend Development Company?</h2>
+<div class="mt-4 flex justify-center">
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+</div>
+<div class="max-w-5xl mx-auto space-y-16 relative perspective-1000">
+<div class="absolute left-1/2 top-0 bottom-0 w-[1px] dashed-connector opacity-40 -translate-x-1/2 hidden md:block"></div>
+<div class="relative flex justify-start md:pr-48 group parallax-depth-1">
+<div class="tilt-card w-full md:w-[85%] bg-white border border-charcoal/10 p-10 rounded-[4px] relative hover:border-primary transition-all duration-500 shadow-xl overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<span class="interior-parallax-label text-primary font-mono text-[11px] tracking-[0.4em] font-bold">VALUE-01</span>
+<div class="interior-parallax-status w-3 h-3 rounded-full bg-primary circle-blink"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-charcoal uppercase mb-6 tracking-tight relative z-10">Experience in scalable solutions</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light relative z-10">We have a proven track record of building backend systems that handle large amounts of data and high user traffic without slowing down.</p>
+</div>
+</div>
+<div class="relative flex justify-end md:pl-48 group parallax-depth-2">
+<div class="tilt-card w-full md:w-[85%] bg-white border border-charcoal/10 p-10 rounded-[4px] relative hover:border-primary transition-all duration-500 shadow-xl overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<span class="interior-parallax-label text-primary font-mono text-[11px] tracking-[0.4em] font-bold">VALUE-02</span>
+<div class="interior-parallax-status w-3 h-3 rounded-full bg-primary circle-blink"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-charcoal uppercase mb-6 tracking-tight relative z-10">Advanced Technology Stack</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light relative z-10">Our team uses the latest backend technologies and frameworks to ensure your system is modern, secure, and ready for future upgrades.</p>
+</div>
+</div>
+<div class="relative flex justify-start md:pr-48 group parallax-depth-3">
+<div class="tilt-card w-full md:w-[85%] bg-white border border-charcoal/10 p-10 rounded-[4px] relative hover:border-primary transition-all duration-500 shadow-xl overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<span class="interior-parallax-label text-primary font-mono text-[11px] tracking-[0.4em] font-bold">VALUE-03</span>
+<div class="interior-parallax-status w-3 h-3 rounded-full bg-primary circle-blink"></div>
+</div>
+<h4 class="text-2xl font-display font-bold text-charcoal uppercase mb-6 tracking-tight relative z-10">Personalized Approach</h4>
+<p class="text-gray-600 text-base leading-relaxed font-light relative z-10">We treat every project as unique, tailoring our backend services to meet your specific business goals and technical requirements.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-32 border-t border-black/5">
+<div class="container-max">
+<div class="max-w-4xl mb-24">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight mb-8">Key elements in backend development services</h2>
+<p class="text-gray-600 font-light text-lg leading-relaxed max-w-2xl">We are committed to helping you create a brighter and more sustainable future through our expertise in backend development. By focusing on these core elements, we ensure your digital platform is ready for any challenge.</p>
+</div>
+<div class="space-y-4">
+<div class="group relative flex items-center bg-[#FBFBF9] border-l-4 border-primary p-8 md:p-12 hover:bg-white transition-all overflow-hidden">
+<span class="absolute right-8 top-1/2 -translate-y-1/2 text-[12rem] font-black text-black/[0.03] select-none pointer-events-none">01</span>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center gap-12 w-full">
+<div class="w-24 shrink-0">
+<span class="text-primary font-mono text-[10px] tracking-[0.4em] uppercase">Spec 1.0</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-2 tracking-tight">Managing the database</h4>
+<p class="text-gray-600 text-sm max-w-xl font-light">Organizing and protecting your data effectively is essential. We use advanced database management systems to ensure your information is always accessible, safe, and easy to manage.</p>
+</div>
+<div class="bg-white px-6 py-3 border border-black/5 rounded-[4px]">
+<span class="text-[10px] font-mono text-black uppercase tracking-widest font-bold">OPTIMIZED FOR HIGH-THROUGHPUT</span>
+</div>
+</div>
+</div>
+<div class="group relative flex items-center bg-[#FBFBF9] border-l-4 border-primary p-8 md:p-12 hover:bg-white transition-all overflow-hidden">
+<span class="absolute right-8 top-1/2 -translate-y-1/2 text-[12rem] font-black text-black/[0.03] select-none pointer-events-none">02</span>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center gap-12 w-full">
+<div class="w-24 shrink-0">
+<span class="text-primary font-mono text-[10px] tracking-[0.4em] uppercase">Spec 2.0</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-2 tracking-tight">Making and connecting APIs</h4>
+<p class="text-gray-600 text-sm max-w-xl font-light">APIs allow different services to talk to each other. We create custom APIs and integrate third-party ones to ensure your platform works seamlessly with all necessary tools and services.</p>
+</div>
+<div class="bg-white px-6 py-3 border border-black/5 rounded-[4px]">
+<span class="text-[10px] font-mono text-black uppercase tracking-widest font-bold">REST/GRAPHQL INTEGRATED</span>
+</div>
+</div>
+</div>
+<div class="group relative flex items-center bg-[#FBFBF9] border-l-4 border-primary p-8 md:p-12 hover:bg-white transition-all overflow-hidden">
+<span class="absolute right-8 top-1/2 -translate-y-1/2 text-[12rem] font-black text-black/[0.03] select-none pointer-events-none">03</span>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center gap-12 w-full">
+<div class="w-24 shrink-0">
+<span class="text-primary font-mono text-[10px] tracking-[0.4em] uppercase">Spec 3.0</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-2 tracking-tight">Logic on the server</h4>
+<p class="text-gray-600 text-sm max-w-xl font-light">The server-side logic handles all the processing behind the scenes. We write efficient code that processes user requests and business rules quickly and accurately, ensuring a smooth experience.</p>
+</div>
+<div class="bg-white px-6 py-3 border border-black/5 rounded-[4px]">
+<span class="text-[10px] font-mono text-black uppercase tracking-widest font-bold">SCALABLE ARCHITECTURE</span>
+</div>
+</div>
+</div>
+<div class="group relative flex items-center bg-[#FBFBF9] border-l-4 border-primary p-8 md:p-12 hover:bg-white transition-all overflow-hidden">
+<span class="absolute right-8 top-1/2 -translate-y-1/2 text-[12rem] font-black text-black/[0.03] select-none pointer-events-none">04</span>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center gap-12 w-full">
+<div class="w-24 shrink-0">
+<span class="text-primary font-mono text-[10px] tracking-[0.4em] uppercase">Spec 4.0</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-2 tracking-tight">Safety and Compliance</h4>
+<p class="text-gray-600 text-sm max-w-xl font-light">Keeping your system secure is a top priority. We implement strong security measures and follow industry standards to protect your data and ensure your platform meets all legal requirements.</p>
+</div>
+<div class="bg-white px-6 py-3 border border-black/5 rounded-[4px]">
+<span class="text-[10px] font-mono text-black uppercase tracking-widest font-bold">MILITARY-GRADE ENCRYPTION</span>
+</div>
+</div>
+</div>
+<div class="group relative flex items-center bg-[#FBFBF9] border-l-4 border-primary p-8 md:p-12 hover:bg-white transition-all overflow-hidden">
+<span class="absolute right-8 top-1/2 -translate-y-1/2 text-[12rem] font-black text-black/[0.03] select-none pointer-events-none">05</span>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center gap-12 w-full">
+<div class="w-24 shrink-0">
+<span class="text-primary font-mono text-[10px] tracking-[0.4em] uppercase">Spec 5.0</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-2xl font-bold text-black uppercase mb-2 tracking-tight">Improving performance and scalability</h4>
+<p class="text-gray-600 text-sm max-w-xl font-light">A successful platform must be fast and able to grow. We optimize our backend code and infrastructure to ensure high performance even as your user base increases.</p>
+</div>
+<div class="bg-white px-6 py-3 border border-black/5 rounded-[4px]">
+<span class="text-[10px] font-mono text-black uppercase tracking-widest font-bold">ZERO-LATENCY TARGETED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#0B0D11] py-32 overflow-hidden process-timeline-container">
+<div class="container-max">
+<div class="text-center mb-32">
+<h2 class="font-display text-5xl font-bold text-white uppercase tracking-tight">Back-end Development Process</h2>
+<p class="text-primary font-mono text-xs mt-6 tracking-[0.6em]">PHASE: PRODUCTION ORCHESTRATION</p>
+</div>
+<div class="relative max-w-5xl mx-auto">
+<div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2"></div>
+<div class="absolute left-1/2 top-0 w-[2px] bg-primary -translate-x-1/2 animated-line-draw origin-top"></div>
+<div class="space-y-24 relative z-10">
+<div class="flex items-center justify-between group">
+<div class="w-[45%] text-right pr-12">
+<h4 class="text-xl font-display font-bold text-white uppercase mb-4">Software Kick-off</h4>
+<p class="text-gray-500 text-sm font-light">Everything starts with a conversation. We discuss your goals and choose the right technology for your project.</p>
+</div>
+<div class="w-12 h-12 bg-charcoal border-2 border-primary rounded-full flex items-center justify-center status-pulse shrink-0 step-activation step-01">
+<span class="material-symbols-outlined text-primary text-xl">rocket_launch</span>
+</div>
+<div class="w-[45%] pl-12 step-activation step-01">
+<span class="text-white/20 font-display text-5xl font-black">01</span>
+</div>
+</div>
+<div class="flex flex-row-reverse items-center justify-between group">
+<div class="w-[45%] text-left pl-12">
+<h4 class="text-xl font-display font-bold text-white uppercase mb-4">Task Execution &amp; Development</h4>
+<p class="text-gray-500 text-sm font-light">Our developers write clean code, building your backend step-by-step with regular quality checks.</p>
+</div>
+<div class="w-12 h-12 bg-charcoal border-2 border-primary rounded-full flex items-center justify-center status-pulse shrink-0 step-activation step-02">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+</div>
+<div class="w-[45%] text-right pr-12 step-activation step-02">
+<span class="text-white/20 font-display text-5xl font-black">02</span>
+</div>
+</div>
+<div class="flex items-center justify-between group">
+<div class="w-[45%] text-right pr-12">
+<h4 class="text-xl font-display font-bold text-white uppercase mb-4">Daily Stand-ups</h4>
+<p class="text-gray-500 text-sm font-light">We meet daily to discuss progress and solve any issues quickly, keeping everything on track.</p>
+</div>
+<div class="w-12 h-12 bg-charcoal border-2 border-primary rounded-full flex items-center justify-center status-pulse shrink-0 step-activation step-03">
+<span class="material-symbols-outlined text-primary text-xl">sync</span>
+</div>
+<div class="w-[45%] pl-12 step-activation step-03">
+<span class="text-white/20 font-display text-5xl font-black">03</span>
+</div>
+</div>
+<div class="flex flex-row-reverse items-center justify-between group">
+<div class="w-[45%] text-left pl-12">
+<h4 class="text-xl font-display font-bold text-white uppercase mb-4">Feature Quality Check</h4>
+<p class="text-gray-500 text-sm font-light">We thoroughly test every new feature to ensure it works perfectly and meets your high standards.</p>
+</div>
+<div class="w-12 h-12 bg-charcoal border-2 border-primary rounded-full flex items-center justify-center status-pulse shrink-0 step-activation step-04">
+<span class="material-symbols-outlined text-primary text-xl">fact_check</span>
+</div>
+<div class="w-[45%] text-right pr-12 step-activation step-04">
+<span class="text-white/20 font-display text-5xl font-black">04</span>
+</div>
+</div>
+<div class="flex items-center justify-between group">
+<div class="w-[45%] text-right pr-12">
+<h4 class="text-xl font-display font-bold text-white uppercase mb-4">Backlog Updates</h4>
+<p class="text-gray-500 text-sm font-light">As things evolve, we keep a clear list of future tasks, ensuring your project continues to grow smoothly.</p>
+</div>
+<div class="w-12 h-12 bg-charcoal border-2 border-primary rounded-full flex items-center justify-center status-pulse shrink-0 step-activation step-05">
+<span class="material-symbols-outlined text-primary text-xl">reorder</span>
+</div>
+<div class="w-[45%] pl-12 step-activation step-05">
+<span class="text-white/20 font-display text-5xl font-black">05</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-32">
+<div class="container-max">
+<div class="flex items-end justify-between mb-24">
+<div>
+<span class="text-primary font-mono text-[10px] tracking-[0.5em] block mb-6 uppercase">Case Study Database</span>
+<h2 class="font-display text-5xl font-bold text-black uppercase tracking-tight">OUR LATEST WORKS</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group flex flex-col h-[700px] bg-white border border-black/5 rounded-[4px] shadow-[20px_20px_0px_rgba(0,0,0,0.02)] hover:shadow-2xl transition-all duration-500">
+<div class="bg-black text-white p-8">
+<span class="text-[10px] font-mono text-primary uppercase tracking-[0.3em] block mb-2">Outcome Metric</span>
+<span class="text-3xl font-display font-bold">40% FASTER LATENCY</span>
+</div>
+<div class="relative flex-1 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Thriving.ai" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8X0-OvcyQkGT8K5B7lGDQVEsCB_9ADuKnKgEoyKXSvJU-wWFbIz1PstXDS3424QXiXj3dX-JIcKsGfynXuAU6cn6fWhcArMXXHofHvO9-INeEu42CBnNsen0ksJwoFO1xIgq_ajR5zrvQzoQLFu-j7nat6xCkCrp1tJSTH4JSI4xhXfOV9Ht6SAg9IHUvwxBYOVA-SpeAc6lh7C6DCpgxP8FWuxquKYJ8paQGNanhtpKCyYqTR7qzdeofDXT0B9KR4uq3Pbqn"/>
+</div>
+<div class="p-10 space-y-6">
+<h4 class="text-2xl font-display font-bold text-black uppercase">Thriving.ai</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">The app Thriving.ai is for people who receive care at home and their families and caregivers. It helps them communicate better and coordinate their needs by providing all the necessary information in one easy-to-access place.</p>
+</div>
+</div>
+<div class="group flex flex-col h-[700px] bg-white border border-black/5 rounded-[4px] shadow-[20px_20px_0px_rgba(0,0,0,0.02)] hover:shadow-2xl transition-all duration-500">
+<div class="bg-black text-white p-8">
+<span class="text-[10px] font-mono text-primary uppercase tracking-[0.3em] block mb-2">Outcome Metric</span>
+<span class="text-3xl font-display font-bold">100% UPTIME CLOUD</span>
+</div>
+<div class="relative flex-1 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Usedo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Oh5oJQnysBkNsqBwsPyCb9mCwVwOFCO_xN6Zz_8ONI1UM9adsgExC_sOlgHAJoYg2RfkS2-RBMdqXxE_skr5_TlavYQ5-3PTV0z2PbuRy4yqcrRTvZBygGc1iO-HVEj6pXMO5dMlQ7X5qjqkvGXnK9IOWKg5bu9d8GRw3HOXUE_8-7pi4leHZvdmxvVuqViuE6kElBrmbmhXmHZpxsvVjfp02WavQ-L-G0qvOqCiTF9g49QPvOqHQ3JIlGvqSxvVyNHfmF1u"/>
+</div>
+<div class="p-10 space-y-6">
+<h4 class="text-2xl font-display font-bold text-black uppercase">Usedo</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">UseDo provides businesses with a simple, all-in-one software tool to manage projects, handle finances, and improve team collaboration. It helps small to medium-sized companies run more efficiently by keeping everything organized in one place.</p>
+</div>
+</div>
+<div class="group flex flex-col h-[700px] bg-white border border-black/5 rounded-[4px] shadow-[20px_20px_0px_rgba(0,0,0,0.02)] hover:shadow-2xl transition-all duration-500">
+<div class="bg-black text-white p-8">
+<span class="text-[10px] font-mono text-primary uppercase tracking-[0.3em] block mb-2">Outcome Metric</span>
+<span class="text-3xl font-display font-bold">60% DATA REDUCTION</span>
+</div>
+<div class="relative flex-1 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Naseni" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgb6gJPkiRYi6okckdOklicZeHcujd4F1xkALqIHbbTpEsOXdnkV1Ae4zoLNQXrk49D-wgaafUph388hVzEARBhdL1bCYxzKb6znm3-3iSce0kXnpsWkGuTOU2RVYZIbu88i8mbuHr876-HsYDxTtbSRLoB5dt7D9nAYRJa9WWH9n94REN_sOySFiWoc4d_mmROFavDOqrUyxnO7MfIUTVXBpPn5gt58QAWgHcS3hodmshNk74kCZThOayVg00LOI_JHCwGfxM"/>
+</div>
+<div class="p-10 space-y-6">
+<h4 class="text-2xl font-display font-bold text-black uppercase">Naseni</h4>
+<p class="text-gray-500 text-sm leading-relaxed font-light">The NASENI Solar Portal is a website that lets people find out how much solar energy they could get based on where they live. It helps users understand the benefits and costs of switching to solar power for their homes or businesses.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#FBFBF9] py-32 border-t border-black/5">
+<div class="container-max">
+<div class="mb-24 text-center">
+<h2 class="font-display text-5xl font-bold text-black uppercase tracking-tight">WHAT OUR CLIENTS SAY</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+<div class="space-y-10 group">
+<p class="text-gray-600 text-2xl italic font-light leading-relaxed">"Codezilla’s focus on the product and its strategy is outstanding, showcasing their commitment to delivering value beyond just development."</p>
+<div class="flex items-center gap-6">
+<img alt="Khalil Halilu" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+<div>
+<span class="block font-bold text-black uppercase tracking-wider">Khalil Halilu</span>
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">CEO at ShapShap</span>
+</div>
+</div>
+</div>
+<div class="space-y-10 group">
+<p class="text-gray-600 text-2xl italic font-light leading-relaxed">"Codezilla demonstrated exceptional expertise and dedication throughout the project, ensuring every requirement was met with precision and excellence."</p>
+<div class="flex items-center gap-6">
+<img alt="Niruban" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+<div>
+<span class="block font-bold text-black uppercase tracking-wider">Niruban</span>
+<span class="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">CEO at Thriving.ai</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-32">
+<div class="container-max">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-display text-4xl font-bold text-black uppercase tracking-tight mb-20">FREQUENTLY ASKED QUESTIONS</h2>
+<div class="space-y-12">
+<div class="border-b border-black/5 pb-12">
+<h4 class="font-display font-bold text-xl uppercase mb-6 text-primary">What is backend development, and why does my business need it?</h4>
+<p class="text-gray-600 text-lg leading-relaxed font-light">Backend development involves building the server-side logic and database of a web application. Your business needs it to handle data, manage users, and ensure your platform works correctly and securely behind the scenes.</p>
+</div>
+<div class="border-b border-black/5 pb-12">
+<h4 class="font-display font-bold text-xl uppercase mb-6 text-primary">Which technologies do you use for backend development?</h4>
+<p class="text-gray-600 text-lg leading-relaxed font-light">We use a variety of modern technologies like Node.js, Python, and Ruby on Rails. We choose the best tools based on your project's specific needs to ensure high performance and scalability.</p>
+</div>
+<div class="border-b border-black/5 pb-12">
+<h4 class="font-display font-bold text-xl uppercase mb-6 text-primary">How do you ensure the security of the backend?</h4>
+<p class="text-gray-600 text-lg leading-relaxed font-light">We implement strong security measures like data encryption, secure authentication, and regular updates. Our team follows industry best practices to protect your data and prevent unauthorized access.</p>
+</div>
+<div class="border-b border-black/5 pb-12">
+<h4 class="font-display font-bold text-xl uppercase mb-6 text-primary">Can you help migrate my existing backend to the cloud?</h4>
+<p class="text-gray-600 text-lg leading-relaxed font-light">Yes, we specialize in migrating backends to cloud services like AWS and Azure. We ensure a smooth transition with minimal downtime, improving your platform's reliability and scalability.</p>
+</div>
+<div class="border-b border-black/5 pb-12">
+<h4 class="font-display font-bold text-xl uppercase mb-6 text-primary">How long does it take to develop a custom backend?</h4>
+<p class="text-gray-600 text-lg leading-relaxed font-light">The timeline depends on the complexity of your project and the features you need. After discussing your requirements, we provide a clear plan and estimate to keep everything on schedule.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-0 min-h-[90vh] flex items-center relative overflow-hidden">
+<div class="absolute inset-0 data-fabric opacity-10"></div>
+<div class="container-max relative z-10 grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-full w-full">
+<div class="py-24 pr-12 self-center">
+<h2 class="font-display text-[4.5rem] font-bold text-white uppercase tracking-tighter leading-none mb-16">
+                TRANSFORM YOUR <span class="text-primary italic">DIGITAL</span> LANDSCAPE.
+            </h2>
+<form class="space-y-12">
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-white/20 text-white py-4 text-lg focus:ring-0 focus:border-primary transition-all peer" placeholder=" " required="" type="text"/>
+<label class="absolute left-0 top-4 text-white/40 font-mono text-[10px] tracking-widest uppercase transition-all peer-focus:-top-6 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-6 peer-[:not(:placeholder-shown)]:text-primary">Corporate Entity / Name</label>
+</div>
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-white/20 text-white py-4 text-lg focus:ring-0 focus:border-primary transition-all peer" placeholder=" " required="" type="email"/>
+<label class="absolute left-0 top-4 text-white/40 font-mono text-[10px] tracking-widest uppercase transition-all peer-focus:-top-6 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-6 peer-[:not(:placeholder-shown)]:text-primary">Communication Protocol / Email</label>
+</div>
+<div class="relative group">
+<textarea class="w-full bg-transparent border-0 border-b border-white/20 text-white py-4 text-lg focus:ring-0 focus:border-primary transition-all peer" placeholder=" " required="" rows="1"></textarea>
+<label class="absolute left-0 top-4 text-white/40 font-mono text-[10px] tracking-widest uppercase transition-all peer-focus:-top-6 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-6 peer-[:not(:placeholder-shown)]:text-primary">Project Parameters / Message</label>
+</div>
+<button class="bg-primary text-white px-12 py-6 text-[11px] font-bold uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all rounded-[4px] shadow-2xl">Send Strategic Inquiry</button>
+</form>
+</div>
+<div class="hidden lg:flex items-center justify-center bg-dark-accent/30 border-l border-white/5 relative">
+<div class="relative w-[500px] h-[500px] flex items-center justify-center">
+<div class="absolute inset-0 border-[40px] border-primary/5 rounded-full"></div>
+<div class="absolute inset-4 border-[2px] border-primary/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
+<div class="w-80 h-80 rounded-full border-4 border-primary p-4 bg-charcoal relative z-10 shadow-[0_0_80px_rgba(255,109,0,0.2)]">
+<img alt="David Miller" class="w-full h-full rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkdupBasrSHB9Dk4CJgvofx9GlXBWEvhiFLT42_ENdfdXlRFLZ2dlZM_GsXlxOUJppJSFEEMq9id2sgXcVGkWUC-AhKYJK48gIGN7Ree0oYOWq0tudv2-ob2UC19WKZFq6nNZQzVK_88ITuGh5_pFJooQdlKZ83KSArH2vLph8FINIgbsjiqfhjoJuEq4copvXWcTQ9ClX5ZuHg2mQDDHWZ0qLqo7LW5023wkNUGeY_sn9o92kLwZ1kd3G82Rt5hqvMf6u3Fd"/>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center z-20">
+<span class="block text-white text-2xl font-bold uppercase tracking-tight">David Miller</span>
+<span class="text-primary font-mono text-[10px] tracking-[0.5em] uppercase">Managing Partner</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-charcoal text-white pt-32 pb-16 border-t border-white/5">
+<div class="container-max">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-24 mb-32">
+<div class="col-span-1 md:col-span-2 space-y-12">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">grid_view</span>
+<span class="font-display font-black text-4xl tracking-tighter text-white uppercase">Codezilla</span>
+</div>
+<p class="text-gray-500 text-lg max-w-sm leading-relaxed font-light">Defining the standard for high-performance digital engineering and backend excellence since 2010.</p>
+</div>
+<div class="space-y-10">
+<h4 class="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">Core Expertise</h4>
+<ul class="space-y-5 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Back-end Architecture</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Database Optimization</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cloud Infrastructure</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Management</a></li>
+</ul>
+</div>
+<div class="space-y-10">
+<h4 class="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">Connectivity</h4>
+<ul class="space-y-5 text-sm text-gray-400">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs text-primary">mail</span>
+                        hello@codezilla.io
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+                        Indore, MP, India
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono uppercase tracking-[0.5em] text-gray-600">
+<span>© 2024 Codezilla Engineering Labs. All Rights Reserved.</span>
+<div class="flex gap-16 mt-8 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Engagement</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

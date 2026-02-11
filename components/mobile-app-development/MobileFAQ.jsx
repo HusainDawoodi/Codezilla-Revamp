@@ -1,3 +1,5 @@
+import FAQ from "../ui/FAQ";
+
 export default function MobileFAQ() {
   const faqs = [
     {
@@ -40,27 +42,7 @@ export default function MobileFAQ() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-black/10 bg-white rounded-[4px] overflow-hidden group hover:border-primary transition-colors duration-300 animate-entrance-fade"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <details className="group p-6 cursor-pointer">
-                <summary className="flex justify-between items-center font-bold text-lg list-none text-black">
-                  <span className="font-display uppercase tracking-tight pr-4">
-                    {faq.question}
-                  </span>
-                  <span className="transition group-open:rotate-180 material-symbols-outlined text-primary">
-                    expand_more
-                  </span>
-                </summary>
-                <div className="text-gray-600 mt-4 leading-relaxed text-base font-light border-t border-black/5 pt-4">
-                  {faq.answer}
-                </div>
-              </details>
-            </div>
-          ))}
+          <FAQ items={faqs} theme="light" variant="contained" />
         </div>
       </div>
     </section>
