@@ -37,8 +37,25 @@ const projects = [
   },
 ];
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Codezilla',
+    url: 'https://codezilla.io',
+    logo: 'https://codezilla.io/images/logo.png',
+    sameAs: [
+      'https://www.linkedin.com/company/codezilla',
+      'https://twitter.com/codezilla'
+    ],
+    description: 'Codezilla delivers executive precision in enterprise software development, AI integration, and scalable system architecture.'
+  };
+
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <HeroSlider />
       <LogoMarquee />

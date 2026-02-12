@@ -34,7 +34,7 @@ const products = [
     id: "reviewly",
     badge: "DEV-OPS",
     status: "BETA",
-    logo: "/images/reviewly-logo.png",
+    logo: "/images/reviewly-logo.svg",
     title: "Reviewly",
     tagline: "AI-Powered Code Intelligence",
     description:

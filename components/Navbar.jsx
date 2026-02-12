@@ -119,25 +119,25 @@ export default function Navbar() {
   const codezillaAccelerators = [
     {
       title: "Document AI",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Automate document processing with intelligent extraction.",
       icon: "psychology",
       link: "/document-ai",
     },
     {
       title: "Codezilla Flywheel",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Accelerate development with pre-built modules.",
       icon: "security",
       link: "/codezilla-flywheel",
     },
     {
       title: "Codezilla Guard:IAM",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Secure identity management and access control.",
       icon: "verified_user",
       link: "/codezilla-guard-iam",
     },
     {
       title: "Chatbot Delivery",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Deploy conversational AI agents at scale.",
       icon: "chat",
       link: "/chatbot-delivery",
     },
@@ -199,10 +199,9 @@ export default function Navbar() {
                 </span>
               </span>
               <div
-                className={` mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black opacity-0 invisible -translate-y-2 transition-transform  ${
-                  activeMegaMenu === "what-we-do" &&
+                className={` mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black opacity-0 invisible -translate-y-2 transition-transform  ${activeMegaMenu === "what-we-do" &&
                   "opacity-100 visible translate-y-0"
-                }`}
+                  }`}
               >
                 <div className="max-w-[1600px] mx-auto grid grid-cols-12 gap-8">
                   <div className="col-span-9 grid grid-cols-4 xl:grid-cols-4 gap-6">
