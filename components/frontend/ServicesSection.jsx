@@ -6,9 +6,9 @@ export default function ServicesSection() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6">
-            High-Performance Frontend Solutions
+            Front-End Web Development Services We Offer For Your Business
           </h2>
-          <p className="text-gray-500 font-mono text-[10px] uppercase tracking-[0.5em]">
+          <p className="text-gray-500 font-mono text-md uppercase tracking-[0.5em]">
             Scalable • Secure • Performant
           </p>
         </div>
@@ -23,13 +23,11 @@ export default function ServicesSection() {
                   {service.id}
                 </span>
               </div>
-              <span className="text-primary font-mono text-xs">
-                {service.id}
-              </span>
-              <h4 className="text-xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors relative z-10">
+             
+              <h4 className="text-2xl font-display font-bold text-white uppercase group-hover:text-primary transition-colors relative z-10">
                 {service.title}
               </h4>
-              <p className="text-gray-500 text-sm leading-relaxed font-light relative z-10">
+              <p className="text-gray-400 text-md leading-relaxed font-light relative z-10">
                 {service.desc}
               </p>
             </div>

@@ -4,13 +4,6 @@ export default function IntroSection() {
   return (
     <section className="bg-[#FBFBF9] py-20 md:py-[120px]">
       <div className="container mx-auto px-6 md:px-12">
-        <nav className="mb-16 font-mono text-[10px] uppercase tracking-[0.5em] text-gray-400 flex items-center gap-4">
-          <span>Home</span>
-          <span className="text-gray-300">/</span>
-          <span>Services</span>
-          <span className="text-gray-300">/</span>
-          <span className="text-black font-bold">Frontend</span>
-        </nav>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-5">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-black uppercase tracking-tight leading-tight">

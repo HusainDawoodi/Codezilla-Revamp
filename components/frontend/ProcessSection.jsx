@@ -5,7 +5,7 @@ export default function ProcessSection() {
     <section className="bg-white py-20 md:py-[140px] overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-20 md:mb-32 flex flex-col items-center text-center">
-          <span className="text-primary font-mono text-[10px] uppercase tracking-[0.5em] mb-6">
+          <span className="text-primary font-mono text-xs uppercase tracking-[0.5em] mb-6">
             Execution Strategy
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-black uppercase tracking-tight">
@@ -57,14 +57,14 @@ export default function ProcessSection() {
                     <h4 className="font-display text-2xl font-bold text-black uppercase tracking-tight whitespace-nowrap [writing-mode:vertical-rl] group-hover:[writing-mode:horizontal-tb] transform rotate-180 group-hover:rotate-0 transition-all duration-700 group-hover:mb-8">
                       {step.title}
                     </h4>
-                    <div className="opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 transition-all duration-700 delay-100">
+                    <div className="opacity-0 hidden group-hover:opacity-100   group-hover:translate-y-0 group-hover:block  translate-y-4 transition-all duration-700 delay-100">
                       <p className="text-gray-600 text-lg leading-relaxed font-light max-w-sm border-l-2 border-primary pl-6">
                         {step.desc}
                       </p>
                     </div>
                   </div>
                   <div className="flex justify-center group-hover:justify-start transition-all duration-700">
-                    <span className="material-symbols-outlined text-primary text-5xl group-hover:scale-125 transition-transform duration-700">
+                    <span className="material-symbols-outlined text-primary !text-5xl group-hover:scale-125 transition-transform duration-700">
                       {icons[index]}
                     </span>
                   </div>

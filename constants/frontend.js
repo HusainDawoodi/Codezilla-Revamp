@@ -2,32 +2,32 @@ export const FRONTEND_SERVICES = [
     {
         id: "01",
         title: "Custom frontend development",
-        desc: "Tailored frontend solutions built from the ground up to match your specific business requirements and user needs.",
+        desc: "We provide custom frontend development solutions that do more than just design, they convey your brand’s story through seamless digital interactions. Our team creates interfaces that are quick, responsive, and future-ready, allowing for seamless use on any device.",
     },
     {
         id: "02",
         title: "UI/UX Design and Development",
-        desc: "Combining aesthetic excellence with technical precision to create interfaces that users love to interact with.",
+        desc: "We create intuitive, attractive interfaces that combine creativity and effectiveness. Our focus is on smooth navigation, immersive experiences, and responsive layouts, ensuring that your digital products are simple to use, engaging, and user-friendly across all devices and platforms.",
     },
     {
         id: "03",
         title: "SPA Development",
-        desc: "Building lightning-fast Single Page Applications using React, Angular, or Vue.js for a desktop-like web experience.",
+        desc: "Our Single Page Application (SPA) development services utilize modern frameworks such as React, Angular, and Vue to create dynamic, responsive, and engaging web applications. We offer quick, engaging solutions with easy navigation, faster loading times, and superior user experiences.",
     },
     {
         id: "04",
         title: "Cross-Browser Compatibility",
-        desc: "Ensuring your web application performs consistently across all modern browsers and device platforms.",
+        desc: "Our frontend development services ensure cross-browser compatibility by optimizing webpages for all leading browsers. We provide smooth functioning, standard layouts, and perfect performance, ensuring that every user has a cohesive web experience, whatever the platform or device.",
     },
     {
         id: "05",
         title: "Performance Optimization",
-        desc: "Systematic auditing and optimization to achieve peak Core Web Vitals and lightning-fast load times.",
+        desc: "We improve website performance and efficiency by optimizing the code, pictures, and overall structure. This leads to faster load times, higher SEO rankings, and more user happiness.",
     },
     {
         id: "06",
         title: "Legacy Modernization",
-        desc: "Updating outdated frontend architectures to modern standards while maintaining business continuity.",
+        desc: "We convert outdated systems into innovative, high-performing, and easily maintainable solutions by analyzing your current legacy front-end, creating a strategy modernization roadmap, and then carefully implementing it. Our method guarantees that your apps can adapt to the needs of your company.",
     },
 ];
 
@@ -35,25 +35,25 @@ export const FRONTEND_KEY_ELEMENTS = [
     {
         id: "01",
         title: "Responsive Web Design",
-        desc: "Seamlessly adapting interfaces across mobile, tablet, and desktop for the ultimate user experience.",
+        desc: "A key component of frontend development is ensuring that websites adjust smoothly across devices. Responsive design ensures excellent viewing on PCs, tablets, and smartphones, improving the user experience and accessibility. ",
         tag: "MOBILE-FIRST APPROACH",
     },
     {
         id: "02",
         title: "Intuitive User Interface",
-        desc: "Clean, logical layouts that guide users effortlessly toward their goals without cognitive overload.",
+        desc: "Frontend services concentrate on providing clean, user-friendly interfaces that make navigation easier. A well-structured UI minimizes complexity, increases engagement, and helps consumers to easily interact with digital products, ensuring satisfaction and retention across a wide range of target audiences.",
         tag: "USER-CENTRIC DESIGN",
     },
     {
         id: "03",
-        title: "High Availability",
-        desc: "Highly optimized code and error-handling strategies to ensure your frontend is always performant.",
+        title: "Uptime",
+        desc: "We specialize in creating robust frontend solutions that can handle large traffic without sacrificing performance. Our developers guarantee quick navigation, low downtime, and maximum dependability, providing digital goods that continually satisfy customer expectations and boost your online presence.",
         tag: "OPTIMIZED PERFORMANCE",
     },
     {
         id: "04",
-        title: "System Integration",
-        desc: "Robust API consumption and state management for fluid communication between UI and server logic.",
+        title: "Integration of Backend Systems",
+        desc: "Successful frontend development goes beyond visuals and seamlessly integrates with backend services. This integration allows for dynamic data processing, real-time updates, and secure interactions, resulting in a fully functional and efficient digital solution adapted to business requirements.",
         tag: "SEAMLESS CONNECTIVITY",
     },
 ];
@@ -62,31 +62,31 @@ export const FRONTEND_PROCESS_STEPS = [
     {
         id: "01",
         title: "Analysis",
-        desc: "Defining project scope and technical feasibility with surgical precision.",
+        desc: "Understanding project goals, audience needs, and key features to define the scope.",
         icon: "analytics",
     },
     {
         id: "02",
         title: "Wireframing",
-        desc: "Translating logic into visual structures and high-fidelity architectural mockups.",
+        desc: "Creating layouts and UI/UX designs for smooth navigation and user engagement.",
         icon: "grid_view",
     },
     {
         id: "03",
         title: "Development",
-        desc: "Writing clean, modular, and high-performance code based on finalized designs.",
+        desc: "Building responsive, functional, and scalable interfaces using modern frameworks.",
         icon: "code",
     },
     {
         id: "04",
         title: "Testing",
-        desc: "Rigorous QA, cross-browser checks, and deep performance auditing.",
+        desc: "Ensuring performance, responsiveness, and cross-browser compatibility.",
         icon: "fact_check",
     },
     {
         id: "05",
         title: "Deployment",
-        desc: "Go-live execution and ongoing technical support for the product lifecycle.",
+        desc: "Launching the product and providing ongoing updates, fixes, and support.",
         icon: "rocket_launch",
     },
 ];
@@ -136,9 +136,9 @@ export const PORTFOLIO_ITEMS = [
 ];
 
 export const FRONTEND_TECH_STACK = [
-    { name: "React", icon: "/images/webDev-logo/react-full-logo.png", score: "EXPERT" },
-    { name: "Next.js", icon: "/images/webDev-logo/nextjs-full-logo.png", score: "ADVANCED" },
-    { name: "Vue.js", icon: "/images/webDev-logo/vuejs-full-logo.png", score: "ADVANCED" },
-    { name: "Node.js", icon: "/images/webDev-logo/nodejs-full-logo.png", score: "PROFICIENT" },
-    { name: "AWS", icon: "/images/webDev-logo/aws-full-logo.png", score: "ADVANCED" },
+    { name: "React", icon: "/images/webDev-logo/react-full-logo.png", },
+    { name: "Next.js", icon: "/images/webDev-logo/nextjs-full-logo.png", },
+    { name: "Vue.js", icon: "/images/webDev-logo/vuejs-full-logo.png", },
+    { name: "Node.js", icon: "/images/webDev-logo/nodejs-full-logo.png", },
+    { name: "AWS", icon: "/images/webDev-logo/aws-full-logo.png", },
 ];

@@ -4,12 +4,19 @@ export default function KeyElementsSection() {
   return (
     <section className="bg-[#FBFBF9] py-20 md:py-[120px] border-t border-black/5">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="flex items-center gap-6 mb-16 md:mb-24">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-black uppercase tracking-tight">
-            Trust us for
+        <div className="flex-col items-center gap-6 mb-16 md:mb-24">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-black uppercase tracking-tight mb-3">
+            Discover the benefits of working with Codezilla
           </h2>
-          <div className="h-[1px] flex-1 bg-black/10"></div>
+          <p className="text-gray-600 text-base leading-relaxed max-w-4xl font-light">
+            We are committed to helping you create a brighter and more
+            sustainable future. Whether you're launching a business, designing a
+            website, or building a brand, we provide the tools, expertise, and
+            support you need to succeed. Let’s shape the futurebetter, smarter,
+            and stronger.
+          </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 border border-black/5">
           {FRONTEND_KEY_ELEMENTS.map((element, index) => {
             const icons = ["responsive_layout", "gesture", "timer", "api"];
@@ -22,19 +29,19 @@ export default function KeyElementsSection() {
                   {element.id}
                 </div>
                 <div className="relative z-10">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-10 block group-hover:scale-110 transition-transform origin-left">
+                  <span className="material-symbols-outlined text-primary !text-4xl mb-10 block group-hover:scale-110 transition-transform origin-left">
                     {icons[index]}
                   </span>
                   <div className="space-y-6">
                     <div>
-                      <span className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold mb-2 block">
+                      <span className="text-xs font-mono text-primary uppercase tracking-[0.3em] font-bold mb-2 block">
                         {element.tag}
                       </span>
-                      <h4 className="font-display text-2xl font-bold text-black uppercase mb-4 tracking-tight">
+                      <h4 className="font-display text-xl lg:text-3xl font-bold text-black uppercase mb-4 tracking-tight">
                         {element.title}
                       </h4>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed max-w-sm font-light">
+                    <p className="text-gray-600 text-base leading-relaxed max-w-lg font-light">
                       {element.desc}
                     </p>
                   </div>

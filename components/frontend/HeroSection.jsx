@@ -14,19 +14,23 @@ export default function HeroSection() {
             <div className="flex-1 h-px bg-white/10 max-w-[100px]"></div>
           </div>
           <div className="space-y-4">
-            <h1 className="font-display text-4xl lg:text-7xl font-bold text-white tracking-tighter uppercase mb-3">
-              Front-end
+            <h1 className="font-display text-3xl lg:text-6xl font-bold text-white tracking-tighter uppercase mb-3">
+              Hire Front-end Engineers
               <br />
-              <span className="text-outline-primary block mt-2">
-                Architecture
-              </span>
+              {/* <span className="text-outline-primary block mt-2">
+                Engineers
+              </span> */}
             </h1>
           </div>
-          <p className="text-gray-400 text-lg max-w-xl leading-relaxed font-light border-l border-primary pl-6 md:pl-10">
-            We are a reputable web development company dedicated to building
-            innovative, scalable, and high-performance web applications that
-            empower businesses to thrive in the digital era. Our team combines
-            technical mastery with cinematic design precision.
+          <p className="text-gray-400 text-lg max-w-3xl leading-relaxed font-light border-l border-primary pl-6 md:pl-10">
+            As a leading front-end development company, we provide advanced
+            front-end development services that prioritize responsiveness,
+            usability, and visually stunning websites. Our professional frontend
+            developers create responsive, cross-platform, and intuitive
+            interfaces that deliver exceptional performance across devices. From
+            initial concept to final deployment, we build efficient and visually
+            stunning websites that help your company connect with customers and
+            generate long-term success.
           </p>
           <div className="space-y-8 pt-4">
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
@@ -62,11 +66,6 @@ export default function HeroSection() {
                   <span className="text-2xl font-display font-bold text-white uppercase tracking-tight">
                     Technical Consultation
                   </span>
-                  <div className="mt-4 flex gap-2">
-                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/20"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/20"></div>
-                  </div>
                 </div>
               </div>
             </div>
