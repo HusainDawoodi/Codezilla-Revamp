@@ -40,7 +40,7 @@ const products = [
       "Automated code review, vulnerability detection, and architecture recommendations. Trained on enterprise codebases to catch what linters miss.",
     metric: { value: "50+", label: "Projects Reviewed" },
     linkText: "Learn More",
-    href: "#",
+    href: "/codepilot",
   },
   {
     id: "cloudsentinel",
@@ -123,9 +123,9 @@ function ConversationDemo() {
       <div className="bg-white/[0.02] border border-t-0 border-white/10 p-4 space-y-3 min-h-[280px] max-h-[320px] overflow-hidden">
         {chatMessages.slice(0, visibleCount).map((msg, i) => (
           <div
-            key={`${visibleCount}-${i}`}
-            className={`flex ${msg.from === "bot" ? "justify-start" : "justify-end"} animate-entrance-fade`}
-            style={{ animationDuration: "0.4s" }}
+            key={i}
+            className={`flex ${msg.from === "bot" ? "justify-start" : "justify-end"}${i === visibleCount - 1 ? " animate-entrance-fade" : ""}`}
+            style={i === visibleCount - 1 ? { animationDuration: "0.4s" } : undefined}
           >
             {msg.from === "bot" && (
               <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mr-2 mt-1 shrink-0">
@@ -134,8 +134,8 @@ function ConversationDemo() {
             )}
             <div
               className={`max-w-[80%] px-3 py-2 text-xs leading-relaxed ${msg.from === "bot"
-                  ? "bg-white/5 border border-white/10 text-gray-300"
-                  : "bg-primary/15 border border-primary/20 text-gray-200"
+                ? "bg-white/5 border border-white/10 text-gray-300"
+                : "bg-primary/15 border border-primary/20 text-gray-200"
                 }`}
             >
               {msg.text}
@@ -153,8 +153,8 @@ function ConversationDemo() {
             )}
             <div
               className={`px-4 py-3 flex items-center gap-1 ${typingSender === "bot"
-                  ? "bg-white/5 border border-white/10"
-                  : "bg-primary/15 border border-primary/20"
+                ? "bg-white/5 border border-white/10"
+                : "bg-primary/15 border border-primary/20"
                 }`}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "0s" }} />
