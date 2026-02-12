@@ -9,7 +9,7 @@ export default function AboutContact() {
         <Image
           alt="David Miller Senior Partner"
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-          src="/images/who-we-are/footer-cta2.png"
+          src="/images/who-we-are/footer-cta-3.png"
           fill
         />
         <div className="absolute bottom-0 left-0 p-12 lg:p-20 z-20">

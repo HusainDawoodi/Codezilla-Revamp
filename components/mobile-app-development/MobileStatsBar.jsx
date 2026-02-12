@@ -1,15 +1,15 @@
 export default function MobileStatsBar() {
   const stats = [
     {
-      value: "50+",
+      value: "100+",
       label: "Codezilla Developers",
     },
     {
-      value: "300+",
+      value: "1000+",
       label: "Projects Completed",
     },
     {
-      value: "8+",
+      value: "10+",
       label: "Years of Experience",
     },
   ];

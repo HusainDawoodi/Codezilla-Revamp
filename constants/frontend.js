@@ -93,24 +93,24 @@ export const FRONTEND_PROCESS_STEPS = [
 
 export const FRONTEND_FAQS = [
     {
-        question: "What front-end frameworks do you use?",
-        answer: "We specialize in React, Next.js, and Vue.js, choosing the best tool for your specific project requirements to ensure performance and scalability.",
+        question: "Will you integrate third party apps, extensions, etc. to the website if needed?",
+        answer: "Yes, we do integrate third-party extensions that can be integrated with mobile applications, but it requires customisation which is a paid service. The integration must be present on your website and you must provide us with the detailed documentation and wireframe of the third-party module.",
     },
     {
-        question: "How do you ensure web performance?",
-        answer: "We follow Core Web Vitals guidelines, implementing lazy loading, image optimization, code splitting, and efficient caching strategies.",
+        question: "Can an existing site be revamped?",
+        answer: "Yes we can revamp an existing website for you as per your goals and objectives.",
     },
     {
-        question: "Do you provide ongoing maintenance?",
-        answer: "Yes, we offer comprehensive maintenance packages including security updates, performance monitoring, and feature enhancements.",
+        question: "Will you create a custom design, or customise a ready-made theme or template?",
+        answer: "As per our clients’ requirements we create custom designs that convert their ideas and concepts into digital reality. However, we can customise a ready made theme or template if required as it all depends on the client’s requirement.",
     },
     {
-        question: "Is your code accessible (WCAG)?",
-        answer: "Every line of code is written with accessibility in mind, ensuring compliance with WCAG 2.1 standards for inclusive digital experiences.",
+        question: "Who will own the code/fonts/design/domain/etc.?",
+        answer: "The product owner (Client) will own the code/ fronts/ design/ domain etc.",
     },
     {
-        question: "How do you handle responsive design?",
-        answer: "We use a mobile-first approach, rigorously testing across multiple screen sizes and devices to ensure a seamless experience everywhere.",
+        question: "Will you provide any warranty/maintenance services when the work is completed?",
+        answer: "Yes we do provide maintenance service when the work is completed – we provide support for 3 months after completion. However sometimes this can vary depending on the documentation which is done at the start of the project.",
     },
 ];
 
