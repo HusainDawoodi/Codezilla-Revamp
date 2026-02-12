@@ -25,7 +25,26 @@ Follow this skill when writing any text content — headings, descriptions, CTAs
 4. **Use action verbs:** Architect, Deploy, Scale, Build, Engineer, Transform
 5. **Avoid:** Flowery language, buzzword-only sentences, passive voice, hedging ("might", "could", "we think")
 
+
 ---
+
+## Localization: UK English
+Codezilla targets the UK market. All copy must strictly adhere to British English conventions.
+
+### Key Rules
+1.  **-ise vs -ize**: Always use **-ise**.
+    *   ✅ `Organise`, `Realise`, `Optimise`, `Unrecognised`
+    *   ❌ `Organize`, `Realize`, `Optimize`, `Unrecognized`
+2.  **-our vs -or**: Always use **-our**.
+    *   ✅ `Colour`, `Behaviour`, `Harbour`
+    *   ❌ `Color`, `Behavior`, `Harbor`
+3.  **-re vs -er**: Always use **-re** for standard words.
+    *   ✅ `Centre`, `Theatre`, `Metre`
+    *   ❌ `Center`, `Theater`, `Meter`
+4.  **Vocabulary**: Use UK terminology.
+    *   ✅ `Mobile phone`
+    *   ❌ `Cell phone`
+
 
 ## Heading Conventions
 
