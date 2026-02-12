@@ -1,11 +1,11 @@
-export const CODEPILOT_STATS = [
+export const REVIEWLY_STATS = [
     { value: "2,400+", label: "Bugs Caught" },
     { value: "50+", label: "Projects" },
     { value: "18", label: "Languages" },
     { value: "<5s", label: "Avg Review" },
 ];
 
-export const CODEPILOT_STEPS = [
+export const REVIEWLY_STEPS = [
     {
         number: "01",
         icon: "link",
@@ -26,7 +26,7 @@ export const CODEPILOT_STEPS = [
     },
 ];
 
-export const CODEPILOT_FEATURES = [
+export const REVIEWLY_FEATURES = [
     { icon: "pageview", label: "Smart Review" },
     { icon: "shield", label: "Vuln Scanner" },
     { icon: "architecture", label: "Architecture" },
@@ -35,7 +35,7 @@ export const CODEPILOT_FEATURES = [
     { icon: "merge", label: "Git Native" },
 ];
 
-export const CODEPILOT_USE_CASES = [
+export const REVIEWLY_USE_CASES = [
     {
         icon: "speed",
         title: "PR Review",
@@ -53,7 +53,7 @@ export const CODEPILOT_USE_CASES = [
     },
 ];
 
-export const CODEPILOT_DEMO_CODE = {
+export const REVIEWLY_DEMO_CODE = {
     filename: "auth/session.js",
     language: "javascript",
     lines: [

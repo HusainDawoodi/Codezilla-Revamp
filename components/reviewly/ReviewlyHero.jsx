@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Button from "@/components/ui/Button";
 
 const terminalLines = [
-    { type: "cmd", text: "$ codepilot scan ./auth --deep" },
+    { type: "cmd", text: "$ reviewly scan ./auth --deep" },
     { type: "info", text: "⚡ Scanning 24 files across 3 modules..." },
     { type: "info", text: "   Analyzing auth/session.js" },
     { type: "warn", text: "⚠  L17: Magic number detected — use named constant" },
@@ -16,10 +16,10 @@ const terminalLines = [
     { type: "info", text: "" },
     { type: "summary", text: "━━━ Scan Complete ━━━━━━━━━━━━━━━━━━━━━━━━━" },
     { type: "summary", text: "  1 critical  ·  2 warnings  ·  21 files clean" },
-    { type: "success", text: "  Auto-fix available for 2/3 issues → run: codepilot fix" },
+    { type: "success", text: "  Auto-fix available for 2/3 issues → run: reviewly fix" },
 ];
 
-export default function CodePilotHero() {
+export default function ReviewlyHero() {
     const [visibleLines, setVisibleLines] = useState(0);
 
     useEffect(() => {
@@ -73,9 +73,9 @@ export default function CodePilotHero() {
 
                         {/* Title */}
                         <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white uppercase tracking-tighter leading-[0.9] mb-6">
-                            Code
+                            Review
                             <br />
-                            <span className="text-primary">Pilot</span>
+                            <span className="text-primary">ly</span>
                         </h1>
 
                         {/* Tagline — 1 line only */}
@@ -112,7 +112,7 @@ export default function CodePilotHero() {
                                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
                                 </div>
                                 <span className="text-[10px] text-gray-500 font-mono ml-2">
-                                    codepilot — terminal
+                                    reviewly — terminal
                                 </span>
                             </div>
 

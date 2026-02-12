@@ -1,13 +1,13 @@
-import CodePilotHero from "@/components/codepilot/CodePilotHero";
-import MetricsStrip from "@/components/codepilot/MetricsStrip";
-import HowItWorks from "@/components/codepilot/HowItWorks";
-import LiveDemo from "@/components/codepilot/LiveDemo";
-import FeatureIcons from "@/components/codepilot/FeatureIcons";
-import UseCases from "@/components/codepilot/UseCases";
-import CTASection from "@/components/codepilot/CTASection";
+import ReviewlyHero from "@/components/reviewly/ReviewlyHero";
+import MetricsStrip from "@/components/reviewly/MetricsStrip";
+import HowItWorks from "@/components/reviewly/HowItWorks";
+import LiveDemo from "@/components/reviewly/LiveDemo";
+import FeatureIcons from "@/components/reviewly/FeatureIcons";
+import UseCases from "@/components/reviewly/UseCases";
+import CTASection from "@/components/reviewly/CTASection";
 
 export const metadata = {
-    title: "CodePilot — AI Code Review | Codezilla",
+    title: "Reviewly — AI Code Review | Codezilla",
     description:
         "AI-powered code review, vulnerability detection, and architecture analysis. Ship cleaner code 10x faster.",
     keywords: [
@@ -15,23 +15,23 @@ export const metadata = {
         "code analysis",
         "vulnerability detection",
         "code quality",
-        "CodePilot",
+        "Reviewly",
         "Codezilla",
     ],
     authors: [{ name: "Codezilla" }],
     creator: "Codezilla",
     openGraph: {
-        title: "CodePilot — AI Code Review | Codezilla",
+        title: "Reviewly — AI Code Review | Codezilla",
         description:
             "AI-powered code review, vulnerability detection, and architecture analysis.",
-        url: "https://codezilla.io/codepilot",
+        url: "https://codezilla.io/reviewly",
         siteName: "Codezilla",
         locale: "en_US",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "CodePilot — AI Code Review | Codezilla",
+        title: "Reviewly — AI Code Review | Codezilla",
         description:
             "AI-powered code review, vulnerability detection, and architecture analysis.",
     },
@@ -40,17 +40,17 @@ export const metadata = {
         follow: true,
     },
     alternates: {
-        canonical: "https://codezilla.io/codepilot",
+        canonical: "https://codezilla.io/reviewly",
     },
 };
 
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "CodePilot",
+    name: "Reviewly",
     description:
         "AI-powered code review, vulnerability detection, and architecture recommendations.",
-    url: "https://codezilla.io/codepilot",
+    url: "https://codezilla.io/reviewly",
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Web",
     offers: {
@@ -75,7 +75,7 @@ export default function CodePilotPage() {
             />
 
             <main className="min-h-screen">
-                <CodePilotHero />
+                <ReviewlyHero />
                 <MetricsStrip />
                 <HowItWorks />
                 <LiveDemo />

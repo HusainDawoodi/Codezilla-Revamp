@@ -1,4 +1,4 @@
-import { CODEPILOT_USE_CASES } from "@/constants/codepilot";
+import { REVIEWLY_USE_CASES } from "@/constants/reviewly";
 
 export default function UseCases() {
     return (
@@ -16,10 +16,10 @@ export default function UseCases() {
 
                 {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-2 border-black">
-                    {CODEPILOT_USE_CASES.map((uc, i) => (
+                    {REVIEWLY_USE_CASES.map((uc, i) => (
                         <div
                             key={i}
-                            className={`p-8 lg:p-10 group hover:bg-black transition-all duration-500 flex flex-col ${i < CODEPILOT_USE_CASES.length - 1
+                            className={`p-8 lg:p-10 group hover:bg-black transition-all duration-500 flex flex-col ${i < REVIEWLY_USE_CASES.length - 1
                                     ? "border-b md:border-b-0 md:border-r border-black"
                                     : ""
                                 }`}

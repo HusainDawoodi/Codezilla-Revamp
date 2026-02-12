@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CODEPILOT_DEMO_CODE } from "@/constants/codepilot";
+import { REVIEWLY_DEMO_CODE } from "@/constants/reviewly";
 
 export default function LiveDemo() {
     const [scanLine, setScanLine] = useState(-1);
     const [showComments, setShowComments] = useState([]);
     const [showFixes, setShowFixes] = useState(false);
 
-    const { lines, fixes, filename } = CODEPILOT_DEMO_CODE;
+    const { lines, fixes, filename } = REVIEWLY_DEMO_CODE;
 
     useEffect(() => {
         if (scanLine >= lines.length) {
@@ -64,7 +64,7 @@ export default function LiveDemo() {
                         </h2>
                     </div>
                     <p className="text-sm text-gray-600 max-w-xs">
-                        Watch CodePilot scan, detect, and suggest fixes in real-time.
+                        Watch Reviewly scan, detect, and suggest fixes in real-time.
                     </p>
                 </div>
 
@@ -148,7 +148,7 @@ export default function LiveDemo() {
                         {/* Comments panel */}
                         <div className="p-6 bg-white/[0.02] min-h-[300px]">
                             <div className="text-[10px] font-bold uppercase tracking-widest text-gray-600 mb-4">
-                                CodePilot Review
+                                Reviewly Review
                             </div>
 
                             {showComments.length === 0 && !showFixes && (
@@ -165,8 +165,8 @@ export default function LiveDemo() {
                                         <div
                                             key={lineIdx}
                                             className={`p-3 border text-xs animate-entrance-fade ${isError
-                                                    ? "border-red-400/30 bg-red-400/5 text-red-300"
-                                                    : "border-amber-400/30 bg-amber-400/5 text-amber-300"
+                                                ? "border-red-400/30 bg-red-400/5 text-red-300"
+                                                : "border-amber-400/30 bg-amber-400/5 text-amber-300"
                                                 }`}
                                             style={{ animationDuration: "0.4s" }}
                                         >

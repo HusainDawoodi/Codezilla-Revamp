@@ -1,6 +1,6 @@
 "use client";
 
-import { CODEPILOT_STEPS } from "@/constants/codepilot";
+import { REVIEWLY_STEPS } from "@/constants/reviewly";
 
 export default function HowItWorks() {
     return (
@@ -31,10 +31,10 @@ export default function HowItWorks() {
                     {/* Connecting line */}
                     <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-black/10 -translate-y-1/2 z-0" />
 
-                    {CODEPILOT_STEPS.map((step, i) => (
+                    {REVIEWLY_STEPS.map((step, i) => (
                         <div
                             key={i}
-                            className={`relative p-8 lg:p-10 flex flex-col group hover:bg-black transition-all duration-500 z-10 ${i < CODEPILOT_STEPS.length - 1
+                            className={`relative p-8 lg:p-10 flex flex-col group hover:bg-black transition-all duration-500 z-10 ${i < REVIEWLY_STEPS.length - 1
                                     ? "border-b md:border-b-0 md:border-r border-black"
                                     : ""
                                 }`}
@@ -60,7 +60,7 @@ export default function HowItWorks() {
                             </p>
 
                             {/* Arrow connector */}
-                            {i < CODEPILOT_STEPS.length - 1 && (
+                            {i < REVIEWLY_STEPS.length - 1 && (
                                 <div className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 bg-primary rounded-full items-center justify-center">
                                     <span className="material-symbols-outlined text-black text-sm">
                                         arrow_forward

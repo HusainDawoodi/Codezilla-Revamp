@@ -1,4 +1,4 @@
-import { CODEPILOT_FEATURES } from "@/constants/codepilot";
+import { REVIEWLY_FEATURES } from "@/constants/reviewly";
 
 export default function FeatureIcons() {
     return (
@@ -16,7 +16,7 @@ export default function FeatureIcons() {
 
                 {/* Icon Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-white/10 border border-white/10">
-                    {CODEPILOT_FEATURES.map((feature, i) => (
+                    {REVIEWLY_FEATURES.map((feature, i) => (
                         <div
                             key={i}
                             className="bg-charcoal p-8 flex flex-col items-center text-center group hover:bg-white transition-all duration-500 cursor-default"

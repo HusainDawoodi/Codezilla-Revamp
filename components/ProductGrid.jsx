@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const products = [
   {
@@ -30,30 +31,30 @@ const products = [
     href: "#",
   },
   {
-    id: "codepilot",
+    id: "reviewly",
     badge: "DEV-OPS",
     status: "BETA",
-    icon: "code",
-    title: "CodePilot",
+    logo: "/images/reviewly-logo.png",
+    title: "Reviewly",
     tagline: "AI-Powered Code Intelligence",
     description:
       "Automated code review, vulnerability detection, and architecture recommendations. Trained on enterprise codebases to catch what linters miss.",
     metric: { value: "50+", label: "Projects Reviewed" },
     linkText: "Learn More",
-    href: "/codepilot",
+    href: "/reviewly",
   },
   {
-    id: "cloudsentinel",
+    id: "skyguard",
     badge: "INFRA-OPS",
-    status: "LIVE",
-    icon: "shield",
-    title: "CloudSentinel",
+    status: "BETA",
+    logo: "/images/skyguard-logo.png",
+    title: "SkyGuard",
     tagline: "Predictive Infrastructure Monitoring",
     description:
       "AI-driven anomaly detection & auto-scaling for cloud workloads. Predicts failures 30 minutes before they happen — zero downtime, zero surprises.",
     metric: { value: "200+", label: "Services Monitored" },
     linkText: "Learn More",
-    href: "#",
+    href: "/skyguard",
   },
 ];
 
@@ -322,9 +323,19 @@ export default function ProductGrid() {
                     // 00{index + 2}
                   </span>
                 </div>
-                <span className="material-symbols-outlined text-primary !text-3xl group-hover:scale-110 transition-transform">
-                  {product.icon}
-                </span>
+                {product.logo ? (
+                  <Image
+                    src={product.logo}
+                    alt={`${product.title} logo`}
+                    width={140}
+                    height={40}
+                    className="h-8 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="material-symbols-outlined text-primary !text-3xl group-hover:scale-110 transition-transform">
+                    {product.icon}
+                  </span>
+                )}
               </div>
 
               {/* Title */}
