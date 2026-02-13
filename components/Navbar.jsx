@@ -199,7 +199,7 @@ export default function Navbar() {
                 </span>
               </span>
               <div
-                className={` mega-menu-panel fixed top-[80px] left-0 w-full glass-morphism transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black opacity-0 invisible -translate-y-2 transition-transform  ${
+                className={` mega-menu-panel fixed top-[80px] left-0 shadow-2xl shadow-black/40 w-full glass-morphism transition-all duration-300 ease-out z-[110] p-10 lg:px-16 border-t border-white/10 !bg-black opacity-0 invisible -translate-y-2 transition-transform  ${
                   activeMegaMenu === "what-we-do" &&
                   "opacity-100 visible translate-y-0"
                 }`}
@@ -427,7 +427,7 @@ export default function Navbar() {
                 </span>
               </span>
               <div
-                className={`mega-menu absolute top-[80px] left-0 w-[100%] bg-black text-white border-t border-b-2 border-black shadow-2xl transform transition-all duration-300 z-50 p-12 ${activeMegaMenu === "what-we-think" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
+                className={`mega-menu absolute top-[80px] left-0 w-[100%] bg-black text-white border-t border-b-2 border-black shadow-2xl shadow-black/40 transform transition-all duration-300 z-50 p-12 ${activeMegaMenu === "what-we-think" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
               >
                 <div className="max-w-7xl grid grid-cols-12 gap-8">
                   <div className="col-span-6 border-r border-white/20 pr-8 flex flex-col items-start">
