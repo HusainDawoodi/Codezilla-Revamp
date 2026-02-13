@@ -67,7 +67,7 @@ export default function ServicesGrid() {
               From black box to clear ROI.
             </p>
             <span className="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary">
-              <span className="w-2 h-2 bg-primary"></span> Analyze
+              <span className="w-2 h-2 bg-primary"></span> Analyse
             </span>
           </div>
         </div>

@@ -119,27 +119,21 @@ export default function Navbar() {
   const codezillaAccelerators = [
     {
       title: "Document AI",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Automate document processing with intelligent extraction.",
       icon: "psychology",
       link: "/document-ai",
     },
     {
       title: "Codezilla Flywheel",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Accelerate development with pre-built modules.",
       icon: "security",
       link: "/codezilla-flywheel",
     },
     {
       title: "Codezilla Guard:IAM",
-      description: "CI/CD, cloud infrastructure, and automation.",
+      description: "Secure identity management and access control.",
       icon: "verified_user",
       link: "/codezilla-guard-iam",
-    },
-    {
-      title: "Chatbot Delivery",
-      description: "CI/CD, cloud infrastructure, and automation.",
-      icon: "chat",
-      link: "/chatbot-delivery",
     },
   ];
   return (

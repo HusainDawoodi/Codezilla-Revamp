@@ -69,8 +69,8 @@ export default function WorkCarousel({ projects = [] }) {
             work
           </h2>
           <p className="text-black-300 text-base leading-relaxed">
-            Floating overlay arrows are placed over the project carousel for
-            easier access on all screen sizes
+            Explore our portfolio of high-impact enterprise solutions and
+            digital transformation success stories.
           </p>
         </div>
 

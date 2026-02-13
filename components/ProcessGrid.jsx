@@ -94,7 +94,7 @@ export default function ProcessGrid() {
                 Plan
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary"></span> C-Suite Liason
+                <span className="w-1.5 h-1.5 bg-primary"></span> C-Suite Liaison
               </li>
             </ul>
           </div>
