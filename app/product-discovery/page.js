@@ -26,7 +26,7 @@ export default function DiscoveryPage() {
             <DiscoveryWorkflow />
             <DiscoveryImpact />
 
-            <FAQSection faqs={DISCOVERY_FAQS} />
+            {/* <FAQSection faqs=e{DISCOVERY_FAQS} /> */}
             <CTASection />
         </main>
     );

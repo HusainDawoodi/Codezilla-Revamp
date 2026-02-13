@@ -38,7 +38,7 @@ export default function TrustBadges({ variant = "dark", className = "" }) {
               isDark ? "text-gray-400" : "text-gray-500"
             }`}
           >
-            4.9/5
+            4.9/5.0
           </span>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function TrustBadges({ variant = "dark", className = "" }) {
               isDark ? "text-gray-400" : "text-gray-500"
             }`}
           >
-            5.0/5
+            5.0/5.0
           </span>
         </div>
       </div>
