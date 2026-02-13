@@ -42,26 +42,30 @@ export default function AboutCulture() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredGallery.map((item) => (
-            <div
-              key={item.id}
-              className={`relative group overflow-hidden border-2 border-black ${item.span}`}
-            >
-              <div className="relative h-64 w-full">
-                <Image
-                  alt={item.category}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src={item.image}
-                  fill
-                />
+          {filteredGallery?.length > 0 ? (
+            filteredGallery.map((item) => (
+              <div
+                key={item.id}
+                className={`relative group overflow-hidden border-2 border-black ${item.span}`}
+              >
+                <div className="relative h-64 w-full">
+                  <Image
+                    alt={item.category}
+                    className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src={item.image}
+                    fill
+                  />
+                </div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">
+                    {item.category}
+                  </span>
+                </div>
               </div>
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="bg-primary text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">
-                  {item.category}
-                </span>
-              </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No images available</p>
+          )}
         </div>
       </div>
     </section>

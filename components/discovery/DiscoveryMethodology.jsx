@@ -1,0 +1,58 @@
+import Image from "next/image";
+
+export default function DiscoveryMethodology() {
+  return (
+    <section className="bg-white py-[90px] px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="relative animate-entrance-fade">
+          <div className="border-[1px] border-primary/30 p-1 rounded-xl">
+            <div className="aspect-square w-full relative overflow-hidden rounded-xl bg-charcoal">
+              <Image
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4najh_3jK3oKhWpdCwf5fDuALCwpVIaOWRplao6xXbwKjG4CFliQ9o9UHQk_aP79TiGp9DBa88O7YG4dp29rKOpNfFqq_GG0I-j3-B6OQuILEHJQDE8BSOK4As9IVtS7K7q4n-M2_dpPlA9X88qjpHHYg96u7wzP422Gkpi4U6y1BteuNmhcKCQZddHiDnyzY18lndJYIJ0tL898VXGAac2mA5rs32IyPWBg8JTJDus5ZWz2nRQNgY1DzsvMfvO8GB2CpRllq"
+                alt="Strategy Workshop"
+                fill
+                className="object-cover grayscale brightness-90 contrast-110"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="relative flex flex-col items-start pt-4 animate-entrance-fade"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <div className="absolute top-0 right-0 flex items-center gap-3">
+            <span className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] font-mono">
+              STRAT-PROC-02
+            </span>
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+          </div>
+
+          <span className="text-primary font-bold tracking-[0.4em] uppercase text-xs mb-6 block">
+            Act 2: The Methodology
+          </span>
+
+          <h2 className="text-6xl lg:text-7xl font-black text-charcoal tracking-tighter leading-[0.9] uppercase mb-8 font-display">
+            THE
+            <br />
+            METHODOLOGY
+          </h2>
+
+          <p className="text-xl md:text-2xl text-zinc-600 font-medium leading-[1.8] text-balance max-w-lg">
+            We steer ideas via systematic study, validation, and planning,
+            ensuring clarity and confidence before development begins.
+          </p>
+
+          <div className="mt-12 flex items-center gap-4 border-t border-zinc-250 pt-8 w-full">
+            <span className="material-symbols-outlined text-primary text-4xl">
+              architecture
+            </span>
+            <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">
+              Architectural Validation Protocol
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -122,8 +122,8 @@ export const EXPERTS = [
 export const CULTURE_GALLERY = [
     {
         id: 1,
-        category: "Workshops",
-        image: "/images/who-we-are/culture-1.png",
+        category: "Team Activities",
+        image: "/images/who-we-are/culture-5.png",
         span: "col-span-1"
     },
     {
@@ -134,20 +134,20 @@ export const CULTURE_GALLERY = [
     },
     {
         id: 3,
-        category: "Client Meetings",
+        category: "Team Activities",
         image: "/images/who-we-are/culture-3.png",
         span: "col-span-1"
     },
     {
         id: 4,
-        category: "Workshops",
+        category: "Team Activities",
         image: "/images/who-we-are/culture-4.png",
         span: "md:col-span-2 lg:col-span-1"
     },
     {
         id: 5,
-        category: "Team Activities",
-        image: "/images/who-we-are/culture-5.png",
+        category: "Workshops",
+        image: "/images/who-we-are/culture-8.png",
         span: "lg:col-span-3"
     }
 ];

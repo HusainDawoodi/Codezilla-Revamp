@@ -413,7 +413,7 @@ export default function Navbar() {
               href="#"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Case studies
+              Our Work
             </Link>
             <div
               className="group h-full flex items-center px-2 cursor-pointer"
@@ -662,7 +662,7 @@ export default function Navbar() {
                 onClick={toggleMobileMenu}
                 className={`block text-xl font-display font-bold uppercase hover:text-primary ${isActive("/case-studies") ? "text-primary font-bold" : "text-white"}`}
               >
-                Case Studies
+                Our Work
               </Link>
 
               {/* What we think Dropdown */}

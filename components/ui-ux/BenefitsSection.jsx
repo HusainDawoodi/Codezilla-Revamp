@@ -1,3 +1,6 @@
+import { UI_UX_BENEFITS } from "@/constants/ui-ux";
+import InfoCard from "../ui/InfoCard";
+
 export default function BenefitsSection() {
   return (
     <section className="bg-[#F9F7F2] py-20 md:py-24 px-6 md:px-12 border-b border-black/5">
@@ -21,61 +24,9 @@ export default function BenefitsSection() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white border border-black p-8 md:p-10 h-full flex flex-col justify-between card-shadow-black transition-transform hover:-translate-y-1">
-            <div>
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-black flex items-center justify-center mb-6 md:mb-8">
-                <span className="material-symbols-outlined text-white text-2xl md:text-3xl">
-                  bolt
-                </span>
-              </div>
-              <h3 className="font-display text-xl md:text-2xl font-bold text-black uppercase mb-4 tracking-tight">
-                Improved User Experience
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Good UI/UX design makes digital interactions simple, clear, and
-                enjoyable. When users can navigate easily, frustration
-                decreases, satisfaction increases, and they are more likely to
-                return and engage frequently.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white border border-black p-8 md:p-10 h-full flex flex-col justify-between card-shadow-orange transition-transform hover:-translate-y-1">
-            <div>
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center mb-6 md:mb-8">
-                <span className="material-symbols-outlined text-white text-2xl md:text-3xl">
-                  pivot_table_chart
-                </span>
-              </div>
-              <h3 className="font-display text-xl md:text-2xl font-bold text-black uppercase mb-4 tracking-tight">
-                Better business outcomes.
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Well-designed user journeys reduce friction and highlight
-                important tasks. By simplifying navigation and guiding
-                decisions, UI/UX design increases engagement, improves
-                conversions, and helps firms achieve better, measurable digital
-                results.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white border border-black p-8 md:p-10 h-full flex flex-col justify-between card-shadow-black transition-transform hover:-translate-y-1 ">
-            <div>
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-black flex items-center justify-center mb-6 md:mb-8">
-                <span className="material-symbols-outlined text-white text-2xl md:text-3xl">
-                  restart_alt
-                </span>
-              </div>
-              <h3 className="font-display text-xl md:text-2xl font-bold text-black uppercase mb-4 tracking-tight">
-                Enhanced Trust and Credibility
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                A smooth interface shows professionalism and reliability.
-                Consistent images and smart interactions increase confidence.
-                This makes users feel more at ease when using your product and
-                helps strengthen your brand's long-term reputation.
-              </p>
-            </div>
-          </div>
+          {UI_UX_BENEFITS.map((benefit, index) => (
+            <InfoCard key={index} {...benefit} />
+          ))}
         </div>
       </div>
     </section>
