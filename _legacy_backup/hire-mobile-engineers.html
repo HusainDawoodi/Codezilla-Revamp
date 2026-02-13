@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hire Mobile Engineers | Codezilla</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#121212",
+                        "obsidian": "#1c1c1c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .marquee {
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: 4rem;
+            }
+            .marquee-content {
+                flex-shrink: 0;
+                display: flex;
+                justify-content: space-around;
+                gap: 4rem;
+                min-width: 100%;
+            }
+            @keyframes pulse-subtle {
+                0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(242, 127, 13, 0.4); }
+                50% { transform: scale(1.05); box-shadow: 0 4px 30px rgba(242, 127, 13, 0.6); }
+            }
+            .animate-pulse-sticky {
+                animation: pulse-subtle 2s infinite ease-in-out;
+            }
+            .brutal-card {
+                @apply transition-all duration-300 border-black border;
+                box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+            }
+            .brutal-card:hover {
+                box-shadow: 8px 8px 0px 0px #f27f0d;
+                transform: translate(-4px, -4px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-white antialiased">
+<div class="fixed bottom-8 left-1/2 z-[100] -translate-x-1/2">
+<button class="animate-pulse-sticky flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-base font-extrabold text-white shadow-2xl transition-all hover:bg-orange-600">
+<span class="whitespace-nowrap">Hire Mobile Developer</span>
+<span class="material-symbols-outlined font-bold">arrow_forward</span>
+</button>
+</div>
+<header class="fixed top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="text-primary">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-extrabold tracking-tight">Codezilla</span>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-semibold transition-colors hover:text-primary" href="#">Services</a>
+<a class="text-sm font-semibold transition-colors hover:text-primary" href="#">Our Work</a>
+<a class="text-sm font-semibold transition-colors hover:text-primary" href="#">About Us</a>
+<a class="text-sm font-semibold transition-colors hover:text-primary" href="#">Insights</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-background-dark transition-transform hover:scale-105">
+                Contact Us
+            </button>
+</div>
+</div>
+</header>
+<section class="relative flex min-h-screen items-center pt-20">
+<div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2">
+<div class="flex flex-col gap-8">
+<h1 class="text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl">
+                Hire Mobile Engineers
+            </h1>
+<p class="text-lg leading-relaxed text-zinc-400 md:text-xl">
+                Our Mobile Engineers create, build, and optimize high-performance apps for iOS, Android, and cross-platform devices. In today's fast-paced digital environment, we create scalable, secure, and user-friendly mobile solutions that boost engagement.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="h-14 min-w-[200px] rounded-xl bg-primary px-8 text-lg font-bold text-background-dark transition-all hover:bg-white">
+                    Start Your Journey
+                </button>
+<button class="h-14 min-w-[200px] rounded-xl border border-white/20 bg-white/5 px-8 text-lg font-bold text-white transition-all hover:bg-white/10">
+                    Our Work
+                </button>
+</div>
+<div class="flex items-center gap-8 pt-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-bold">4.5</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star_half</span>
+</div>
+</div>
+<p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Google Rating</p>
+</div>
+<div class="h-10 w-px bg-white/10"></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-bold">4.5</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined fill-[1] text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star_half</span>
+</div>
+</div>
+<p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Clutch Review</p>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center lg:justify-end">
+<div class="aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl bg-zinc-800">
+<img alt="Senior mobile architect in a professional portrait" class="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBemuIqAaxfCzhyJcLSpAAHFaJMb_hImgaf1Gz7ZEpXSgeLXh4OkmaODXIDa1PNdV3LWuUJ_ambLZgz5d0Aqg6K5AS5jCORD9KJnYY9NbJL1YRbNEvOvRaGSQfiYGz7INe9adLZA-Q9IB2Tx5uPGEUjvs9SnecnqE_KB1aFixVKv7GstK589YsOFi4JE5NqKGu2S-oQtBfgEEDJYFqbCSXT79MdHyzZq723dOvIIKxjme1OiQ_CClpolrax0i7_H1kxcoLrRzEf"/>
+</div>
+</div>
+</div>
+</section>
+<div class="border-y border-white/5 bg-background-dark py-12">
+<div class="marquee">
+<div class="marquee-content opacity-30 grayscale">
+<span class="text-2xl font-black uppercase tracking-tighter">Samsung</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Uber</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Spotify</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Airbnb</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Stripe</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Revolut</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Deliveroo</span>
+</div>
+<div aria-hidden="true" class="marquee-content opacity-30 grayscale">
+<span class="text-2xl font-black uppercase tracking-tighter">Samsung</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Uber</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Spotify</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Airbnb</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Stripe</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Revolut</span>
+<span class="text-2xl font-black uppercase tracking-tighter">Deliveroo</span>
+</div>
+</div>
+</div>
+<section class="bg-background-light py-[90px] text-background-dark">
+<div class="mx-auto max-w-7xl px-6">
+<h2 class="mb-16 text-4xl font-extrabold tracking-tight md:text-5xl">Why Mobile Engineering is Needed</h2>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="rounded-xl bg-white p-10 shadow-sm transition-transform hover:-translate-y-2">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h3 class="mb-4 text-2xl font-bold">Reach customers anywhere</h3>
+<p class="leading-relaxed text-zinc-600">Mobile apps enable rapid access to your brand, enhancing engagement and convenience for customers everywhere.</p>
+</div>
+<div class="rounded-xl bg-white p-10 shadow-sm transition-transform hover:-translate-y-2">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="mb-4 text-2xl font-bold">Boost business growth</h3>
+<p class="leading-relaxed text-zinc-600">Optimised mobile solutions increase sales, retention, and user pleasure, resulting in demonstrable business benefits.</p>
+</div>
+<div class="rounded-xl bg-white p-10 shadow-sm transition-transform hover:-translate-y-2">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<h3 class="mb-4 text-2xl font-bold">Stay competitive</h3>
+<p class="leading-relaxed text-zinc-600">In today's digital landscape, effective mobile applications are required to outperform competition and remain relevant.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-background-dark py-[90px]">
+<div class="mx-auto max-w-7xl px-6">
+<h2 class="mb-16 text-4xl font-extrabold tracking-tight text-white md:text-5xl">Mobile Engineering Services We Offer</h2>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+<div class="group rounded-xl bg-obsidian border border-white/5 p-8 transition-all hover:border-primary/50">
+<div class="mb-8 flex items-start justify-between">
+<span class="text-4xl font-black text-white/10 group-hover:text-primary transition-colors">01</span>
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">smartphone</span>
+</div>
+</div>
+<h3 class="mb-4 text-xl font-bold text-white">Custom Mobile App Development</h3>
+<p class="text-sm leading-relaxed text-zinc-400">We develop feature-rich, scalable mobile apps for iOS, Android, and cross-platform devices that offer smooth operation.</p>
+</div>
+<div class="group rounded-xl bg-obsidian border border-white/5 p-8 transition-all hover:border-primary/50">
+<div class="mb-8 flex items-start justify-between">
+<span class="text-4xl font-black text-white/10 group-hover:text-primary transition-colors">02</span>
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">palette</span>
+</div>
+</div>
+<h3 class="mb-4 text-xl font-bold text-white">UI/UX Design for Mobile</h3>
+<p class="text-sm leading-relaxed text-zinc-400">Our engineers create simple, engaging interfaces that boost usability, increase user retention across all screens.</p>
+</div>
+<div class="group rounded-xl bg-obsidian border border-white/5 p-8 transition-all hover:border-primary/50">
+<div class="mb-8 flex items-start justify-between">
+<span class="text-4xl font-black text-white/10 group-hover:text-primary transition-colors">03</span>
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+</div>
+<h3 class="mb-4 text-xl font-bold text-white">Mobile App Testing and QA</h3>
+<p class="text-sm leading-relaxed text-zinc-400">Comprehensive testing ensures performance, security, and stability, producing bug-free, high-quality mobile applications.</p>
+</div>
+<div class="group rounded-xl bg-obsidian border border-white/5 p-8 transition-all hover:border-primary/50">
+<div class="mb-8 flex items-start justify-between">
+<span class="text-4xl font-black text-white/10 group-hover:text-primary transition-colors">04</span>
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">cloud_sync</span>
+</div>
+</div>
+<h3 class="mb-4 text-xl font-bold text-white">API and backend integration</h3>
+<p class="text-sm leading-relaxed text-zinc-400">We integrate apps with APIs, cloud services, and backend systems to ensure smooth operation and scalability.</p>
+</div>
+<div class="group rounded-xl bg-obsidian border border-white/5 p-8 transition-all hover:border-primary/50">
+<div class="mb-8 flex items-start justify-between">
+<span class="text-4xl font-black text-white/10 group-hover:text-primary transition-colors">05</span>
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">bolt</span>
+</div>
+</div>
+<h3 class="mb-4 text-xl font-bold text-white">Performance optimisation</h3>
+<p class="text-sm leading-relaxed text-zinc-400">We analyse program speed, responsiveness, and resource utilisation to minimise load times and improve user experience.</p>
+</div>
+<div class="group rounded-xl bg-obsidian border border-white/5 p-8 transition-all hover:border-primary/50">
+<div class="mb-8 flex items-start justify-between">
+<span class="text-4xl font-black text-white/10 group-hover:text-primary transition-colors">06</span>
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">build</span>
+</div>
+</div>
+<h3 class="mb-4 text-xl font-bold text-white">App Maintenance and Support</h3>
+<p class="text-sm leading-relaxed text-zinc-400">Continuous upgrades, feature enhancements, and bug fixes ensure your apps remain secure and up to date.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[#fcfbf9] py-24 text-background-dark overflow-hidden">
+<div class="mx-auto max-w-7xl px-6">
+<div class="mb-20 text-center">
+<h2 class="text-4xl font-extrabold tracking-tight md:text-6xl">Why Invest in Mobile Engineering Expertise</h2>
+<div class="mt-4 h-1.5 w-32 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 items-start max-w-6xl mx-auto">
+<div class="brutal-card bg-white p-12 rounded-none relative">
+<div class="mb-8 text-primary">
+<span class="material-symbols-outlined text-6xl font-bold">touch_app</span>
+</div>
+<h3 class="mb-6 text-3xl font-black leading-tight uppercase tracking-tight">Improved Interaction with Users</h3>
+<p class="leading-relaxed text-zinc-700 text-lg">Good mobile apps enhance user interactions, boost retention, and cultivate loyalty, creating deep connections between your company and its clients.</p>
+</div>
+<div class="brutal-card bg-white p-14 rounded-none relative lg:mt-24 lg:-ml-8 z-10 scale-105 border-2">
+<div class="mb-8 text-primary">
+<span class="material-symbols-outlined text-7xl font-bold">insights</span>
+</div>
+<h3 class="mb-6 text-4xl font-black leading-tight uppercase tracking-tight">Enhanced Business Development</h3>
+<p class="leading-relaxed text-zinc-700 text-xl font-medium">Optimised mobile solutions increase market reach, sales, and conversions, giving businesses a competitive edge and real growth.</p>
+<div class="absolute -top-4 -right-4 bg-primary text-white px-4 py-1 font-bold text-sm tracking-widest uppercase">Key Driver</div>
+</div>
+<div class="brutal-card bg-white p-12 rounded-none relative lg:-mt-12 lg:ml-20">
+<div class="mb-8 text-primary">
+<span class="material-symbols-outlined text-6xl font-bold">auto_awesome</span>
+</div>
+<h3 class="mb-6 text-3xl font-black leading-tight uppercase tracking-tight">Technology That Is Future-Proof</h3>
+<p class="leading-relaxed text-zinc-700 text-lg">Professional mobile engineers develop modern, safe, and scalable apps that adjust to changing consumer demands and trends.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-background-dark py-[90px] overflow-hidden">
+<div class="mx-auto max-w-7xl px-6">
+<h2 class="mb-16 text-center text-3xl font-bold text-white">Tech Stack Expertise</h2>
+<div class="marquee">
+<div class="marquee-content grayscale opacity-50">
+<span class="text-4xl font-black">SWIFT</span>
+<span class="text-4xl font-black">KOTLIN</span>
+<span class="text-4xl font-black">FLUTTER</span>
+<span class="text-4xl font-black">REACT NATIVE</span>
+<span class="text-4xl font-black">FIREBASE</span>
+<span class="text-4xl font-black">ANDROID JETPACK</span>
+</div>
+<div aria-hidden="true" class="marquee-content grayscale opacity-50">
+<span class="text-4xl font-black">SWIFT</span>
+<span class="text-4xl font-black">KOTLIN</span>
+<span class="text-4xl font-black">FLUTTER</span>
+<span class="text-4xl font-black">REACT NATIVE</span>
+<span class="text-4xl font-black">FIREBASE</span>
+<span class="text-4xl font-black">ANDROID JETPACK</span>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-2">
+<div class="bg-obsidian flex flex-col justify-center px-12 py-24 lg:px-24">
+<h2 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl">Ready to build what’s next?</h2>
+<p class="mb-12 text-lg text-zinc-400">Tell us about your project and we'll get back to you with a roadmap.</p>
+<form class="flex flex-col gap-6">
+<div>
+<label class="mb-2 block text-sm font-bold text-zinc-500 uppercase tracking-widest">Your Name</label>
+<input class="w-full rounded-lg border-white/10 bg-white/5 p-4 text-white focus:border-primary focus:ring-0" type="text"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-bold text-zinc-500 uppercase tracking-widest">Business Email</label>
+<input class="w-full rounded-lg border-white/10 bg-white/5 p-4 text-white focus:border-primary focus:ring-0" type="email"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-bold text-zinc-500 uppercase tracking-widest">How can we help?</label>
+<textarea class="w-full rounded-lg border-white/10 bg-white/5 p-4 text-white focus:border-primary focus:ring-0" rows="4"></textarea>
+</div>
+<button class="mt-4 h-14 w-full rounded-xl bg-primary text-lg font-bold text-background-dark transition-all hover:bg-white">
+                Submit Inquiry
+            </button>
+</form>
+</div>
+<div class="relative min-h-[500px] w-full">
+<img alt="Portrait of David Miller" class="absolute inset-0 h-full w-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjmvJm6hOUmS5Dy2Si7aLwIdhXOQFlcc_voFV7aJt13dZSeSpvZBUWJHx-ywCZlQq8QpB_qNcHkHpfBC2w5D2lvBlQ5SWrC2ulGHKHweeVJPaAq9dFuSIyklkaKU8s0gN9vAY9v6twvAdrfb6pp2tdfGgw7HMUvPXBHZe5cjSHaDI5LqcBNU53cKbqxMK4Pbdh0OCcjLijK3IQGCku14Ks6-2bjGIKmHc7gxwLEf-VN9tDncuBiFHX0QOym-RPg_bp9eSPboYR"/>
+<div class="absolute bottom-12 left-12">
+<p class="text-2xl font-bold text-white">David Miller</p>
+<p class="text-sm font-semibold uppercase tracking-widest text-primary">Head of Mobile Engineering</p>
+</div>
+</div>
+</section>
+<footer class="border-t border-white/5 bg-background-dark py-16">
+<div class="mx-auto max-w-7xl px-6">
+<div class="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
+<div class="col-span-2 lg:col-span-2">
+<div class="mb-6 flex items-center gap-2">
+<div class="text-primary">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 48 48">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-lg font-bold">Codezilla</span>
+</div>
+<p class="max-w-xs text-sm leading-relaxed text-zinc-500">
+                    Enterprise-grade mobile engineering and digital transformation strategies for global industry leaders.
+                </p>
+</div>
+<div>
+<h4 class="mb-6 text-sm font-bold uppercase tracking-widest text-white">Services</h4>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500">
+<li><a class="hover:text-primary transition-colors" href="#">Web Development</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Mobile Engineering</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cloud Strategy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">AI &amp; ML</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-6 text-sm font-bold uppercase tracking-widest text-white">Company</h4>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500">
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Work</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-6 text-sm font-bold uppercase tracking-widest text-white">Legal</h4>
+<ul class="flex flex-col gap-4 text-sm text-zinc-500">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 flex flex-col items-center justify-between border-t border-white/5 pt-8 md:flex-row">
+<p class="text-xs text-zinc-600">© 2024 Codezilla Engineering. All rights reserved.</p>
+<div class="mt-4 flex gap-6 md:mt-0">
+<a class="text-zinc-600 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-zinc-600 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+<a class="text-zinc-600 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-lg">share</span></a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
